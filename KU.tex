@@ -18,8 +18,28 @@ Jedną z części pracy było zaprojektowanie graficznego interfejsu użytkownik
 \subsection{Wprowadzenie}
 Na początku tego rozdziału należy przypomnieć, główne pojęcia związane z korzystaniem z platformy \emph{Moodle}.
 
-Po zalogowaniu do systemu użytkownik musi wybrać \emph{kurs}. Kurs jest największą częścią \emph{Moodle} i przeważnie kojarzony jest z przedmiotem. Na kurs składa się kilka lub kilkanaście \emph{sekcji}. Sekcja odpowiada najczęściej konkretnym zajęciom, jest związana z jakimś wydarzeniem lub tygodniem. Najmniejszą jednostką w \emph{Moodle} jest \emph{aktywność}. Aktywność to podstawowy typ modułów rozszerzających funkcjonalność \emph{Moodle}. Aktywnościami są np.: \emph{Forum}, \emph{Głosowanie}, \emph{Czat}. Moduły te grupowane są w \emph{sekcje}.
+Po zalogowaniu do systemu użytkownik musi wybrać \emph{kurs}. Kurs jest największą częścią \emph{Moodle} i przeważnie kojarzony jest z przedmiotem. Na kurs składa się kilka lub kilkanaście \emph{sekcji}. Sekcja odpowiada najczęściej konkretnym zajęciom, jest związana z jakimś wydarzeniem lub tygodniem. Najmniejszą jednostką w \emph{Moodle} jest \emph{aktywność}. Aktywność to podstawowy typ modułów rozszerzających funkcjonalność \emph{Moodle}. Aktywnościami są np. \emph{Forum}, \emph{Głosowanie}, \emph{Czat}. Istnieje również inny typ modułów: \emph{zasoby}. Są to m.in. własne strony internetowe, pliki, adresy \emph{URL}. Na potrzeby projektu została wyróżniona grupa \emph{materiały}. Zalicza się do niej wszystkie moduły inne niż \emph{iQuest}, czyli inne niż badania. Moduły grupowane są w sekcje.
+
+\emph{Formater} kursu decyduje o ułożeniu i wyświetlaniu elementów na stronie.
+
+Jako, że rozdział ten tyczy się grafiki, warto wspomnieć, że elementy na stronie ułożone są w następujący sposób:
+\begin{description}
+\item Na ekranie wyświetlana jest lista sekcji.
+\item Wewnątrz każdej sekcji znajduje się lista badań. Pod nią drukowana jest lista materiałów.
+\end{description}
+
+\subsection{Role}
+Jedną z cech projektu, jest podział użytkowników na ankieterów i respondentów. W systemie \emph{Moodle} istnieje mechanizm do zarządzania rolami, który wydawał się adekwatny do użycia w tym przypadku. Rola jest to zbiór \emph{możliwości}. Możliwość można rozumieć jako prawo do wykonania określonego przez programistę fragmentu kodu.
+
 \subsection{Formater kursu}
-Jednym z problemów jakie napotkano, była konieczność wyświetlania respondentom i ankieterom tylko określonych aktywności
+Jednym z problemów jakie napotkano, była konieczność wyświetlania respondentom i ankieterom tylko określonych modułów. Ankieterzy powinni zobaczyć tylko te badania, które utworzyli oraz inne aktywności, zasoby. Respondenci powinni zobaczyć tylko te badania, w których mogą wypełnić ankietę, a także materiały, które mają prawo wyświetlać.
+
+Do rozwiązania problemu zdecydowano się użyć formatera kursu. Narzędzie to, jako integralna część \emph{Moodle}, było najlepszym rozwiązaniem z możliwych. Niestety wkrótce okazało się, że brak dokumentacji, a także dyskusji na temat tego narzędzia w internecie utrudnia wykonanie zadania. Całą pracę wejścia, polegającą na poznaniu narzędzia, wykonano studiując kod źródłowy domyślnych formaterów \emph{Moodle}.
+
+Pierwszy plan zakładał wyświetlanie użytkownikowi dwóch sekcji. Jedną z odpowiednimi badaniami, drugą z materiałami. Należało także ograniczyć ankieterowi możliwość dodawania w pierwszej sekcji modułów innych niż iQuest, a w drugiej sekcji uniemożliwić dodanie tej aktywności. Niestety wyszło na jaw, że jest to nieosiągalne bez ingerowania w wewnętrzny kod platformy \emph{Moodle}. 
+
+Zostało to spowodowane uaktualnieniami w \emph{Moodle}. Kod \emph{PHP} wyświetlania typów modułów, zostaje nadpisywany przez \emph{JavaScript}. W taki sposób, mimo istniejących funkcji, z poziomu funkcji \emph{PHP}, odpowiedzialnych za wyświetlanie listy modułów w danej sekcji, nie da się kontrolować, które moduły zostaną wyświetlane, a które nie. Mówiąc prościej, programista może jedynie wybrać, jakie moduły będą wyświetlane we wszystkich sekcjach w danym kursie, a nie może decydować o tym, co można dodać w każdej sekcji z osobna.
+
+Rozwiązaniem było umieszczenie listy badań oraz listy materiałów w jednej sekcji. Można w niej dodać jakikolwiek moduł. Dopiero przy wyświetlaniu moduły dzielone są na dwie listy: listę badań i listę materiałów.     
 
 \end{document}
