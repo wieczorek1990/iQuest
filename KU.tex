@@ -1,0 +1,25 @@
+\documentclass[12pt]{article}
+
+% kodowanie: latin2, utf8 lub cp1250
+%\usepackage[latin2]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[MeX]{polski}
+\begin{document}
+
+\part{Moodle jako narzędzie Szatana do gnębienia programistów.}
+
+\section{Implementacja}
+\subsection{Wprowadzenie}
+Jedną z części pracy było zaprojektowanie graficznego interfejsu użytkownika. Głównym problemem jaki się pojawił, był wybór odpowiedniego narzędzia. Celem jaki postawiono, była maksymalna zgodność projektowanych elementów z różnymi wersjami \emph{Moodle} --- zarówno wcześniejszymi, jak i późniejszymi. Zdecydowano, aby starać się korzystać z gotowych interfejsów programowania aplikacji \emph{(API)} dostarczonych przez \emph{Moodle}, tj. \emph{Page API}, \emph{Form API}, oraz \emph{Access API}. Wszystkie interfejsy są napisane przy użyciu języka PHP --- są wykonywane po stronie serwera. Konieczne okazało się też wykonanie niektórych skryptów po stronie klienta. Dlatego w projekcie wykorzystano również język skryptowy \emph{Java Script}.
+
+\section{Problemy i ich rozwiązania}
+\subsection{Wprowadzenie}
+Na początku tego rozdziału należy przypomnieć, główne pojęcia związane z korzystaniem z platformy \emph{Moodle}.
+
+Po zalogowaniu do systemu użytkownik musi wybrać \emph{kurs}. Kurs jest największą częścią \emph{Moodle} i przeważnie kojarzony jest z przedmiotem. Na kurs składa się kilka lub kilkanaście \emph{sekcji}. Sekcja odpowiada najczęściej konkretnym zajęciom, jest związana z jakimś wydarzeniem lub tygodniem. Najmniejszą jednostką w \emph{Moodle} jest \emph{aktywność}. Aktywność to podstawowy typ modułów rozszerzających funkcjonalność \emph{Moodle}. Aktywnościami są np.: \emph{Forum}, \emph{Głosowanie}, \emph{Czat}. Moduły te grupowane są w \emph{sekcje}.
+\subsection{Formater kursu}
+Jednym z problemów jakie napotkano, była konieczność wyświetlania respondentom i ankieterom tylko określonych aktywności
+
+\end{document}
