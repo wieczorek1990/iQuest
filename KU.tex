@@ -8,7 +8,7 @@
 \usepackage[MeX]{polski}
 \begin{document}
 
-\part{Moodle jako narzędzie Szatana do gnębienia programistów.}
+
 
 \section{Implementacja}
 \subsection{Wprowadzenie}
@@ -38,8 +38,16 @@ Do rozwiązania problemu zdecydowano się użyć formatera kursu. Narzędzie to,
 
 Pierwszy plan zakładał wyświetlanie użytkownikowi dwóch sekcji. Jedną z odpowiednimi badaniami, drugą z materiałami. Należało także ograniczyć ankieterowi możliwość dodawania w pierwszej sekcji modułów innych niż iQuest, a w drugiej sekcji uniemożliwić dodanie tej aktywności. Niestety wyszło na jaw, że jest to nieosiągalne bez ingerowania w wewnętrzny kod platformy \emph{Moodle}. 
 
-Zostało to spowodowane uaktualnieniami w \emph{Moodle}. Kod \emph{PHP} wyświetlania typów modułów, zostaje nadpisywany przez \emph{JavaScript}. W taki sposób, mimo istniejących funkcji, z poziomu funkcji \emph{PHP}, odpowiedzialnych za wyświetlanie listy modułów w danej sekcji, nie da się kontrolować, które moduły zostaną wyświetlane, a które nie. Mówiąc prościej, programista może jedynie wybrać, jakie moduły będą wyświetlane we wszystkich sekcjach w danym kursie, a nie może decydować o tym, co można dodać w każdej sekcji z osobna.
+Zostało to spowodowane uaktualnieniami w \emph{Moodle}. Kod \emph{PHP} wyświetlania typów modułów, zostaje nadpisywany przez \emph{JavaScript}. W taki sposób, z poziomu funkcji \emph{PHP}, odpowiedzialnych za wyświetlanie listy modułów w danej sekcji, nie da się kontrolować, które moduły zostaną wyświetlane, a które nie. Mówiąc prościej, programista może jedynie wybrać, jakie moduły będą wyświetlane we wszystkich sekcjach w danym kursie, a nie może decydować o tym, co można dodać w każdej sekcji z osobna.
 
-Rozwiązaniem było umieszczenie listy badań oraz listy materiałów w jednej sekcji. Można w niej dodać jakikolwiek moduł. Dopiero przy wyświetlaniu moduły dzielone są na dwie listy: listę badań i listę materiałów.     
+Rozwiązaniem było umieszczenie listy badań oraz listy materiałów w jednej sekcji. Można w niej dodać jakikolwiek moduł. Dopiero przy wyświetlaniu moduły dzielone są na dwie listy: listę badań i listę materiałów. Dzięki temu cel został osiągnięty --- użytkownik zobaczy tylko te moduły, które może wyświetlić. Co więcej, będą one odpowiednio posegregowane, aby użytkownik szybko mógł znaleźć to, czym jest zainteresowany.
 
+\subsection{Tworzenie badania}
+Kolejną trudnością w projekcie, było połączenie go z systemem \emph{Moodle}. Głównie sprowadzało się to do tego, aby tak wykorzystać interfejs graficzny oferowany przez \emph{Moodle}, żeby użytkownik nie miał poczucia zmiany systemu. Zarówno wygląd, jak i dodawanie różnych funkcji, powinny być zgodne ze standardem \emph{Moodle}. Dzięki takiemu podejściu, osoba, korzystająca wcześniej z \emph{Moodle}, a pragnąca używać wtyczki \emph{iQuest}, nie musiała zmieniać swoich przyzwyczajeń. Co więcej, w projekcie duży nacisk został postawiony na nie zniechęcanie respondentów do wypełnienia ankiety, co było dodatkową motywacją do zaprojektowania przyjaznego użytkownikom interfejsu.
+
+Wstępna wersja interfejsu, zaprojektowana przez architekta, wyglądała następująco. Najpierw ankieter wyrażał chęć utworzenia nowego badania, klikając odpowiedni przycisk. Następnie mógł dodać do badania ankietę z katalogu, ewentualnie utworzyć nową. Na kolejnej stronie ankieter definiował szczegóły badania, takie jak: nazwa, grupa docelowa, czas rozpoczęcia i zakończenia etc. Nie było możliwe, aby zaimplementować to w powyższy sposób.
+
+Problem stwarzało dodawanie ankiety wewnątrz tworzenia badania. Gdy tworzenie badania zaczyna się od zdefiniowania ankiety, to nie można od razu dodać jej do odpowiedniego badania, ponieważ to badanie jeszcze nie istnieje. W takim wypadku należałoby przechowywać gdzieś informację, że po utworzeniu badania ma dodać się do niego ankieta. Na przykład można w tym celu użyć dodatkowy parametr w adresie \emph{URL}. Dodatkowo, w \emph{Moodle}, przy kreowaniu nowego modułu, użytkownikowi wyświetlany jest domyślny formularz, w którym podaje się parametry potrzebne do zbudowania instancji modułu. Przyjmując, że badanie jest kojarzone z modułem, nie ma możliwości, aby przed zakończeniem tworzenia badania wstawić dodatkowy formularz.
+
+Rozwiązaniem 
 \end{document}
