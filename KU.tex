@@ -22,6 +22,8 @@ Po zalogowaniu do systemu użytkownik musi wybrać \emph{kurs}. Kurs jest najwi�
 
 \emph{Formater} kursu decyduje o ułożeniu i wyświetlaniu elementów na stronie.
 
+Różnica pomiędzy tym, czy użytkownik znajduje się lub nie, w module lub w kursie, to \emph{kontekst}.
+
 Jako, że rozdział ten tyczy się grafiki, warto wspomnieć, że elementy na stronie ułożone są w następujący sposób:
 \begin{description}
 \item Na ekranie wyświetlana jest lista sekcji.
@@ -35,7 +37,9 @@ Odrzucono pomysł pierwszy oraz trzeci. Pomysł pierwszy wydał się zbyt pracoc
 
 \emph{Output API} to zestaw funkcji, wprowadzonych od wersji \emph{Moodle} $2.0$. Umożliwiają one wstawianie na stronę standardowych elementów formularza, takich jak: etykiety, przyciski, linki, tabele etc. Niestety, z nieznanych powodów, to wspaniale wyposażone, z pełną dokumentacją i w pełni przydatne \emph{API} zostało usunięte z \emph{Moodle} już w wersji $2.2$. Co ciekawe niektórych elementów można nadal używać, lecz nie znaleziono dokumentu, który mówiłby o tym jakie dokładnie części tego \emph{API} można używać, a które zostały wycofane.
 
-Następcą \emph{Output API} został \emph{Form API}.
+Następcą \emph{Output API} został \emph{Form API}. Ku rozczarowaniu zespołu \emph{Form API} ma nieco uboższą dokumentację. Zdarza się, że w funkcji są omówione np. tylko trzy pierwsze argumenty, natomiast reszta jest pominięta, tak jakby nie istniała. \emph{Form API} różni się też od poprzednich \emph{API} tym, że jest oparte na modelu obiektowym. Posiada także mechanizm pozwalający na weryfikację danych, wprowadzanych przez użytkownika. Mechanizm ten napisany jest z użyciem języka \emph{JavaScript}, oznacza to, że walidacja przeprowadzana jest po stronie klienta, a dopiero poprawne dane przesyłane są do serwera.
+
+Podsumowując, mimo niekompletnej dokumentacji, jako narzędzie implementacji formularzy, zostało wybrane \emph{Form API}. Posiada ono szereg przydatnych funkcji, pozwalających na definiowanie standardowych elementów każdego formularza. Nie bez znaczenia są też funkcje pozwalające na walidację wprowadzanych danych. Oczywiście nie wszystkie potrzebne elementy udało się napisać używając jedynie \emph{API}. Korzystano wtedy z czystego języka \emph{HTML}. 
 
 \subsection{Role}
 Jedną z cech projektu, jest podział użytkowników na ankieterów i respondentów. W systemie \emph{Moodle} istnieje mechanizm do zarządzania rolami, który wydawał się adekwatny do użycia w tym przypadku. Rola jest to zbiór \emph{możliwości}. Możliwość można rozumieć jako prawo do wykonania, określonego przez programistę, fragmentu kodu.
@@ -61,6 +65,23 @@ Problem stwarzało dodawanie ankiety wewnątrz tworzenia badania. Gdy tworzenie 
 Rozwiązaniem jest prosta zamiana kolejności tworzenia badania oraz ankiety. Najpierw użytkownik tworzy badanie, czyli moduł. Dopiero wówczas ma możliwość sporządzenia ankiety. Podejście to ma kilka zalet: jest to zgodne z procedurą \emph{Moodle}, a co za tym idzie, bardziej intuicyjne dla użytkownika obeznanego z \emph{Moodle} oraz pozwala na łatwe dodanie ankiety do badania. Ponadto ankieter może zrezygnować z komponowania ankiety przy kreowaniu badania. Nie sposób nie zgodzić się z tezą, że jest to jedyny słuszny sposób dodawania nowego modułu \emph{iQuest}.
 
 \subsection{Tworzenie ankiety}
+Przy tworzeniu ankiety powstał dość specyficzny problem implementacyjny. Wynikał on z faktu, że ankietę definiować można zarówno z poziomu kursu, jak i z poziomu badania. Powstało pytanie: Jak przetwarzać dane pochodzące z różnych kontekstów? 
 
+Standardowo, we wtyczkach Moodle, elementy odpowiedzialne za wyświetlanie informacji na ekranie znajdują się w pliku \emph{view.php}. Pojawił się pomysł, aby rozszerzyć strukturę o dwa dodatkowe pliki: \emph{mod.php} oraz \emph{course.php}. Do pliku \emph{mod.php} trafiały dane z kontekstu modułu. Drugi plik zajmował się przetwarzaniem danych z kontekstu kursu. Taki podział gwarantował większy porządek w kodzie źródłowym. Porządek był ważny, ponieważ w \emph{Moodle} nie jest zgodny z wzorcem Model-View-Controller. W związku z tym ważne jest aby efektywnie zarządzać kodem źródłowym, żeby mała jego zmiana nie wymagała zmiany wielu elementów.
 
+Niestety wprowadzone zmiany okazały się niewystarczające. Występowało niepotrzebne powielanie kodu. Wydzielono jeszcze jeden plik, w którym przetwarzano dane otrzymane z formularzy, zapisywano je do bazy danych. Później zwracano sterowanie do plików \emph{mod.php} albo \emph{course.php} w zależności od kontekstu.
+
+Dzięki utworzeniu trzech dodatkowych plików, kod źródłowy stał się bardziej przejrzysty. Wartość takiego rozwiązania można zauważyć dopiero, gdy zachodzi konieczność znalezienia błędu lub wprowadzenia zmian. Przy dobrym zarządzaniu kodem mała zmiana wymaga małych zmian.
+
+\subsection{Inwencja programistów}
+
+W trakcie rozwoju oprogramowania pojawiło się kilka małych niejasności, które programiści musieli rozwiązać sami. Kilka razy wykazali również inicjatywę i zaproponowali rozwiązania, które stały się ostatecznie częścią projektu.
+
+Pierwszą ideą było zagospodarowanie przestrzeni w widoku badania. Po utworzeniu badania i dodania do niego ankiety, ankieterowi ukazuje się widok badania. Architekt nie zaproponował jak ma on wyglądać. Dał tylko pewne wskazówki. Zaznaczył, że z tego widoku, ankieter ma mieć możliwość usunięcia ankiety z badania oraz edytowania jej. I tu pojawił się problem. Żeby spełnić wymagania, na stronie wystarczyło pokazać odnośniki: ,,edytuj'' i ,,usuń z badania''. Praktycznie cała stron pozostawała pusta. Sytuacja taka jest niedopuszczalna, bo na pewno istniały jakieś przydatne informacje, które można było w tym miejscu wyświetlić. Wykoncypowano, że najbardziej naturalnie będzie pokazać w tym miejscu statystyki dla badania.
+
+W pierwszej wersji zaimplementowano tylko proste statystyki. Można się z nich dowiedzieć: ile czasu zostało do zakończenia badania, ile osób liczy grupa docelowa oraz ile osób już odpowiedziało i poznać wartość procentową. Następnie dodano kolejną tabelkę ze statystykami. Wyświetla się gdy choć jedna osoba odpowie na któreś pytanie. Możemy w niej zobaczyć jak kształtowały się odpowiedzi, w pytaniach zamkniętych, na które odpowiedziano. Nie zdecydowano się wyświetlać odpowiedzi na pytania otwarte ze względu na ich różnorodność, a więc ilość miejsca, które zajmowały. Ideą tabelki było pokazanie skróconych informacji o badaniu. Cały, dokładny, rozbudowany raport można wygenerować z użyciem systemu \emph{Jasper Report}.
+
+Kolejnym pomysłem programistów było dodanie kilku przycisków. Zarówno w katalogu jak i widoku badania umieszczono przycisk ,,pokaż''. Służy on do wyświetlenia ankiety tak samo jak widzi ją respondent. Ankieter może zobaczyć, układ pytań, łatwiej mu zdecydować o dodaniu kolejnej strony. Pojawił się także przycisk pozwalający na dodanie nowej ankiety, będąc w widoku katalogu. Znajduję się on zarówno na dole jak i na górze tabelki, aby nie było konieczności przewijania ekranu.
+
+W założeniach projektu ustalono, że odpowiedź jest nieedytowalna. Dodano udoskonalenie, które polegało na tym, że respondent nie musi od razu wypełnić całej ankiet. Może to robić stopniowo. Za każdym razem jednak zostaną mu wyświetlone tylko te pytania, na które jeszcze nie odpowiedział. Pozwala to także uniknąć sytuacji, w której respondent przeoczy jakieś pytania. Jeśli respondent nie wypełni całej ankiety, to badanie nie zniknie z widoku kursu. Dopiero po wypełnieniu całej ankiety badanie nie pokaże się w kursie. 
 \end{document}
