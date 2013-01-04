@@ -1,0 +1,68 @@
+\select@language {polish}
+\select@language {polish}
+\contentsline {chapter}{\chapternumberline {1}Wprowadzenie}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Opis problemu i koncepcja jego rozwi\IeC {\k a}zania (ToDo)}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Cele projektu}{2}{section.1.2}
+\contentsline {chapter}{\chapternumberline {2}Opis proces\IeC {\'o}w biznesowych}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Aktorzy}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Obiekty biznesowe}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Badanie}{3}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Ankieta}{4}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Grupa Docelowa}{4}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Raport}{4}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Biznesowe przypadki u\IeC {\.z}ycia}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}BC01: Zbieranie informacji o Absolwentach}{5}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}BC02: Zbieranie informacji o Studentach}{5}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}BC03: Zarz\IeC {\k a}dzanie Grupami Docelowymi}{5}{subsection.2.3.3}
+\contentsline {chapter}{\chapternumberline {3}Wymagania funkcjonalne}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}Wst\IeC {\k e}p -- diagram przypadk\IeC {\'o}w u\IeC {\.z}ycia}{6}{section.3.1}
+\contentsline {section}{\numberline {3.2}Ankieter}{7}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}UC01: Stworzenie Ankiety}{7}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}UC02: Edycja Ankiety}{8}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}UC03: Wyb\IeC {\'o}r Grupy Docelowej}{8}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}UC04: Uruchomienie Badania}{9}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}UC06: Sprawdzenie wynik\IeC {\'o}w}{9}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Respondent}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}UC05: Udzielenie odpowiedzi}{10}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Administrator Bazy Danych}{10}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}UC07: Tworzenie Grupy Docelowej}{10}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}UC08: Edycja Grupy Docelowej}{11}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Wszyscy U\IeC {\.z}ytkownicy}{11}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}UC09: Logowanie do Systemu}{11}{subsection.3.5.1}
+\contentsline {chapter}{\chapternumberline {4}Wymagania pozafunkcjonalne}{12}{chapter.4}
+\contentsline {section}{\numberline {4.1}Wst\IeC {\k e}p}{12}{section.4.1}
+\contentsline {chapter}{\chapternumberline {5}Architektura systemu}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}Wst\IeC {\k e}p}{13}{section.5.1}
+\contentsline {section}{\numberline {5.2}Opis og\IeC {\'o}lny architektury -- Marketecture}{13}{section.5.2}
+\contentsline {section}{\numberline {5.3}Perspektywy architektoniczne}{13}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Perspektywa fizyczna}{13}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Perspektywa logiczna}{13}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Perspektywa implemetancyjna}{13}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Perspektywa procesu (r\IeC {\'o}wnoleg\IeC {\l }o\IeC {\'s}ci)}{13}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Decyzje projektowe}{13}{section.5.4}
+\contentsline {section}{\numberline {5.5}Wykorzystane technologie}{13}{section.5.5}
+\contentsline {section}{\numberline {5.6}Schemat bazy danych}{14}{section.5.6}
+\contentsline {chapter}{\chapternumberline {6}Opis implementacji}{15}{chapter.6}
+\contentsline {section}{\numberline {6.1}Wst\IeC {\k e}p}{15}{section.6.1}
+\contentsline {section}{\numberline {6.2}U\IeC {\.z}yte technologie}{15}{section.6.2}
+\contentsline {section}{\numberline {6.3}Og\IeC {\'o}lna struktura projektu}{15}{section.6.3}
+\contentsline {section}{\numberline {6.4}Interfejs}{15}{section.6.4}
+\contentsline {section}{\numberline {6.5}Logika (back-end)}{15}{section.6.5}
+\contentsline {section}{\numberline {6.6}Powi\IeC {\k a}zanie back-endu z interfejsem}{15}{section.6.6}
+\contentsline {chapter}{\chapternumberline {7}Zapewnianie jako\IeC {\'s}ci i konserwacja systemu}{16}{chapter.7}
+\contentsline {section}{\numberline {7.1}Testy i weryfikacja jako\IeC {\'s}ci oprogramowania}{16}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Testy jednostkowe}{16}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Testy integracyjne}{16}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Testy akceptacyjne}{16}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Inne metody zapewniania jako\IeC {\'s}ci}{16}{subsection.7.1.4}
+\contentsline {section}{\numberline {7.2}Spos\IeC {\'o}b uruchomienia i~dzia\IeC {\l }ania systemu}{16}{section.7.2}
+\contentsline {chapter}{\chapternumberline {8}Zebrane do\IeC {\'s}wiadczenia}{17}{chapter.8}
+\contentsline {chapter}{\chapternumberline {9}Zako\IeC {\'n}czenie}{18}{chapter.9}
+\contentsline {section}{\numberline {9.1}Podsumowanie}{18}{section.9.1}
+\contentsline {section}{\numberline {9.2}Propozycja dalszych prac}{18}{section.9.2}
+\contentsline {appendix}{\chapternumberline {A}Informacje uzupe\IeC {\l }niaj\IeC {\k a}ce}{19}{appendix.A}
+\contentsline {section}{\numberline {A.1}Wk\IeC {\l }ad poszczeg\IeC {\'o}lnych os\IeC {\'o}b do przedsi\IeC {\k e}wzi\IeC {\k e}cia}{19}{section.A.1}
+\contentsline {section}{\numberline {A.2}Wykaz u\IeC {\.z}ytych narz\IeC {\k e}dzi}{20}{section.A.2}
+\contentsline {section}{\numberline {A.3}Zawarto\IeC {\'s}\IeC {\'c} p\IeC {\l }yty CD}{20}{section.A.3}
+\contentsline {appendix}{\chapternumberline {B}Wygl\IeC {\k a}d aplikacji}{21}{appendix.B}
+\contentsline {appendix}{\chapternumberline {C}Schemat bazy danych}{22}{appendix.C}

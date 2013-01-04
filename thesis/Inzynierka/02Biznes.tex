@@ -1,0 +1,123 @@
+\chapter{Opis procesów biznesowych}
+\label{Chapter2}
+
+\section{Aktorzy}
+\label{Chapter21}
+
+Aktorami zdefiniowanymi w Systemie są:
+\begin{itemize}
+\item System -- opisywany System iQuest.
+\item Administrator -- zarządza sprawami technicznymi, związanymi platformą Moodle. Funkcję mogą pełnić osoby mające podstawową wiedzę informatyczną, znający mechanizmy Moodle'a.
+\item Administrator Bazy Danych -- zarządza sprawami technicznymi, związanymi z prawami do grup docelowych, ich tworzeniem i utrzymaniem. Funkcję mogą pełnić Pracownicy Uczelni\slash Dziekanatu oraz Administratorzy Systemów.
+\item Ankieter -- tworzy ankiety, wskazuje grupy docelowe i rozsyła ankiety. Może też przeglądać raporty. Funkcję mogą pełnić: Prowadzący zajęcia, Pracownik Dziekanatu.
+\item Respondent -- odpowiada na otrzymane ankiety. Funkcję mogą pełnić: Absolwenci, Studenci.
+\end{itemize}
+
+\section{Obiekty biznesowe}
+\label{Chapter22}
+
+\subsection{Badanie}
+
+Jest to Ankieta wraz z wybranymi: grupą docelową i czasem trwania. Badanie determinują następujące atrybuty:
+
+\begin{itemize}
+\item Nazwa Badania,
+\item Data rozpoczęcia,
+\item Data zakończenia,
+\item Okresowość,
+\item Grupa docelowa,
+\item Przypisana Ankieta.
+\end{itemize}
+
+\subsection{Ankieta}
+
+Jest tworzona przez Ankieterów i wysyłana do Respondentów. Raz utworzona Ankieta zostaje zapisana w Katalogu Ankiet. Ankietę charakteryzują następujące atrybuty:
+
+\begin{itemize}
+\item Nazwa Ankiety,
+\item Wstęp,
+\item Podsumowanie,
+\item Przypisane Pytania.
+\end{itemize}
+
+\subsection{Grupa Docelowa}
+
+Grupa studentów lub absolwentów, do których skierowana jest ankieta. Atrybuty:
+
+\begin{itemize}
+\item Studenci\slash Absolwenci
+\end{itemize}
+
+\subsection{Raport}
+
+Zebrane odpowiedzi z jednego lub z kilku badań. Może zawierać wykresy, zestawienia.
+
+
+%\subsection{Katalog Ankiet}
+%
+%Katalog Ankiet zawiera zbiór wszystkich Ankiet dostępnych dla danego Ankietera iQuest. Ankiety mogą być z poziomu Katalogu Ankiet współdzielone, duplikowane, oglądane, edytowane i//lub usuwane, w zależności od aktualnego statusu. Dla przykładu, nowo-utworzoną Ankietę bez odpowiedzi można bez problemu usunąć lub edytować, podczas gdy taka, na którą udzielono już odpowiedzi, dostępna jest jedynie do odczytu, duplikacji i współdzielenia.
+
+%\subsection{Pytanie}
+%
+%Pytanie jest elementarną jednostką Ankiety. Samo może składać się jedynie z nazwy (w przypadku pytań otwartych), lub nazwy i dostępnych odpowiedzi (dla Pytań zamkniętych). Pytanie w ogólności charakteryzują:
+
+%\begin{itemize}
+%\item Treść Pytania,
+%\item Rodzaj Pytania,
+%\item Dostępne odpowiedzi (dla Pytań zamkniętych).
+%\end{itemize}
+
+\pagebreak
+\section{Biznesowe przypadki użycia}
+\label{Chapter23}
+
+Poniżej przedstawione zostały biznesowe przypadki użycia.
+
+\subsection{BC01: Zbieranie informacji o Absolwentach}
+
+\ucsection{BC01: Zbieranie informacji o Absolwentach}{Ankieter, Respondent}
+{Ankieter chce ankietować Absolwentów}
+{Ankieta, Raport}{\ucactions{
+\ucaction{1. Ankieter tworzy Ankietę (UC01)}
+\ucaction{2. Ankieter wybiera Absolwentów, do których chce rozesłać Ankietę (UC03)}
+\ucaction{3. Ankieter uruchamia Ankietę (UC04)}
+\ucaction{4. System powiadamia Respondentów o Ankiecie}
+\ucaction{5. Respondent wypełnia Ankietę (UC05)}
+\ucaction{6. Ankieter sprawdza podsumowanie Ankiety (UC06)}
+}}
+%{\ucextensions{
+%\ucaction{3.A Opis sytuacji wyjątkowej 1}
+%\ucaction{3.A.1 Pierwszy krok sytuacji wyjątkowej 1}
+%\ucaction{3.B Opis sytuacji wyjątkowej 2}
+%\ucaction{3.B.1 Pierwszy krok sytuacji wyjątkowej 2}
+%\ucaction{3.B.2 Drugi krok sytuacji wyjątkowej 2}
+%}}
+{}
+
+\subsection{BC02: Zbieranie informacji o Studentach}
+
+\ucsection{BC02: Zbieranie informacji o Studentach}{Ankieter, Respondent}
+{Ankieter chce ankietować Studentów}
+{Ankieta, Raport}{\ucactions{
+\ucaction{1. Ankieter tworzy Ankietę (UC01)}
+\ucaction{2. Ankieter wybiera Studentów, do których chce rozesłać Ankietę (UC03)}
+\ucaction{3. Ankieter uruchamia Ankietę (UC04)}
+\ucaction{4. System powiadamia Respondentów o Ankiecie}
+\ucaction{5. Respondent wypełnia Ankietę (UC05)}
+\ucaction{6. Ankieter sprawdza podsumowanie Ankiety (UC06)}
+}}
+{}
+
+\subsection{BC03: Zarządzanie Grupami Docelowymi}
+
+\ucsection{BC03: Zarządzanie Grupami Docelowymi}{Administrator Bazy Danych}
+{Ankieter chce ankietować Studentów}
+{Ankieta, Raport}{\ucactions{
+\ucaction{1. Ankieter zgłasza potrzebę stworzenia Grupy Docelowej Administratorowi Bazy Danych}
+\ucaction{2. Administrator Bazy Danych podaje nazwę Grupy Docelowej, którą zamierza utworzyć}
+\ucaction{3. Administrator Bazy Danych dodaje/usuwa członków Grupy Docelowej}
+\ucaction{4. Administrator Bazy Danych potwierdza chęć stworzenia Grupy Docelowej}
+\ucaction{5. System tworzy Grupę Docelową}
+\ucaction{6. Ankieter może korzystać z Grupy Docelowej}
+}}
+{}

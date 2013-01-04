@@ -1,0 +1,76 @@
+\chapter{Wprowadzenie}
+\label{Chapter1}
+
+\section{Opis problemu i koncepcja jego rozwiązania (ToDo)}
+\label{Chapter11}
+
+Treść testowa. \textit{TexTit treść testowa.}. Treść testowa.
+
+AKTUALNA WERSJA OPARTA NA: Project Brief
+
+Context
+The customer of this project is the Dean of the Faculty of Computing Science at the Poznan University of Technology. The project is going to be developed for the University, which is a middle-sized, Polish higher education institution. 
+Problems and Their Impact
+Problems:
+The University doesn't have statistics on its graduates' careers. It also doesn't have a feedback from the current and former students on their satisfaction of the services provided by the University.
+Impact of the problems:
+Because of the above problems, the University has a limited ability to measure and improve the quality of provided education services. If the quality is not satisfying, the University's prestige will decrease and fewer students will be willing to study there. This will cause the University to receive less funding from government and other organizations. 
+Outline of the Solution
+The solution is to conduct surveys among the University students and graduates. In these surveys they will be asked to provide an opinion on the studies and to give some information on their professional life.
+There will be a web application developed which will be the platform used to carry out surveys. It will allow reaching various target groups (current students, former students, etc.), verifying respondent's identity, collecting, storing and analyzing answers, and generating reports. The solution will also provide incentives to encourage potential participants to take part in the surveys. 
+Additionally, the application will allow to make anonymous surveys so in reports there will be no personal information about respondent. Moreover there will be some extra articles available only for those who complete the survey and kind of CMS to put articles on line. 
+Business Constraints
+Application has to be done until the end of February/March 2013. It’s a time when bachelor’s degree students need to finish their project before final exam. They are our developers. Budget is not known yet. 
+Preliminary Risk Assessment
+Priority will be high enough to get appropriate support from client-side. Also deadline seems to be suitable. The budget is still not known. Client did not specify a technology which has to be used in this project. There are some well-known technologies which may contribute our goals. Moreover, we hope that we will find easily a group of developers which can handle one of these technologies.
+Acceptance Criteria
+The most important quality criteria for the project are usability. Application should be useful for users and provide all functions at the easiest way to don't discourage end-user. System should allow as many users as possible to use it at same time. It is of high importance that the deadline cannot be met.
+Proposed Staff
+Jerzy Nawrocki – Jerzy.Nawrocki@cs.put.poznan.pl – Executive
+Sylwia Kopczyńska – Sylwia.Kopczynska@cs.put.poznan.pl – Senior Supplier
+Michał Witczak – mich.witczak@gmail.com  – Project Manager
+Błażej Matuszyk – blasoft@live.com – Architect / Quality Assurance
+Marcin Domański – marcaj13@gmail.com – Analyst
+Additional information
+Detailed problem description:
+University is currently using its own system to conduct surveys. Unfortunately, it has many disadvantages and students are not willing to use it (e.g. Users have problems with choosing the right tutor of their courses, sometimes they just cannot find them on the list). Moreover, that application doesn’t provide features required by the customer. It doesn’t support short surveys after lectures – surveys intended for graduates. Overall application should be more flexible to assist in carrying out many types of polls and surveys.
+
+\section{Cele projektu}
+Zbudowanie systemu umożliwiającego łatwe przeprowadzanie ankiet wśród studentów oraz absolwentów uczelni. System powinien:
+\begin{itemize}
+\item{współpracować z innymi systemami funkcjonującymi na uczelni (np. Sokrates)}
+\item{oferować dużą elastyczność przy definiowaniu ankiet oraz grup respondentów}
+\item{oferować rozbudowane możliwości raportowania}
+\end{itemize}
+
+%Oto przykład tekstu, do którego istnieje adnotacja na dole strony\footnote{To jest właśnie odnośnik.}. Do bibliografii odnosimy się w taki sposób \cite{Hirsch:HIR05}. Dla oznaczenia wszelkich terminów używany znacznika ,,definicja'': \definicja{Termin z definicji}. Natomiast, jeśli chcemy odnieść się do innego miejsca w dokumencie (które jest oznaczone pewną etykietą): \ref{Chapter12}. Łamanie strony odbywa się poprzez znacznik ,,pagebreak''. Po skrótach z kropką warto używać tyldy (np.~tak). Link podajemy poprzez znacznik ,,url'' (\url{www.google.pl}).
+
+%Do takiego ,,zwykłego'' myślnika używamy podwójnego znaku ,,-'', a pojedynczego do łączenia bezpośrednio dwóch wyrażeń. Potrójny stosujemy, jak chcemy gdzieś pokazać brak informacji.
+
+%Kompilację tego dokumentu najwygodniej zacząć od zainstalowania MikTeXa oraz przygotowana pliku render.bat, którego treść przedstawia się następująco:
+
+%\begin{verbatim}
+%@echo off
+%
+%pdflatex thesis-bachelor-polski.tex 
+%bibtex   thesis-bachelor-polski
+%pdflatex thesis-bachelor-polski.tex 
+%pdflatex thesis-bachelor-polski.tex 
+%
+%del *.aux *.bak *.log *.blg *.bbl *.toc *.out
+%\end{verbatim}
+%
+%Potrójna kompilacja to nie wymysł szalonego programisty, który uważa, że ,,wtedy lepiej się skompiluje'', ale rzeczywista potrzeba wynikająca z poprawnego powiązania ze sobą wszystkich odwołań w dokumencie. Po uruchomieniu takiego pliku .bat (jeśli wszystko pójdzie dobrze), powinien się utworzyć plik .pdf. Nie poleca się uruchamiania skryptu, gdy mamy otwartą aktualną wersję pliku .pdf. Przy pierwszym uruchomieniu, MikTeX prawdopodobnie będzie prosił o pozwolenie na pobranie wymaganych pakietów. UWAGA! Podczas kompilacji być może trzeba będzie trzy razy potwierdzać zaistnienie jakiegoś błędu związanego ze znacznikiem ,,ppcolophon'' -- jak potwierdzicie to Enterem, to kompilacja pójdzie dalej i wszystko skończy się szczęśliwie. To wynika z jakiejś konstrukcji w szablonie udostępnianym przez uczelnię.
+%
+%W tym podrozdziale generalnie znajduje się opis problemu, jaki doprowadził do powstania koncepcji Waszego systemu. Umieszcza się tu także ogólny opis tego, co Wasz system powinien robić, jakie ma zastosowanie (fachowo to się nazywa ,,problem i jego implikacje (znaczenie)'' oraz ,,cel biznesowy''). 
+%
+%\section{Omówienie pracy}
+%\label{Chapter12}
+%
+%Tutaj piszemy o celu samego dokumentu oraz ewentualnych konwencjach, jakie przyjęliśmy podczas opisywania różnych rzeczy. Dla systemu BIS-2 ten fragment wyglądał tak:
+%
+%\textit{Niniejszy dokument opisuje system System informacji bibliometrycznej (ang.~\definicja{Bibliometric Information System}) zwanego dalej BIS-2 (dla odróżnienia od wersji pilotażowej), który realizuje koncepcję przytoczoną w~punkcie \ref{Chapter11}. Praca ma formę dokumentacji technicznej dla osób, które zamierzają wdrażać i~obsługiwać system, ale także opisuje ideę stojącą za implementacją poszczególnych części projektu z~odniesieniami do literatury. Ponadto, jest to również praca dyplomowa inżynierska, zatem jej odbiorcami są także członkowie komisji egzaminacyjnej.}
+%
+%Następnie musicie napisać, co zawierają poszczególne rozdziały. U nas wyglądało to tak:
+%
+%\textit{W rozdziale \ref{Chapter2}. rozszerzono koncepcję projektu o~przedstawienie aktorów oraz obiektów biznesowych, a~także przybliżono scenariusze operacyjne w~postaci przypadków użycia. Specyfikację wymagań oprogramowania przedstawiono w rozdziałach \ref{Chapter3}.~(funkcjonalne) oraz w~\ref{Chapter4}.~(pozafunkcjonalne). W~rozdziale \ref{Chapter5}.~omówiono architekturę systemu na wyższym poziomie abstrakcji. Uzasadnienie wyboru technologii, opis implementacji i~koncepcji znajduje się w~rozdziale \ref{Chapter6}. Informacje dotyczące zapewniania jakości zostały opisane w~rozdziale \ref{Chapter7}. W~rozdziale \ref{Chapter8}.~umieszczono opis zarządzania wersjami i~sposobu pracy nad projektem. Zebrane wnioski i~doświadczenia zawarto w~rozdziale \ref{Chapter9}. W~dodatkach opisano wkład poszczególnych osób i~informacje uzupełniające. Ostatnią część dokumentu stanowi wykaz literatury przybliżający zagadnienia opisane w~pracy.}
