@@ -135,7 +135,8 @@ Supervisor\\\@ppsupervisor
 \renewcommand{\and}{\unskip{}, }%
 \renewcommand{\album}[1]{\unskip}%
 \cleardoublepage\thispagestyle{empty}\vspace*{\fill}%
-\footnotesize\singlespacing\noindent%
+\footnotesize%\singlespacing
+\noindent%
 \raisebox{-1.3cm}{\includegraphics[height=1.5cm]{figures/template/logo-pp}}%
 \hspace{1.5em}%
 \begin{minipage}[t]{11cm}%
