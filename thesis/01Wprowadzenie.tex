@@ -1,47 +1,57 @@
 \chapter{Wprowadzenie}
 \label{Chapter1}
 
-\section{Opis problemu i koncepcja jego rozwiązania (ToDo)}
+\section{Opis problemu i koncepcja jego rozwiązania}
 \label{Chapter11}
 
-Treść testowa. \textit{TexTit treść testowa.}. Treść testowa.
+\subsection{Problem}
+Podstawą każdej działalności jest warunkująca ją potrzeba. Niemożliwą jest jednak analiza potrzeb, bez wcześniejszego ich zbadania. Najłatwiejszą i najbardziej rozpowszechnioną metodą pozyskiwania wiedzy na jakiś temat jest pytanie o to osób związanych ze sprawą. Kiedy pytań jest wiele, a liczba potencjalnych respondentów osiąga niewyobrażalny poziom, zadawanie pytań wymaga usystematyzowania, podobnie, jak metodyka ich dostarczania do odpowiadających i gromadzenia odpowiedzi. Rozumując w ten sposób, ponownie wynajdujemy niezwykłe narzędzie badań, pozwalające na analizę danych i prowadzenie zaawansowanych statystyk. Mowa o ankiecie. \\
 
-AKTUALNA WERSJA OPARTA NA: Project Brief
+W kontekście uczelni technicznej, jaką jest Politechnika Poznańska, ankietowanie jest niezbędne do jej prawidłowej pracy. Bez informacji zwrotnej (ang.~\definicja{feedback}) praktycznie nie ma możliwości sprawdzenia poprawności podejmowanych działań, co w efekcie zawsze będzie prowadzić do katastrofy. \\
 
-Context
-The customer of this project is the Dean of the Faculty of Computing Science at the Poznan University of Technology. The project is going to be developed for the University, which is a middle-sized, Polish higher education institution. 
-Problems and Their Impact
-Problems:
-The University doesn't have statistics on its graduates' careers. It also doesn't have a feedback from the current and former students on their satisfaction of the services provided by the University.
-Impact of the problems:
-Because of the above problems, the University has a limited ability to measure and improve the quality of provided education services. If the quality is not satisfying, the University's prestige will decrease and fewer students will be willing to study there. This will cause the University to receive less funding from government and other organizations. 
-Outline of the Solution
-The solution is to conduct surveys among the University students and graduates. In these surveys they will be asked to provide an opinion on the studies and to give some information on their professional life.
-There will be a web application developed which will be the platform used to carry out surveys. It will allow reaching various target groups (current students, former students, etc.), verifying respondent's identity, collecting, storing and analyzing answers, and generating reports. The solution will also provide incentives to encourage potential participants to take part in the surveys. 
-Additionally, the application will allow to make anonymous surveys so in reports there will be no personal information about respondent. Moreover there will be some extra articles available only for those who complete the survey and kind of CMS to put articles on line. 
-Business Constraints
-Application has to be done until the end of February/March 2013. It’s a time when bachelor’s degree students need to finish their project before final exam. They are our developers. Budget is not known yet. 
-Preliminary Risk Assessment
-Priority will be high enough to get appropriate support from client-side. Also deadline seems to be suitable. The budget is still not known. Client did not specify a technology which has to be used in this project. There are some well-known technologies which may contribute our goals. Moreover, we hope that we will find easily a group of developers which can handle one of these technologies.
-Acceptance Criteria
-The most important quality criteria for the project are usability. Application should be useful for users and provide all functions at the easiest way to don't discourage end-user. System should allow as many users as possible to use it at same time. It is of high importance that the deadline cannot be met.
-Proposed Staff
-Jerzy Nawrocki – Jerzy.Nawrocki@cs.put.poznan.pl – Executive
-Sylwia Kopczyńska – Sylwia.Kopczynska@cs.put.poznan.pl – Senior Supplier
-Michał Witczak – mich.witczak@gmail.com  – Project Manager
-Błażej Matuszyk – blasoft@live.com – Architect / Quality Assurance
-Marcin Domański – marcaj13@gmail.com – Analyst
-Additional information
-Detailed problem description:
-University is currently using its own system to conduct surveys. Unfortunately, it has many disadvantages and students are not willing to use it (e.g. Users have problems with choosing the right tutor of their courses, sometimes they just cannot find them on the list). Moreover, that application doesn’t provide features required by the customer. It doesn’t support short surveys after lectures – surveys intended for graduates. Overall application should be more flexible to assist in carrying out many types of polls and surveys.
+W ostatnich latach\footnote{Mowa o okresie 2008-2013, który jest znany autorom niniejszej Pracy Dyplomowej.} Politechnika Poznańska posiadała szerokie spektrum narzędzi do pozyskiwania wiedzy o swoim działaniu i oferowanych usługach. Niestety, gros z nich wzajemnie się wykluczał. Przykładowy student na Wydziale Informatyki\footnote{Do 2010 roku -- Wydziale Informatyki i Zarządzania} poddawany był ankietom: elektronicznym na poziomie Uczelni, elektronicznym na poziomie Wydziału, ,,papierowym'' na poziomie Uczelni i Samorządu Studentów, a ponadto dodatkowej ankietyzacji w ramach niektórych zajęć dydaktycznych. Co gorsza, żaden spośród tych ,,systemów'' ankietyzacji nie posiada odpowiednich zabezpieczeń, wymaganych do zapewnienia wymierności ich wyników (jak zapewnienie, aby nikt nie wziął w ankiecie udziału więcej niż jeden raz, czy uniemożliwienie wypełnienia ankiety przeznaczonej dla innego wydziału, kierunku). Brak wymiernych efektów udziału w tych badaniach, podobnie jak ich mnogość i dezorientacja, kto tak naprawdę pozyskuje informacje, działała tu na niekorzyść ankietujących. Co jednak najważniejsze, istniała tylko jedna grupa docelowa -- studenci Politechniki Poznańskiej. \\
+
+Ustawa o Szkolnictwie Wyższym wymaga od uczelni wyższych badania nie tylko aktualnej społeczności studenckiej, lecz także jej absolwentów. Sprawdzane powinny być takie czynniki, jak rozwój karier czy satysfakcja z zapewnianych usług. Niestety, na Politechnice Poznańskiej brak jest odpowiednich narzędzi do prowadzenia tego rodzaju badań. Wracając więc do tego, co wspomniane zostało wcześniej, potencjalna katastrofa (jak chociażby niezauważony spadek jakości usług, prowadzący do zmniejszenia satysfakcji odbiorców i w efekcie spadku prestiżu Uczelni) to jedynie kwestia czasu. \\
+
+\subsection{Proponowane rozwiązanie}
+Na szczęście, problemu sprawnego ankietowania nie można porównywać z węzłem gordyjskim. Najłatwiejszym i -- w naszej opinii -- najbardziej popartym logicznymi argumentami rozwiązaniem jest stworzenie jednego, jednolitego, globalnego i prostego w obsłudze systemu prowadzenia badań i ankiet dla różnych grup docelowych, obejmujących wszystkich aktualnych i byłych studentów Politechniki Poznańskiej. Aby zapewnić dostępność oraz prostotę wdrożenia systemu, który na to pozwoli, zostanie on wykonany za pomocą technologii internetowych, co umożliwi też jego obsługę z użyciem dowolnej popularnej przeglądarki internetowej dostępnej na rynku. \\
+
+W trakcie analizy problemu, wraz z Kierownikiem Projektu oraz jego Architektem, doszliśmy do wniosku, że koniecznym będzie także zapewnienie swojego rodzaju ,,zachęty'' dla potencjalnych Respondentów -- o ile bowiem studentowi może zależeć na rozwoju jego uczelni, o tyle absolwent nie będzie czerpał z tego tytułu żadnych korzyści. Nasze rozwiązanie obejmuje więc także element zachęcający do korzystania z systemu, jakim jest dostęp dla Respondentów do unikalnych materiałów dydaktyczno-naukowych. \\
+
+Aby zapewnić, że pozyskane dane są prawidłowe, w proponowanym rozwiązaniu znajdą się systemy autoryzacji osób uzyskujących dostęp do badań i ankiet. Jest to jednak jedyny element wymagający sprawdzenia tożsamości Respondenta -- same wyniki będą całkowicie anonimowe. \\
+
+\section{Ograniczenia i zagrożenia dla projektu}
+Największym ograniczeniem, a zarazem zagrożeniem dla projektu jest czas. Na projektowanie, implementację i wdrożenie rozwiązania przewidziany jest jedynie okres od września 2012, do lutego 2013. Wynika to właśnie z faktu, iż projekt ten jest bezpośrednio związany z niniejszą Pracą Dyplomową. Dodatkowym zagrożeniem jest fakt braku wcześniejszego doświadczenia przy realizacji projektów opartych na technologiach internetowych.
 
 \section{Cele projektu}
-Zbudowanie systemu umożliwiającego łatwe przeprowadzanie ankiet wśród studentów oraz absolwentów uczelni. System powinien:
+Celem projektu \textit{iQuest} jest zbudowanie systemu umożliwiającego łatwe przeprowadzanie ankiet wśród studentów i absolwentów uczelni. System powinien:
 \begin{itemize}
 \item{współpracować z innymi systemami funkcjonującymi na uczelni (np. Sokrates)}
-\item{oferować dużą elastyczność przy definiowaniu ankiet oraz grup respondentów}
+\item{oferować dużą elastyczność:
+\begin{itemize}
+\item{przy definiowaniu różnorodnych ankiet}
+\item{przy tworzeniu i hierarchizacji grup respondentów}
+\item{przy zachęcaniu do uczestnictwa w niej przez potencjalnych Respondentów}
+\end{itemize}}
 \item{oferować rozbudowane możliwości raportowania}
+\item{ujednolicić uczelniany system pozyskiwania informacji}
+\item{odciążyć pracowników uczelni oraz Samorząd Studentów z obowiązków związanych z przeprowadzaniem konwencjonalnych (,,papierowych'') ankiet}
 \end{itemize}
+
+\section{Omówienie pracy}
+\label{Chapter12}
+
+{\color{red}Do uzupełnienia później}
+
+%Tutaj piszemy o celu samego dokumentu oraz ewentualnych konwencjach, jakie przyjęliśmy podczas opisywania różnych rzeczy. Dla systemu BIS-2 ten fragment wyglądał tak:
+%
+%\textit{Niniejszy dokument opisuje system System informacji bibliometrycznej (ang.~\definicja{Bibliometric Information System}) zwanego dalej BIS-2 (dla odróżnienia od wersji pilotażowej), który realizuje koncepcję przytoczoną w~punkcie \ref{Chapter11}. Praca ma formę dokumentacji technicznej dla osób, które zamierzają wdrażać i~obsługiwać system, ale także opisuje ideę stojącą za implementacją poszczególnych części projektu z~odniesieniami do literatury. Ponadto, jest to również praca dyplomowa inżynierska, zatem jej odbiorcami są także członkowie komisji egzaminacyjnej.}
+%
+%Następnie musicie napisać, co zawierają poszczególne rozdziały. U nas wyglądało to tak:
+%
+%\textit{W rozdziale \ref{Chapter2}. rozszerzono koncepcję projektu o~przedstawienie aktorów oraz obiektów biznesowych, a~także przybliżono scenariusze operacyjne w~postaci przypadków użycia. Specyfikację wymagań oprogramowania przedstawiono w rozdziałach \ref{Chapter3}.~(funkcjonalne) oraz w~\ref{Chapter4}.~(pozafunkcjonalne). W~rozdziale \ref{Chapter5}.~omówiono architekturę systemu na wyższym poziomie abstrakcji. Uzasadnienie wyboru technologii, opis implementacji i~koncepcji znajduje się w~rozdziale \ref{Chapter6}. Informacje dotyczące zapewniania jakości zostały opisane w~rozdziale \ref{Chapter7}. W~rozdziale \ref{Chapter8}.~umieszczono opis zarządzania wersjami i~sposobu pracy nad projektem. Zebrane wnioski i~doświadczenia zawarto w~rozdziale \ref{Chapter9}. W~dodatkach opisano wkład poszczególnych osób i~informacje uzupełniające. Ostatnią część dokumentu stanowi wykaz literatury przybliżający zagadnienia opisane w~pracy.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Oto przykład tekstu, do którego istnieje adnotacja na dole strony\footnote{To jest właśnie odnośnik.}. Do bibliografii odnosimy się w taki sposób \cite{Hirsch:HIR05}. Dla oznaczenia wszelkich terminów używany znacznika ,,definicja'': \definicja{Termin z definicji}. Natomiast, jeśli chcemy odnieść się do innego miejsca w dokumencie (które jest oznaczone pewną etykietą): \ref{Chapter12}. Łamanie strony odbywa się poprzez znacznik ,,pagebreak''. Po skrótach z kropką warto używać tyldy (np.~tak). Link podajemy poprzez znacznik ,,url'' (\url{www.google.pl}).
 
@@ -64,6 +74,9 @@ Zbudowanie systemu umożliwiającego łatwe przeprowadzanie ankiet wśród stude
 %
 %W tym podrozdziale generalnie znajduje się opis problemu, jaki doprowadził do powstania koncepcji Waszego systemu. Umieszcza się tu także ogólny opis tego, co Wasz system powinien robić, jakie ma zastosowanie (fachowo to się nazywa ,,problem i jego implikacje (znaczenie)'' oraz ,,cel biznesowy''). 
 %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %\section{Omówienie pracy}
 %\label{Chapter12}
 %

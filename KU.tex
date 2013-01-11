@@ -10,11 +10,12 @@
 \begin{document}
 
 %PANIE BOROWIAK: 10.01.2013 Dodałem swoje \hypernation()
+%PANIE URBANIAK: żem zauważył \hyphenation{} ;]
 
 \part{Moodle jako narzędzie Szatana do gnębienia programistów.}
 \chapter{Implementacja}
 \subsubsection{Wprowadzenie}
-Jedną z części pracy było zaprojektowanie graficznego interfejsu użytkownika. Głównym problemem jaki się pojawił, był wybór odpowiedniego narzędzia. Celem jaki postawiono, była maksymalna zgodność projektowanych elementów z różnymi wersjami \emph{Moodle} --- zarówno wcześniejszymi, jak i późniejszymi. Zdecydowano, aby starać się korzystać z gotowych interfejsów programowania aplikacji \emph{(API)} dostarczonych przez \emph{Moodle}, tj. \emph{Page API}, \emph{Form API}, oraz \emph{Access API}. Wszystkie interfejsy są napisane przy użyciu języka PHP --- są wykonywane po stronie serwera. Konieczne okazało się też wykonanie niektórych skryptów po stronie klienta. Dlatego w projekcie wykorzystano również język skryptowy \emph{Java Script}.
+Jedną z części pracy było zaprojektowanie graficznego interfejsu użytkownika. Głównym problemem jaki się pojawił, był wybór odpowiedniego narzędzia. Celem jaki postawiono, była maksymalna zgodność projektowanych elementów z różnymi wersjami \emph{Moodle} -- zarówno wcześniejszymi, jak i późniejszymi. Zdecydowano, aby starać się korzystać z gotowych interfejsów programowania aplikacji \emph{(API)} dostarczonych przez \emph{Moodle}, tj. \emph{Page API}, \emph{Form API}, oraz \emph{Access API}. Wszystkie interfejsy są napisane przy użyciu języka PHP -- są wykonywane po stronie serwera. Konieczne okazało się też wykonanie niektórych skryptów po stronie klienta. Dlatego w projekcie wykorzystano również język skryptowy \emph{Java Script}.
 
 \section{Problemy i ich rozwiązania}
 \subsection{Krzysztof Urbaniak}
@@ -34,7 +35,7 @@ Jako, że rozdział ten tyczy się grafiki, warto wspomnieć, że elementy na st
 \end{description}
 
 \subsubsection{Formularze}
-Projektując graficzny interfejs użytkownika, prędzej czy później pojawia się potrzeba wyboru narzędzia do projektowania formularzy. Rozważano kilka możliwości. Po pierwsze, użycie po prostu czystego języka \emph{HTML}. Drugą opcją było użycie wbudowanych w \emph{Moodle} \emph{API} --- \emph{Form API} lub \emph{Output API}. Jako trzecią możliwość rozważano użycie zewnętrznych \emph{API} --- nie związanych z \emph{Moodle}.
+Projektując graficzny interfejs użytkownika, prędzej czy później pojawia się potrzeba wyboru narzędzia do projektowania formularzy. Rozważano kilka możliwości. Po pierwsze, użycie po prostu czystego języka \emph{HTML}. Drugą opcją było użycie wbudowanych w \emph{Moodle} \emph{API} -- \emph{Form API} lub \emph{Output API}. Jako trzecią możliwość rozważano użycie zewnętrznych \emph{API} -- nie związanych z \emph{Moodle}.
 
 Odrzucono pomysł pierwszy oraz trzeci. Pomysł pierwszy wydał się zbyt pracochłonny. Z uwagi na dość mocno ograniczony czas, nie chciano programować czegoś od początku samemu, skoro wcześniej zostało to już przez kogoś napisane. Nawet kosztem tego, że interfejs nie wyglądał dokładnie tak, jak go zaprojektowano. Na pierwszym miejscu stawiano jego kompletność. Wariant trzeci był nie zgodny z założeniem mówiącym o korzystaniu z interfejsów \emph{Moodle} tam, gdzie to możliwe. Nie chciano, żeby użytkownik poczuł, że programowana wtyczka nie jest częścią systemu \emph{Moodle}. Co więcej, interfejs odbiegałby od wyglądu \emph{Moodle} i mógłby zostać oceniony jako nieintuicyjny. W pierwszej kolejności zdecydowano się korzystać z \emph{Output API}.
 
@@ -56,7 +57,7 @@ Pierwszy plan zakładał wyświetlanie użytkownikowi dwóch sekcji. Jedną z od
 
 Zostało to spowodowane uaktualnieniami w \emph{Moodle}. Kod \emph{PHP} wyświetlania typów modułów, zostaje nadpisywany przez \emph{JavaScript}. W taki sposób, z poziomu funkcji \emph{PHP}, odpowiedzialnych za wyświetlanie listy modułów w danej sekcji, nie da się kontrolować, które moduły zostaną wyświetlane, a które nie. Mówiąc prościej, programista może jedynie wybrać, jakie moduły będą wyświetlane we wszystkich sekcjach w danym kursie, a nie może decydować o tym, co można dodać w każdej sekcji z osobna.
 
-Rozwiązaniem było umieszczenie listy badań oraz listy materiałów w jednej sekcji. Można w niej dodać jakikolwiek moduł. Dopiero przy wyświetlaniu moduły dzielone są na dwie listy: listę badań i listę materiałów. Dzięki temu cel został osiągnięty --- użytkownik zobaczy tylko te moduły, które może wyświetlić. Co więcej, będą one odpowiednio posegregowane, aby użytkownik szybko mógł znaleźć to, czym jest zainteresowany.
+Rozwiązaniem było umieszczenie listy badań oraz listy materiałów w jednej sekcji. Można w niej dodać jakikolwiek moduł. Dopiero przy wyświetlaniu moduły dzielone są na dwie listy: listę badań i listę materiałów. Dzięki temu cel został osiągnięty -- użytkownik zobaczy tylko te moduły, które może wyświetlić. Co więcej, będą one odpowiednio posegregowane, aby użytkownik szybko mógł znaleźć to, czym jest zainteresowany.
 
 \subsubsection{Tworzenie badania}
 Kolejną trudnością w projekcie, było połączenie wtyczki z systemem \emph{Moodle}. Głównie sprowadzało się to do tego, aby tak wykorzystać interfejs graficzny oferowany przez \emph{Moodle}, żeby użytkownik nie miał poczucia zmiany systemu. Zarówno wygląd, jak i dodawanie różnych funkcji, powinny być zgodne ze standardem \emph{Moodle}. Dzięki takiemu podejściu, osoba, korzystająca wcześniej z \emph{Moodle}, a pragnąca używać wtyczki \emph{iQuest}, nie musiała zmieniać swoich przyzwyczajeń. Co więcej, w projekcie duży nacisk został postawiony na nie zniechęcanie respondentów do wypełnienia ankiety, co było dodatkową motywacją do zaprojektowania przyjaznego użytkownikom interfejsu.
