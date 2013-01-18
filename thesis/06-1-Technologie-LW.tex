@@ -1,0 +1,39 @@
+
+\subsection{Moodle}
+\emph{Moodle} (roz. \textit{Modular Object-Oriented Dynamic Learning Environment}) -- stanowi podstawę systemu \textit{iQuest}. Wyboru dokonano ze względu na kilka czynników:
+\begin{itemize}
+\item{Propozycję Architekta, wynikającą z faktu, iż Moodle posiada już implementację wielu wymaganych w \textit{iQuest} mechanizmów.}
+\item{Oczekiwania Klienta, wynikające z popularności platformy Moodle wśród systemów uczelnianych.}
+\end{itemize}
+
+\subsection{PHP}
+\emph{PHP} -- platforma Moodle opiera się właśnie na tym języku programowania. Z tego względu, jest to też technologia zastosowana w większości rozszerzeń utworzonych przez zespół /textit{iQuest}, korzystających z wielu interfejsów programowania aplikacji tej platformy.
+
+\subsection{PHPUnit}
+Ze względu na fakt, iż programiści \textit{Moodle'a} wykonują testy jednostkowe kodu wykorzystując do tego celu \emph{PHPUnit}, zdecydowano o wzorowaniu się na tym działaniu. \textit{Moodle} udostępnia dwie klasy do testowania -- \textit{basic\_testcase} i \textit{advanced\_testcase}, przy czym ta druga służy do testów, które wchodzą w interakcję z bazą danych.
+
+\subsection{Selenium}
+\emph{Selenium} -- szybko rozwijające się narzędzie do testów akceptacyjnych. Był to naturalny wybór zwłaszcza, że zostało ono przybliżone zespołowi \textit{iQuest} na zajęciach z Inżynierii Oprogramowania w trakcie toku studiów.
+
+\subsection{PostgreSQL}
+System zarządzania bazą danych \emph{PostgreSQL} został wybrany ze względu na wymagania pozafunkcjonalne.
+
+\subsection{Eclipse IDE}
+\label{Chapter621}
+
+Wybór \emph{Eclipse IDE} jako stosowanego dla projektu \textit{iQuest} zintegrowanego środowiska programistycznego wynika z faktu, iż oprogramowanie to jest dostępne za darmo. Dodatkową zaletą \textit{Eclipse} jest modularność tego rozwiązania, dzięki czemu dostępny jest w nim dodatek \emph{PHP Development Tools}, znacząco upraszczający pracę z technologią PHP.
+
+\subsection{SVN}
+\label{Chapter632}
+
+\emph{Subversion} został wybrany jako podstawowy system zarządzania treścią ze względu na wymagania pozafunkcjonalne. Dodatkową zaletą jego użycia jest fakt, że zespół eksploatacji, który docelowo przejmie zarządzanie artefaktami związanymi z projektem, wykorzystuje właśnie \textit{SVN}.
+
+\subsection{Redmine}
+\label{Chapter633}
+
+Systemu zarządzania projektami \emph{Redmine} wykorzystywany był od samego początku istnienia projektu. Jest to narzędzie bardzo przydatne w wymianie informacji pomiędzy członkami zespołu, integrujące się m.in. z repozytorium kodu. Technologia ta została narzucona, ze względu na sposób organizacji pracy w \textit{Software Development Studio} na Politechnice Poznańskiej.
+
+\subsection{JasperReports}
+\label{Chapter634}
+
+Ze względu na wymagania pozafunkcjonalne, zdecydowano się skorzystać z mechanizmów raportowania oferowanych przez \emph{JasperReports}.

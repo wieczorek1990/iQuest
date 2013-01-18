@@ -5,4 +5,4 @@ bibtex   thesis-bachelor-polski
 pdflatex thesis-bachelor-polski.tex 
 pdflatex thesis-bachelor-polski.tex 
 
-rm -f *.aux *.bak *.log *.blg *.bbl *.toc *.out
+rm -f *.aux *.bak *.log *.blg *.bbl *.toc *.out *.synctex.gz

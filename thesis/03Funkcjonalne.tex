@@ -4,6 +4,7 @@
 Celem sprawnej realizacji celów warunkujących powstanie systemu iQuest, musi on spełniać szereg wymagań funkcjonalnych. Obejmuje to m.in. tworzenie i prowadzenie (zarówno ze strony Ankietera, jak i Respondenta) Badań i Ankiet, a także analizę powstałych na ich podstawie zestawień danych. Ze względu na charakter projektu iQuest, niezwykle ważną funkcjonalnością okazał się najbardziej podstawowy ze wszystkich mechanizmów -- logowanie do systemu. Koniecznością jest bowiem prawidłowa autoryzacja użytkowników systemu, jak też współpraca z innymi systemami Uczelni.
 
 \section{Diagram przypadków użycia}
+\label{Chapter31}
 
 Na rysunku 3.1 (poniżej) przedstawiono diagram przypadków użycia. W ramach Systemu udostępniane są różne funkcje, możliwe do wykonania przez różnych aktorów. Dla przykładu, Ankieter może tworzyć Badania i analizować ich Statystyki oraz Raporty, podczas gdy Respondent może odpowiadać w Ankietach w ramach skierowanych do niego Badań; Administrator zarządza przydzielaniem ról; Administrator Bazy Danych zajmuje zarządza grupami Respondentów i przydzielaniem praw i zezwoleń.
 
@@ -13,10 +14,12 @@ Na rysunku 3.1 (poniżej) przedstawiono diagram przypadków użycia. W ramach Sy
 \end{figure}
 
 \section{Ankieter}
+\label{Chapter32}
 
 Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 
 \subsection{UC01: Stworzenie Ankiety}
+\label{Chapter321}
 
 \ucsection{UC01: Stworzenie Ankiety}{Ankieter}
 {Ankieter jest zalogowany w Systemie i chce utworzyć Ankietę}
@@ -39,6 +42,7 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 {}
 
 \subsection{UC02: Edycja Ankiety}
+\label{Chapter322}
 
 \ucsection{UC02: Edycja Ankiety}{Ankieter}
 {
@@ -62,6 +66,7 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 {}
 
 \subsection{UC03: Wybór Grupy Docelowej}
+\label{Chapter323}
 
 \ucsection{UC03: Wybór Grupy Docelowej}{Ankieter, Administrator Bazy Danych}
 {
@@ -88,6 +93,7 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 {}
 
 \subsection{UC04: Uruchomienie Badania}
+\label{Chapter324}
 
 \ucsection{UC04: Uruchomienie Badania}{Ankieter, Respondent}
 {
@@ -108,6 +114,7 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 {}
 
 \subsection{UC06: Sprawdzenie wyników}
+\label{Chapter325}
 
 \ucsection{UC06: Sprawdzenie wyników}{Ankieter}
 {
@@ -122,10 +129,12 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 {}
 
 \section{Respondent}
+\label{Chapter33}
 
 Poniżej przedstawiono przypadki użycia dotyczące Respondenta.
 
 \subsection{UC05: Udzielenie odpowiedzi}
+\label{Chapter331}
 
 \ucsection{UC05: Udzielenie odpowiedzi}{Respondent}
 {
@@ -149,10 +158,12 @@ Poniżej przedstawiono przypadki użycia dotyczące Respondenta.
 {}
 
 \section{Administrator Bazy Danych}
+\label{Chapter34}
 
 Poniżej przedstawiono przypadki użycia dotyczące Administratora Bazy Danych.
 
 \subsection{UC07: Tworzenie Grupy Docelowej}
+\label{Chapter341}
 
 \ucsection{UC07: Tworzenie Grupy Docelowej}{Administrator Bazy Danych}
 {
@@ -173,6 +184,7 @@ Poniżej przedstawiono przypadki użycia dotyczące Administratora Bazy Danych.
 {}
 
 \subsection{UC08: Edycja Grupy Docelowej}
+\label{Chapter342}
 
 \ucsection{UC08: Edycja Grupy Docelowej}{Administrator Bazy Danych}
 {
@@ -189,10 +201,12 @@ Poniżej przedstawiono przypadki użycia dotyczące Administratora Bazy Danych.
 {}
 
 \section{Wszyscy Użytkownicy}
+\label{Chapter35}
 
 Poniżej przedstawiono przypadki użycia dotyczące wszystkich Użytkowników.
 
 \subsection{UC09: Logowanie do Systemu}
+\label{Chapter351}
 
 \ucsection{UC09: Logowanie do Systemu}{Użytkownik (Ankieter, Administrator, Administrator Bazy Danych, Respondent)}
 {Użytkownik posiada konto w Systemie i posiada poprawne dane logowania}
