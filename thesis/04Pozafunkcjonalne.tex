@@ -12,186 +12,152 @@ W niniejszym rozdziale zostaną zaprezentowane i krótko opisane charakterystyki
 Projektując system, pod uwagę brane były następujące charakterystyki:
 
 \begin{itemize}
-\item{Funkcjonalna poprawność}
-\item{Zużycie zasobów}
-\item{Współistnienie}
-\item{Interoperacyjność}
-\item{Łatwość nauczenia się}
-\item{Ochrona użytkownika przed błędami}
-\item{Estetyka interfejsu Użytkownika}
-\item{Dostępność personalna}
+\item{Analizowalność}
+\item{Autentyczność}
 \item{Bezpieczeństwo (wolność od ryzyka)}
-\item{Kompletność kontekstowa}
-\item{Odporność na wady}
-\item{Odtwarzalność}
+\item{Charakterystyka czasowa}
+\item{Dostępność personalna}
+\item{Dostępność techniczna}
+\item{Estetyka interfejsu Użytkownika}
+\item{Funkcjonalna poprawność}
+\item{Identyfikowalność}
 \item{Integralność}
-\item{Niezaprzeczalność}
-\item{Łatwość instalacji}
+\item{Interoperacyjność}
+\item{Kompletność kontekstowa}
 \item{Łatwość adaptacji}
+\item{Łatwość instalacji}
+\item{Łatwość nauczenia się}
+\item{Łatwość testowania}
 \item{Łatwość zamiany}
 \item{Łatwość zmiany}
-\item{Łatwość testowania}
+\item{Niezaprzeczalność}
+\item{Ochrona użytkownika przed błędami}
+\item{Odporność na wady}
+\item{Odtwarzalność}
 \item{Poufność}
-\item{Identyfikowalność}
-\item{Autentyczność}
-\item{Analizowalność}
+\item{Współistnienie}
+\item{Zużycie zasobów}
 \end{itemize}
 
-Wymienione powyżej charakterystyki były rozpatrywane w fazach projektowania i implementacji z zastosowaniem różnych priorytetów. Dla przykładu, najważniejsza okazała się %DOKOŃCZYĆ%
+Wymienione powyżej charakterystyki były rozpatrywane w fazach projektowania i implementacji z zastosowaniem różnych priorytetów. Ciężko w tym miejscu wyznaczyć najważniejsze bądź najtrudniejsze do osiągnięcia wymagania z nimi związane, w szczególności w relacji wzajemnej między nimi. Tym niemniej, można dokonać pewnych obserwacji w klasyfikacji ogólnej.\\
 
-cji.
-Najważniejsza okazała się dokładność, gdyż system ma wspomagać ocenę jakości pracy naukowej, a zatem powinien udostępniać rzetelne informacje. Dużą uwagę zwrócono na fazę oczyszczania
-danych, choć w wyniku napotkanych trudności, nie uzyskano tak dużej dokładności jaką zakładano.
-Na bezpieczeństwo położono duży nacisk ze względu na wrażliwość danych i dostepu do nich –
-zastosowano silny mechanizm uprawnień kontrolowany przez administratora. Odporność na błędy
-154.3. Wymagania pozafunkcjonalne i ich weryﬁkacja 16
-została ogólnie zapewniona przez zastosowanie obsługi wyjątków, częste testowanie systemu oraz
-sprawdzanie poprawności danych.
-Modułowość sprawiła, iż łatwe staje się przeprowadzanie zmian i poprawienie działania jednej
-z części systemu. Poprzez dobre i wyczerpujące komentowanie kodu, zwłaszcza w miejscach o
-większym stopniu złożoności, osiągnięto łatwiejszą możliwość analizy i wprowadzanie potrzebnych
-korekt.
-BIS-2 korzysta ze sprawdzonych i uznanych narzędzi omówionych w rozdziale 6. To sprawia,
-iż zachowana została adaptowalność i przenośność systemu, chociażby dzięki wybrania języka programowania Java. Także współdziałanie z innymi aplikacjami nie powinno powodować żadnych
-komplikacji. System zarządzania bazą danych PostgreSQL zapewnia narzędzia związane z odtwarzaniem danych po awarii, co można wykorzystać w systemie. Charakterystyka czasowa nie
-była najważniejszym wymaganiem dla BIS-2, jednak dołożono wszelkich starań, aby wykonywanie
-operacji przez aplikację było jak najszybsze. Najbardziej czasochłonnymi procesami okazały się:
-pozyskiwanie danych o publikacjach z zewnętrznych serwisów oraz algorytm oczyszczania danych,
-a zatem etapy w większości sytuacji niebezpośrednio odczuwalne przez użytkownika.
+Bardzo ważna okazała się interoperacyjność, czyli współpraca systemu iQuest z pozostałymi systemami Uczelni. Również odporność na wady oraz odtwarzalność -- ze względu na ilość i wagę danych -- okazały się znaczące dla projektu. \\
 
-Każde z wymagań w ramach powyższych charakterystyk oprogramowania zostało określone za pomocą etykiety określającej jej ważność oraz trudność implementacji w formacie \textit{[ważność]/[trudność_implementacji]}. Wartości te wyrażone są w następującej skali:
-\begin{itemize}
-\item{H (ang.~\definicja{high}) -- wysoka;
-\item{M (ang.~\definicja{medium}) -- średnia;
-\item{L (ang.~\definicja{low}) -- niska.
-\end{itemize}
+Nie mniej istotna okazała się estetyka interfejsu użytkownika, która ma przyciągnąć potencjalnych respondentów i umożliwić im wygodę przy podejmowaniu ankiet. Jego intuicyjność sprawia, że użytkownik końcowy nie potrzebuje wiele czasu na naukę użytkowania systemu, nawet, jeśli zrezygnuje z zapoznania się z instrukcją użytkownika końcowego -- która również została przygotowana. Znacząco wspomaga on obsługę systemu i pozwala w łatwy sposób tworzyć, prowadzić i wypełniać badania i ankiety. \\
 
-Funkcjonalna poprawność
-R1: Wszystkie wartości mają być prezentowane z dokładnością do 2 miejsc do przecinku. H/L
-Charakterystyka czasowa
-R2: Wyświetlanie ankiety powinno odbywać się z maksymalną prędkością nie większą iż 4 sekundy. H/L
-R3: Generowanie raportów powinno odbywać się ze średnią prędkością nie większą iż 1 godzina. M/M
-R54: Należy zdefiniować klasy operacji w zależności od czasu ich trwania (klasy: bez komunikatu potwierdzającego wykonanie, z potwierdzeniem wykonania, wykonywane na serwerze w tle) M/M
-Zużycie zasobów
-R4: System nie powinien wykorzystywać więcej serwerów niż jeden. M/L
-R5: System powinien działać poprawnie przy nawet 10000 użytkowników zalogowanych jednocześnie. H/M
-R55: Należy kolejkować zadania do wykonania przez system, które nie muszą zostać wykonane natychmiastowo. M/M
-R57: Możliwość pracy dla ankietera i respondenta na średniej klasy laptopie (CPU 2GHz, RAM 4GB). H/L
-Współistnienie
-R6: Jedynym kryterium działania systemu ankiet (bez raportów) jest działająca przeglądarka. H/L
-R7: System generowania raportów może być osobną aplikacją, działać na specjalnym potrzebnym do tego sprzęcie i oprogramowaniu. L/L
-R58: Wszystkie potrzebne dane z zewnętrznych systemów przechowywać lokalnie i synchronizować . M/H
-R59: Kolejkować e-maile w systemie, podczas gdy nie da się ich wysłać (awaria ePoczty). H/M
-Interoperacyjność
-R8: System ma wymieniać potrzebne dane z systemami uczelnianymi. eKonto, eDziekanat, ePoczta. Dane mają być aktualne. H/M
-Łatwość nauczenia się
-R9: Interfejs użytkownika (dla ankietowanych) powinien być całkowicie intuicyjny. H/M
-R10: Interfejs użytkownika (generowanie raportów, tworzenie ankiet) może wymagać drobnego szkolenia. M/L
-Ochrona użytkownika przed błędami
-R11: Dodatkowe potwierdzenie chęci wykonania operacji nieodwracalnych (nawet dla administratora), albo możliwość przywrócenia usuniętych danych przez jakiś czas. H/M
-R12: Dla dużych ankiet, zatwierdzenie odesłania jej przez ankietowanego. M/L
-R30: Potwierdzenie przed rozesłaniem ankiet. M/L
-R56: Lista operacji wykonywanych w tle. M/L
-Estetyka Interfjesu Użytkownika
-R13: Ma zachecać a nie zniechęcać, przyjazne, czytelne. H/M
-Dostępność personalna
-R14: Przewidzieć na poziomie architektury, możliwośc rozbudowy np. dla osób niedowidzących. L/M
-Bezpieczeństwo (wolność od ryzyka)
-R15: Dane trzymane w systemie muszą być tymi, uzyskanymi w ankietach H/L
-R31: Projekt systemu należy poddać analizie z wykorzystaniem metody ATAM. M/M
-Kompletność kontekstowa
-R16: System ma działać dla: IE 7.0+, Firefox 15, Opera 12 H/M
-R62: Przygotować raport jak system zachowuje się na platformach mobilnych. L/L
-Dostępność techniczna
-R17: System może mieć przerwę serwisową, ale wtedy specjalny ekran do kiedy będzie trwać. H/L
-Odporność na wady
-R18: Gdy nastąpi awaria innych systemów np. eKonta, należy poinformować użytkownika o błędzie i uniemożliwić mu dalsze działanie w systemie. H/L
-Odtwarzalność
-R19: Odtwarzanie całego systemu 3h. M/L
-R20: Kopia zapasowa bazy danych, raz na dobę. H/L
-R64: Dostępność instrukcji odtwarzania. H/L
-R65: Wykonywanie operacji w transakcjach tam gdzie to możliwe. H/L
-Integralność
-R34: Baza danych powinna być chroniona przed nieuprawnionym dostępem [modyfikacją / usunięciem] w następujący sposób: username/pass. H/L
-R35: System powinien być odporny na następujące próby nielegalnego dostępu: dostęp fizyczny do serwera. M/L
-R36: Należy chronić, szyfrować dane przesyłane z i do systemu. M/L
-Niezaprzeczalność
-R22: System musi posiadać logi (zalogowanie w systemie, stworzenie/edycja/usunięcie/wysłanie/wypełnienie ankiety), aby móc udokumentować skąd pochodzą dane. H/L
-Łatwość instalacji
-R24: Należy utworzyć raport z łatwości adaptacji. Gdzie znajdują się adaptery. M/L
-R41: System umożliwiać łatwą aktualizacje. Zakładamy, że wersja Moodle'a pozostaje bez zmian. H/H
-Łatwość adaptacji
-R42: System powinien współpracować z systemem BI (raportowanie). H/H
-Łatwość zamiany
-R43: System powinien umożliwiać wczytanie wszystkich danych z poprzedniej wersji. H/M
-R44: Procedura wymiany oprogramowania powinna trwać nie dłużej niż 2 dni i odbywać się w następujący sposób: zgodność z instrukcją. M/L
-R61: Brać pod uwagę podczas projektowania systemu, możliwość wielojęzyczności. M/M
-Łatwość zmiany
-R51: System powinien być przygotowany na wprowadzenie następujących zmian: nowe typy raportów, nowe typy pytań, modyfikacje interfejsów systemów zewnętrznych. M/M
-Łatwość testowania
-R52: „Atrapy” systemów zewnętrznych (w tym eKonto). M/M
-R53: Należy umożliwić przełączanie systemu między trybem testowym i produkcyjnym. M/L
-Interoperacyjność
-R26: System ma pobierać dane z systemu eDziekanat w następujący sposób: SOAP. H/M
-R27: System ma przesyłać dane o wiadomościach do wysłania do systemu ePoczta w następujący sposób: SOAP. H/M
-R28: System ma pobierać dane do autoryzacji z systemu eKonto w następujący sposób: SOAP. H/M
-R29: System ma przesyłać wyniki ankiet do systemu raportowania. (dodefiniować później!) H/M
-Poufność
-R32: Uwierzytelnianie i autoryzacja dla każdej operacji. H/L
-Identyfikowalność
-R38: System ma umożliwiać identyfikowanie podmiotów (osobno administratorów, ankieterów, respondentów) podejmujących działania: tworzenie ankiet, odpowiadanie w 
-ankietach. H/M
-Autentyczność
-R39: Gdy student staje się absolwentem, należy umożliwić mu dalsze logowanie się do systemu bez użycia eKonta. H/M
-Analizowalność
-R45: Komentarze w kodzie źródłowym powinny być w języku angielskim. M/L
-R46: Kod źródłowy sytemu powinien być utworzony zgodnie ze standardami Moodle'a. M/L
-R47: System powinien zawierać testy jednostkowe. M/M
-R48: System powinien rejestrować stack trace i rodzaj błędu (fatal, warning). H/L
-R49: Wraz z kodem źródłowym systemu należy dostarczyć dokumentację: jak opisano w PID. H/M
-R50: Logować niewłaściwe wywołania metod. H/L
+Zważywszy, że projekt ten jest istotny dla Uczelni, dołożono wszelkich starań, aby spełnić wszystkie wymagania pozafunkcjonalne -- nie tylko te opisane powyżej jako ważne. Zadanie to zostało w sporej części wykonane dzięki zastosowaniu sprawdzonego i znanego narzędzia w roli podstawy dla całego systemu. Mowa o platformie Moodle\footnote{Więcej informacji w rozdziale~\ref{Chapter6}, poświęconym implementacji i zastosowanym w niej technologiom.}. Zastosowanie jej pozwoliło m.in. na zapewnienie pełnej modułowości systemowi, dzięki czemu wprowadzanie jakichkolwiek zmian w dowolnej jego części jest proste i nie wpływa na resztę kodu. Spełniona została także adaptatywność i przenośność systemu, oparta na uniwersalności języka PHP, jak też szerokiej gamie obsługiwanych przez Moodle systemów baz danych. \\
 
-%
-%Poniżej są jeszcze stare charakterystyki oprogramowania (wtedy myśleliśmy, że to mądrze brzmi), kategorii wymagań pozafunkcjonalnych. Obecnie to się trochę zmieniło, zatem ta lista będzie znacznie bardziej rozbudowana.
-%
-%\begin{itemize}
-%\item Dokładność (ang. \definicja{accuracy})
-%\item Bezpieczeństwo (ang. \definicja{security})
-%\item Odporność na błędy (ang. \definicja{fault tolerance})
-%\item Odtwarzalność (ang. \definicja{recoverability})
-%\item Charakterystyka czasowa (ang. \definicja{time behaviour})
-%\item Łatwość analizowania (ang. \definicja{analysability})
-%\item Łatwość zmian (ang. \definicja{changeability})
-%\item Adaptowalność (ang. \definicja{adaptability})
-%\item Instalowalność (ang. \definicja{installability})
-%\item Współistnienie (ang. \definicja{co-existence})
-%\item Zamienność (ang. \definicja{replaceability})
-%\end{itemize}
-%
-%Tutaj piszemy, które podcharakterystyki były dla nas priorytetowe lub szczególnie ważne, a które mniej. Oczywiście, z uzasadnieniem. Piszemy również, jak zamierzaliśmy (lub to robiliśmy) dbać o to, aby wszystko było spełnione.
-%
+Zalety wykorzystania tak powszechnej technologii są jednak znacznie szersze. Moodle posiada swój własny standard kodowania, którego przy realizowaniu projektu starano się w pełni przestrzegać. To sprawia, że w połączeniu z wytycznymi DRO (\definicja{Dział Rozwoju Oprogramowania Politechniki Poznańskiej}), dokumentacją Moodle i dokumentacją projektu, nakład pracy wymagany do wdrożenia się celem rozwoju systemu iQuest został zminimalizowany. \\
+
+W trakcie prac nad projektem, bardzo silny nacisk stawiano na prawidłowe zarządzanie uprawnieniami użytkowników. Są one weryfikowane przy każdym działaniu. Zależą one od przydzielonej im w systemie roli użytkownika. Szczegóły tej kwestii swobodnie definiować może administracja. Ważnym jest, że osoby o roli ankietera mogą modyfikować i analizować jedynie utworzone przez siebie, lub udostępnione im badania. Podobnie działają uprawnienia przydzielone do roli respondenta -- pozwalając dokładnie jeden raz odpowiedzieć na pytania w ankietach skierowanych do grup docelowych, do których należy użytkownik o takiej roli. \\
+
+Charakterystyką, której od samego początku nie traktowano priorytetowo, była szybkość działania systemu. W ogólnym sensie, wyświetlanie danych realizowane jest w relatywnie krótkim czasie, zależy to jednak od tego, gdzie są one przechowywane, czy ich pobranie wymaga połączenia z systemem zewnętrznym oraz czy istnieją one już w bazie danych systemu, czy dopiero należy je tam zamieścić. Tym niemniej, wszelkie związane z tą kwestią wymagania zostały spełnione. \\
+
+Na sam koniec, warto wspomnieć o kwestii instalacji systemu. Realizowana jest ona trójstopniowo. Pierwszym krokiem jest umieszczenie na serwerze docelowym plików platformy Moodle. W tak przygotowanym środowisku, umieszczane są następnie dane systemu iQuest. Ostatnim krokiem jest wykonanie standardowej instalacji platformy Moodle oraz jej konfiguracja. Aktualizacja systemu przebiega bardzo podobnie, i polega jedynie na zmianie odpowiednich plików na serwerze, w ramach którego działa system, i przeprowadzenia procesu aktualizacji zgodnie ze standardowymi procedurami obowiązującymi dla Moodle. W trakcie testów na urządzeniu przenośnym z procesorem \definicja{Intel Atom D525}, 4 GB pamięci operacyjnej oraz małowydajnym dyskiem twardym, pod kontrolą zwirtualizowanego systemu \definicja{Ubuntu 12.04 LTE}, cały proces instalacji nie przekraczał 40 minut. Głównym czynnikiem ograniczającym wydajność procesu była szybkość środowiska wirtualnego oraz zastosowanego dysku twardego.
+
 \section{Wymagania pozafunkcjonalne i ich weryfikacja}
 \label{Chapter43}
+
+Wymagania pozafunkcjonalne przypisane do wyżej opisanych charakterystyk oprogramowania przedstawione zostały w tabeli \ref{tab:reqs}. Dodatkowo, określono za pomocą etykiety \textbf{ważność (W)} oraz \textbf{trudność implementacji (TI)} dla każdego z wymagań. Wartości w ramach tego oznaczenia wyrażone są w następującej skali:
+
+\begin{itemize}
+\item{H (ang.~\definicja{high}) -- wysoka}
+\item{M (ang.~\definicja{medium}) -- średnia}
+\item{L (ang.~\definicja{low}) -- niska}
+\end{itemize}
+
+\newpage
+\begin{center}
+\begin{longtable}{ | p{4cm} | p{9cm} | c | c | }
+\hline
+\textbf{Charakterystyka} & \textbf{Wymaganie} & \textbf{W} & \textbf{TI} \\ \hline
 %
-%W tablicy \ref{tab:reqs} przedstawiono wymagania pozafunkcjonalne związane z systemem. W kolumnach \textbf{Priorytet} oraz \textbf{Trudność} określono poziomy przy pomocy następującej notacji:
+Analizowalność & Komentarze w kodzie źródłowym powinny być w języku angielskim. & M & L \\ \hline
+Analizowalność & Kod źródłowy sytemu powinien być utworzony zgodnie ze standardami Moodle. & M & L \\ \hline
+Analizowalność & System powinien zawierać testy jednostkowe. & M & M \\ \hline
+Analizowalność & System powinien rejestrować stack trace i rodzaj błędu (fatal, warning). & H & L \\ \hline
+Analizowalność & Wraz z kodem źródłowym systemu należy dostarczyć dokumentację. & H & M \\ \hline
+Analizowalność & System powinien logować niewłaściwe wywołania metod. & H & L \\ \hline
 %
-%\begin{itemize}
-%\item H -- wysoki priorytet lub poziom trudności
-%\item M -- średni priorytet lub poziom trudności
-%\item L -- niski priorytet lub poziom trudności
-%\item N -- wymaganie oczywiste lub bardzo proste do spełnienia
-%\end{itemize}
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ | c | p{7cm} | c | c | }
-%\hline
-%\textbf{Podcharakterystyka} & \textbf{Wymaganie} & \textbf{Priorytet} & \textbf{Trudność} \\ %\hline
-%Nazwa podcharakterystyki & Wymaganie 1 (przykład procentów: 90\%) & H & H \\ \hline
-%Nazwa podcharakterystyki & Wymaganie 2 & M & H \\ \hline
-%Nazwa podcharakterystyki & Wymaganie 3 & H & L \\ \hline
-%Nazwa podcharakterystyki & Wymaganie 4 & N & L \\ \hline
-%... & ... & ... & ... \\ \hline
-%\end{tabular}
-%\caption{Wymagania pozafunkcjonalne}\label{tab:reqs}
-%\end{table}
+Autentyczność & Gdy student staje się absolwentem, należy umożliwić mu dalsze logowanie się do systemu bez użycia eKonta. & H & M \\ \hline
+%
+Bezpieczeństwo (wolność od ryzyka) & Dane trzymane w systemie muszą być tymi, uzyskanymi w ankietach. & H & L \\ \hline
+Bezpieczeństwo (wolność od ryzyka) & Projekt systemu należy poddać analizie z wykorzystaniem metody ATAM. & M & M \\ \hline
+%
+Charakterystyka czasowa & Wyświetlanie ankiety powinno odbywać się z maksymalną prędkością nie większą niż 4 sekundy. & H & L \\ \hline %DAFUQ?!
+Charakterystyka czasowa & Generowanie raportów powinno odbywać się ze średnią prędkością nie większą niż 1 godzina. & M & M \\ \hline %DAFUQ?!
+Charakterystyka czasowa & Należy zdefiniować klasy operacji w zależności od czasu ich trwania (klasy: bez komunikatu potwierdzającego wykonanie, z potwierdzeniem wykonania, wykonywane na serwerze w tle). & M & M \\ \hline
+%
+Dostępność personalna & Przewidzieć, na poziomie architektury, możliwość rozbudowy np. o interfejs dla osób niedowidzących. & L & M \\ \hline
+%
+Dostępność techniczna & System może mieć przerwę serwisową, lecz musi wówczas prezentować specjalny ekran informujący o czasie jej trwania. & H & L \\ \hline
+%
+Estetyka Interfejsu Użytkownika & Ma zachęcać, nie zniechęcać. Środowisko ma być przyjazne i czytelne. & H & M \\ \hline
+%
+Funkcjonalna poprawność & Wszystkie wartości mają być prezentowane z dokładnością do 2~miejsc po przecinku. & H & L \\ \hline
+%
+Identyfikowalność & System ma umożliwiać identyfikowanie podmiotów (osobno administratorów, ankieterów, respondentów) podejmujących konkretne działania: tworzenie ankiet, odpowiadanie w 
+ankietach. & H & M \\ \hline
+%
+Integralność & Baza danych powinna być chroniona przed nieuprawnionym dostępem [modyfikacją\slash usunięciem] w następujący sposób: logowanie za pomocą loginu i hasła. & H & L \\ \hline
+Integralność & System powinien być odporny na następujące próby nielegalnego dostępu: nieuprawniony dostęp fizyczny do serwera. & M & L \\ \hline
+Integralność & Należy chronić\slash szyfrować dane przesyłane z i do systemu. & M & L \\ \hline
+%
+Interoperacyjność & System ma wymieniać potrzebne dane z systemami uczelnianymi: eKonto, eDziekanat, ePoczta. Dane mają być aktualne. & H & M \\ \hline
+Interoperacyjność & System ma pobierać dane z systemu eDziekanat w następujący sposób: SOAP. & H & M \\ \hline
+Interoperacyjność & System ma przesyłać dane o wiadomościach do wysłania do systemu ePoczta w następujący sposób: SOAP. & H & M \\ \hline
+Interoperacyjność & System ma pobierać dane do autoryzacji z systemu eKonto w następujący sposób: SOAP. & H & M \\ \hline
+Interoperacyjność & System ma przesyłać wyniki ankiet do systemu raportowania. & H & M \\ \hline
+%
+Kompletność kontekstowa & System ma działać dla: IE 7.0+, Firefox 15, Opera 12. & H & M \\ \hline
+Kompletność kontekstowa & Należy przygotować raport jak system zachowuje się na platformach mobilnych. & L & L \\ \hline
+%
+Łatwość adaptacji & System powinien współpracować z systemem BI (raportowanie). & H & H \\ \hline
+Łatwość adaptacji & Należy utworzyć raport z łatwości adaptacji. Gdzie znajdują się adaptery. & M & L \\ \hline
+%
+Łatwość instalacji & System umożliwiać łatwą aktualizacje. Zakładamy, że wersja Moodle'a pozostaje bez zmian. & H & H \\ \hline
+%
+Łatwość nauczenia się & Interfejs użytkownika (dla ankietowanych) powinien być całkowicie intuicyjny. & H & M \\ \hline
+Łatwość nauczenia się & Interfejs użytkownika (dla ankietera) może wymagać drobnego szkolenia. & M & L \\ \hline
+%
+Łatwość testowania & „Atrapy” (ang.~\definicja{mock}) systemów zewnętrznych (m.in. eKonto). & M & M \\ \hline
+Łatwość zamiany & Należy umożliwić przełączanie systemu między trybem testowym i produkcyjnym. & M & L \\ \hline
+%
+Łatwość zamiany & System powinien umożliwiać wczytanie wszystkich danych z poprzedniej wersji. & H & M \\ \hline
+Łatwość zamiany & Procedura wymiany oprogramowania powinna trwać nie dłużej niż 2 dni i odbywać się w następujący sposób: zgodność z instrukcją. & M & L \\ \hline
+Łatwość zamiany & Podczas projektowania systemu, brać pod uwagę możliwość wprowadzenia wielojęzyczności interfejsu. & M & M \\ \hline
+%
+Łatwość zmiany & System powinien być przygotowany na wprowadzenie następujących zmian: nowe typy raportów, nowe typy pytań, modyfikacje interfejsów systemów zewnętrznych. & M & M \\ \hline
+%
+Niezaprzeczalność & System musi posiadać logi (zalogowanie w systemie, stworzenie\slash edycja\slash usunięcie\slash wysłanie\slash wypełnienie ankiety), aby móc udokumentować skąd pochodzą dane. & H & L \\ \hline
+%
+Ochrona użytkownika przed błędami & Dodatkowe potwierdzenie chęci wykonania operacji nieodwracalnych (nawet dla administratora), lub możliwość przywrócenia usuniętych danych przez jakiś czas. & H & M \\ \hline
+Ochrona użytkownika przed błędami & Dla dużych ankiet, zatwierdzenie odesłania jej przez ankietowanego. & M & L \\ \hline
+Ochrona użytkownika przed błędami & Potwierdzenie przed rozesłaniem ankiet. & M & L \\ \hline
+Ochrona użytkownika przed błędami & Lista operacji wykonywanych w tle. & M & L \\ \hline
+%
+Odporność na wady & Gdy nastąpi awaria innych systemów np. eKonta, należy poinformować użytkownika o błędzie i uniemożliwić mu dalsze działanie w systemie. & H & L \\ \hline
+%
+Odtwarzalność & Odtwarzanie całego systemu w czasie do 3h. & M & L \\ \hline
+Odtwarzalność & Kopia zapasowa bazy danych z częstotliwością raz na dobę. & H & L \\ \hline
+Odtwarzalność & Dostępność instrukcji odtwarzania. & H & L \\ \hline
+Odtwarzalność & Wykonywanie operacji w transakcjach tam, gdzie to możliwe. & H & L \\ \hline
+%
+Poufność & Uwierzytelnianie i autoryzacja dla każdej operacji. & M & L \\ \hline
+%
+Współistnienie & Jedynym kryterium działania systemu ankiet (bez raportów) jest działająca przeglądarka. & H & L \\ \hline
+Współistnienie & System generowania raportów może być osobną aplikacją, działającą na specjalnych: sprzęcie i oprogramowaniu. & L & L \\ \hline
+Współistnienie & Wszystkie potrzebne dane z zewnętrznych systemów należy przechowywać lokalnie i synchronizować. & M & H \\ \hline
+Współistnienie & Należy kolejkować zadania (e-maile) w systemie, na czas braku możliwości ich wysłania (awaria ePoczty). & H & M \\ \hline
+%
+Zużycie zasobów & System nie powinien wykorzystywać więcej serwerów niż jeden. & M & L \\ \hline
+Zużycie zasobów & System powinien działać poprawnie przy nawet 10.000 użytkowników zalogowanych jednocześnie. & H & M \\ \hline
+Zużycie zasobów & Zadania, które nie muszą zostać wykonane natychmiastowe, powinny być kolejkowane przez system. & M & M \\ \hline
+Zużycie zasobów & Możliwość pracy przez ankietera\slash respondenta na średniej klasy laptopie (CPU 2GHz, RAM 4GB). & H & L \\ \hline
+%
+\caption{Wymagania pozafunkcjonalne}\label{tab:reqs}
+\end{longtable}
+\end{center}
+
+{\color{red}Uzupełnić o problemy związane ze spełnieniem wymagań pozafunkcjonalnych - weryfikacja.}
 %A tutaj piszemy o wszelkich problemach, wszelkich naszych wnioskach związanych ze spełnianiem wymagań pozafunkcjonalnych -- co się udało, co nie (i dlaczego). Tak, jakbyśmy opisywali nasze doświadczenia i problemy, z jakimi przyszło nam się zmagać i być może rozwiązać. Staramy się odnieść do najważniejszych wymagań (chyba że jest ich mało, wtedy do wszystkich).
