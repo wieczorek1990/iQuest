@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\field_mapping</OriginalElement>
+  <nodes>
+    <node x="412.0" y="1056.0">\reference_mapping</node>
+    <node x="0.0" y="106.0">\record</node>
+    <node x="0.0" y="1056.0">\names_mapping</node>
+    <node x="0.0" y="713.0">\mapping</node>
+    <node x="552.0" y="713.0">\inheritance_mapping</node>
+    <node x="292.0" y="0.0">\field_mapping</node>
+    <node x="44.0" y="0.0">\irecord</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\record" target="\irecord">
+      <point x="0.0" y="-281.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5390243902439025" x="514.0" y="605.0" />
+  <SelectedNodes>
+    <node>\field_mapping</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+</Diagram>
+

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\struct_single_choice_question</OriginalElement>
+  <nodes>
+    <node x="846.0" y="1374.0">\tables</node>
+    <node x="237.0" y="861.0">\answer</node>
+    <node x="332.0" y="572.0">\record</node>
+    <node x="1219.0" y="994.0">\reference_mapping</node>
+    <node x="281.0" y="326.0">\task</node>
+    <node x="990.0" y="994.0">\inheritance_mapping</node>
+    <node x="381.0" y="645.0">\iquest_question_type</node>
+    <node x="390.0" y="1374.0">\field_mapping</node>
+    <node x="0.0" y="1297.0">\edziekanat_connector_mock</node>
+    <node x="0.0" y="628.0">\answer_set</node>
+    <node x="228.0" y="426.0">\stub</node>
+    <node x="98.0" y="323.0">\faculty_group</node>
+    <node x="466.0" y="1145.0">\epoczta_connector</node>
+    <node x="5.0" y="479.0">\system_event</node>
+    <node x="718.0" y="237.0">\choice_question</node>
+    <node x="156.0" y="625.0">\study_scope</node>
+    <node x="134.0" y="994.0">\edziekanat_connector_real</node>
+    <node x="198.0" y="1374.0">\names_mapping</node>
+    <node x="167.0" y="93.0">\send_emails_task</node>
+    <node x="367.0" y="253.0">\faculty_group_member</node>
+    <node x="708.0" y="1374.0">\settings</node>
+    <node x="180.0" y="499.0">\target_group</node>
+    <node x="86.0" y="1144.0">\edziekanat_connector</node>
+    <node x="410.0" y="1293.0">\epoczta_connector_real</node>
+    <node x="887.0" y="0.0">\struct_single_choice_question</node>
+    <node x="483.0" y="994.0">\epoczta_connector_mock</node>
+    <node x="546.0" y="729.0">\target_group_member</node>
+    <node x="199.0" y="698.0">\survey</node>
+    <node x="517.0" y="802.0">\research</node>
+    <node x="557.0" y="411.0">\question</node>
+    <node x="375.0" y="917.0">\survey_permission</node>
+    <node x="748.0" y="994.0">\background_processor</node>
+    <node x="373.0" y="799.0">\user</node>
+    <node x="627.0" y="564.0">\target_group_permission</node>
+    <node x="569.0" y="1374.0">\mapping</node>
+    <node x="0.0" y="1374.0">\database_helper</node>
+    <node x="429.0" y="726.0">\role</node>
+    <node x="34.0" y="814.0">\question_choice</node>
+    <node x="488.0" y="543.0">\irecord</node>
+    <node x="276.0" y="771.0">\job</node>
+    <node x="343.0" y="411.0">\answer_set_answer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\system_event" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\survey_permission" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\faculty_group_member" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\user" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\study_scope" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\question_choice" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\answer_set" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\answer" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\edziekanat_connector_real" target="\edziekanat_connector">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\answer_set_answer" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\stub" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\job" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\edziekanat_connector_mock" target="\edziekanat_connector">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\role" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\iquest_question_type" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\question" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\research" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\survey" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\struct_single_choice_question" target="\choice_question">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\record" target="\irecord">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\task" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\faculty_group" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\target_group_member" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\choice_question" target="\question">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\send_emails_task" target="\task">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\epoczta_connector_real" target="\epoczta_connector">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\epoczta_connector_mock" target="\epoczta_connector">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\target_group_permission" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\target_group" target="\record">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4649368863955119" x="696.0" y="703.0" />
+  <SelectedNodes />
+  <Categories />
+</Diagram>
+
