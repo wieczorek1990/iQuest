@@ -36,25 +36,49 @@ Testy akceptacyjne rozpatrywane są na dwóch poziomach: automatycznym i manualn
 
 Poniżej przedstawiono Manualne Testy Akceptacyjne:
 
-\matbegin{MAT01}{Nazwa testu pierwszego}
+\matbegin{TC01}{Logowanie do systemu przez eKonto}
 \matpres
-\matpre{Warunek początkowy 1}
-\matpre{Warunek początkowy 2}
+\matpre{Użytkownik jest niezalogowany}
+\matpre{Użytkownik posiada e-konto}
+\matpre{Połączenie z Internetem}
 \matsteps
-\matstep{1}{Polecenie pierwsze}{Odpowiedź systemu}
-\matstep{2}{Polecenie drugie}{Odpowiedź systemu}
-\matstep{3}{Polecenie trzecie}{Odpowiedź systemu}
-\matremark{Jakaś uwaga.}
+\matstep{1}{Użytkownik wpisuje adres systemu}{Strona logowania do system iQuest}
+\matstep{2}{Użytkownik naciska przycisk “Zaloguj przez eKonto”}{Strona logowania eLogin}
+\matstep{3}{Użytkownik wpisuje dane logowania}{}
+\matstep{4}{Użytkownik naciska przycisk “Zaloguj”}{Przekierowanie na stronę systemu iQuest, wyświetlenie strony głównej z zalogowanym użytkownikiem.}
+%\matremark{}
 
-\matbegin{MAT02}{Nazwa testu drugiego}
+\matbegin{TC02}{Stworzenie Ankiety}
 \matpres
-\matpre{Warunek początkowy 1}
-\matpre{Warunek początkowy 2}
+\matpre{Zalogowany użytkownik z prawem do tworzenia ankiet}
 \matsteps
-\matstep{1}{Polecenie pierwsze}{Odpowiedź systemu}
-\matstep{2}{Polecenie drugie}{Odpowiedź systemu}
-\matstep{4}{Polecenie trzecie}{Odpowiedź systemu}
-\matremark{Brak}
+\matstep{1}{Użytkownik wybiera przycisk „Stwórz ankietę”}{Strona umożliwiająca tworzenie ankiet}
+\matstep{2}{Użytkownik podaje nazwę ankiety
+}{}
+\matstep{3}{Użytkownik podaje wstęp  i podsumowanie ankiety
+}{}
+\matstep{4}{Użytkownik dodaje pytanie jednokrotnego wyboru}{Pojawia się pole na wpisanie treści pytania}
+\matstep{5}{Użytkownik wpisuje treść pytania}{}
+\matstep{6}{Użytkownik naciska przycisk „Dodaj odpowiedź” dwukrotnie}{Pojawiają się dwa pola do wpisania możliwych odpowiedzi}
+\matstep{7}{Użytkownik podaje treści możliwych odpowiedzi}{}
+\matstep{8}{Użytkownik dodaje stronę wciskając przycisk „Dodaj stronę”}{Wyświetla się nowa strona na dodawanie pytań}
+\matstep{9}{Użytkownik dodaje pytanie otwarte}{Wyświetla się pole na wpisanie treści pytania}
+\matstep{10}{Użytkownik wpisuje treść pytania}{}
+\matstep{11}{Użytkownik wybiera przycisk „Zapisz zmiany”}{Komunikat o pomyślnym stworzeniu ankiety}
+%\matremark{}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ | >{\bfseries}c | p{5cm} | } \hline
+Krok & \textbf{Dane} \\ \hline
+2 & ,,Ankieta testowa'' \\ \hline
+3 & ,,Wstęp'' oraz ,,Podsumowanie'' \\ \hline
+5 & ,,Pytania jednokrotnego wyboru działają?'' \\ \hline
+7 & ,,tak'' oraz ,,nie'' \\ \hline
+10 & ,,Pytania otwarte działają?'' \\ \hline
+\end{tabular}
+\caption{Poprawne dane dla scenariusza TC02}\label{tab:TC02-correct}
+\end{table}
 
 \subsubsection{AAT}
 \label{Chapter7131}
