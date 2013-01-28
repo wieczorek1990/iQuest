@@ -18,10 +18,22 @@ W systemie zdefiniowani są następujący aktorzy:
 \section{Obiekty biznesowe}
 \label{Chapter22}
 
-W ramach systemu iQuest, zdefiniowane są cztery obiekty biznesowe. Mowa o Badaniu, Ankiecie, Grupie Docelowej i Raporcie.
+W ramach systemu iQuest, zdefiniowanych jest sześć obiektów biznesowych. Mowa o Ankiecie, Badaniu, Grupie Docelowej, Katalogu Ankiet, Pytaniu i Raporcie. Poniższe opisy tych obiektów podane są w kolejności alfabetycznej.
+
+\subsection{Ankieta}
+\label{Chapter221}
+
+Jest tworzona przez Ankieterów i wysyłana do Respondentów. Raz utworzona Ankieta zostaje zapisana w Katalogu Ankiet. Ankietę charakteryzują następujące atrybuty:
+
+\begin{itemize}
+\item Nazwa Ankiety,
+\item Wstęp,
+\item Podsumowanie,
+\item Przypisane Pytania.
+\end{itemize}
 
 \subsection{Badanie}
-\label{Chapter221}
+\label{Chapter222}
 
 Jest to Ankieta wraz z wybranymi: grupą docelową i czasem trwania. Badanie determinują następujące atrybuty:
 
@@ -34,18 +46,6 @@ Jest to Ankieta wraz z wybranymi: grupą docelową i czasem trwania. Badanie det
 \item Przypisana Ankieta.
 \end{itemize}
 
-\subsection{Ankieta}
-\label{Chapter222}
-
-Jest tworzona przez Ankieterów i wysyłana do Respondentów. Raz utworzona Ankieta zostaje zapisana w Katalogu Ankiet. Ankietę charakteryzują następujące atrybuty:
-
-\begin{itemize}
-\item Nazwa Ankiety,
-\item Wstęp,
-\item Podsumowanie,
-\item Przypisane Pytania.
-\end{itemize}
-
 \subsection{Grupa Docelowa}
 \label{Chapter223}
 
@@ -55,25 +55,26 @@ Grupa studentów lub absolwentów, do których skierowana jest ankieta. Atrybuty
 \item Studenci\slash Absolwenci
 \end{itemize}
 
-\subsection{Raport}
+\subsection{Katalog Ankiet}
 \label{Chapter224}
 
+Katalog Ankiet zawiera zbiór wszystkich Ankiet dostępnych dla danego Ankietera iQuest. Ankiety mogą być z poziomu Katalogu Ankiet współdzielone, duplikowane, oglądane, edytowane i//lub usuwane, w zależności od aktualnego statusu. Dla przykładu, nowo-utworzoną Ankietę bez odpowiedzi można bez problemu usunąć lub edytować, podczas gdy taka, na którą udzielono już odpowiedzi, dostępna jest w trybie \textit{tylko do odczytu}.
+
+\subsection{Pytanie}
+\label{Chapter225}
+
+Pytanie jest elementarną jednostką Ankiety. Samo może składać się jedynie z nazwy (w przypadku pytań otwartych), lub nazwy i dostępnych odpowiedzi (dla Pytań zamkniętych). Pytanie w ogólności charakteryzują:
+
+\begin{itemize}
+\item Treść Pytania,
+\item Rodzaj Pytania,
+\item Dostępne odpowiedzi (dla Pytań zamkniętych).
+\end{itemize}
+
+\subsection{Raport}
+\label{Chapter226}
+
 Zebrane odpowiedzi z jednego lub z kilku badań. Może zawierać wykresy, zestawienia.
-
-
-%\subsection{Katalog Ankiet}
-%
-%Katalog Ankiet zawiera zbiór wszystkich Ankiet dostępnych dla danego Ankietera iQuest. Ankiety mogą być z poziomu Katalogu Ankiet współdzielone, duplikowane, oglądane, edytowane i//lub usuwane, w zależności od aktualnego statusu. Dla przykładu, nowo-utworzoną Ankietę bez odpowiedzi można bez problemu usunąć lub edytować, podczas gdy taka, na którą udzielono już odpowiedzi, dostępna jest jedynie do odczytu, duplikacji i współdzielenia.
-
-%\subsection{Pytanie}
-%
-%Pytanie jest elementarną jednostką Ankiety. Samo może składać się jedynie z nazwy (w przypadku pytań otwartych), lub nazwy i dostępnych odpowiedzi (dla Pytań zamkniętych). Pytanie w ogólności charakteryzują:
-
-%\begin{itemize}
-%\item Treść Pytania,
-%\item Rodzaj Pytania,
-%\item Dostępne odpowiedzi (dla Pytań zamkniętych).
-%\end{itemize}
 
 \pagebreak
 \section{Biznesowe przypadki użycia}

@@ -6,7 +6,7 @@ Celem sprawnej realizacji celów warunkujących powstanie systemu iQuest, musi o
 \section{Diagram przypadków użycia}
 \label{Chapter31}
 
-Na rysunku 3.1 (poniżej) przedstawiono diagram przypadków użycia. W ramach Systemu udostępniane są różne funkcje, możliwe do wykonania przez różnych aktorów. Dla przykładu, Ankieter może tworzyć Badania i analizować ich Statystyki oraz Raporty, podczas gdy Respondent może odpowiadać w Ankietach w ramach skierowanych do niego Badań; Administrator zarządza przydzielaniem ról; Administrator Bazy Danych zajmuje zarządza grupami Respondentów i przydzielaniem praw i zezwoleń.
+Na rysunku \ref{rys:usecase} przedstawiono diagram przypadków użycia. W ramach Systemu udostępniane są różne funkcje, możliwe do wykonania przez różnych aktorów. Dla przykładu, Ankieter może tworzyć Badania i analizować ich Statystyki oraz Raporty, podczas gdy Respondent może odpowiadać w Ankietach w ramach skierowanych do niego Badań; Administrator zarządza przydzielaniem ról; Administrator Bazy Danych zajmuje zarządza grupami Respondentów i przydzielaniem praw i zezwoleń.
 
 \begin{figure}[H]
 \centering\includegraphics[width=15cm]{figures/UseCaseView}
@@ -24,20 +24,19 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 \ucsection{UC01: Stworzenie Ankiety}{Ankieter}
 {Ankieter jest zalogowany w Systemie i chce utworzyć Ankietę}
 {}{\ucactions{
-\ucaction{1. Ankieter wpisuje atrybuty Ankiety: nazwę Ankiety, wstęp, podsumowanie}
+\ucaction{1. Ankieter uruchamia interfejs tworzenia Ankiety. Podaje atrybuty Ankiety: nazwę Ankiety, wstęp, podsumowanie}
 \ucaction{2. System prezentuje stronę umożliwiającą dodawanie pytań}
 \ucaction{3. Ankieter wybiera typ pytania}
-\ucaction{4. Ankieter wpisuje treść pytania}
+\ucaction{4. Ankieter podaje treść pytania}
 \ucaction{5. Ankieter podaje możliwe odpowiedzi}
-\ucaction{6. System prezentuje podsumowanie ankiety}
-\ucaction{7. Ankieter akceptuje ankietę}
-\ucaction{8. System zapisuje ankietę w Katalogu Ankiet Ankietera}
+\ucaction{6. Ankieter akceptuje Ankietę}
+\ucaction{7. System prezentuje podsumowanie ankiety i zapisuje ją w Katalogu Ankiet ankietera}
 }}
 {\ucextensions{
 \ucaction{4.A Typ pytania: pytanie otwarte}
 \ucaction{4.A.1 Ankieter pomija krok 5.}
-\ucaction{5.A Ankieter chce dodać kolejne pytanie}
-\ucaction{5.A.1 Powrót do kroku 3.}
+\ucaction{6.A Ankieter chce dodać kolejne pytanie}
+\ucaction{6.A.1 Powrót do kroku 3.}
 }}
 {}
 
@@ -53,15 +52,13 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 {}{\ucactions{
 \ucaction{1. Ankieter wybiera Ankietę do modyfikacji}
 \ucaction{2. System prezentuje wskazaną Ankietę}
-\ucaction{3. Ankieter wybiera pytanie do edycji/usunięcia}
-\ucaction{4. System prezentuje pytanie z możliwością edycji}
-\ucaction{5. Ankieter edytuje/usuwa pytanie}
-\ucaction{6. Ankieter potwierdza chęć zapisu zmienionej Ankiety}
-\ucaction{7. System zapisuje zmienioną Ankietę}
+\ucaction{3. Ankieter modyfikuje lub usuwa dostępne pytania}
+\ucaction{4. Ankieter potwierdza chęć zapisu zmienionej Ankiety}
+\ucaction{5. System zapisuje zmienioną Ankietę}
 }}
 {\ucextensions{
-\ucaction{5.A. Edycja możliwych odpowiedzi do pytań}
-\ucaction{5.A.1 Ankieter edytuje możliwe odpowiedzi do pytań}
+\ucaction{3.A. Edycja możliwych odpowiedzi do pytań}
+\ucaction{3.A.1 Ankieter edytuje możliwe odpowiedzi do pytań}
 }}
 {}
 
@@ -75,11 +72,10 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 3. Ankieter jest zalogowany w Systemie i chce wybrać Grupę Docelową
 }
 {}{\ucactions{
-\ucaction{1. Ankieter wybiera przycisk ,,Utwórz badanie''}
+\ucaction{1. Ankieter wybiera opcję tworzenia Badania}
 \ucaction{2. System prezentuje listę Grup Docelowych, do których Ankieter ma uprawnienia}
-\ucaction{3. Ankieter wybiera Grupy Docelowe dla danej Ankiety}
-\ucaction{4. Ankieter wybiera typ powiadamiania Respondentów}
-\ucaction{5. Ankieter akceptuje powiązanie Grup Docelowych z Ankietą}
+\ucaction{3. Ankieter wybiera Grupy Docelowe dla danego Badania}
+\ucaction{4. Ankieter akceptuje powiązanie Grup Docelowych z Ankietą}
 }}
 {\ucextensions{
 \ucaction{3.A. Zawężenie Grupy Docelowej}
@@ -102,14 +98,14 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 3. Ankieter jest zalogowany w Systemie i chce rozesłać istniejącą Ankietę
 }
 {Respondenci powiadomieni o Ankiecie}{\ucactions{
-\ucaction{1. Ankieter ustawia czas rozpoczęcia i zakończenia Ankiety}
+\ucaction{1. Ankieter ustawia czas rozpoczęcia i zakończenia Badania oraz grupę docelową (UC3)}
 \ucaction{2. Ankieter potwierdza chęć uruchomienia Badania}
-\ucaction{3. System rozsyła Ankietę do Respondentów}
+\ucaction{3. System udostępnia Ankietę Respondentom}
 \ucaction{4. System powiadamia Respondentów o Ankiecie}
 }}
 {\ucextensions{
-\ucaction{1.A. Ankieter chce prowadzić ankietę wielokrotną}
-\ucaction{1.A.1 Ankieter ustawia częstotliwość ankiety}
+\ucaction{1.A. Ankieter chce prowadzić cykliczną ankietyzację}
+\ucaction{1.A.1 Ankieter ustawia częstotliwość powtarzania Badania}
 }}
 {}
 
@@ -142,18 +138,18 @@ Poniżej przedstawiono przypadki użycia dotyczące Respondenta.
 2. Respondent jest zalogowany w Systemie i chce wypełnić Ankietę
 }
 {}{\ucactions{
-\ucaction{1. System prezentuje Ankietę Respondentowi}
-\ucaction{2. Respondent udziela odpowiedzi na pytania}
-\ucaction{3. System prezentuje podsumowanie odpowiedzi}
+\ucaction{1. Respondent wybiera Ankietę, w której chce wziąć udział}
+\ucaction{2. System prezentuje wybraną Ankietę Respondentowi}
+\ucaction{3. Respondent udziela odpowiedzi na pytania}
 \ucaction{4. Respondent zatwierdza wypełnioną Ankietę}
 \ucaction{5. System zapisuje odpowiedzi}
 }}
 {\ucextensions{
-\ucaction{1.A. Przedawniona Ankieta}
-\ucaction{1.A.1 System informuje, że Ankieta już się zakończyła}
+\ucaction{2.A. Przedawniona Ankieta}
+\ucaction{2.A.1 System informuje, że Ankieta już się zakończyła}
 \ucaction{5.A. Brak odpowiedzi na niektóre pytania}
-\ucaction{5.A.1 System informuje, że pozostały pytania bez odpowiedzi}
-\ucaction{5.A.2 Powrót do kroku 2.}
+\ucaction{5.A.1 System pozwala powrócić do pytań, na które nie udzielono odpowiedzi}
+\ucaction{5.A.2 Powrót do kroku 1.}
 }}
 {}
 
