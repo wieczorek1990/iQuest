@@ -1,0 +1,12 @@
+\subsection{Inicjalizacja bazy danych}
+\label{Chapter623}
+
+Moduł iQuest do prawidłowego działania wymaga rozszerzenia istniejącej bazy danych platformy \textit{Moodle} o dodatkowe tabele, przechowujące niezbędne do spełnienia założonej funkcjonalności dane. \\
+
+Do zaimportowania bazy danych przygotowanej przez Architekta, wykorzystano narzędzie wbudowane w platformę \textit{Moodle}: \definicja{XMLDB}. Gwarantuje ono bezobsługową instalację modułu w przyszłości. W trakcie pracy z tym narzędziem, znaleziony został błąd, uniemożliwiający zaimportowanie kluczy obcych do bazy. W efekcie, programiści musieli ręcznie utworzyć wszystkie klucze obce, przewidziane przez Architekta, co wymagało znaczących nakładów czasowych.
+
+\subsection{Instalacja modułu}
+\label{Chapter624}
+Postanowiono, że wraz z instalacją modułu \textit{iSurvey} zawierającego logikę systemu iQuest, powinien automatycznie tworzyć się odpowiedni \definicja{kurs} związany jedynie z nim. Rozwiązanie to zmniejsza nakład czas wymagany do przygotowania platformy do użytku, oraz zapobiega pomyłkom związanym z ręcznym tworzeniem i konfiguracją systemu. \\
+
+Konsekwencje takiego podejścia wyszły na jaw dopiero po jego zrealizowaniu. Okazało się, że podejście to uniemożliwia instalację modułu jednocześnie z całą platformą \textit{Moodle}, ponieważ w trakcie procesu instalacji platformy \textit{Moodle}, dodatkowe moduły instalowane są przed mechanizmami pozwalającymi na tworzenie \definicja{kursu}. Z tego względu, moduł \textit{iSurvey} należy dodawać do wcześniej zainstalowanej platformy.

@@ -1,0 +1,62 @@
+\subsection{Formularze}
+\label{Chapter625}
+
+Projektując graficzny interfejs użytkownika, prędzej czy później pojawia się potrzeba wyboru narzędzia do projektowania formularzy. Rozważano kilka możliwości. Pierwszym, najbardziej naturalnym odruchem była idea zastosowania czystego języka \textit{HTML}. Pod uwagę brane było także zastosowanie wbudowanych w Moodle \textit{API} -- \textit{Form API} oraz \textit{Output API}, jak też użycie zewnętrznych API, nie związanych bezpośrednio z platformą. \\
+
+Zastosowanie HTML oraz zewnętrznych API zostało odrzucone. Decyzję tę podjęto ze względu na obawę, że pisanie interfejsu w całości od nowa okaże się zbyt pracochłonne. Z uwagi na dość mocno ograniczony czas, nie chciano wyważać otwartych już drzwi, tworząc coś, co już wcześniej zostało przez kogoś zrealizowane, nawet kosztem tego, że interfejs nie wyglądał dokładnie tak, jak go zaprojektowano -- na pierwszym miejscu stawiano jego kompletność. Zastosowanie zewnętrznych API było natomiast niezgodne z założeniem, mówiącym o korzystaniu z interfejsów Moodle wszędzie tam, gdzie to możliwe. Niepożądanym było, aby użytkownik poczuł, że programowana wtyczka nie jest integralną częścią platformy. Co więcej, różnice w stosunku do oryginalnego wyglądu platformy mogłyby sprawić, że interfejs oceniony zostałby jako nieintuicyjny. To zaważyło na decyzji odnośnie zastosowania \textit{Output API} wbudowanego w Moodle. \\
+
+Wyżej wspomniane API jest zestawem funkcji, wprowadzonych wraz wersją $2.0$ Moodle. Umożliwiają one wstawianie na stronę standardowych elementów formularza, takich jak: etykiety, przyciski, linki, tabele, itp. Niestety, z nieznanych dla osób tworzących ten dokument przyczyn, to doskonale wyposażone i w pełni udokumentowane API zostało usunięte z Moodle wraz z aktualizacją do wersji $2.2$. Co bardziej niezrozumiałe, niektóre elementy można nadal stosować, lecz niemożliwym okazało się odnalezienie dotyczącej tego dokumentacji. \\
+
+Ostatecznie, realizacja interfejsu musiała odbyć się z użyciem \textit{Form API}. Ku rozczarowaniu zespołu programistów, ma on znacznie uboższą dokumentację. Zdarza się, że w funkcji są omówione np. tylko trzy pierwsze argumenty, podczas gdy reszta jest pominięta -- tak jakby kompletnie nie istniała. \textit{Form API} różni się też od poprzednich API tym, że jest oparte na modelu obiektowym. To sprawia, że zawiera szereg zalet, jak np.~fakt posiadania mechanizmu pozwalającego na weryfikację danych wprowadzanych przez użytkownika z użyciem \textit{JavaScript}. Mechanizm ten waliduje dane po stronie klienta, pozwalając na przesłanie do serwera jedynie poprawnych informacji. \\
+
+Podsumowując, mimo niekompletnej dokumentacji, jako narzędzie implementacji formularzy wybrano \textit{Form API}. Choć zawiera ono sporo zalet, nie wszystkie potrzebne elementy udało się stworzyć korzystając jedynie z niego. Stosowano wówczas język \textit{HTML}. 
+
+\subsection{Role}
+\label{Chapter626}
+
+Jedną z cech projektu, jest podział użytkowników na ankieterów i respondentów. W systemie Moodle istnieje mechanizm do zarządzania rolami, który wydawał się adekwatny do użycia w tym przypadku. Rola jest to zbiór \textit{możliwości} (ang. \definicja{capability}), które można rozumieć, jako prawa do wykonania, określonego przez programistę, fragmentu kodu. Zdecydowano więc o zastosowaniu tego gotowego rozwiązania.
+
+\subsection{Formater kursu}
+\label{Chapter627}
+
+Jednym z problemów jakie napotkano, była konieczność wyświetlania respondentom i ankieterom tylko określonych modułów. Ankieterzy powinni zobaczyć tylko te badania, które utworzyli, lub które im udostępniono, wraz z innymi aktywnościami i zasobami. Respondenci powinni natomiast zobaczyć tylko te badania, w których mogą wypełnić wziąć udział, a także materiały, do których pozyskali prawa do ich odczytu.
+
+Do rozwiązania problemu zdecydowano się użyć formatera kursu. Narzędzie to, jako integralna część Moodle, wydawało się najlepszym rozwiązaniem spośród dostępnych. W krótkim czasie okazało się jednak, że niekompletność dokumentacji, czy nawet merytorycznych dyskusji na temat w Internecie znacząco uprzykrza wykonanie zadania. Całą pracę wejścia, polegającą na poznaniu narzędzia, wykonano studiując kod źródłowy domyślnych formaterów dostępnych w Moodle.
+
+Pierwotnie zakładano wyświetlanie użytkownikowi dwóch sekcji. Jednej z odpowiednimi badaniami, drugiej z materiałami. Należało także ograniczyć ankieterowi możliwość dodawania w pierwszej sekcji modułów innych niż iQuest, oraz dokładnie odwrotnego działania w drugiej z nich. Okazało się to nieosiągalne bez ingerowania w wewnętrzny kod platformy.
+
+Przyczyną były uaktualnienia zastosowane w Moodle. Kod PHP wyświetlania typów modułów jest nadpisywany przez \textit{JavaScript}. W ten sposób, z poziomu funkcji PHP odpowiedzialnych za wyświetlanie listy modułów w danej sekcji, nie da się kontrolować, które moduły zostaną wyświetlane, a które nie. Mówiąc prościej, programista może jedynie wybrać, jakie moduły będą wyświetlane we wszystkich sekcjach w danym kursie, nie mogąc decydować, co można wykonywać w każdej sekcji z osobna.
+
+Rozwiązaniem było umieszczenie listy badań oraz listy materiałów w jednej sekcji. Można w niej dodać jakikolwiek moduł. Dopiero przy wyświetlaniu moduły dzielone są na dwie listy: listę badań i listę materiałów. Dzięki temu cel został osiągnięty -- użytkownik zobaczy tylko te moduły, które ma prawo wyświetlać. Co więcej, będą one odpowiednio posegregowane, aby użytkownik szybko mógł znaleźć to, czego szuka.
+
+\subsection{Tworzenie badania}
+\label{Chapter628}
+
+Kolejną trudnością w projekcie było połączenie utworzonej dla systemu iQuest wtyczki z platformą Moodle. Głównie sprowadzało się to do wykorzystania interfejsu graficznego Moodle w sposób niwelujący uczucie zmiany systemu u użytkownika. Zarówno wygląd, jak i sposób wykorzystywania funkcjonalności, powinny być zgodne ze standardem Moodle. Dzięki takiemu podejściu, osoba korzystająca wcześniej z platformy, a pragnąca używać wtyczki iQuest, nie będzie musiała zmieniać swoich przyzwyczajeń. Co więcej, w projekcie duży nacisk został postawiony na zachęcanie respondentów do wypełnienia ankiety, co było dodatkową motywacją do zaprojektowania przyjaznego użytkownikom interfejsu.
+
+Wstępna wersja interfejsu, zaprojektowana przez Architekta, działała wedle następującego schematu: ankieter wyrażał chęć utworzenia nowego badania poprzez kliknięcie odpowiedniego przycisku. Wówczas mógł dodać do badania ankietę z katalogu, ewentualnie utworzyć nową. W kolejnych krokach, użytkownik definiował szczegóły badania, takie jak: nazwa, grupa docelowa, czas rozpoczęcia i zakończenia itp. Niestety, realizacja takiego rozwiązania okazała się niemożliwa.
+
+Problem stwarzało dodawanie ankiety w trakcie procesu tworzenia badania, jeszcze przed jego zakończeniem. Zaczynając generowanie badania od zdefiniowania ankiety, nie można było jej od razu do niego dodać -- badanie to bowiem jeszcze nie istniało. W takim wypadku należałoby przechowywać informację, że po utworzeniu badania ma dodać się do niego ankieta\footnote{Przykładowo można w tym celu wykorzystać dodatkowy parametr w adresie \textit{URL}, choć stwarzałoby to potencjalny problem dotyczący kwestii liczby przekierowań, przez które musiałby on być przekazywany.}. Dodatkowo, w Moodle, przy kreowaniu nowego modułu, użytkownikowi wyświetlany jest domyślny formularz, w którym podaje się parametry potrzebne do zbudowania instancji tego modułu. Przyjmując, że badanie jest kojarzone z modułem, nie ma możliwości, aby przed zakończeniem tworzenia badania wstawić wewnątrz dodatkowy formularz.
+
+Z tego względu, zamieniona została kolejność tworzenia badania i ankiety. Najpierw użytkownik tworzy badanie, czyli moduł realizujący ankietę. Dopiero wówczas ma możliwość załączenia do niego ankiety. Podejście to ma kilka zalet: jest to zgodne z procedurami charakterystycznymi dla Moodle, a co za tym idzie, bardziej intuicyjne dla użytkownika obeznanego z platformą, a jednocześnie pozwala na łatwe dodanie ankiety do badania. Ponadto ankieter może zrezygnować z komponowania ankiety przy kreowaniu badania, odkładając to -- znacznie bardziej czasochłonne -- zadanie na później.
+
+\subsection{Tworzenie ankiety}
+\label{Chapter629}
+
+Przy tworzeniu ankiety pojawił się dość specyficzny problem implementacyjny. Wynikał on z faktu, że ankietę definiować można zarówno z poziomu kursu, jak i z poziomu badania. Powstało pytanie: Jak przetwarzać dane pochodzące z różnych, niezależnych od siebie kontekstów?
+
+Standardowo, we wtyczkach Moodle, elementy odpowiedzialne za wyświetlanie informacji na ekranie znajdują się w pliku \textit{view.php}. Pojawił się pomysł, aby rozszerzyć strukturę o dwa dodatkowe pliki: \textit{mod.php} oraz \textit{course.php}. Do pliku \textit{mod.php} trafiać miały dane z kontekstu modułu. Drugi plik zajmować miałby się przetwarzaniem danych z kontekstu kursu. Taki podział gwarantował większy porządek w kodzie źródłowym. Porządek był ważny, ponieważ Moodle nie jest tu zgodny ze wzorcem Model-View-Controller. W związku z tym istotne jest aby efektywnie zarządzać kodem źródłowym, żeby mała jego zmiana nie wymagała zmiany wielu elementów.
+
+Niestety wprowadzone zmiany okazały się niewystarczające. Występowało niepotrzebne powielanie kodu. Wydzielono jeszcze jeden plik, w którym przetwarzano dane otrzymane z formularzy i zapisywano je do bazy danych. Później zwracano sterowanie do plików wspomnianych plików, w zależności od kontekstu.
+
+Dzięki utworzeniu trzech dodatkowych plików, kod źródłowy stał się bardziej przejrzysty. Wartość takiego rozwiązania można zauważyć dopiero, gdy zachodzi konieczność znalezienia błędu lub wprowadzenia modyfikacji do kodu. Przy dobrym zarządzaniu kodem mała zmiana wymaga nieznacznych tylko poprawek.
+
+\subsection{Hierarchia CSS}
+\label{Chapter62a}
+
+Na wielu poziomach serwisu borykano się z problemem hierarchii plików \textit{CSS}. Twórcy platformy Moodle po, jak zapewniają, gruntownym przemyśleniu sprawy i rozważeniu wszystkich możliwości, ustalili następującą hierarchię kaskadowych arkuszy stylów:
+\begin{description}
+\item Najważniejsze są pliki umieszczone w katalogu \textit{theme}, odnoszące się do całej platformy.
+\item Następnie uwzględniane są reguły z pliku \textit{styles.css}, umieszczonego w katalogu konkretnej wtyczki.
+\end{description}
+Główną wadą tego podejścia jest fakt, że nie można we wtyczce nadpisać właściwości, która została zdefiniowana w katalogu \textit{theme}. Aby zmienić choćby jedną właściwość z tego katalogu należy utworzyć nowy \definicja{wygląd}, kopiując oryginalny i zmieniając tę jedną właściwość. Następnie administrator platformy musi ustawić ten wygląd w swoim systemie (co wiąże się z dodatkową operacją, jeśli poprzedni wygląd był wyglądem domyślnym). Problem ten nie mógł zostać rozwiązany i przewijał się przez cały czas implementacji systemu iQuest.

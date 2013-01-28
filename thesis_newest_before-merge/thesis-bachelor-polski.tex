@@ -1,0 +1,69 @@
+
+% Szkielet dla pracy inżynierskiej pisanej w języku polskim.
+
+\documentclass[polish,bachelor,a4paper,oneside]{ppfcmthesis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{usecase}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage{mat}
+\usepackage{verbatim}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{multirow}
+
+\hyphenation{roz-sze-rza-ją-cych}
+
+% Authors of the thesis here. Separate them with \and
+\author{%
+   Krzysztof Marian Borowiak \album{94269} \and 
+   Maciej Trojan \album{94378} \and 
+   Krzysztof Urbaniak \album{94381} \and 
+   Łukasz Wieczorek \album{94385}}
+\title{iQuest -- system rozszerzonych ankiet~studenckich}                   % Note how we protect the final title phrase from breaking
+\ppsupervisor{dr hab.~inż.~Bartosz Walter} % Your supervisor comes here.
+\ppyear{2013}                                         % Year of final submission (not graduation!)
+
+
+\begin{document}
+
+% Front matter starts here
+\frontmatter\pagestyle{empty}%
+\maketitle\cleardoublepage%
+
+% Blank info page for "karta dyplomowa"
+\thispagestyle{empty}\vspace*{\fill}%
+\begin{center}Tutaj przychodzi karta pracy dyplomowej;\\oryginał wstawiamy do wersji dla archiwum PP, w pozostałych kopiach wstawiamy ksero.\end{center}%
+\vfill\cleardoublepage%
+
+% Table of contents.
+\pagenumbering{Roman}\pagestyle{ppfcmthesis}%
+\tableofcontents* \cleardoublepage%
+
+% Main content of your thesis starts here.
+\mainmatter%
+\input{01Wprowadzenie.tex}
+\input{02Biznes.tex}
+\input{03Funkcjonalne.tex}
+\input{04Pozafunkcjonalne.tex}
+\input{05Architektura.tex}
+\input{06Implementacja.tex}
+\input{07Jakosc.tex}
+\input{08Wnioski.tex}
+\input{09Zakonczenie.tex}
+
+% All appendices and extra material, if you have any.
+\cleardoublepage\appendix%
+\input{10Dodatki.tex}
+\input{11DodatkiB.tex}
+\input{12DodatkiC.tex}
+
+% Bibliography (books, articles) starts here.
+\bibliographystyle{plain}{\raggedright\sloppy\small\bibliography{bibliography}}
+
+% Colophon is a place where you should let others know about copyrights etc.
+\ppcolophon
+
+\end{document}
