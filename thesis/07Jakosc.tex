@@ -12,11 +12,11 @@ Testy i weryfikacja jakości oprogramowania realizowana była na trzech poziomac
 \subsection{Testy jednostkowe}
 \label{Chapter712}
 
-Testy jednostkowe zostały wykonane jako pierwsze i traktowane były z wysokim priorytetem. Realizowane były z użyciem klas PHPUnit, stosowanych powszechnie m.in.~przy testowaniu wtyczek do platformy Moodle. Testy te były kluczowe dla rozwoju logiki systemu iQuest. Uruchamiane są za pomocą przygotowanego skryptu \textit{tests.sh}, uruchamiającego je kolejno. Część testów operuje na systemie w trybie produkcyjnym, część na trybie testowym, obsługującym tzw. ,,atrapy'' (ang. \definicja{mock}), imitujące działanie systemów zewnętrznych. \\
+Testy jednostkowe zostały wykonane jako pierwsze i traktowane były z wysokim priorytetem. Realizowane były z użyciem klas PHPUnit, stosowanych powszechnie m.in.~przy testowaniu wtyczek do platformy Moodle. Testy te były kluczowe dla rozwoju logiki systemu iQuest. Przygotowaliśmy konfigurowalne skrypty automatyzujące proces testowania w języku BASH. Część testów operuje na systemie w trybie produkcyjnym, część na trybie testowym, obsługującym tzw. ,,atrapy'' (ang. \definicja{mock}), imitujące działanie systemów zewnętrznych poprzez zwracanie przykładowych danych.\\
 
-Do stworzenia testów posłużyło środowisko Eclipse z dodatkiem PHP Development Tools. To pozwoliło na znaczące usprawnienie pracy przy realizacji tego zadania, względem stosowania zwykłych edytorów tekstowych, w tym tych poświęconych językowi PHP, jak np. gPHPEdit. \\
+Przy realizacji pierwszego wydania, za testy jednostkowe w pełni odpowiadał jeden z członków zespołu programistów. W wydaniu drugim, rolę tę przejął programista realizujący logikę systemu. Z początku próbowaliśmy działać w oparciu o TDU (ang. \definicja{Test-Driven Development} - rozwój w oparciu o testy), jednakże szybko porzuciliśmy tą metodykę, ze względu na brak doświadczenia programistów.
 
-Przy realizacji pierwszego wydania, za testy jednostkowe w pełni odpowiadał jeden z członków zespołu programistów. W wydaniu drugim, rolę tę przejął programista realizujący logikę systemu, stosując zamiennie dwie techniki programowania, w tym jedną opartą o metodę TDU (ang. \definicja{Test-Driven Development} - rozwój w oparciu o testy). Pozwoliło to na znaczące zmniejszenie czasochłonności tego zadania.
+Na początku projektu przygotowaliśmy program w języku Java uruchamiający zestaw testów akceptacyjnych. W drugim wydaniu korzystaliśmy już wyłącznie z Selenium IDE, ze względu możliwość szybszego rozpoznania problemów z poziomu przeglądarki, w przeciwieństwie do terminala.
 
 \begin{figure}[H]
 \begin{center}
@@ -25,6 +25,13 @@ Przy realizacji pierwszego wydania, za testy jednostkowe w pełni odpowiadał je
 \caption{Struktura klas testujących}
 \label{fig:tests}
 \end{figure}
+
+Na diagramie widzimy trzy klasy służące do testowania, z których dziedziczą wszystkie inne, są to:
+\begin{itemize}
+\item \emph{basic\_testcase} -- podstawowe testy jednostkowe
+\item \emph{advanced\_testcase} -- testy z użyciem bazy danych
+\item \emph{iquest\_testcase} -- rozszerzenie \emph{advanced\_testcase} na potrzeby testowania klas dziedziczących z \emph{record}
+\end{itemize}
 
 \subsection{Testy akceptacyjne}
 \label{Chapter713}
