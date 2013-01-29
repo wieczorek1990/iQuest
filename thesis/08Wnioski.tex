@@ -3,24 +3,23 @@
 
 Podczas pracy zebraliśmy następujące doświadczenia bezpośrednio związane z zastosowanymi technologiami:
 \begin{itemize}
-\item{Implementowanie testów jednostkowych z użyciem PHPUnit,}
-\item{Implementowanie logiki aplikacji w języku PHP na podstawie UML,}
-\item{Implementowanie formularzy z wykorzystaniem JavaScript,}
-\item{Implementowanie usług internetowych (protokół \emph{SOAP}),}
-\item{Implementowanie schematu bazy danych w formacie XMLDB na podstawie UML,}
-\item{Implementowanie modułów uwierzytelniania systemu Moodle,}
-\item{Implementowanie modułów aktywności systemu Moodle,}
-\item{Rozszerzanie funkcjonalności oprogramowania o otwartym kodzie źródłowym, w celu spełnienia wymagań projektowych,}
-\item{Programowanie z użyciem Eclipse PDT,}
-\item{Projektowanie testów akceptacyjnych z użyciem Selenium IDE,}
-\item{Konfigurowanie serwera Apache dla PHP,}
-\item{Zdalne konfigurowanie systemów operacyjnych Ubuntu i OpenSUSE,}
-\item{Konfigurowanie JasperServer,}
-\item{Projektowanie raportów JasperReports,}
-\item{Korzystanie z klientów VPN (firmy CheckPoint),}
-\item{Korzystanie z systemu zarządzania projektami Redmine,}
-\item{Korzystanie z systemów kontroli wersji SVN i Git,}
-\item{Pisanie dokumentacji technicznej oraz użytkownika,}
+\item Implementowanie testów jednostkowych z użyciem PHPUnit -- w celu kontroli poprawności pisanego kodu back-end'u w języku PHP,
+\item Implementowanie logiki aplikacji w języku PHP na podstawie UML -- na podstawie diagramów UML oraz rozmów z architektem zaimplementowano kod back-end'u w języku PHP,
+\item Implementowanie usług internetowych (protokół \emph SOAP) -- dla komunikacji z usługami uczelni wykorzystano klienty dostarczone przez Dział Rozwoju Oprogramowania w języku PHP, dla komunikacji z serwerem raportowania wykorzystano API \emph{external services} platformy Moodle (PHP) po stronie systemu iQuest oraz Apache Axis (Java) po stronie serwera JasperReports,
+\item Implementowanie schematu bazy danych w formacie XMLDB na podstawie UML -- wykorzystano interfejs do zarządzania XMLDB dostarczany przez Moodle; drobne poprawki wprowadzano ręcznie w pliku XML definiującym schemat bazy danych,
+\item Implementowanie modułów uwierzytelniania systemu Moodle -- na podstawie przykładowych oraz istniejących modułów uwierzytelniania stworzono moduł uwierzytelniania przez eKonto oraz moduł dla absolwentów,
+\item Rozszerzanie funkcjonalności oprogramowania o otwartym kodzie źródłowym -- w celu spełnienia wymagań projektowych dodano m.in. okresowe sprawdzanie ważności sesji eKonto do mechanizmu zarządzania sesją Moodle, zmodyfikowano wygląd strony logowania, panelu użytkownika,
+\item Konfigurowanie systemów operacyjnych Ubuntu i OpenSUSE -- W celu zdalnej konfiguracji wykorzystywano protokół SSH; Należało zainstalować i skonfigurować wymagane oprogramowanie (w tym Apache, cron, PostgreSQL, PHP, Check Point's Linux SNX), przygotować katalogi repozytoriów kodu,
+\item Programowanie z użyciem Eclipse PDT -- wykorzystano zintegrowane środowisko programistyczne w celu zwiększenia produktywności programistów,
+\item Konfigurowanie JasperServer -- dodano dialekt zapytań JoSQL, własne źródło danych (pomocne okazały się informacje z projektu \emph{Business Intelligence Server} dostępnego na Redmine),
+\item Projektowanie raportów JasperReports -- obejmowało zaprojektowanie raportów w JasperReports Studio,
+\item Korzystanie z klientów VPN (firmy CheckPoint) -- w celu uzyskania dostępu do sieci wewnętrznej zobligowano zespół do zestawiania połączenia VPN,
+\item Korzystanie z systemu zarządzania projektami Redmine -- obejmuje zarządzanie zagadnieniami, bazą wiedzy, repozytorium, plikami, korzystanie z dostępnych metod komunikacji: komunikaty, forum, komentarze,
+\item Korzystanie z systemów kontroli wersji SVN i Git -- SVN wykorzystano jak repozytorium kodu, repozytorium Git służyło zespołowi podczas pracy nad niniejszą pracą,
+\item Pisanie dokumentacji technicznej oraz użytkownika,
+\item Implementowanie modułów aktywności systemu Moodle,
+\item Projektowanie testów akceptacyjnych z użyciem Selenium IDE,
+\item Implementowanie formularzy z wykorzystaniem JavaScript,
 \end{itemize}
 
 Bardzo istotna cześć doświadczeń związanych z projektem wiąże się z pracą zespołową.
