@@ -36,27 +36,25 @@ Testy akceptacyjne rozpatrywane są na dwóch poziomach: automatycznym i manualn
 
 Poniżej przedstawiono Manualne Testy Akceptacyjne:
 
-\matbegin{TC01}{Logowanie do systemu przez eKonto}
+\matbegin{TC1}{Logowanie do systemu przez eKonto}
 \matpres
 \matpre{Użytkownik jest niezalogowany}
-\matpre{Użytkownik posiada e-konto}
+\matpre{Użytkownik posiada eKonto}
 \matpre{Połączenie z Internetem}
 \matsteps
 \matstep{1}{Użytkownik wpisuje adres systemu}{Strona logowania do system iQuest}
 \matstep{2}{Użytkownik naciska przycisk “Zaloguj przez eKonto”}{Strona logowania eLogin}
 \matstep{3}{Użytkownik wpisuje dane logowania}{}
 \matstep{4}{Użytkownik naciska przycisk “Zaloguj”}{Przekierowanie na stronę systemu iQuest, wyświetlenie strony głównej z zalogowanym użytkownikiem.}
-%\matremark{}
+\matremark{}
 
-\matbegin{TC02}{Stworzenie Ankiety}
+\matbegin{TC2}{Stworzenie Ankiety}
 \matpres
 \matpre{Zalogowany użytkownik z prawem do tworzenia ankiet}
 \matsteps
 \matstep{1}{Użytkownik wybiera przycisk „Stwórz ankietę”}{Strona umożliwiająca tworzenie ankiet}
-\matstep{2}{Użytkownik podaje nazwę ankiety
-}{}
-\matstep{3}{Użytkownik podaje wstęp  i podsumowanie ankiety
-}{}
+\matstep{2}{Użytkownik podaje nazwę ankiety}{}
+\matstep{3}{Użytkownik podaje wstęp  i podsumowanie ankiety}{}
 \matstep{4}{Użytkownik dodaje pytanie jednokrotnego wyboru}{Pojawia się pole na wpisanie treści pytania}
 \matstep{5}{Użytkownik wpisuje treść pytania}{}
 \matstep{6}{Użytkownik naciska przycisk „Dodaj odpowiedź” dwukrotnie}{Pojawiają się dwa pola do wpisania możliwych odpowiedzi}
@@ -65,7 +63,7 @@ Poniżej przedstawiono Manualne Testy Akceptacyjne:
 \matstep{9}{Użytkownik dodaje pytanie otwarte}{Wyświetla się pole na wpisanie treści pytania}
 \matstep{10}{Użytkownik wpisuje treść pytania}{}
 \matstep{11}{Użytkownik wybiera przycisk „Zapisz zmiany”}{Komunikat o pomyślnym stworzeniu ankiety}
-%\matremark{}
+\matremark{}
 
 \begin{table}[H]
 \centering
@@ -77,8 +75,81 @@ Krok & \textbf{Dane} \\ \hline
 7 & ,,tak'' oraz ,,nie'' \\ \hline
 10 & ,,Pytania otwarte działają?'' \\ \hline
 \end{tabular}
-\caption{Poprawne dane dla scenariusza TC02}\label{tab:TC02-correct}
+\caption{Poprawne dane dla scenariusza TC2}\label{tab:TC2-correct}
 \end{table}
+
+\matbegin{TC2.2}{Stworzenie Ankiety - brak pytań}
+\matpres
+\matpre{Zalogowany użytkownik z prawem do tworzenia ankiet}
+\matsteps
+\matstep{1}{Użytkownik wybiera przycisk „Stwórz ankietę”}{Strona umożliwiająca tworzenie ankiet}
+\matstep{2}{Użytkownik podaje nazwę ankiety}{}
+\matstep{3}{Użytkownik podaje wstęp  i podsumowanie ankiety}{}
+\matstep{4}{Użytkownik wybiera przycisk „Zapisz zmiany”}{Komunikat o braku pytań w ankiecie}
+\matremark{}
+
+\matbegin{TC3}{Edycja ankiety}
+\matpres
+\matpre{Zalogowany użytkownik z prawem do tworzenia ankiet}
+\matpre{Użytkownik posiada prawo do edycji ankiety ,,Ankiety testowej''}
+\matsteps
+\matstep{1}{Użytkownik wybiera przycisk „Katalog Ankiet”}{Strona z listą ankiet do których prawo ma użytkownik.}
+\matstep{2}{Użytkownik wybiera przycisk „edytuj” przy „Ankiecie Testowej”}{Strona umożliwiająca edycję „Ankiety Testowej”}
+\matstep{3}{Użytkownik wciska przycisk „usuń” przy pytaniu drugim}{Pytanie drugie znika}
+\matstep{4}{Użytkownik naciska przycisk „Dodaj odpowiedź” przy pytaniu pierwszym}{Pojawia się pole do wpisania możliwej odpowiedzi}
+\matstep{5}{Użytkownik wpisuje możliwą odpowiedź}{}
+\matstep{6}{Użytkownik wybiera przycisk „Zapisz zmiany”}{Strona wyświetla komunikat potwierdzający zapisanie zmian w ankiecie.}
+\matremark{}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ | >{\bfseries}c | p{5cm} | } \hline
+Krok & \textbf{Dane} \\ \hline
+5 & ,,nie wiem'' \\ \hline
+\end{tabular}
+\caption{Poprawne dane dla scenariusza TC3}\label{tab:TC3-correct}
+\end{table}
+
+\matbegin{TC3}{Edycja ankiety - usunięcie wszystkich pytań}
+\matpres
+\matpre{Zalogowany użytkownik z prawem do tworzenia ankiet}
+\matpre{Użytkownik posiada prawo do edycji ankiety ,,Ankiety testowej''}
+\matsteps
+\matstep{1}{Użytkownik wybiera przycisk „Katalog Ankiet”}{Strona z listą ankiet do których prawo ma użytkownik.}
+\matstep{2}{Użytkownik wybiera przycisk „edytuj” przy „Ankiecie Testowej”}{Strona umożliwiająca edycję „Ankiety Testowej”}
+\matstep{3}{Użytkownik wciska przycisk „usuń” przy każdym z pytań}{Pytania znikają}
+\matstep{4}{Użytkownik wybiera przycisk „Zapisz zmiany”}{Strona wyświetla komunikat, że ankieta nie posiada pytań i prosi o ich dodanie.}
+\matremark{}
+
+\matbegin{TC4}{Wybranie grupy docelowej}
+\matpres
+\matpre{Zalogowany użytkownik z prawami do tworzenia ankiet}
+\matpre{Użytkownik posiada prawa do ankiety „Ankieta Testowa”}
+\matpre{Użytkownik posiada prawo do ankietowania grupy docelowej „test”}
+\matsteps
+\matstep{1}{Użytkownik wybiera przycisk ,,Włącz tryb edycji''}{Interfejs edycji Moodle}
+\matstep{2}{Użytkownik wybiera przycisk „edytuj” przy „Ankiecie Testowej”}{Strona umożliwiająca edycję „Ankiety Testowej”}
+\matstep{3}{Użytkownik wybiera grupę docelową „test”}{}
+\matstep{4}{Użytkownik wybiera przycisk „Zapisz zmiany”}{Strona wyświetla komunikat, że ankieta została zaktualizowana pomyślnie.}
+\matstep{5}{Respondent otrzymuje email z powiadomieniem o ankiecie}{}
+\matremark{}
+
+
+
+{\color{red}Niedodane jeszcze TC: Udzielanie odp., Spr. wyników., Tworzenie grupy docelowej, Edycja grupy docelowej, Logowanie bez eKonta, }
+
+Dodatkowo, poniżej znajduje się wykaz mapujący przypadki testowe do przypadków użycia:
+\begin{itemize}
+\item{TC1.X – UC09 Logowanie do systemu.}
+\item{TC2.X – UC01 Stworzenie ankiety}
+\item{TC3.X – UC02 Edycja ankiety}
+\item{TC4.X – UC03 UC04 Wybranie grupy docelowej, uruchomienie ankiety}
+\item{TC5.X – UC05 Udzielenie odpowiedzi}
+\item{TC6.X – UC06 Sprawdzenie wyników}
+\item{TC7.X – UC07 Tworzenie grupy docelowej}
+\item{TC8.X – UC08 Edycja grupy docelowej}
+\item{TC9.X – UC09 Logowanie do systemu}
+\end{itemize}
 
 \subsubsection{AAT}
 \label{Chapter7131}

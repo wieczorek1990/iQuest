@@ -29,9 +29,61 @@ Programiści & Krzysztof Marian Borowiak \\
 \end{table}
 
 \noindent
-%Teraz bardzo ważna rzecz -- w tym miejscu piszecie, co kto przygotowywał w tekście pracy inżynierskiej. Prawdopodobnie tutaj będziecie musieli wymienić, które rozdziały został dla Was przygotowane przez kierownika projektu, analityka, architekta lub inną osobę. Oczywiście, piszecie też, za które części dokumentu Wy jesteście odpowiedzialni. To jest ważna, aby ta część była tutaj precyzyjnie przygotowana -- takie są wymogi uczelni oraz też uwzględnienia pracy innych osób.
-%Materiały pozyskane od zespołu zarządzającego - \cite{Redmine:ProjDocs}.
+Odpowiedzialność za utworzenie treści niniejszej pracy dyplomowej została przedstawiona poniżej:
 
+\begin{description}
+\item Krzysztof Marian Borowiak
+
+\begin{itemize}
+\item Edycja i dostosowanie szablonu pracy w środowisku \LaTeX
+\item Redakcja całej pracy, włącznie z częściami pozostałych autorów
+\item Pozyskanie, przetworzenie i zamieszczenie materiałów zewnętrznych
+\item Pozyskanie, przetworzenie i zamieszczenie materiałów pochodzących od zespołu zarządzającego
+\item Rozdział 1 - Wprowadzenie
+\item Rozdział 7 - Zapewnianie jakości i konserwacja systemu
+\item Rozdział 6.2.11 - Testy jednostkowe i akceptacyjne
+\item Rozdział 8 - Wnioski - część własna
+\item Rozdział 9 - Zakończenie
+\item Dodatki
+\end{itemize}
+\noindent
+
+\item Maciej Trojan
+
+\begin{itemize}
+\item Rozdział 6.2.3; 6.2.4 - Napotkane problemy i ich rozwiązania - Inicjalizacja bazy danych; Inicjalizacja modułu
+\item Rozdział 6.3.11 - Użyte technologie - JavaScript
+\item Rozdział 8 - Wnioski - część własna
+\end{itemize}
+\noindent
+
+\item Krzysztof Urbaniak
+
+\begin{itemize}
+\item Rozdział 6.2.5-10 - Napotkane problemy i ich rozwiązania - Formularze; Role; Formater kursu; Tworzenie badania; Tworzenie ankiety; Hierarchia CSS
+\item Rozdział 6.5 - Interfejs
+\item Rozdział 6.7 - Powiązanie logiki z interfejsem
+\item Rozdział 8 - Wnioski - część własna
+\end{itemize}
+\noindent
+
+\item Łukasz Wieczorek
+
+\begin{itemize}
+\item Rozdział 6.3.1-10 - Użyte technologie - Moodle, PHP, PHPUnit, Selenium, PostgreSQL,Eclipse IDE, SVN, Redmine, JasperReports, JetBrains PhpStorm
+\item Rozdział 8 - Wnioski - część własna
+\end{itemize}
+\noindent
+
+\item Zespół zarządzający projektem (Marcin Domański, Błażej Matuszyk)
+
+\begin{itemize}
+\item Materiały wskazane w bibliografii\cite{Redmine:ProjDocs}, zastosowane jako baza dla rozdziałów 1-5
+\item Część grafik (z odpowiednim odniesieniem w etykiecie)
+\end{itemize}
+\noindent
+
+\end{description}
 \noindent
 
 Odpowiedzialność za część implementacyjną systemu została przedstawiona poniżej:
@@ -40,9 +92,11 @@ Odpowiedzialność za część implementacyjną systemu została przedstawiona p
 \item Krzysztof Marian Borowiak
 
 \begin{itemize}
-\item Testy jednostkowe
+\item Testy jednostkowe (wydanie 1)
 \item Testy akceptacyjne
-\item Dokumentacja dla Użytkownika Końcowego
+\item Dokumentacja dla Użytkownika Końcowego (Administratora, Użytkownika)
+\item Raport funkcjonowania na różnych platformach mobilnych
+\item Raport funkcjonowania w różnych przeglądarkach internetowych
 \end{itemize}
 \noindent
 
@@ -50,7 +104,6 @@ Odpowiedzialność za część implementacyjną systemu została przedstawiona p
 
 \begin{itemize}
 \item Interfejs użytkownika
-\item Powiązanie interfejsu z back-endem
 \item Obsługa Bazy Danych
 \end{itemize}
 \noindent
@@ -59,7 +112,7 @@ Odpowiedzialność za część implementacyjną systemu została przedstawiona p
 
 \begin{itemize}
 \item Interfejs użytkownika
-\item Powiązanie interfejsu z back-endem
+\item Powiązanie interfejsu z logiką
 \item Obsługa Bazy Danych
 \end{itemize}
 \noindent
@@ -67,28 +120,55 @@ Odpowiedzialność za część implementacyjną systemu została przedstawiona p
 \item Łukasz Wieczorek
 
 \begin{itemize}
-\item Logika (back-end)
-\item Powiązanie interfejsu z back-endem
+\item Logika
+\item Testy jednostkowe (wydanie 2)
 \end{itemize}
 \noindent
 
 \end{description}
 
 %\noindent
-%Ewentualne podziękowania dla innych osób, które Wam pomagały, mowy dziękczynne, itd.
+Serdeczne podziękowania należą się zespołowi zarządzającemu, przygotowane przez który materiały, choć wymagające znaczącej redakcji, pomogły w utworzeniu niniejszej pracy dyplomowej.
 
-\section{Wykaz użytych narzędzi}
-\label{Chapter104}
+\section{Wykaz użytych narzędzi i technologii}
+\label{ChapterA4}
 
-%Wprawdzie jest odpowiedni podrozdział w rozdziale \ref{Chapter5}, ale tutaj można wymienić nawet małe narzędzia i biblioteki, które wykorzystywaliście (np.~narzędzie do robienia makiet interfejsu) i które warto wymienić, także dla przyszłych roczników (można też dać linki).
+\begin{itemize}
+\item Apache
+\item bash
+\item CheckPoint SNX
+\item CRON
+\item Eclipse IDE
+\item git
+\item gPHPEdit
+\item JasperReports Designer
+\item JasperReports Server
+\item Java
+\item JavaScript
+\item JetBrains PhpStorm
+\item Kazam Screencaster
+\item meld
+\item Moodle
+\item MySQL
+\item PHP
+\item PHPUnit
+\item PostgreSQL
+\item Redmine
+\item Selenium
+\item SSH
+\item SVN
+\item TexLive
+\item TexMaker
+\item Zend PHP Developer Tools for Eclipse IDE
+\end{itemize}
 
 \section{Zawartość płyty CD}
 
 Do dokumentu załączono płytę CD o następującej zawartości:
 
 \begin{itemize}
-\item Zawartość 1
-\item Zawartość 2
-\item Zawartość 3
-\item ...
+\item Dokumentacja systemu iQuest
+\item Niniejszy dokument w formacie PDF
+\item Pliki źródłowe systemu iQuest
+\item Pliki źródłowe wykorzystywanej wersji Moodle
 \end{itemize}
