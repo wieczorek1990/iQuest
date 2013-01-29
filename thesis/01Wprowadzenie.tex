@@ -55,49 +55,8 @@ Celem projektu \textit{iQuest} jest zbudowanie systemu umożliwiającego łatwe 
 \section{Omówienie pracy}
 \label{Chapter14}
 
-{\color{red}Do uzupełnienia po ukończeniu reszty pracy}
+Niniejszy dokument, będący pracą inżynierską w ramach studiów I-stopnia na kierunku Informatyka na Wydziale Informatyki Politechniki Poznańskiej, dotyczy systemu iQuest, służącego do badania opinii studentów i absolwentów Uczelni, realizującego zadania przytoczone w rozdziale \ref{Chapter13}.Praca ma formę dokumentacji technicznej dla osób mających w przyszłości rozwijać, wdrażać i obsługiwać system, choć jej odbiorcami są również członkowie komisji egzaminacyjnej. \\
 
-%Tutaj piszemy o celu samego dokumentu oraz ewentualnych konwencjach, jakie przyjęliśmy podczas opisywania różnych rzeczy. Dla systemu BIS-2 ten fragment wyglądał tak:
-%
-%\textit{Niniejszy dokument opisuje system System informacji bibliometrycznej (ang.~\definicja{Bibliometric Information System}) zwanego dalej BIS-2 (dla odróżnienia od wersji pilotażowej), który realizuje koncepcję przytoczoną w~punkcie \ref{Chapter11}. Praca ma formę dokumentacji technicznej dla osób, które zamierzają wdrażać i~obsługiwać system, ale także opisuje ideę stojącą za implementacją poszczególnych części projektu z~odniesieniami do literatury. Ponadto, jest to również praca dyplomowa inżynierska, zatem jej odbiorcami są także członkowie komisji egzaminacyjnej.}
-%
-%Następnie musicie napisać, co zawierają poszczególne rozdziały. U nas wyglądało to tak:
-%
-%\textit{W rozdziale \ref{Chapter2}. rozszerzono koncepcję projektu o~przedstawienie aktorów oraz obiektów biznesowych, a~także przybliżono scenariusze operacyjne w~postaci przypadków użycia. Specyfikację wymagań oprogramowania przedstawiono w rozdziałach \ref{Chapter3}.~(funkcjonalne) oraz w~\ref{Chapter4}.~(pozafunkcjonalne). W~rozdziale \ref{Chapter5}.~omówiono architekturę systemu na wyższym poziomie abstrakcji. Uzasadnienie wyboru technologii, opis implementacji i~koncepcji znajduje się w~rozdziale \ref{Chapter6}. Informacje dotyczące zapewniania jakości zostały opisane w~rozdziale \ref{Chapter7}. W~rozdziale \ref{Chapter8}.~umieszczono opis zarządzania wersjami i~sposobu pracy nad projektem. Zebrane wnioski i~doświadczenia zawarto w~rozdziale \ref{Chapter9}. W~dodatkach opisano wkład poszczególnych osób i~informacje uzupełniające. Ostatnią część dokumentu stanowi wykaz literatury przybliżający zagadnienia opisane w~pracy.}
+Cała praca podzielona została umownie (w trakcie tworzenia) na trzy uzupełniające się części, zawierające po kilka rozdziałów. Część pierwsza, zawierająca rozdziały \ref{Chapter1}., \ref{Chapter8}. i \ref{Chapter9}. oraz sekcję \ref{Chapter62}. rozdziału \ref{Chapter6}., odnosi się do całości projektu z punktu widzenia jego autorów. W tej części opisane są założenia, napotkane problemy i wyciągnięte z pracy wnioski. Część druga, zawierająca rozdziały od \ref{Chapter2}. do \ref{Chapter5}., dotyczy charakterystyki projektu oraz jego architektury. Tę część oparto na danych pozyskanych od zespołu zarządzającego projektem\cite{Redmine:ProjDocs}, dostępnych dla zespołu w ramach platformy \definicja{Redmine}. Część trzecia, zawierająca pozostałe rozdziały, tj. \ref{Chapter6}. i \ref{Chapter7}, przedstawia projekt od strony implementacji. Zawiera szczegółowe informacje odnośnie budowy systemu iQuest. \\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%Oto przykład tekstu, do którego istnieje adnotacja na dole strony\footnote{To jest właśnie odnośnik.}. Do bibliografii odnosimy się w taki sposób \cite{Hirsch:HIR05}. Dla oznaczenia wszelkich terminów używany znacznika ,,definicja'': \definicja{Termin z definicji}. Natomiast, jeśli chcemy odnieść się do innego miejsca w dokumencie (które jest oznaczone pewną etykietą): \ref{Chapter12}. Łamanie strony odbywa się poprzez znacznik ,,pagebreak''. Po skrótach z kropką warto używać tyldy (np.~tak). Link podajemy poprzez znacznik ,,url'' (\url{www.google.pl}).
-
-%Do takiego ,,zwykłego'' myślnika używamy podwójnego znaku ,,-'', a pojedynczego do łączenia bezpośrednio dwóch wyrażeń. Potrójny stosujemy, jak chcemy gdzieś pokazać brak informacji.
-
-%Kompilację tego dokumentu najwygodniej zacząć od zainstalowania MikTeXa oraz przygotowana pliku render.bat, którego treść przedstawia się następująco:
-
-%\begin{verbatim}
-%@echo off
-%
-%pdflatex thesis-bachelor-polski.tex 
-%bibtex   thesis-bachelor-polski
-%pdflatex thesis-bachelor-polski.tex 
-%pdflatex thesis-bachelor-polski.tex 
-%
-%del *.aux *.bak *.log *.blg *.bbl *.toc *.out
-%\end{verbatim}
-%
-%Potrójna kompilacja to nie wymysł szalonego programisty, który uważa, że ,,wtedy lepiej się skompiluje'', ale rzeczywista potrzeba wynikająca z poprawnego powiązania ze sobą wszystkich odwołań w dokumencie. Po uruchomieniu takiego pliku .bat (jeśli wszystko pójdzie dobrze), powinien się utworzyć plik .pdf. Nie poleca się uruchamiania skryptu, gdy mamy otwartą aktualną wersję pliku .pdf. Przy pierwszym uruchomieniu, MikTeX prawdopodobnie będzie prosił o pozwolenie na pobranie wymaganych pakietów. UWAGA! Podczas kompilacji być może trzeba będzie trzy razy potwierdzać zaistnienie jakiegoś błędu związanego ze znacznikiem ,,ppcolophon'' -- jak potwierdzicie to Enterem, to kompilacja pójdzie dalej i wszystko skończy się szczęśliwie. To wynika z jakiejś konstrukcji w szablonie udostępnianym przez uczelnię.
-%
-%W tym podrozdziale generalnie znajduje się opis problemu, jaki doprowadził do powstania koncepcji Waszego systemu. Umieszcza się tu także ogólny opis tego, co Wasz system powinien robić, jakie ma zastosowanie (fachowo to się nazywa ,,problem i jego implikacje (znaczenie)'' oraz ,,cel biznesowy''). 
-%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\section{Omówienie pracy}
-%\label{Chapter12}
-%
-%Tutaj piszemy o celu samego dokumentu oraz ewentualnych konwencjach, jakie przyjęliśmy podczas opisywania różnych rzeczy. Dla systemu BIS-2 ten fragment wyglądał tak:
-%
-%\textit{Niniejszy dokument opisuje system System informacji bibliometrycznej (ang.~\definicja{Bibliometric Information System}) zwanego dalej BIS-2 (dla odróżnienia od wersji pilotażowej), który realizuje koncepcję przytoczoną w~punkcie \ref{Chapter11}. Praca ma formę dokumentacji technicznej dla osób, które zamierzają wdrażać i~obsługiwać system, ale także opisuje ideę stojącą za implementacją poszczególnych części projektu z~odniesieniami do literatury. Ponadto, jest to również praca dyplomowa inżynierska, zatem jej odbiorcami są także członkowie komisji egzaminacyjnej.}
-%
-%Następnie musicie napisać, co zawierają poszczególne rozdziały. U nas wyglądało to tak:
-%
-%\textit{W rozdziale \ref{Chapter2}. rozszerzono koncepcję projektu o~przedstawienie aktorów oraz obiektów biznesowych, a~także przybliżono scenariusze operacyjne w~postaci przypadków użycia. Specyfikację wymagań oprogramowania przedstawiono w rozdziałach \ref{Chapter3}.~(funkcjonalne) oraz w~\ref{Chapter4}.~(pozafunkcjonalne). W~rozdziale \ref{Chapter5}.~omówiono architekturę systemu na wyższym poziomie abstrakcji. Uzasadnienie wyboru technologii, opis implementacji i~koncepcji znajduje się w~rozdziale \ref{Chapter6}. Informacje dotyczące zapewniania jakości zostały opisane w~rozdziale \ref{Chapter7}. W~rozdziale \ref{Chapter8}.~umieszczono opis zarządzania wersjami i~sposobu pracy nad projektem. Zebrane wnioski i~doświadczenia zawarto w~rozdziale \ref{Chapter9}. W~dodatkach opisano wkład poszczególnych osób i~informacje uzupełniające. Ostatnią część dokumentu stanowi wykaz literatury przybliżający zagadnienia opisane w~pracy.}
+Wraz z dalszym zagłębianiem się w treść, następuje przejście na coraz głębszy poziom abstrakcji. Zabieg ten miał na celu zagwarantowanie osobie czytającej stopniowe zagłębianie się w szczegóły projektu. Jednocześnie, czytający ma pewność, że otwierając konkretny rozdział niniejszego dokumentu, uzyska dostęp do najistotniejszych dla niego informacji.
