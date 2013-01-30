@@ -3,168 +3,216 @@
   <ID>PHP</ID>
   <OriginalElement>\struct_single_choice_question</OriginalElement>
   <nodes>
-    <node x="846.0" y="1374.0">\tables</node>
-    <node x="237.0" y="861.0">\answer</node>
-    <node x="332.0" y="572.0">\record</node>
-    <node x="1219.0" y="994.0">\reference_mapping</node>
-    <node x="281.0" y="326.0">\task</node>
-    <node x="990.0" y="994.0">\inheritance_mapping</node>
-    <node x="381.0" y="645.0">\iquest_question_type</node>
-    <node x="390.0" y="1374.0">\field_mapping</node>
-    <node x="0.0" y="1297.0">\edziekanat_connector_mock</node>
-    <node x="0.0" y="628.0">\answer_set</node>
-    <node x="228.0" y="426.0">\stub</node>
-    <node x="98.0" y="323.0">\faculty_group</node>
-    <node x="466.0" y="1145.0">\epoczta_connector</node>
-    <node x="5.0" y="479.0">\system_event</node>
-    <node x="718.0" y="237.0">\choice_question</node>
-    <node x="156.0" y="625.0">\study_scope</node>
-    <node x="134.0" y="994.0">\edziekanat_connector_real</node>
-    <node x="198.0" y="1374.0">\names_mapping</node>
-    <node x="167.0" y="93.0">\send_emails_task</node>
-    <node x="367.0" y="253.0">\faculty_group_member</node>
-    <node x="708.0" y="1374.0">\settings</node>
-    <node x="180.0" y="499.0">\target_group</node>
-    <node x="86.0" y="1144.0">\edziekanat_connector</node>
-    <node x="410.0" y="1293.0">\epoczta_connector_real</node>
-    <node x="887.0" y="0.0">\struct_single_choice_question</node>
-    <node x="483.0" y="994.0">\epoczta_connector_mock</node>
-    <node x="546.0" y="729.0">\target_group_member</node>
-    <node x="199.0" y="698.0">\survey</node>
-    <node x="517.0" y="802.0">\research</node>
-    <node x="557.0" y="411.0">\question</node>
-    <node x="375.0" y="917.0">\survey_permission</node>
-    <node x="748.0" y="994.0">\background_processor</node>
-    <node x="373.0" y="799.0">\user</node>
-    <node x="627.0" y="564.0">\target_group_permission</node>
-    <node x="569.0" y="1374.0">\mapping</node>
-    <node x="0.0" y="1374.0">\database_helper</node>
-    <node x="429.0" y="726.0">\role</node>
-    <node x="34.0" y="814.0">\question_choice</node>
-    <node x="488.0" y="543.0">\irecord</node>
-    <node x="276.0" y="771.0">\job</node>
-    <node x="343.0" y="411.0">\answer_set_answer</node>
+    <node x="1497.2580073599565" y="581.8845577211393">\tables</node>
+    <node x="2224.5" y="244.0">\answer</node>
+    <node x="1544.0" y="82.0">\record</node>
+    <node x="1512.2580073599565" y="504.88455772113934">\reference_mapping</node>
+    <node x="667.5" y="244.0">\task</node>
+    <node x="1283.2580073599565" y="504.88455772113934">\inheritance_mapping</node>
+    <node x="2328.5" y="244.0">\iquest_question_type</node>
+    <node x="1041.2580073599565" y="581.8845577211393">\field_mapping</node>
+    <node x="1292.2580073599565" y="427.88455772113934">\edziekanat_connector_mock</node>
+    <node x="2298.076116979426" y="507.0837556032409">\answer_set</node>
+    <node x="1256.5" y="244.0">\stub</node>
+    <node x="2071.5" y="244.0">\faculty_group</node>
+    <node x="1719.5080073599565" y="345.88455772113934">\epoczta_connector</node>
+    <node x="868.5" y="244.0">\system_event</node>
+    <node x="518.933760392531" y="503.05601744582236">\choice_question</node>
+    <node x="1342.5" y="244.0">\study_scope</node>
+    <node x="1041.2580073599565" y="427.88455772113934">\edziekanat_connector_real</node>
+    <node x="620.5" y="326.0">\send_emails_task</node>
+    <node x="1928.2580073599565" y="504.88455772113934">\names_mapping</node>
+    <node x="1485.5" y="244.0">\faculty_group_member</node>
+    <node x="1359.2580073599565" y="581.8845577211393">\settings</node>
+    <node x="2433.076116979426" y="507.0837556032409">\target_group</node>
+    <node x="1187.0080073599565" y="345.88455772113934">\edziekanat_connector</node>
+    <node x="1819.2580073599565" y="427.88455772113934">\epoczta_connector_real</node>
+    <node x="467.933760392531" y="585.0560174458224">\struct_single_choice_question</node>
+    <node x="663.433760392531" y="421.05601744582236">\target_group_member</node>
+    <node x="1579.2580073599565" y="427.88455772113934">\epoczta_connector_mock</node>
+    <node x="1970.5" y="244.0">\survey</node>
+    <node x="752.5" y="244.0">\research</node>
+    <node x="1703.5" y="244.0">\survey_permission</node>
+    <node x="546.433760392531" y="421.05601744582236">\question</node>
+    <node x="1041.2580073599565" y="504.88455772113934">\background_processor</node>
+    <node x="878.433760392531" y="421.05601744582236">\user</node>
+    <node x="1022.5" y="244.0">\target_group_permission</node>
+    <node x="1730.2580073599565" y="504.88455772113934">\database_helper</node>
+    <node x="1220.2580073599565" y="581.8845577211393">\mapping</node>
+    <node x="1888.5" y="244.0">\role</node>
+    <node x="495.5" y="244.0">\question_choice</node>
+    <node x="1542.0" y="0.0">\irecord</node>
+    <node x="2583.076116979426" y="507.0837556032409">\job</node>
+    <node x="2105.076116979426" y="507.0837556032409">\answer_set_answer</node>
   </nodes>
   <notes />
   <edges>
     <edge source="\system_event" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
-    </edge>
-    <edge source="\survey_permission" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="935.5" y="194.0" />
+      <point x="1569.0714285714287" y="194.0" />
+      <point x="-15.428571428571331" y="16.0" />
     </edge>
     <edge source="\faculty_group_member" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="0.0" y="16.0" />
+    </edge>
+    <edge source="\survey_permission" target="\record">
+      <point x="0.0" y="-16.0" />
+      <point x="1786.0" y="224.0" />
+      <point x="1588.357142857143" y="224.0" />
+      <point x="3.8571428571428896" y="16.0" />
     </edge>
     <edge source="\user" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="910.933760392531" y="331.05601744582236" />
+      <point x="1553.642857142857" y="154.0" />
+      <point x="-30.85714285714289" y="16.0" />
     </edge>
     <edge source="\study_scope" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="1404.0" y="224.0" />
+      <point x="1580.642857142857" y="224.0" />
+      <point x="-3.8571428571428896" y="16.0" />
     </edge>
     <edge source="\question_choice" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="571.5" y="164.0" />
+      <point x="1557.5" y="164.0" />
+      <point x="-27.0" y="16.0" />
     </edge>
     <edge source="\answer_set" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="2355.576116979426" y="417.0837556032409" />
+      <point x="1615.357142857143" y="154.0" />
+      <point x="30.85714285714289" y="16.0" />
     </edge>
     <edge source="\answer" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="2266.5" y="184.0" />
+      <point x="1603.7857142857142" y="184.0" />
+      <point x="19.28571428571422" y="16.0" />
     </edge>
     <edge source="\edziekanat_connector_real" target="\edziekanat_connector">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="1156.7580073599565" y="402.88455772113934" />
+      <point x="1236.0080073599565" y="402.88455772113934" />
+      <point x="-49.0" y="16.0" />
     </edge>
     <edge source="\answer_set_answer" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="2191.576116979426" y="427.0837556032409" />
+      <point x="1611.5" y="164.0" />
+      <point x="27.0" y="16.0" />
     </edge>
     <edge source="\stub" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="1289.5" y="214.0" />
+      <point x="1576.7857142857142" y="214.0" />
+      <point x="-7.714285714285779" y="16.0" />
     </edge>
     <edge source="\job" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="2611.076116979426" y="397.0837556032409" />
+      <point x="1623.0714285714284" y="134.0" />
+      <point x="38.57142857142844" y="16.0" />
     </edge>
     <edge source="\edziekanat_connector_mock" target="\edziekanat_connector">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="1413.2580073599565" y="402.88455772113934" />
+      <point x="1334.0080073599565" y="402.88455772113934" />
+      <point x="49.0" y="16.0" />
     </edge>
     <edge source="\role" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="1919.5" y="214.0" />
+      <point x="1592.2142857142858" y="214.0" />
+      <point x="7.714285714285779" y="16.0" />
     </edge>
     <edge source="\iquest_question_type" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="2423.5" y="174.0" />
+      <point x="1607.642857142857" y="174.0" />
+      <point x="23.14285714285711" y="16.0" />
     </edge>
     <edge source="\question" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="594.933760392531" y="311.05601744582236" />
+      <point x="1545.9285714285713" y="134.0" />
+      <point x="-38.57142857142867" y="16.0" />
     </edge>
     <edge source="\research" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="800.5" y="184.0" />
+      <point x="1565.2142857142858" y="184.0" />
+      <point x="-19.28571428571422" y="16.0" />
     </edge>
     <edge source="\survey" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="2011.0" y="204.0" />
+      <point x="1596.0714285714284" y="204.0" />
+      <point x="11.571428571428442" y="16.0" />
     </edge>
     <edge source="\struct_single_choice_question" target="\choice_question">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="0.0" y="16.0" />
     </edge>
     <edge source="\record" target="\irecord">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="0.0" y="16.0" />
     </edge>
     <edge source="\task" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="700.0" y="174.0" />
+      <point x="1561.357142857143" y="174.0" />
+      <point x="-23.14285714285711" y="16.0" />
     </edge>
     <edge source="\faculty_group" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="2138.0" y="194.0" />
+      <point x="1599.9285714285713" y="194.0" />
+      <point x="15.428571428571331" y="16.0" />
     </edge>
     <edge source="\target_group_member" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="760.933760392531" y="321.05601744582236" />
+      <point x="1549.7857142857142" y="144.0" />
+      <point x="-34.71428571428578" y="16.0" />
     </edge>
     <edge source="\choice_question" target="\question">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="0.0" y="16.0" />
     </edge>
     <edge source="\send_emails_task" target="\task">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="0.0" y="16.0" />
     </edge>
     <edge source="\epoczta_connector_real" target="\epoczta_connector">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="1923.7580073599565" y="402.88455772113934" />
+      <point x="1850.0080073599565" y="402.88455772113934" />
+      <point x="43.5" y="16.0" />
     </edge>
     <edge source="\epoczta_connector_mock" target="\epoczta_connector">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="1689.2580073599565" y="402.88455772113934" />
+      <point x="1763.0080073599565" y="402.88455772113934" />
+      <point x="-43.5" y="16.0" />
     </edge>
     <edge source="\target_group_permission" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="1129.5" y="204.0" />
+      <point x="1572.9285714285713" y="204.0" />
+      <point x="-11.571428571428669" y="16.0" />
     </edge>
     <edge source="\target_group" target="\record">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-16.0" />
+      <point x="2498.076116979426" y="407.0837556032409" />
+      <point x="1619.2142857142858" y="144.0" />
+      <point x="34.71428571428578" y="16.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.4649368863955119" x="696.0" y="703.0" />
+  <settings layout="Hierarchic Group" zoom="0.47560419516643865" x="1553.5" y="309.0" />
   <SelectedNodes />
   <Categories />
 </Diagram>
