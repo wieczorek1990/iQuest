@@ -59,12 +59,14 @@ Mapowanie obiektowo-relacyjne pozwala uprościć operacje na danych przechowywan
 
 System \emph{iQuest} operuje na klasach takich jak: ankieta, badanie, grupa docelowa, członek grupy docelowej, uprawnienie dostępu, pytanie (i potomne), odpowiedź, zadanie, praca w tle, etc. Początkowo architekt stworzył diagram klas na którym każda klasa miała wyróżnione publiczne metody \emph{insert, update, delete}. Niestety takie rozwiązanie spowodowało powielenie dużej ilości kodu związanego z interakcją z bazą danych. W ramach refaktoryzacji podjęto zadania stworzenia klas, które wzorem nowoczesnych systemów \emph{ORM} uproszczą projektowanie nowych klas reprezentujących dane. Ze względu na silną integrację z mechanizmami \emph{Moodle} w grę nie wchodziły gotowe rozwiązania. Autorskie rozwiązanie korzysta z mechanizmów \emph{Moodle Data manipulation API} oraz mechanizmu refleksji języka PHP, by pozwolić programiście korzystającego z tego rozwiązania na proste pobieranie i manipulację obiektami przechowywanymi w bazie danych. Diagram UML przedstawia się następująco:
 
+\newpage
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=0.9\textwidth]{figures/lw/orm.pdf} 
+\includepdf{figures/lw/orm.pdf} 
 \end{center}
 \caption{iQuest ORM}\label{fig:iquest-orm}
 \end{figure}
+\newpage
 
 Klasa danych dziedziczy po klasie \emph{record} oraz implementuje statyczną metodę \emph{get\_mapping} interfejsu \emph{irecord}, by uzyskać dostęp do metod komunikacji z bazą danych. Metoda \emph{get\_mapping} pozwala zdefiniować mapowanie danej klasy na odpowiednią relację w bazie danych. Należy przy tym podać nazwę tabeli, mapowanie dla pól klasy składające się z mapowania nazw (klasa \emph{names\_mapping}), tj. nazwy w klasie i bazie danych oraz typu, który zadecyduje o metodzie pobrania/zapisania danej (typem może być także klasa potomna klasy \emph{record}). Dodatkowo można uwzględnić istnienie kluczy obcych, których poprawność będzie sprawdzana, jeżeli utworzymy obiekt klasy \emph{reference\_mapping}. W przypadku dziedziczenia wystarczy zdefiniować przy mapowaniu sposób jego obsługi (m.in. jakie pole określa typ klasy). Najważniejszy kod znajduje się w metodzie \emph{get\_instance}, która pobiera konstruktor danej klasy, poprzez refleksję tworzy obiekt z wyłuskanymi z bazy danych parametrami wymaganymi przy jego tworzeniu oraz ustawia resztę pól pobranych z bazy danych. Metody \emph{insert, update, delete} pobierają reprezentację obiektu oczekiwanego przez metody \emph{Data manipulation API} oraz wykonują żądane operacje.\\
 Zastosowane rozwiązanie znacząco poprawiło czytelność kodu poprzez zastosowanie zasady DRY (\emph{Don't repeat yourself}). Projektowano je, mając na uwadze rozwiązanie, z którym programista logiki miał już wcześniej styczność, tj. implementację \emph{ActiveRecord} z \emph{Ruby on Rails}. W trakcie pracy nad projektem doceniono stosowanie konwencji nazewniczych, których obecność znacząco upraszcza projektowanie klas mapujących dane.
