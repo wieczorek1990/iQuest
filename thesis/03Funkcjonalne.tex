@@ -1,16 +1,16 @@
 \chapter{Wymagania funkcjonalne}
 \label{Chapter3}
 
-Celem sprawnej realizacji celów warunkujących powstanie systemu iQuest, musi on spełniać szereg wymagań funkcjonalnych. Obejmuje to m.in. tworzenie i prowadzenie (zarówno ze strony Ankietera, jak i Respondenta) Badań i Ankiet, a także analizę powstałych na ich podstawie zestawień danych. Ze względu na charakter projektu iQuest, niezwykle ważną funkcjonalnością okazał się najbardziej podstawowy ze wszystkich mechanizmów -- logowanie do systemu. Koniecznością jest bowiem prawidłowa autoryzacja użytkowników systemu, jak też współpraca z innymi systemami Uczelni.
+Celem sprawnej realizacji celów warunkujących powstanie systemu \textit{iQuest}, musi on spełniać szereg wymagań funkcjonalnych. Obejmuje to m.in. tworzenie i prowadzenie (zarówno ze strony Ankietera, jak i Respondenta) Badań i Ankiet, a także analizę powstałych na ich podstawie zestawień danych. Ze względu na charakter projektu \textit{iQuest}, niezwykle ważną funkcjonalnością okazał się najbardziej podstawowy ze wszystkich mechanizmów -- logowanie do systemu. Koniecznością jest bowiem prawidłowa autoryzacja użytkowników systemu, jak też współpraca z innymi systemami Uczelni.
 
 \section{Diagram przypadków użycia}
 \label{Chapter31}
 
-Na rysunku \ref{rys:usecase} przedstawiono diagram przypadków użycia. W ramach Systemu udostępniane są różne funkcje, możliwe do wykonania przez różnych aktorów. Dla przykładu, Ankieter może tworzyć Badania i analizować ich Statystyki oraz Raporty, podczas gdy Respondent może odpowiadać w Ankietach w ramach skierowanych do niego Badań; Administrator zarządza przydzielaniem ról; Administrator Bazy Danych zajmuje zarządza grupami Respondentów i przydzielaniem praw i zezwoleń.
+Na rysunku \ref{rys:UseCaseView} przedstawiono diagram przypadków użycia. W ramach systemu udostępniane są różne funkcje, możliwe do wykonania przez różnych aktorów. Dla przykładu, Ankieter może tworzyć Badania i analizować ich Statystyki oraz Raporty, podczas gdy Respondent może odpowiadać w Ankietach w ramach skierowanych do niego Badań; Administrator zarządza przydzielaniem ról; Administrator Bazy Danych zajmuje zarządza grupami Respondentów i przydzielaniem praw i zezwoleń.
 
 \begin{figure}[H]
-\centering\includegraphics[width=15cm]{figures/UseCaseView}
-\caption{Diagram przypadków użycia}\label{rys:usecase}
+\centering\includegraphics[width=0.9*\textwidth]{figures/UseCaseView}
+\caption{Diagram przypadków użycia}\label{rys:UseCaseView}
 \end{figure}
 
 \section{Ankieter}
@@ -65,7 +65,7 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 \subsection{UC03: Wybór Grupy Docelowej}
 \label{Chapter323}
 
-\ucsection{UC03: Wybór Grupy Docelowej}{Ankieter, Administrator Bazy Danych}
+\ucsection{UC03: Wybór Grupy Docelowej}{Ankieter, Administrator}
 {
 1. Ankieta znajduje się w Systemie i jest dostępna dla Ankietera \\
 2. Grupa Docelowa znajduje się w Systemie i jest dostępna dla Ankietera \\
@@ -83,7 +83,7 @@ Poniżej przedstawiono przypadki użycia dotyczące Ankietera.
 \ucaction{3.A.2 Powrót do kroku 4.}
 \ucaction{3.B. Grupa Docelowa poszukiwana przez Ankietera nie istnieje}
 \ucaction{3.B.1 Ankieter próbuje połączyć kilka Grup Docelowych lub ich fragmentów}
-\ucaction{3.B.2 W przypadku niepowodzenia kroku rozszerzenia 3.B.1, bądź wystąpienia takiej konieczności, Ankieter informuje Administratora Bazy Danych, że nie ma praw do wysyłania ankiet do wskazanych osób i/lub powiadamia go (za pomocą poczty elektronicznej) o potrzebie stworzenia Grupy Docelowej o konkretnych atrybutach (BC03)}
+\ucaction{3.B.2 W przypadku niepowodzenia kroku rozszerzenia 3.B.1, bądź wystąpienia takiej konieczności, Ankieter informuje Administratora, że nie ma praw do wysyłania ankiet do wskazanych osób i/lub powiadamia go (za pomocą poczty elektronicznej) o potrzebie stworzenia Grupy Docelowej o konkretnych atrybutach (BC03)}
 \ucaction{3.B.3 W przypadku pominięcia kroku rozszerzenia 3.B.2, powrót do kroku 4., w przeciwnym razie, powrót do kroku 1.}
 }}
 {}
@@ -153,24 +153,24 @@ Poniżej przedstawiono przypadki użycia dotyczące Respondenta.
 }}
 {}
 
-\section{Administrator Bazy Danych}
+\section{Administrator}
 \label{Chapter34}
 
-Poniżej przedstawiono przypadki użycia dotyczące Administratora Bazy Danych.
+Poniżej przedstawiono przypadki użycia dotyczące Administratora.
 
 \subsection{UC07: Tworzenie Grupy Docelowej}
 \label{Chapter341}
 
-\ucsection{UC07: Tworzenie Grupy Docelowej}{Administrator Bazy Danych}
+\ucsection{UC07: Tworzenie Grupy Docelowej}{Administrator}
 {
 1. Ankieter chce wysyłać Ankiety do określonych Respondentów w prosty sposób \\
-2. Administrator Bazy Danych jest zalogowany w Systemie i chce utworzyć nową Grupę Docelową
+2. Administrator jest zalogowany w Systemie i chce utworzyć nową Grupę Docelową
 }
 {Nowa Grupa Docelowa w Systemie}{\ucactions{
-\ucaction{1. Administrator Bazy Danych wybiera opcję tworzenia Grup Docelowych}
+\ucaction{1. Administrator wybiera opcję tworzenia Grup Docelowych}
 \ucaction{2. System prezentuje formularz tworzenia Grupy Docelowej}
-\ucaction{3. Administrator Bazy Danych wprowadza nazwę tworzonej Grupy Docelowej, wybiera Grupę Nadrzędną oraz Respondentów do dodania do Grupy Docelowej}
-\ucaction{4. Administrator Bazy Danych potwierdza chęć stworzenia Grupy Docelowej}
+\ucaction{3. Administrator wprowadza nazwę tworzonej Grupy Docelowej, wybiera Grupę Nadrzędną oraz Respondentów do dodania do Grupy Docelowej}
+\ucaction{4. Administrator potwierdza chęć stworzenia Grupy Docelowej}
 \ucaction{5. System zapisuje nową Grupę Docelową}
 }}
 {\ucextensions{
@@ -182,16 +182,16 @@ Poniżej przedstawiono przypadki użycia dotyczące Administratora Bazy Danych.
 \subsection{UC08: Edycja Grupy Docelowej}
 \label{Chapter342}
 
-\ucsection{UC08: Edycja Grupy Docelowej}{Administrator Bazy Danych}
+\ucsection{UC08: Edycja Grupy Docelowej}{Administrator}
 {
 1. Grupa Docelowa znajduje się w Systemie \\
-2. Administrator Bazy Danych jest zalogowany w Systemie i chce zmodyfikować Grupę Docelową
+2. Administrator jest zalogowany w Systemie i chce zmodyfikować Grupę Docelową
 }
 {Zmodyfikowana lista członków Grupy Docelowej}{\ucactions{
-\ucaction{1. Administrator Bazy Danych wybiera Grupę Docelową}
-\ucaction{2. Administrator Bazy Danych wybiera członka\slash członków Grupy Docelowej do edycji\slash usunięcia}
-\ucaction{3. Administrator Bazy Danych dodaje\slash edytuje]\slash usuwa członka\slash członków Grupy Docelowej}
-\ucaction{4. Administrator Bazy Danych potwierdza chęć wprowadzenia zmian}
+\ucaction{1. Administrator wybiera Grupę Docelową}
+\ucaction{2. Administrator wybiera członka\slash członków Grupy Docelowej do edycji\slash usunięcia}
+\ucaction{3. Administrator dodaje\slash edytuje]\slash usuwa członka\slash członków Grupy Docelowej}
+\ucaction{4. Administrator potwierdza chęć wprowadzenia zmian}
 \ucaction{5. System zapisuje zmiany}
 }}
 {}
@@ -204,7 +204,7 @@ Poniżej przedstawiono przypadki użycia dotyczące wszystkich Użytkowników.
 \subsection{UC09: Logowanie do Systemu}
 \label{Chapter351}
 
-\ucsection{UC09: Logowanie do Systemu}{Użytkownik (Ankieter, Administrator, Administrator Bazy Danych, Respondent)}
+\ucsection{UC09: Logowanie do Systemu}{Użytkownik (Ankieter, Administrator, Respondent)}
 {Użytkownik posiada konto w Systemie i posiada poprawne dane logowania}
 {Użytkownik jest zalogowany w Systemie}{\ucactions{
 \ucaction{1. System wyświetla Użytkownikowi formularz logowania}

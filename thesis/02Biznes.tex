@@ -8,8 +8,8 @@ System \textit{iQuest}, będący przedmiotem niniejszej Pracy Dyplomowej, jest n
 
 W systemie zdefiniowani są następujący aktorzy:
 \begin{itemize}
-\item System -- opisywany system, iQuest.
-\item Administrator -- zarządza sprawami technicznymi, związanymi platformą Moodle. Funkcję mogą pełnić osoby mające podstawową wiedzę informatyczną, znający mechanizmy Moodle'a.
+\item System -- opisywany system, \textit{iQuest}.
+\item Administrator -- zarządza sprawami technicznymi, związanymi platformą \textit{Moodle}\footnote{ang. \definicja{Modular Object-Oriented Dynamic Learning Environment}}. Funkcję mogą pełnić osoby mające podstawową wiedzę informatyczną, znający mechanizmy \textit{Moodle'a}.
 \item Administrator Bazy Danych -- zarządza sprawami technicznymi, związanymi z prawami do grup docelowych, ich tworzeniem i utrzymaniem. Funkcję mogą pełnić Pracownicy Uczelni\slash Dziekanatu oraz Administratorzy Systemów.
 \item Ankieter -- tworzy ankiety, wskazuje grupy docelowe i rozsyła ankiety. Może też przeglądać raporty. Funkcję mogą pełnić: Prowadzący zajęcia, Pracownik Dziekanatu.
 \item Respondent -- odpowiada na otrzymane ankiety. Funkcję mogą pełnić: Absolwenci, Studenci.
@@ -18,7 +18,7 @@ W systemie zdefiniowani są następujący aktorzy:
 \section{Obiekty biznesowe}
 \label{Chapter22}
 
-W ramach systemu iQuest, zdefiniowanych jest sześć obiektów biznesowych. Mowa o Ankiecie, Badaniu, Grupie Docelowej, Katalogu Ankiet, Pytaniu i Raporcie. Poniższe opisy tych obiektów podane są w kolejności alfabetycznej.
+W ramach systemu \textit{iQuest}, zdefiniowanych jest sześć obiektów biznesowych. Mowa o Ankiecie, Badaniu, Grupie Docelowej, Katalogu Ankiet, Pytaniu i Raporcie. Poniższe opisy tych obiektów podane są w kolejności alfabetycznej.
 
 \subsection{Ankieta}
 \label{Chapter221}
@@ -58,7 +58,7 @@ Grupa studentów lub absolwentów, do których skierowana jest ankieta. Atrybuty
 \subsection{Katalog Ankiet}
 \label{Chapter224}
 
-Katalog Ankiet zawiera zbiór wszystkich Ankiet dostępnych dla danego Ankietera iQuest. Ankiety mogą być z poziomu Katalogu Ankiet współdzielone, duplikowane, oglądane, edytowane i//lub usuwane, w zależności od aktualnego statusu. Dla przykładu, nowo-utworzoną Ankietę bez odpowiedzi można bez problemu usunąć lub edytować, podczas gdy taka, na którą udzielono już odpowiedzi, dostępna jest w trybie \textit{tylko do odczytu}.
+Katalog Ankiet zawiera zbiór wszystkich Ankiet dostępnych dla danego Ankietera \textit{iQuest}. Ankiety mogą być z poziomu Katalogu Ankiet współdzielone, duplikowane, oglądane, edytowane i//lub usuwane, w zależności od aktualnego statusu. Dla przykładu, nowo-utworzoną Ankietę bez odpowiedzi można bez problemu usunąć lub edytować, podczas gdy taka, na którą udzielono już odpowiedzi, dostępna jest w trybie \textit{tylko do odczytu}.
 
 \subsection{Pytanie}
 \label{Chapter225}
@@ -122,13 +122,13 @@ Poniżej przedstawione zostały biznesowe przypadki użycia. Obejmują one dwa g
 \subsection{BC03: Zarządzanie Grupami Docelowymi}
 \label{Chapter233}
 
-\ucsection{BC03: Zarządzanie Grupami Docelowymi}{Administrator Bazy Danych}
+\ucsection{BC03: Zarządzanie Grupami Docelowymi}{Administrator}
 {Ankieter chce ankietować Studentów}
 {Ankieta, Raport}{\ucactions{
-\ucaction{1. Ankieter zgłasza potrzebę stworzenia Grupy Docelowej Administratorowi Bazy Danych}
-\ucaction{2. Administrator Bazy Danych podaje nazwę Grupy Docelowej, którą zamierza utworzyć}
-\ucaction{3. Administrator Bazy Danych dodaje/usuwa członków Grupy Docelowej}
-\ucaction{4. Administrator Bazy Danych potwierdza chęć stworzenia Grupy Docelowej}
+\ucaction{1. Ankieter zgłasza potrzebę stworzenia Grupy Docelowej Administratorowi}
+\ucaction{2. Administrator podaje nazwę Grupy Docelowej, którą zamierza utworzyć}
+\ucaction{3. Administrator dodaje/usuwa członków Grupy Docelowej}
+\ucaction{4. Administrator potwierdza chęć stworzenia Grupy Docelowej}
 \ucaction{5. System tworzy Grupę Docelową}
 \ucaction{6. Ankieter może korzystać z Grupy Docelowej}
 }}

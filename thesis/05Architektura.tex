@@ -4,17 +4,17 @@
 \section{Wstęp}
 \label{Chapter51}
 
-System iQuest został stworzony w oparciu o model architektury trójwarstwowej, w którym wyróżnione zostały warstwy: danych, logiki biznesowej oraz prezentacji. Dzięki takiemu podejściu, zadania związane z poszczególnymi warstwami można było bez większego problemu rozdzielić między członków zespołu programistów, a w przypadku ewentualnej modyfikacji jednej z warstw nie występuje konieczność wprowadzania zmian w reszcie projektu.
+System \textit{iQuest} został stworzony w oparciu o model architektury trójwarstwowej, w którym wyróżnione zostały warstwy: danych, logiki biznesowej oraz prezentacji. Dzięki takiemu podejściu, zadania związane z poszczególnymi warstwami można było bez większego problemu rozdzielić między członków zespołu programistów, a w przypadku ewentualnej modyfikacji jednej z warstw nie występuje konieczność wprowadzania zmian w reszcie projektu.
 
 \section{Opis ogólny architektury -- Marketecture}
 \label{Chapter52}
 
 \begin{figure}[H]
-\centering\includegraphics[width=15cm]{figures/marketecture}
+\centering\includegraphics[width=0.9*\textwidth]{figures/marketecture}
 \caption{Diagram ,,Marketektury''}\label{rys:marketecture}
 \end{figure}
 
-System iQuest to aplikacja internetowa w postaci zbioru rozszerzeń platformy e-learningowej Moodle. Całość (Moodle oraz rozszrzenia) zainstalowana jest na serwerze www, zlokalizowanym w sieci Politechniki Poznańskiej, łączącym się z osobnym serwerem baz danych oraz usługami eKonto i eDziekanat. Funkcje raportowania realizowane są w głównej mierze za pośrednictwem zewnętrznego systemu BI, pobierającego dane z iQuest za pośrednictwem usług sieciowych (en.~\definicja{webservices}). Administracja oraz obsługa systemu odbywa się za pośrednictwem przeglądarki internetowej, w ramach połączenia z platformą Moodle lub serwerem raportowania. Respondenci mogą też uzyskać dostęp do systemu przy pomocy urządzeń mobilnych, takich jak tablety czy smartfony.
+System \textit{iQuest} to aplikacja internetowa w postaci zbioru rozszerzeń platformy e-learningowej \textit{Moodle}. Całość (\textit{Moodle} oraz rozszrzenia) zainstalowana jest na serwerze www, zlokalizowanym w sieci Politechniki Poznańskiej, łączącym się z osobnym serwerem baz danych oraz usługami \textit{eKonto} i \textit{eDziekanat}. Funkcje raportowania realizowane są w głównej mierze za pośrednictwem zewnętrznego systemu \textit{BI}, pobierającego dane z \textit{iQuest} za pośrednictwem usług sieciowych (en.~\definicja{webservices}). Administracja oraz obsługa systemu odbywa się za pośrednictwem przeglądarki internetowej, w ramach połączenia z platformą \textit{Moodle} lub serwerem raportowania. Respondenci mogą też uzyskać dostęp do systemu przy pomocy urządzeń mobilnych, takich jak tablety czy smartfony.
 
 \section{Analiza~podejść\slash Analiza~SWOT}
 \label{Chapter53}
@@ -25,17 +25,17 @@ System iQuest to aplikacja internetowa w postaci zbioru rozszerzeń platformy e-
 \hline
 --- & \textbf{Pozytywne} & \textbf{Negatywne} \\ \hline
 \multirow{6}{*}{\textbf{Wewnętrzne}} & \textbf{Mocne strony (S)} & \textbf{Słabe strony (W)} \\
-			& Środowisko Moodle jest dobrze udokumentowane. & Konieczność trzymania się standardów Moodle. \\
-			& Środowisko Moodle jest łatwe w rozwoju. & Konieczność wdrożenia się w nieznany kod. \\
-			& Stosowanie podejścia MVC w środowisku Moodle. & \\
+			& Środowisko \textit{Moodle} jest dobrze udokumentowane. & Konieczność trzymania się standardów \textit{Moodle}. \\
+			& Środowisko \textit{Moodle} jest łatwe w rozwoju. & Konieczność wdrożenia się w nieznany kod. \\
+			& Stosowanie podejścia MVC w środowisku \textit{Moodle}. & \\
 			& Już zaimplementowane mechanizmy, takie jak kontrola praw dostępu, CMS. & \\
 			& Posiadanie bazy wiedzy, która ma zachęcać użytkowników. & \\ \hline
 %					
 \multirow{3}{*}{\textbf{Zewnętrzne}} & \textbf{Szanse (O)} & \textbf{Zagrożenia (T)} \\
-				& Modułowość platformy Moodle. & Środowisko może być nieznane programistom. \\
+				& Modułowość platformy \textit{Moodle}. & Środowisko może być nieznane programistom. \\
 				& Łatwość tworzenia własnych wtyczek. & \\ \hline
 \end{tabular}
-\caption{Podejście pierwsze -- w oparciu o platformę Moodle}\label{tab:SWOT1}
+\caption{Podejście pierwsze -- w oparciu o platformę \textit{Moodle}}\label{tab:SWOT1}
 \end{table}
 
 \begin{table}[H]
@@ -50,10 +50,10 @@ System iQuest to aplikacja internetowa w postaci zbioru rozszerzeń platformy e-
 				& Dobra znajomość kodu przez programistów. & Konieczność tworzenia wszystkiego od podstaw. \\
 				& & Nieznajomość technologii przez programistów. \\ \hline
 \end{tabular}
-\caption{Podejście drugie -- napisanie aplikacji od podstaw przy użyciu JAVA~EE}\label{tab:SWOT2}
+\caption{Podejście drugie -- napisanie aplikacji od podstaw przy użyciu \textit{JAVA~EE}}\label{tab:SWOT2}
 \end{table}
 
-W oparciu o analizy SWOT przedstawione w tabelach \ref{tab:SWOT1} i \ref{tab:SWOT2}, zespół zarządzający zarządził o realizacji projektu z użyciem platformy Moodle.
+W oparciu o analizy SWOT przedstawione w tabelach \ref{tab:SWOT1} i \ref{tab:SWOT2}, zespół zarządzający zarządził o realizacji projektu z użyciem platformy \textit{Moodle}.
 
 \section{Perspektywy architektoniczne}
 \label{Chapter54}
@@ -66,21 +66,21 @@ W oparciu o analizy SWOT przedstawione w tabelach \ref{tab:SWOT1} i \ref{tab:SWO
 \caption{Diagram perspektywy fizycznej}\label{rys:PerspektywaFizyczna}
 \end{figure}
 
-Schemat \ref{rys:PerspektywaFizyczna} prezentuje perspektywę fizyczną projektu. Widać na nim dokładnie, opisaną wcześniej, opartą na rozszerzeniach dla platformy Moodle budowę logiki systemu iQuest. Za jej pośrednictwem dokonuje się połączeń z serwerem baz danych oraz serwerem raportowania. Użytkownik systemu, z wykorzystaniem przeglądarki internetowej, komunikuje się z platformą, lub systemem raportowania, korzystając przy tym z warstwy prezentacji.
+Schemat \ref{rys:PerspektywaFizyczna} prezentuje perspektywę fizyczną projektu. Widać na nim dokładnie, opisaną wcześniej, opartą na rozszerzeniach dla platformy \textit{Moodle} budowę logiki systemu \textit{iQuest}. Za jej pośrednictwem dokonuje się połączeń z serwerem baz danych oraz serwerem raportowania. Użytkownik systemu, z wykorzystaniem przeglądarki internetowej, komunikuje się z platformą, lub systemem raportowania, korzystając przy tym z warstwy prezentacji.
 
 \subsection{Perspektywa logiczna}
 \label{Chapter542}
 
 \begin{figure}[H]
-\centering\includegraphics[width=15cm]{figures/LogicalView}
+\centering\includegraphics[width=0.9*\textwidth]{figures/LogicalView}
 \caption{Diagram perspektywy logicznej}\label{rys:PerspektywaLogiczna}
 \end{figure}
 
-Schemat \ref{rys:PerspektywaLogiczna} prezentuje perspektywę logiczną systemu. Określa ona zależności między poszczególnymi komponentami ,,wszczepionymi'' do platformy Moodle. Poniżej znajduje się opis wyszczególnionych na rysunku komponentów.
+Schemat \ref{rys:PerspektywaLogiczna} prezentuje perspektywę logiczną systemu. Określa ona zależności między poszczególnymi komponentami ,,wszczepionymi'' do platformy \textit{Moodle}. Poniżej znajduje się opis wyszczególnionych na rysunku komponentów.
 
 \subsubsection{iQuest Survey Activity Plugin}
 \label{Chapter5421}
-Funkcjonalnością \definicja{Activity Plugin}ów jest udostępnianie możliwości dodania nowych rodzajów tzw. ,,aktywności'' w ramach platformy Moodle. \textit{iQuest Survey Activity Plugin} pozwala na dodanie nowego Badania iQuest. Komponent ten składa się z dwóch subkomponentów:
+Funkcjonalnością \definicja{Activity Plugin}ów jest udostępnianie możliwości dodania nowych rodzajów tzw. ,,aktywności'' w ramach platformy \textit{Moodle}. \textit{iQuest Survey Activity Plugin} pozwala na dodanie nowego Badania \textit{iQuest}. Komponent ten składa się z dwóch subkomponentów:
 \begin{itemize}
 \item{Survey Creator}
 \item{Survey Runner}
@@ -90,12 +90,12 @@ Pierwszy z nich odpowiada za definiowanie ankiet, natomiast drugi za ich realiza
 \subsubsection{iQuest Course Format Plugin}
 \label{Chapter5422}
 
-\definicja{Course Format Plugin} dla platformy Moodle odpowiada za obsługę interfejsu użytkownika. W przypadku systemu iQuest, zarządza kwestią wyświetlania użytkownikowi tylko tych składowych kursu "iQuest", które są dla niego dostępne. Przykładowo, Respondent uzyska dostęp do listy ankiet, które może wypełnić, podczas gdy ankieter uzyska dostęp do listy zarządzanych przez niego badań.
+\definicja{Course Format Plugin} dla platformy \textit{Moodle} odpowiada za obsługę interfejsu użytkownika. W przypadku systemu \textit{iQuest}, zarządza kwestią wyświetlania użytkownikowi tylko tych składowych kursu "iQuest", które są dla niego dostępne. Przykładowo, Respondent uzyska dostęp do listy ankiet, które może wypełnić, podczas gdy ankieter uzyska dostęp do listy zarządzanych przez niego badań.
 
 \subsubsection{eDziekanat Connector oraz ePoczta Connector}
 \label{Chapter5423}
 
-Komponenty te odpowiadają za komunikację z usługami eDziekanat i ePoczta, pozwalające m.in. na pozyskanie danych o grupach docelowych (w oparciu o dane Grup Dziekańskich) oraz wysyłanie powiadomień za pośrednictwem poczty studenckiej.
+Komponenty te odpowiadają za komunikację z usługami \textit{eDziekanat} i \textit{ePoczta}, pozwalające m.in. na pozyskanie danych o grupach docelowych (w oparciu o dane Grup Dziekańskich) oraz wysyłanie powiadomień za pośrednictwem poczty studenckiej.
 
 \subsubsection{Background Task Scheduler and Executor}
 \label{Chapter5424}
@@ -105,23 +105,23 @@ Dzięki temu komponentowi możliwe jest szeregowanie oraz wykonywanie zadań w t
 \subsubsection{eKonto Authentication Plugin}
 \label{Chapter5425}
 
-\definicja{eKonto Authentication Plugin} -- to moduł uwierzytelniania (ang.~\definicja{Authentication}), korzystający z systemu eLogin platformy eKonto do logowania się do platformy Moodle, obsługującej system iQuest. Korzystanie z tego systemu pozwala nie tylko na jednoznaczną weryfikację tożsamości użytkownika łączącego się z systemem, ale jest zarazem wygodne -- dzięki jego zastosowaniu, nie ma potrzeby posiadania osobnego konta w systemie iQuest.
+\definicja{eKonto Authentication Plugin} -- to moduł uwierzytelniania (ang.~\definicja{Authentication}), korzystający z systemu \textit{eLogin} platformy \textit{eKonto} do logowania się do platformy \textit{Moodle}, obsługującej system \textit{iQuest}. Korzystanie z tego systemu pozwala nie tylko na jednoznaczną weryfikację tożsamości użytkownika łączącego się z systemem, ale jest zarazem wygodne -- dzięki jego zastosowaniu, nie ma potrzeby posiadania osobnego konta w systemie \textit{iQuest}.
 
 \subsection{Perspektywa implemetancyjna}
 \label{Chapter543}
 
 \begin{figure}[H]
-\centering\includegraphics[width=15cm]{figures/Layers}
+\centering\includegraphics[width=0.9*\textwidth]{figures/Layers}
 \caption{Diagram perspektywy implementacyjnej}\label{rys:PerspektywaImplementacyjna}
 \end{figure}
 
-Diagram perspektywy implementacyjnej (rys.~\ref{rys:PerspektywaImplementacyjna}) pozwala na analizę przeplatania się elementów systemu iQuest w ramach poszczególnych warstw zastosowanego modelu trójwarstwowego. Funkcje zaprezentowanych na nim modułów zostały wyjaśnione już wcześniej w niniejszym dokumencie.
+Diagram perspektywy implementacyjnej (rys.~\ref{rys:PerspektywaImplementacyjna}) pozwala na analizę przeplatania się elementów systemu \textit{iQuest} w ramach poszczególnych warstw zastosowanego modelu trójwarstwowego. Funkcje zaprezentowanych na nim modułów zostały wyjaśnione już wcześniej w niniejszym dokumencie.
 
 \subsection{Perspektywa procesu (równoległości)}
 \label{Chapter544}
 
 \begin{figure}[H]
-\centering\includegraphics[width=15cm]{figures/ProcessView}
+\centering\includegraphics[width=0.9*\textwidth]{figures/ProcessView}
 \caption{Diagram perspektywy procesu}\label{rys:PerspektywaProcesu}
 \end{figure}
 
@@ -133,7 +133,7 @@ Jak widać na diagramie \ref{rys:PerspektywaProcesu}, istnieje możliwość jedn
 \subsection{Wstęp}
 \label{Chapter551}
 
-W procesie rozwoju systemu iQuest podjęto dokładnie 40 decyzji projektowych. Większość decyzji podejmował Architekt. W części przypadków rozpatrywano także zdanie zespołu programistów.
+W procesie rozwoju systemu \textit{iQuest} podjęto dokładnie 40 decyzji projektowych. Większość decyzji podejmował Architekt. W części przypadków rozpatrywano także zdanie zespołu programistów.
 
 \subsection{Podjęte decyzje}
 \label{Chapter552}
@@ -146,8 +146,8 @@ W procesie rozwoju systemu iQuest podjęto dokładnie 40 decyzji projektowych. W
 %
 Identyfikator & D01 \\ \hline
 Nazwa & Postać systemu \\ \hline
-Opis & System iQuest jest zestawem rozszerzeń środowiska Moodle (Modular Object-Oriented Dynamic Learning Environment) \\ \hline
-Uzasadnienie & Platforma Moodle jest już stosowana na uczelni, więc łatwiej jest dotrzeć z ankietami do studentów, jeżeli można je wypełniać bezpośrednio w Moodle'u. \\ \hline
+Opis & System iQuest jest zestawem rozszerzeń środowiska \textit{Moodle} \\ \hline
+Uzasadnienie & Platforma \textit{Moodle} jest już stosowana na uczelni, więc łatwiej jest dotrzeć z ankietami do studentów, jeżeli można je wypełniać bezpośrednio w \textit{Moodle'u}. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -161,7 +161,7 @@ Uzasadnienie & Platforma Moodle jest już stosowana na uczelni, więc łatwiej j
 %
 Identyfikator & D02 \\ \hline
 Nazwa & Podział na komponenty  \\ \hline
-Opis & iQuest składa się z następujących głównych komponentów: iQuest Course Format Plugin, iQuest Survey Activity Plugin, eDziekanat Connector, eKonto Authentication Plugin, Background Task Scheduler and Executor, Logger  \\ \hline
+Opis & \textit{iQuest} składa się z następujących głównych komponentów: \textit{iQuest Course Format Plugin}, \textit{iQuest Survey Activity Plugin}, \textit{eDziekanat Connector}, \textit{eKonto Authentication Plugin}, \textit{Background Task Scheduler and Executor}, \textit{Logger}  \\ \hline
 Uzasadnienie & Dzięki budowie modułowej łatwiej jest analizować, implementować i testować system. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -175,9 +175,9 @@ Uzasadnienie & Dzięki budowie modułowej łatwiej jest analizować, implementow
 \hline
 %
 Identyfikator & D03 \\ \hline
-Nazwa & iQuest jako kurs na Moodle'u  \\ \hline
-Opis & iQuest widoczny jest dla użytkowników platformy Moodle jako specjalny kurs. \\ \hline
-Uzasadnienie & Jest to zgodne z ideą Moodle'a -- treści umieszczane na tej platformie są pogrupowane w kursach. \\ \hline
+Nazwa & \textit{iQuest} jako kurs na \textit{Moodle'u}  \\ \hline
+Opis & \textit{iQuest} widoczny jest dla użytkowników platformy \textit{Moodle} jako specjalny kurs. \\ \hline
+Uzasadnienie & Jest to zgodne z ideą \textit{Moodle'a} -- treści umieszczane na tej platformie są pogrupowane w kursach. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -190,8 +190,8 @@ Uzasadnienie & Jest to zgodne z ideą Moodle'a -- treści umieszczane na tej pla
 \hline
 %
 Identyfikator & D04 \\ \hline
-Nazwa & Wtyczka iQuest Course Format Plugin  \\ \hline
-Opis & iQuest Course Format Plugin odpowiada za prezentowanie treści wewnątrz "kursu" iQuest. Plugin dba o to, aby ankieterowi wyświetlała się lista tylko tych badań, do których ma on uprawnienia oraz żeby respondent widział listę tylko tych badań, w których ma on prawo wypełnić ankietę. \\ \hline
+Nazwa & Wtyczka \textit{iQuest Course Format Plugin}  \\ \hline
+Opis & \textit{iQuest Course Format Plugin} odpowiada za prezentowanie treści wewnątrz "kursu" \textit{iQuest}. Plugin dba o to, aby ankieterowi wyświetlała się lista tylko tych badań, do których ma on uprawnienia oraz żeby respondent widział listę tylko tych badań, w których ma on prawo wypełnić ankietę. \\ \hline
 Uzasadnienie & Istnienie takiej wtyczki jest wymagane, ponieważ bez niej nie byłoby możliwe filtrowanie listy badań tak, aby użytkownik wydział tylko te do których ma uprawnienia. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -205,9 +205,9 @@ Uzasadnienie & Istnienie takiej wtyczki jest wymagane, ponieważ bez niej nie by
 \hline
 %
 Identyfikator & D05 \\ \hline
-Nazwa & Wtyczka eKonto Authentication Plugin  \\ \hline
-Opis & Logowanie użytkowników przy pomocy eKonta realizowane jest poprzez utworzenie rozszerzenia eKonto Authentication Plugin dla platformy Moodle. \\ \hline
-Uzasadnienie & Platforma Moodle jest tak skonstruowana, że aby umożliwić uwierzytelnianie przy pomocy zewnętrznych mechanizmów, konieczne jest utworzenie specjalnej wtyczki. \\ \hline
+Nazwa & \textit{Wtyczka eKonto Authentication Plugin}  \\ \hline
+Opis & Logowanie użytkowników przy pomocy \textit{eKonta} realizowane jest poprzez utworzenie rozszerzenia \textit{eKonto Authentication Plugin} dla platformy \textit{Moodle}. \\ \hline
+Uzasadnienie & Platforma \textit{Moodle} jest tak skonstruowana, że aby umożliwić uwierzytelnianie przy pomocy zewnętrznych mechanizmów, konieczne jest utworzenie specjalnej wtyczki. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -220,9 +220,9 @@ Uzasadnienie & Platforma Moodle jest tak skonstruowana, że aby umożliwić uwie
 \hline
 %
 Identyfikator & D06 \\ \hline
-Nazwa & Wtyczka iQuest Survey Activity Plugin - funkcjonalność dla ankieterów  \\ \hline
-Opis & iQuest Survey Activity Plugin pozwala ankieterowi na tworzenie, edytowanie i usuwanie ankiet, a także na tworzenie, edytowanie i usuwanie badań. \\ \hline
-Uzasadnienie & Wtyczka typu Activity Plugin dla Moodle'a posiada wszystkie cechy potrzebne do zrealizowania tego typu funkcjonalności w sposób intuicyjny dla użytkownika. \\ \hline
+Nazwa & Wtyczka \textit{iQuest Survey Activity Plugin} - funkcjonalność dla ankieterów  \\ \hline
+Opis & \textit{iQuest Survey Activity Plugin} pozwala ankieterowi na tworzenie, edytowanie i usuwanie ankiet, a także na tworzenie, edytowanie i usuwanie badań. \\ \hline
+Uzasadnienie & Wtyczka typu \textit{Activity Plugin} dla \textit{Moodle'a} posiada wszystkie cechy potrzebne do zrealizowania tego typu funkcjonalności w sposób intuicyjny dla użytkownika. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -235,9 +235,9 @@ Uzasadnienie & Wtyczka typu Activity Plugin dla Moodle'a posiada wszystkie cechy
 \hline
 %
 Identyfikator & D07 \\ \hline
-Nazwa & Wtyczka iQuest Survey Activity Plugin - funkcjonalność dla respondentów \\ \hline
-Opis &  	iQuest Survey Activity Plugin pozwala respondentowi na udzielenie odpowiedzi w ankiecie. \\ \hline
-Uzasadnienie & Wtyczka typu Activity Plugin dla Moodle'a posiada wszystkie cechy potrzebne do zrealizowania tego typu funkcjonalności w sposób intuicyjny dla użytkownika. \\ \hline
+Nazwa & Wtyczka \textit{iQuest Survey Activity Plugin} - funkcjonalność dla respondentów \\ \hline
+Opis & \textit{iQuest Survey Activity Plugin} pozwala respondentowi na udzielenie odpowiedzi w ankiecie. \\ \hline
+Uzasadnienie & Wtyczka typu \textit{Activity Plugin} dla \textit{Moodle'a} posiada wszystkie cechy potrzebne do zrealizowania tego typu funkcjonalności w sposób intuicyjny dla użytkownika. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -251,7 +251,7 @@ Uzasadnienie & Wtyczka typu Activity Plugin dla Moodle'a posiada wszystkie cechy
 %
 Identyfikator & D08 \\ \hline
 Nazwa & Wykorzystanie protokołu HTTPS \\ \hline
-Opis & Moodle (w ramach którego działa iQuest) będzie dostępny dla użytkowników poprzez protokół HTTPS. \\ \hline
+Opis & \textit{Moodle} (w ramach którego działa \textit{iQuest}) będzie dostępny dla użytkowników poprzez protokół HTTPS. \\ \hline
 Uzasadnienie & Zastosowanie protokołu HTTPS jest łatwym sposobem na dość skuteczne zabezpieczenie danych przesyłanych między klientem a serwerem. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -266,8 +266,8 @@ Uzasadnienie & Zastosowanie protokołu HTTPS jest łatwym sposobem na dość sku
 %
 Identyfikator & D09 \\ \hline
 Nazwa & Mechanizm kont i ról użytkowników \\ \hline
-Opis & Wykorzystany jest istniejący w systemie Moodle mechanizm kont i ról użytkowników. \\ \hline
-Uzasadnienie & Dzięki temu nie ma potrzeby implementowania osobnego mechanizmu. Ten istniejący w Moodle'u spełnia niezbędne wymagania. \\ \hline
+Opis & Wykorzystany jest istniejący w systemie \textit{Moodle} mechanizm kont i ról użytkowników. \\ \hline
+Uzasadnienie & Dzięki temu nie ma potrzeby implementowania osobnego mechanizmu. Ten istniejący w \textit{Moodle'u} spełnia niezbędne wymagania. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -280,9 +280,9 @@ Uzasadnienie & Dzięki temu nie ma potrzeby implementowania osobnego mechanizmu.
 \hline
 %
 Identyfikator & D10 \\ \hline
-Nazwa & Integracja eKonta z kontem na Moodle'u \\ \hline
-Opis & W momencie pierwszego logowania danego użytkownika przy pomocy eKonta, jest mu tworzone profil w systemie Moodle. Za nazwę użytkownika przyjmuje się adres e-mail. Do profilu, dzięki możliwościom usługi eKonto kopiowane są także inne dane użytkownika (np. imię i nazwisko). \\ \hline
-Uzasadnienie & Takie działanie jest wymagane, aby zainicjalizować konto użytkownika logującego się do Moodle'a przez eKonto po raz pierwszy. \\ \hline
+Nazwa & Integracja \textit{eKonta} z kontem na \textit{Moodle'u} \\ \hline
+Opis & W momencie pierwszego logowania danego użytkownika przy pomocy \textit{eKonta}, jest mu tworzone profil w systemie \textit{Moodle}. Za nazwę użytkownika przyjmuje się adres e-mail. Do profilu, dzięki możliwościom usługi \textit{eKonto} kopiowane są także inne dane użytkownika (np. imię i nazwisko). \\ \hline
+Uzasadnienie & Takie działanie jest wymagane, aby zainicjalizować konto użytkownika logującego się do \textit{Moodle'a} przez \textit{eKonto} po raz pierwszy. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -295,9 +295,9 @@ Uzasadnienie & Takie działanie jest wymagane, aby zainicjalizować konto użytk
 \hline
 %
 Identyfikator & D11 \\ \hline
-Nazwa & Sposób zapamiętywania ustawień systemu iQuest  \\ \hline
-Opis & Ustawienia systemu iQuest przechowywane są w specjalnej tabeli bazy danych, w postaci identyfikator-wartość, które są ciągami znaków. \\ \hline
-Uzasadnienie & Umożliwia to łatwy I wygodny dostęp do ustawień w różnych miejscach kodu źródłowego systemu. \\ \hline
+Nazwa & Sposób zapamiętywania ustawień systemu \textit{iQuest}  \\ \hline
+Opis & Ustawienia systemu \textit{iQuest} przechowywane są w specjalnej tabeli bazy danych, w postaci identyfikator-wartość, które są ciągami znaków. \\ \hline
+Uzasadnienie & Umożliwia to łatwy i wygodny dostęp do ustawień w różnych miejscach kodu źródłowego systemu. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -311,8 +311,8 @@ Uzasadnienie & Umożliwia to łatwy I wygodny dostęp do ustawień w różnych m
 %
 Identyfikator & D12 \\ \hline
 Nazwa & Dziennik zdarzeń \\ \hline
-Opis & Wszystkie ważniejsze zdarzenia w systemie iQuest są zapisywane w logu w bazie danych, w specjalnej tabeli. Dla każdego zdarzenia zapisane zostaną następujące dane: data i godzina, identyfikator użytkownika wykonującego operację (o ile dotyczy), tekstowy opis, typ (informacja, ostrzeżenie, błąd). \\ \hline
-Uzasadnienie & Mechanizm logowania zdarzeń obecny w Moodle'u nie spełnia wymagań - nie pozwala na dzielenie wpisów na kategorie. Z tego powodu została podjęta decyzja o utworzeniu osobnego mechanizmu. \\ \hline
+Opis & Wszystkie ważniejsze zdarzenia w systemie \textit{iQuest} są zapisywane w logu w bazie danych, w specjalnej tabeli. Dla każdego zdarzenia zapisane zostaną następujące dane: data i godzina, identyfikator użytkownika wykonującego operację (o ile dotyczy), tekstowy opis, typ (informacja, ostrzeżenie, błąd). \\ \hline
+Uzasadnienie & Mechanizm logowania zdarzeń obecny w \textit{Moodle'u} nie spełnia wymagań - nie pozwala na dzielenie wpisów na kategorie. Z tego powodu została podjęta decyzja o utworzeniu osobnego mechanizmu. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -356,7 +356,7 @@ Uzasadnienie & Znacznie ułatwi to zarządzanie uprawnieniami do ankiet. \\ \hli
 %
 Identyfikator & D15 \\ \hline
 Nazwa & Wykonywanie zadań w tle \\ \hline
-Opis & System iQuest posiada możliwość wykonywania złożonych zadań w tle. Poszczególne moduły systemu mogą dodawać zlecenia, z których każde składa się z jednego lub wielu zadań. \\ \hline
+Opis & System \textit{iQuest} posiada możliwość wykonywania złożonych zadań w tle. Poszczególne moduły systemu mogą dodawać zlecenia, z których każde składa się z jednego lub wielu zadań. \\ \hline
 Uzasadnienie & Pozwala to na poprawienie responsywności systemu dla użytkownika (np. ankieter nie musi czekać, aż wyślą się e-maile z zaproszeniami dla respondentów). Podział zleceń na zadania umożliwia łatwiejszą obsługę sytuacji, w której w trakcie realizowania zlecenia następuje awaria - zadania już wykonane nie zostaną wykonane ponownie, a wykonane zostaną tylko zadania niewykonane wcześniej. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -372,7 +372,7 @@ Uzasadnienie & Pozwala to na poprawienie responsywności systemu dla użytkownik
 Identyfikator & D16 \\ \hline
 Nazwa & Kolejkowanie zadań wykonywanych w tle \\ \hline
 Opis & Moduł wykonywana zadań w tle posiada mechanizm kolejkowania. \\ \hline
-Uzasadnienie & Pozwala to na zwiększenie niezawodności systemu (np. e-maile do wysłania nie "przepadną" a zostaną zakolejkowane w przypadku awarii ePoczty). \\ \hline
+Uzasadnienie & Pozwala to na zwiększenie niezawodności systemu (np. e-maile do wysłania nie "przepadną" a zostaną zakolejkowane w przypadku awarii \textit{ePoczty}). \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -416,7 +416,7 @@ Uzasadnienie & Zadania do wykonania w tle mają różne rodzaje. Umożliwi to sy
 %
 Identyfikator & D19 \\ \hline
 Nazwa &  Sposób przechowywania danych niezbędnych do wykonania zadania w tle \\ \hline
-Opis & Dane niezbędne do wykonania zadania przechowywane są w odpowiedniej kolumnie bazy danych w postaci łańcucha znakowego. Dane te mają postać obiektu zserializowanego przy pomocy technologii JSON. \\ \hline
+Opis & Dane niezbędne do wykonania zadania przechowywane są w odpowiedniej kolumnie bazy danych w postaci łańcucha znakowego. Dane te mają postać obiektu zserializowanego przy pomocy technologii \textit{JSON}. \\ \hline
 Uzasadnienie & Zadania do wykonania w tle mają różne rodzaje. Umożliwi to systemowi w łatwy sposób uruchomić kod odpowiedni do wykonania danego rodzaju zadania. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -430,8 +430,8 @@ Uzasadnienie & Zadania do wykonania w tle mają różne rodzaje. Umożliwi to sy
 \hline
 %
 Identyfikator & D20 \\ \hline
-Nazwa & Zewnętrzny system BI \\ \hline
-Opis & Do generowania raportów wykorzystany jest system BI działający na osobnym serwerze. \\ \hline
+Nazwa & Zewnętrzny system \textit{BI} \\ \hline
+Opis & Do generowania raportów wykorzystany jest system \textit{BI} działający na osobnym serwerze. \\ \hline
 Uzasadnienie & Dzięki temu nie trzeba implementować od początku mechanizmu raportowania, a można wykorzystać istniejące już oprogramowanie.  \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -491,8 +491,8 @@ Uzasadnienie & Pozwala to zapobiec rozpoczęciu wykonywania zlecenia w momencie,
 %
 Identyfikator & D24 \\ \hline
 Nazwa & Język programowania \\ \hline
-Opis & Wykorzystany jest język programowania PHP. \\ \hline
-Uzasadnienie & Jest to konieczne ze względu na to, że system Moodle jest wykonany w tej technologii. \\ \hline
+Opis & Wykorzystany jest język programowania \textit{PHP}. \\ \hline
+Uzasadnienie & Jest to konieczne ze względu na to, że system \textit{Moodle} jest wykonany w tej technologii. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -505,8 +505,8 @@ Uzasadnienie & Jest to konieczne ze względu na to, że system Moodle jest wykon
 \hline
 %
 Identyfikator & D25 \\ \hline
-Nazwa & iQuest jako aplikacja internetowa \\ \hline
-Opis & System iQuest ma postać aplikacji internetowej. \\ \hline
+Nazwa & \textit{iQuest} jako aplikacja internetowa \\ \hline
+Opis & System \textit{iQuest} ma postać aplikacji internetowej. \\ \hline
 Uzasadnienie & Dzięki temu po stronie klienta nie trzeba instalować dedykowanej aplikacji, a także nie jest zużywana duża ilość zasobów komputera. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -520,9 +520,9 @@ Uzasadnienie & Dzięki temu po stronie klienta nie trzeba instalować dedykowane
 \hline
 %
 Identyfikator & D26 \\ \hline
-Nazwa & Cache'owanie danych z usługi eDziekanat \\ \hline
-Opis & Moduł eDziekanat Connector ma możliwość lokalnego cache'owania danych z usługi eDziekanat. \\ \hline
-Uzasadnienie & Poprawia to wydajność oraz umożliwia dostęp do danych w przypadku awarii usługi eDziekanat. \\ \hline
+Nazwa & Cache'owanie danych z usługi \textit{eDziekanat} \\ \hline
+Opis & Moduł \textit{eDziekanat Connector} ma możliwość lokalnego cache'owania danych z usługi \textit{eDziekanat}. \\ \hline
+Uzasadnienie & Poprawia to wydajność oraz umożliwia dostęp do danych w przypadku awarii usługi \textit{eDziekanat}. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -535,9 +535,9 @@ Uzasadnienie & Poprawia to wydajność oraz umożliwia dostęp do danych w przyp
 \hline
 %
 Identyfikator & D27 \\ \hline
-Nazwa & Moduł eDziekanat Connector \\ \hline
-Opis & Moduł eDziekanat Connector służy do pobierania danych z systemu eDziekanat. \\ \hline
-Uzasadnienie & Wydzielenie osobnego modułu do pobierania danych poprzez usługę eDziekanat pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". W przypadku zmian w sposobie dostępu do usługi, wystarczy zmodyfikować tylko ten moduł. \\ \hline
+Nazwa & Moduł \textit{eDziekanat Connector} \\ \hline
+Opis & Moduł \textit{eDziekanat Connector} służy do pobierania danych z systemu \textit{eDziekanat}. \\ \hline
+Uzasadnienie & Wydzielenie osobnego modułu do pobierania danych poprzez usługę \textit{eDziekanat} pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". W przypadku zmian w sposobie dostępu do usługi, wystarczy zmodyfikować tylko ten moduł. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -550,9 +550,9 @@ Uzasadnienie & Wydzielenie osobnego modułu do pobierania danych poprzez usług�
 \hline
 %
 Identyfikator & D28 \\ \hline
-Nazwa & Moduł ePoczta Connector \\ \hline
-Opis & Moduł ePoczta Connector służy do wysyłania wiadomości e-mail przy pomocy usługi ePoczta. \\ \hline
-Uzasadnienie & Wydzielenie osobnego modułu do interakcji z usługą ePoczta pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". W przypadku zmian w sposobie dostępu do usługi, wystarczy zmodyfikować tylko ten moduł. Możliwe jest też łatwe utworzenie "atrapy" modułu przydatnej przy testowaniu. \\ \hline
+Nazwa & Moduł \textit{ePoczta Connector} \\ \hline
+Opis & Moduł \textit{ePoczta Connector} służy do wysyłania wiadomości e-mail przy pomocy usługi \textit{ePoczta}. \\ \hline
+Uzasadnienie & Wydzielenie osobnego modułu do interakcji z usługą \textit{ePoczta} pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". W przypadku zmian w sposobie dostępu do usługi, wystarczy zmodyfikować tylko ten moduł. Możliwe jest też łatwe utworzenie "atrapy" modułu przydatnej przy testowaniu. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -566,7 +566,7 @@ Uzasadnienie & Wydzielenie osobnego modułu do interakcji z usługą ePoczta poz
 %
 Identyfikator & D29 \\ \hline
 Nazwa & System zarządzania bazą danych \\ \hline
-Opis & Przystosowanie systemu do pracy z urządzeniami mobilnymi polega na przygotowaniu odpowiedniej tzw. kompozycji dla systemu Moodle. \\ \hline
+Opis & Przystosowanie systemu do pracy z urządzeniami mobilnymi polega na przygotowaniu odpowiedniej tzw. kompozycji dla systemu \textit{Moodle}. \\ \hline
 Uzasadnienie & Jest to łatwy sposób na zrealizowanie wymagania dotyczącego obsługi na urządzeniach przenośnych. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -581,7 +581,7 @@ Uzasadnienie & Jest to łatwy sposób na zrealizowanie wymagania dotyczącego ob
 %
 Identyfikator & D30 \\ \hline
 Nazwa & Przystosowanie systemu do pracy na urządzeniach mobilnych \\ \hline
-Opis & Przystosowanie systemu do pracy z urządzeniami mobilnymi polega na przygotowaniu odpowiedniej tzw. kompozycji dla systemu Moodle. \\ \hline
+Opis & Przystosowanie systemu do pracy z urządzeniami mobilnymi polega na przygotowaniu odpowiedniej tzw. kompozycji dla systemu \textit{Moodle}. \\ \hline
 Uzasadnienie & Jest to łatwy sposób na zrealizowanie wymagania dotyczącego obsługi na urządzeniach przenośnych. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -596,8 +596,8 @@ Uzasadnienie & Jest to łatwy sposób na zrealizowanie wymagania dotyczącego ob
 %
 Identyfikator & D31 \\ \hline
 Nazwa & Przechowywanie informacji o przerwie serwisowej \\ \hline
-Opis & Informacja o przerwie serwisowej jest przechowywana w bazie danych w tabeli z ustawieniami systemu iQuest. \\ \hline
-Uzasadnienie & W ten sposób wtyczki iQuest Survey Activity Plugin i iQuest Course Format będą mogły w łatwy sposób sprawdzić, czy system nie jest w stanie przerwy serwisowej. \\ \hline
+Opis & Informacja o przerwie serwisowej jest przechowywana w bazie danych w tabeli z ustawieniami systemu \textit{iQuest}. \\ \hline
+Uzasadnienie & W ten sposób wtyczki \textit{iQuest Survey Activity Plugin} i \textit{iQuest Course Format} będą mogły w łatwy sposób sprawdzić, czy system nie jest w stanie przerwy serwisowej. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -612,7 +612,7 @@ Uzasadnienie & W ten sposób wtyczki iQuest Survey Activity Plugin i iQuest Cour
 Identyfikator & D32 \\ \hline
 Nazwa & Odtwarzanie po awarii \\ \hline
 Opis & Odtwarzanie zawartości systemu po awarii jest wykonywane poprzez przywrócenie kopii zapasowej bazy danych. \\ \hline
-Uzasadnienie & W ten sposób wtyczki iQuest Survey Activity Plugin i iQuest Course Format będą mogły w łatwy sposób sprawdzić, czy system nie jest w stanie przerwy serwisowej. \\ \hline
+Uzasadnienie & W ten sposób wtyczki \textit{iQuest Survey Activity Plugin} i \textit{iQuest Course Format} będą mogły w łatwy sposób sprawdzić, czy system nie jest w stanie przerwy serwisowej. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -641,7 +641,7 @@ Uzasadnienie & Dzięki temu nie ma potrzeby implementowania dodatkowej funkcjona
 %
 Identyfikator & D34 \\ \hline
 Nazwa & Moduł Logger \\ \hline
-Opis & Za obsługę dziennika zdarzeń systemowych odpowiada specjalny moduł - Logger. \\ \hline
+Opis & Za obsługę dziennika zdarzeń systemowych odpowiada specjalny moduł - \textit{Logger}. \\ \hline
 Uzasadnienie & Wydzielenie do tego celu osobnego modułu pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -655,8 +655,8 @@ Uzasadnienie & Wydzielenie do tego celu osobnego modułu pozwala na umieszczenie
 \hline
 %
 Identyfikator & D35 \\ \hline
-Nazwa & Moduł Background Task Scheduler and Executor \\ \hline
-Opis & Za obsługę zadań wykonywanych w tle odpowiada specjalny moduł - Background Task Scheduler and Executor. \\ \hline
+Nazwa & Moduł \textit{Background Task Scheduler and Executor} \\ \hline
+Opis & Za obsługę zadań wykonywanych w tle odpowiada specjalny moduł - \textit{Background Task Scheduler and Executor}. \\ \hline
 Uzasadnienie & Wydzielenie do tego celu osobnego modułu pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -671,8 +671,8 @@ Uzasadnienie & Wydzielenie do tego celu osobnego modułu pozwala na umieszczenie
 %
 Identyfikator & D36 \\ \hline
 Nazwa & Sposób aktualizacji systemu \\ \hline
-Opis & Do aktualizacji systemu wykorzystany jest mechanizm aktualizacji wtyczek platformy Moodle. \\ \hline
-Uzasadnienie & Dzięki wykorzystaniu mechanizmu obecnego w Moodle'u nie ma potrzeby opracowywania własnego sposobu aktualizacji. \\ \hline
+Opis & Do aktualizacji systemu wykorzystany jest mechanizm aktualizacji wtyczek platformy \textit{Moodle}. \\ \hline
+Uzasadnienie & Dzięki wykorzystaniu mechanizmu obecnego w \textit{Moodle'u} nie ma potrzeby opracowywania własnego sposobu aktualizacji. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -686,8 +686,8 @@ Uzasadnienie & Dzięki wykorzystaniu mechanizmu obecnego w Moodle'u nie ma potrz
 %
 Identyfikator & D37 \\ \hline
 Nazwa & Testowanie jednostkowe \\ \hline
-Opis & Do obsługi testowania jednostkowego wykorzystana jest biblioteka PHPUnit.  \\ \hline
-Uzasadnienie & Biblioteka PHPUnit jest dość rozbudowana, a testowanie przy jej pomocy jest dodatkowo wspierane przez najnowszą wersję Moodle'a. \\ \hline
+Opis & Do obsługi testowania jednostkowego wykorzystana jest biblioteka \textit{PHPUnit}.  \\ \hline
+Uzasadnienie & Biblioteka \textit{PHPUnit} jest dość rozbudowana, a testowanie przy jej pomocy jest dodatkowo wspierane przez najnowszą wersję \textit{Moodle'a}. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -701,8 +701,8 @@ Uzasadnienie & Biblioteka PHPUnit jest dość rozbudowana, a testowanie przy jej
 %
 Identyfikator & D38 \\ \hline
 Nazwa & Dostęp absolwentów do systemu \\ \hline
-Opis & Student po staniu się absolwentem ma dostęp do systemu przy pomocy "zwykłego" konta w systemie Moodle. \\ \hline
-Uzasadnienie & Logowanie absolwentów przy pomocy eKonta nie jest na razie możliwe, a więc będą oni musieli korzystać ze "zwykłych" kont. \\ \hline
+Opis & Student po staniu się absolwentem ma dostęp do systemu przy pomocy "zwykłego" konta w systemie \textit{Moodle}. \\ \hline
+Uzasadnienie & Logowanie absolwentów przy pomocy \textit{eKonta} nie jest na razie możliwe, a więc będą oni musieli korzystać ze "zwykłych" kont. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -731,7 +731,7 @@ Uzasadnienie & Tak proste rozwiązanie jest wystarczające, ponieważ w przewidy
 %
 Identyfikator & D40 \\ \hline
 Nazwa & Atrapy \\ \hline
-Opis & Kod źródłowy systemu zawiera alternatywne wersje modułów eDziekanat Connector oraz ePoczta Connector. Nie łączą się one z systemami uczelnianymi, a służą jedynie jako "atrapy" wykorzystywane przy testowaniu. \\ \hline
+Opis & Kod źródłowy systemu zawiera alternatywne wersje modułów \textit{eDziekanat Connector} oraz \textit{ePoczta Connector}. Nie łączą się one z systemami uczelnianymi, a służą jedynie jako "atrapy" wykorzystywane przy testowaniu. \\ \hline
 Uzasadnienie &  Takie rozwiązanie sprawia, że znaczną część prac związanych z testowaniem można wykonać bez konieczności połączenia z prawdziwymi usługami zewnętrznymi. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -775,8 +775,8 @@ Ponadto:
 Identyfikator & AD1 \\ \hline
 Jest alternatywą do & D01 \\ \hline
 Nazwa & Postać systemu - alternatywa \\ \hline
-Opis & System jest samodzielną aplikacją wykonaną w technologii Java EE. \\ \hline
-Uzasadnienie & Tworzenie aplikacji całkowicie od początku okazałoby się bardziej pracochłonne, a także trudniej byłoby ją zintegrować z innymi aplikacjami używanymi przez studentów (np. Moodle). \\ \hline
+Opis & System jest samodzielną aplikacją wykonaną w technologii \textit{Java EE}. \\ \hline
+Uzasadnienie & Tworzenie aplikacji całkowicie od początku okazałoby się bardziej pracochłonne, a także trudniej byłoby ją zintegrować z innymi aplikacjami używanymi przez studentów (np. \textit{Moodle}). \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -790,7 +790,7 @@ Uzasadnienie & Tworzenie aplikacji całkowicie od początku okazałoby się bard
 %
 Identyfikator & AD2 \\ \hline
 Jest alternatywą do & D11 \\ \hline
-Nazwa & Sposób zapamiętywania ustawień systemu iQuest - alternatywa \\ \hline
+Nazwa & Sposób zapamiętywania ustawień systemu \textit{iQuest} - alternatywa \\ \hline
 Opis & System zapamiętuje ustawienia bezpośrednio w pliku na serwerze. \\ \hline
 Uzasadnienie & Rozwiązanie to wymagałoby wykonywania dodatkowych czynności w celu wykonania lub ewentualnego przywrócenia kopii zapasowej. \\ \hline
 Źródło & Architekt \\ \hline
@@ -807,8 +807,8 @@ Uzasadnienie & Rozwiązanie to wymagałoby wykonywania dodatkowych czynności w 
 Identyfikator & AD3 \\ \hline
 Jest alternatywą do & D12 \\ \hline
 Nazwa & Dziennik zdarzeń - alternatywa \\ \hline
-Opis & System w utrzymywania dziennika zdarzeń wykorzystuje istniejący w Moodle'u mechanizm logowania zdarzeń \\ \hline
-Uzasadnienie & Standardowy mechanizm logowania zdarzeń w Moodle'u nie pozwala na przyporządkowanie wpisów do kategorii (np. ostrzeżenie, błąd, itp.), a więc nie byłby w stanie spełnić wymagania pozafunkcjonalnego obejmującego tę kwestię. \\ \hline
+Opis & System w utrzymywania dziennika zdarzeń wykorzystuje istniejący w \textit{Moodle'u} mechanizm logowania zdarzeń \\ \hline
+Uzasadnienie & Standardowy mechanizm logowania zdarzeń w \textit{Moodle'u} nie pozwala na przyporządkowanie wpisów do kategorii (np. ostrzeżenie, błąd, itp.), a więc nie byłby w stanie spełnić wymagania pozafunkcjonalnego obejmującego tę kwestię. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -839,8 +839,8 @@ Uzasadnienie &  	Byłoby to zbyt pracochłonne. Lepiej wykorzystać istniejący 
 Identyfikator & AD5 \\ \hline
 Jest alternatywą do & D24 \\ \hline
 Nazwa & Język programowania - alternatywa \\ \hline
-Opis &  	System jest napisany w języku Java. \\ \hline
-Uzasadnienie &  	Nie pozwoliłoby to wykorzystanie Moodle'a jako platformy. \\ \hline
+Opis &  	System jest napisany w języku \textit{Java}. \\ \hline
+Uzasadnienie & Nie pozwoliłoby to wykorzystanie \textit{Moodle'a} jako platformy. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -854,7 +854,7 @@ Uzasadnienie &  	Nie pozwoliłoby to wykorzystanie Moodle'a jako platformy. \\ \
 %
 Identyfikator & AD6 \\ \hline
 Jest alternatywą do & D25 \\ \hline
-Nazwa & Klient systemu iQuest jako samodzielna aplikacja \\ \hline
+Nazwa & Klient systemu \textit{iQuest} jako samodzielna aplikacja \\ \hline
 Opis & Użytkownik korzysta z systemu za pośrednictwem specjalnej aplikacji klienckiej. \\ \hline
 Uzasadnienie & Konieczność instalowania dodatkowej aplikacji w celu wypełnienia ankiety zniechęciłoby wielu potencjalnych respondentów. Ponadto, należałoby przygotować wersję dla różnych systemów operacyjnych, co wiązałoby się z dodatkowym nakładem pracy. \\ \hline
 Źródło & Architekt \\ \hline
@@ -871,8 +871,8 @@ Uzasadnienie & Konieczność instalowania dodatkowej aplikacji w celu wypełnien
 Identyfikator & AD7 \\ \hline
 Jest alternatywą do & D29 \\ \hline
 Nazwa & System zarządzania bazą danych - alternatywa \\ \hline
-Opis & System korzysta z systemu zarządzania bazą danych MySQL. \\ \hline
-Uzasadnienie & Byłoby to niezgodne z wymaganiami DRO. \\ \hline
+Opis & System korzysta z systemu zarządzania bazą danych \textit{MySQL}. \\ \hline
+Uzasadnienie & Byłoby to niezgodne z wymaganiami \textit{DRO}. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -887,8 +887,8 @@ Uzasadnienie & Byłoby to niezgodne z wymaganiami DRO. \\ \hline
 Identyfikator & AD8 \\ \hline
 Jest alternatywą do & D37 \\ \hline
 Nazwa & Testowanie jednostkowe - alternatywa \\ \hline
-Opis & Do obsługi testowania jednostkowego wykorzystana jest biblioteka SimpleTest. \\ \hline
-Uzasadnienie & Biblioteka SimpleTest jest mało rozbudowana. Bardziej funkcjonalna jest np. biblioteka PHPUnit. \\ \hline
+Opis & Do obsługi testowania jednostkowego wykorzystana jest biblioteka \textit{SimpleTest}. \\ \hline
+Uzasadnienie & Biblioteka \textit{SimpleTest} jest mało rozbudowana. Bardziej funkcjonalna jest np. biblioteka PHPUnit. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -903,8 +903,8 @@ Uzasadnienie & Biblioteka SimpleTest jest mało rozbudowana. Bardziej funkcjonal
 Identyfikator & AD9 \\ \hline
 Jest alternatywą do & D38 \\ \hline
 Nazwa & Dostęp absolwentów do systemu - alternatywa \\ \hline
-Opis & Student po staniu się absolwentem ma dostęp do systemu dzięki logowaniu się poprzez specjalne eKonto dla absolwentów. \\ \hline
-Uzasadnienie & Na Uczelni nie są tworzone specjalne eKonta dla absolwentów i nie planuje się, aby w najbliższym czasie (zwłaszcza przed wdrożeniem systemu iQuest) to zmienić. \\ \hline
+Opis & Student po staniu się absolwentem ma dostęp do systemu dzięki logowaniu się poprzez specjalne \textit{eKonto} dla absolwentów. \\ \hline
+Uzasadnienie & Na Uczelni nie są tworzone specjalne \textit{eKonta} dla absolwentów i nie planuje się, aby w najbliższym czasie (zwłaszcza przed wdrożeniem systemu \textit{iQuest}) to zmienić. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
