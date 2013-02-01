@@ -1,59 +1,59 @@
-\subsection{Moodle}
+\subsection{\textit{Moodle}}
 \label{Chapter631}
 
-\emph{Moodle} (roz. \textit{Modular Object-Oriented Dynamic Learning Environment}) -- stanowi podstawę systemu \textit{iQuest}. Jest to popularna (ponad 63 miliony użytkownikiów) platforma e-learningowa o otwartym kodzie źródłowym, napisana w języku \emph{PHP}. Wyboru dokonano ze względu na kilka czynników:
+\textit{Moodle} (ang. \definicja{Modular Object-Oriented Dynamic Learning Environment}) -- stanowi podstawę systemu \textit{iQuest}. Jest to popularna (ponad 63 miliony użytkownikiów) platforma e-learningowa o otwartym kodzie źródłowym, napisana w języku \emph{PHP}. Wyboru dokonano ze względu na kilka czynników:
 \begin{itemize}
-\item{Propozycję Architekta, wynikającą z faktu, iż Moodle posiada już implementację wielu wymaganych w \textit{iQuest} mechanizmów, jak np. konta użytkowników, system ról i uprawnień.}
-\item{Oczekiwania Klienta, wynikające z popularności platformy Moodle wśród systemów uczelnianych.}
-\item{Modułowość \emph{Moodle}, umożliwiającą pisanie rozszerzeń.}
+\item{Propozycję Architekta, wynikającą z faktu, iż \textit{Moodle} posiada już implementację wielu wymaganych w \textit{iQuest} mechanizmów, jak np. konta użytkowników, system ról i uprawnień.}
+\item{Oczekiwania Klienta, wynikające z popularności platformy \textit{Moodle} wśród systemów uczelnianych.}
+\item{Modułowość \textit{Moodle}, umożliwiającą pisanie rozszerzeń.}
 \end{itemize}
 
-\subsection{PHP}
+\subsection{\textit{PHP}}
 \label{Chapter632}
 
-\emph{PHP} -- platforma \textit{Moodle} jest napisana właśnie w tym języku programowania. Z tego względu, jest to technologia zastosowana w większości rozszerzeń utworzonych przez zespół /textit{iQuest}, korzystających z interfejsów programowania aplikacji tej platformy. Ponadto \emph{PHP} jest jednym z najpopularniejszych języków programowania aplikacji internetowych, posiada doskonalą dokumentację oraz jest cały czas rozwijany.
+\textit{PHP} -- platforma \textit{Moodle} jest napisana właśnie w tym języku programowania. Z tego względu, jest to technologia zastosowana w większości rozszerzeń utworzonych przez zespół /textit{iQuest}, korzystających z interfejsów programowania aplikacji tej platformy. Ponadto \textit{PHP} jest jednym z najpopularniejszych języków programowania aplikacji internetowych, posiada doskonalą dokumentację oraz jest cały czas rozwijany.
 
-\subsection{PHPUnit}
+\subsection{\textit{PHPUnit}}
 \label{Chapter633}
 
-Ze względu na fakt, iż programiści \textit{Moodle'a} wykonują testy jednostkowe kodu wykorzystując do tego celu \emph{PHPUnit}, zdecydowano się skorzystać z przygotowanego przez nich oprogramowania. \textit{Moodle} udostępnia dwie klasy do testowania -- \textit{basic\_testcase} i \textit{advanced\_testcase}, przy czym druga wymieniona służy do testów, które wchodzą w interakcję z bazą danych.
+Ze względu na fakt, iż programiści \textit{Moodle'a} wykonują testy jednostkowe kodu wykorzystując do tego celu \textit{PHPUnit}, zdecydowano się skorzystać z przygotowanego przez nich oprogramowania. \textit{Moodle} udostępnia dwie klasy do testowania -- \textit{basic\_testcase} i \textit{advanced\_testcase}, przy czym druga wymieniona służy do testów, które wchodzą w interakcję z bazą danych.
 
-\subsection{Selenium}
+\subsection{\textit{Selenium}}
 \label{Chapter634}
 
-\emph{Selenium} -- szybko rozwijające się narzędzie do testów akceptacyjnych. Był to naturalny wybór zwłaszcza, że zostało ono przybliżone programistom na zajęciach z Inżynierii Oprogramowania w trakcie toku studiów. Projekt ten składa się m.in. z następującego oprogramowania:
+\textit{Selenium} -- szybko rozwijające się narzędzie do testów akceptacyjnych. Był to naturalny wybór zwłaszcza, że zostało ono przybliżone programistom na zajęciach z Inżynierii Oprogramowania w trakcie toku studiów. Projekt ten składa się m.in. z następującego oprogramowania:
 \begin{itemize}
-\item{Selenium IDE -- zintegrowane środowisko programistyczne dla skryptów \emph{Selenium} -- zaimplementowane jako rozszerzenie dla przeglądarki internetowej Firefox. Pozwala na: nagrywanie i odtwarzanie sekwencji kroków, wykonywanych podczas pracy z przeglądarką, eksport skryptów do kodu języków programowania (np. \emph{Java}).}
-\item{Selenium Client Drivers (\emph{Java}) -- sterownik klienta dla języka Java, pozwalający na wykonywanie skryptów \emph{Selenium} z poziomu języka \emph{Java}},
-\item{HtmlUnit Driver -- Implementacja klasy \emph{WebDriver}, która emuluje zachowanie przeglądarki. Pozwala na uruchamianie skryptów \emph{Selenium} bez korzystania z przeglądarki internetowej.}
+\item{\textit{Selenium IDE} -- zintegrowane środowisko programistyczne dla skryptów \textit{Selenium} -- zaimplementowane jako rozszerzenie dla przeglądarki internetowej \textit{Firefox}. Pozwala na: nagrywanie i odtwarzanie sekwencji kroków, wykonywanych podczas pracy z przeglądarką, eksport skryptów do kodu języków programowania (np. \textit{Java}).}
+\item{\textit{Selenium Client Drivers} (\textit{Java}) -- sterownik klienta dla języka \textit{Java}, pozwalający na wykonywanie skryptów \textit{Selenium} z poziomu języka \textit{Java}},
+\item{\textit{HtmlUnit Driver} -- Implementacja klasy \textit{WebDriver}, która emuluje zachowanie przeglądarki. Pozwala na uruchamianie skryptów \textit{Selenium} bez korzystania z przeglądarki internetowej.}
 \end{itemize}
 
-\subsection{PostgreSQL}
+\subsection{\textit{PostgreSQL}}
 \label{Chapter635}
 
-System zarządzania bazą danych \emph{PostgreSQL} został wybrany ze względu na wymaganie pozafunkcjonalne -- pracownicy \emph{Działu Rozwoju Oprogramowania Politechniki Poznańskiej} korzystają z tej właśnie bazy danych. Jest to baza danych o otwartym kodzie źródłowym, zgodna ze standardami, ciągle rozwijana, wysoce konfigurowalna.
+System zarządzania bazą danych \textit{PostgreSQL} został wybrany ze względu na wymaganie pozafunkcjonalne -- pracownicy \textit{Działu Rozwoju Oprogramowania Politechniki Poznańskiej} korzystają z tej właśnie bazy danych. Jest to baza danych o otwartym kodzie źródłowym, zgodna ze standardami, ciągle rozwijana, wysoce konfigurowalna.
 
-\subsection{Eclipse IDE}
+\subsection{\textit{Eclipse IDE}}
 \label{Chapter636}
 
-Wybór \emph{Eclipse IDE} jako stosowanego dla projektu \textit{iQuest} zintegrowanego środowiska programistycznego wynika z faktu, iż oprogramowanie to jest dostępne za darmo. Dodatkową zaletą \textit{Eclipse} jest modularność tego rozwiązania, dzięki czemu dostępny jest w nim dodatek \emph{PHP Development Tools}, upraszczający pracę z technologią PHP. Udostępnia m.in. narzędzia do analizy poprawności składniowej pisanego kodu, formatery kodu, wyszukiwanie fraz w wielu plikach, kontekstowe podpowiedzi i nawigację.
+Wybór \textit{Eclipse IDE} jako stosowanego dla projektu \textit{iQuest} zintegrowanego środowiska programistycznego wynika z faktu, iż oprogramowanie to jest dostępne za darmo. Dodatkową zaletą \textit{Eclipse} jest modularność tego rozwiązania, dzięki czemu dostępny jest w nim dodatek \textit{PHP Development Tools}, upraszczający pracę z technologią \textit{PHP}. Udostępnia m.in. narzędzia do analizy poprawności składniowej pisanego kodu, formatery kodu, wyszukiwanie fraz w wielu plikach, kontekstowe podpowiedzi i nawigację.
 
-\subsection{SVN}
+\subsection{\textit{SVN}}
 \label{Chapter637}
 
-\emph{Subversion} został wybrany jako podstawowy system kontroli wersji ze względu na wymagania pozafunkcjonalne. Zespół eksploatacji, który docelowo przejmie zarządzanie artefaktami związanymi z projektem, wykorzystuje właśnie \textit{SVN}. Główne funkcjonalności tego systemu to: atomowe publikowanie zmian, historia operacji na plikach (zmiana nazwy, skopiowanie, przeniesienie, modyfikacja, usunięcie), wersjonowanie plików i folderów, łatwy dostęp do informacji o zmianach.
+\textit{Subversion} został wybrany jako podstawowy system kontroli wersji ze względu na wymagania pozafunkcjonalne. Zespół eksploatacji, który docelowo przejmie zarządzanie artefaktami związanymi z projektem, wykorzystuje właśnie \textit{SVN}. Główne funkcjonalności tego systemu to: atomowe publikowanie zmian, historia operacji na plikach (zmiana nazwy, skopiowanie, przeniesienie, modyfikacja, usunięcie), wersjonowanie plików i folderów, łatwy dostęp do informacji o zmianach.
 
-\subsection{Redmine}
+\subsection{\textit{Redmine}}
 \label{Chapter638}
 
-Systemu zarządzania projektami \emph{Redmine} wykorzystywany był od samego początku istnienia projektu. Jest to narzędzie bardzo przydatne w wymianie informacji pomiędzy członkami zespołu, integrujące się m.in. z repozytorium kodu, bazą wiedzy o projekcie, listą zagadnień, forum.  Technologia ta została narzucona, ze względu na sposób organizacji pracy w \textit{Software Development Studio} na Politechnice Poznańskiej.
+Systemu zarządzania projektami \textit{Redmine} wykorzystywany był od samego początku istnienia projektu. Jest to narzędzie bardzo przydatne w wymianie informacji pomiędzy członkami zespołu, integrujące się m.in. z repozytorium kodu, bazą wiedzy o projekcie, listą zagadnień, forum.  Technologia ta została narzucona, ze względu na sposób organizacji pracy w \textit{Software Development Studio} na Politechnice Poznańskiej.
 
-\subsection{JasperReports}
+\subsection{\textit{JasperReports}}
 \label{Chapter639}
 
-Ze względu na wymagania pozafunkcjonalne, zdecydowano się skorzystać z mechanizmów raportowania oferowanych przez \emph{JasperReports}. Jest to najbardziej popularny silnik raportowania o otwartym kodzie źródłowym (wersja Community). Pozwala na generację raportów, których treść jest określona z dokładnością co do piksela. Generowane raporty można eksportować do popularnych formatów dokumentów, np. HTML, PDF, Excel, Word.
+Ze względu na wymagania pozafunkcjonalne, zdecydowano się skorzystać z mechanizmów raportowania oferowanych przez \textit{JasperReports}. Jest to najbardziej popularny silnik raportowania o otwartym kodzie źródłowym (wersja Community). Pozwala na generację raportów, których treść jest określona z dokładnością co do piksela. Generowane raporty można eksportować do popularnych formatów dokumentów, np. \textit{HTML}, \textit{PDF}, \textit{Excel}, \textit{Word}.
 
-\subsection{JetBrains PhpStorm}
+\subsection{\textit{JetBrains PhpStorm}}
 \label{Chapter63a}
 
-PhpStorm jest komercyjnym \emph{IDE} dla języka \emph{PHP} tworzonym przez firmę \emph{JetBrains}. Wykorzystano funkcjonalność odpowiedzialną za generację diagramów \emph{UML} z kodu. Wygenerowane w trybie \emph{Organic} diagramy można zobaczyć w dalszej części pracy.
+\textit{PhpStorm} jest komercyjnym \textit{IDE} dla języka \textit{PHP} tworzonym przez firmę \textit{JetBrains}. Wykorzystano funkcjonalność odpowiedzialną za generację diagramów \textit{UML} z kodu. Wygenerowane w trybie \textit{Organic} diagramy można zobaczyć w dalszej części pracy.

@@ -9,7 +9,7 @@ W niniejszym rozdziale zostaną zaprezentowane i krótko opisane wymagania pozaf
 \section{Opis wymagań}
 \label{Chapter43}
 
-Wymagania pozafunkcjonalne przypisane do wyżej opisanych charakterystyk oprogramowania przedstawione zostały w tabeli \ref{tab:reqs}. Dodatkowo, określono za pomocą etykiety \textbf{ważność (W)} oraz \textbf{trudność implementacji (TI)} dla każdego z wymagań. Wartości w ramach tego oznaczenia wyrażone są w następującej skali:
+Wymagania pozafunkcjonalne przypisane do wyżej opisanych charakterystyk oprogramowania przedstawione zostały w tabeli \ref{tab:reqs}. Dodatkowo, określono za pomocą etykiety \emph{ważność (W)} oraz \emph{trudność implementacji (TI)} dla każdego z wymagań. Wartości w ramach tego oznaczenia wyrażone są w następującej skali:
 
 \begin{itemize}
 \item{H (ang.~\definicja{high}) -- wysoka}
@@ -65,7 +65,7 @@ Interoperacyjność & System ma wymieniać potrzebne dane z systemami uczelniany
 Interoperacyjność & System ma pobierać dane z systemu \textit{eDziekanat} w następujący sposób: \textit{SOAP}. & H & M \\ \hline
 Interoperacyjność & System ma przesyłać dane o wiadomościach do wysłania do systemu \textit{ePoczta} w następujący sposób: \textit{SOAP}. & H & M \\ \hline
 Interoperacyjność & System ma pobierać dane do autoryzacji z systemu \textit{eKonto} w następujący sposób: \textit{SOAP}. & H & M \\ \hline
-Interoperacyjność & System ma przesyłać wyniki ankiet do systemu BI\footnote{ang. \definicja{Business Intelligence}}. & H & M \\ \hline
+Interoperacyjność & System ma przesyłać wyniki ankiet do systemu \textit{BI}\footnote{ang. \definicja{Business Intelligence}}. & H & M \\ \hline
 %
 Kompletność kontekstowa & System ma działać w przeglądarkach: \textit{IE 7.0+}, \textit{Firefox 15}, \textit{Opera 12}. & H & M \\ \hline
 Kompletność kontekstowa & Należy przygotować raport jak system zachowuje się na platformach mobilnych. & L & L \\ \hline
@@ -107,7 +107,7 @@ Współistnienie & System generowania raportów może być osobną aplikacją, d
 Współistnienie & Wszystkie potrzebne dane z zewnętrznych systemów należy przechowywać lokalnie i synchronizować. & M & H \\ \hline
 Współistnienie & Należy kolejkować zadania (np.~e-maile) w systemie, na czas braku możliwości ich wysłania (np.~awaria \textit{ePoczty}). & H & M \\ \hline
 %
-Zużycie zasobów & System nie powinien wykorzystywać więcej serwerów HTTP niż jeden. & M & L \\ \hline
+Zużycie zasobów & System nie powinien wykorzystywać więcej serwerów \textit{HTTP} niż jeden. & M & L \\ \hline
 Zużycie zasobów & System powinien działać poprawnie przy nawet 10.000 użytkowników zalogowanych jednocześnie. & H & M \\ \hline
 Zużycie zasobów & Zadania, które nie muszą zostać wykonane natychmiastowo, powinny być kolejkowane przez system. & M & M \\ \hline
 Zużycie zasobów & Możliwość pracy przez ankietera\slash respondenta na średniej klasy laptopie (CPU 2GHz, RAM 4GB). & H & L \\ \hline
@@ -122,6 +122,6 @@ Zalety wykorzystania tak powszechnej technologii są jednak znacznie szersze. \t
 
 Warto zaznaczyć, że w trakcie prac nad projektem, bardzo silny nacisk stawiano na prawidłowe zarządzanie uprawnieniami użytkowników. Są one weryfikowane przy każdym działaniu podejmowanym przez użytkowników. Zależą one od przydzielonej im w systemie roli. Szczegóły tej kwestii swobodnie definiować może administracja. Ważnym jest, że osoby o roli ankietera mogą modyfikować i analizować jedynie utworzone przez siebie, lub udostępnione im bezpośrednio, badania. Podobnie działają uprawnienia przydzielone do roli respondenta -- pozwalając dokładnie jeden raz odpowiedzieć na pytania w ankietach skierowanych do grup docelowych, do których należy użytkownik. \\
 
-W trakcie testów na urządzeniu przenośnym typu netbook\footnote{\textit{Asus Automobili Lamborghini VX6}, CPU: Intel Atom D525 1,7GHz, RAM: 4GB, HDD: 320GB 5400 RPM, Środowisko: korzystający z \definicja{WUBI} system \definicja{Ubuntu 12.04 LTS}.} pełniącym rolę serwera HTTP, serwera bazy danych oraz klienta systemu jednocześnie, cały proces instalacji nie przekraczał 40 minut. Zaobserwowanym głównym czynnikiem ograniczającym wydajność procesu była szybkość środowiska wirtualnego oraz zastosowanego dysku twardego.
+W trakcie testów na urządzeniu przenośnym typu netbook\footnote{\textit{Asus Automobili Lamborghini VX6}, CPU: \textit{Intel Atom D525} 1,7GHz, RAM: 4GB, HDD: 320GB 5400 RPM, Środowisko: korzystający z \definicja{WUBI} system \definicja{Ubuntu 12.04 LTS}.} pełniącym rolę serwera \textit{HTTP}, serwera bazy danych oraz klienta systemu jednocześnie, cały proces instalacji nie przekraczał 40 minut. Zaobserwowanym głównym czynnikiem ograniczającym wydajność procesu była szybkość środowiska wirtualnego oraz zastosowanego dysku twardego.
 
 %Wywaliłem weryfikację wymagań. Nie wiem co tu napisać - mamy bowiem zrobione to jedynie na zasadzie: "jest?" "jest!". I tyle. Nikt nic nie testował aż tak dokładnie w tej kwestii, nie?
