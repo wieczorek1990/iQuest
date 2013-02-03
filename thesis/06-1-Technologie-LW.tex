@@ -3,7 +3,7 @@
 
 \textit{Moodle} (ang. \definicja{Modular Object-Oriented Dynamic Learning Environment}) -- stanowi podstawę systemu \textit{iQuest}. Jest to popularna (ponad 63 miliony użytkownikiów) platforma e-learningowa o otwartym kodzie źródłowym, napisana w języku \emph{PHP}. Wyboru dokonano ze względu na kilka czynników:
 \begin{itemize}
-\item{Propozycję Architekta, wynikającą z faktu, iż \textit{Moodle} posiada już implementację wielu wymaganych w \textit{iQuest} mechanizmów, jak np. konta użytkowników, system ról i uprawnień.}
+\item{Propozycję Kierownika Projektu oraz następującą po niej decyzję Architekta, wynikającą z faktu, iż \textit{Moodle} posiada już implementację wielu wymaganych w \textit{iQuest} mechanizmów, jak np. konta użytkowników, system ról i uprawnień.}
 \item{Oczekiwania Klienta, wynikające z popularności platformy \textit{Moodle} wśród systemów uczelnianych.}
 \item{Modułowość \textit{Moodle}, umożliwiającą pisanie rozszerzeń.}
 \end{itemize}
@@ -11,17 +11,19 @@
 \subsection{\textit{PHP}}
 \label{Chapter632}
 
-\textit{PHP} -- platforma \textit{Moodle} jest napisana właśnie w tym języku programowania. Z tego względu, jest to technologia zastosowana w większości rozszerzeń utworzonych przez zespół /textit{iQuest}, korzystających z interfejsów programowania aplikacji tej platformy. Ponadto \textit{PHP} jest jednym z najpopularniejszych języków programowania aplikacji internetowych, posiada doskonalą dokumentację oraz jest cały czas rozwijany.
+\textit{PHP} -- platforma \textit{Moodle} jest napisana właśnie w tym języku programowania. Z tego względu, jest to technologia zastosowana w większości rozszerzeń utworzonych przez zespół textit{iQuest}, korzystających z interfejsów programowania aplikacji tej platformy. Ponadto \textit{PHP} jest jednym z najpopularniejszych języków programowania aplikacji internetowych, posiada doskonałą dokumentację\footnote{\cite{Man:PHP}} oraz jest cały czas rozwijany.
+
+Dodatkowo, język \textit{PHP} jest dość przyjazny dla programisty, gdy chodzi o komunikację z bazą danych. Przy realizacji zadań z tym związanych, odnoszono się zarówno do wspomnianej wyżej dokumentacji, jak też do literatury fachowej, w tym ,,PHP i MySQL - Księga przykładów'' autorstwa E. Quigley oraz M. Gargenta\footnote{\cite{EQMG:PiMKp07}}.
 
 \subsection{\textit{PHPUnit}}
 \label{Chapter633}
 
-Ze względu na fakt, iż programiści \textit{Moodle'a} wykonują testy jednostkowe kodu wykorzystując do tego celu \textit{PHPUnit}, zdecydowano się skorzystać z przygotowanego przez nich oprogramowania. \textit{Moodle} udostępnia dwie klasy do testowania -- \textit{basic\_testcase} i \textit{advanced\_testcase}, przy czym druga wymieniona służy do testów, które wchodzą w interakcję z bazą danych.
+Ze względu na fakt, iż programiści \textit{Moodle'a} wykonują testy jednostkowe kodu wykorzystując do tego celu \textit{PHPUnit}, zdecydowano się skorzystać z przygotowanego przez nich oprogramowania. \textit{Moodle} udostępnia dwie klasy do testowania -- \textit{basic\_testcase} i \textit{advanced\_testcase}, przy czym druga wymieniona służy do testów, które wchodzą w interakcję z bazą danych. Korzystanie z tych klas dodatkowo uprasza fakt istnienia świetnej dokumentacji technicznej\cite{Man:PHPUnit}.
 
 \subsection{\textit{Selenium}}
 \label{Chapter634}
 
-\textit{Selenium} -- szybko rozwijające się narzędzie do testów akceptacyjnych. Był to naturalny wybór zwłaszcza, że zostało ono przybliżone programistom na zajęciach z Inżynierii Oprogramowania w trakcie toku studiów. Projekt ten składa się m.in. z następującego oprogramowania:
+\textit{Selenium} -- szybko rozwijający się zestaw narzędzi do testów akceptacyjnych. Był to naturalny wybór zwłaszcza, że zostało ono przybliżone programistom na zajęciach z Inżynierii Oprogramowania w trakcie toku studiów. \textit{Selenium} składa się m.in. z następującego oprogramowania\footnote{\cite{Man:Selenium}}:
 \begin{itemize}
 \item{\textit{Selenium IDE} -- zintegrowane środowisko programistyczne dla skryptów \textit{Selenium} -- zaimplementowane jako rozszerzenie dla przeglądarki internetowej \textit{Firefox}. Pozwala na: nagrywanie i odtwarzanie sekwencji kroków, wykonywanych podczas pracy z przeglądarką, eksport skryptów do kodu języków programowania (np. \textit{Java}).}
 \item{\textit{Selenium Client Drivers} (\textit{Java}) -- sterownik klienta dla języka \textit{Java}, pozwalający na wykonywanie skryptów \textit{Selenium} z poziomu języka \textit{Java}},
@@ -57,3 +59,7 @@ Ze względu na wymagania pozafunkcjonalne, zdecydowano się skorzystać z mechan
 \label{Chapter63a}
 
 \textit{PhpStorm} jest komercyjnym \textit{IDE} dla języka \textit{PHP} tworzonym przez firmę \textit{JetBrains}. Wykorzystano funkcjonalność odpowiedzialną za generację diagramów \textit{UML} z kodu. Wygenerowane w trybie \textit{Organic} diagramy można zobaczyć w dalszej części pracy.
+
+\subsection{\textit{HTML} oraz \textit{CSS}}
+\label{Chapter63b}
+Po stronie użytkownika, system \textit{iQuest} prezentowany jest za pośrednictwem interpretowanego przez jego przeglądarkę internetową kodu w języku \textit{HTML}. Jego wygląd, wraz z umiejscowieniem elementów, określa natomiast arkusz stylów \textit{CSS}. Realizując zadania związane z tymi technologiami, odnoszono się do profesjonalnej literatury branżowej -- m.in. ,,Wstępu do CSS3 i HTML5'' autorstwa Bartosza Danowskiego/footnote{/cite{BD:WdCiH11}}.

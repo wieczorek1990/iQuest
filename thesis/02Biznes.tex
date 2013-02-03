@@ -1,10 +1,13 @@
 \chapter{Opis procesów biznesowych}
 \label{Chapter2}
 
-System \textit{iQuest}, będący przedmiotem niniejszej Pracy Dyplomowej, jest nie tylko projektem edukacyjnym, lecz również pełnoprawnym zadaniem biznesowym. Wykonywany dla Dziekana Wydziału Informatyki Politechniki Poznańskiej, traktowany jest dokładnie tak samo, jak w pełni profesjonalne zlecenia, z którymi jego uczestnikom przyjdzie się zmierzyć w przyszłości. Z tego względu, konieczna jest jego analiza w kontekście powiązanych procesów biznesowych.
+\section{Wstęp}
+\label{Chapter21}
+
+System \textit{iQuest}, będący przedmiotem niniejszej Pracy Dyplomowej, jest nie tylko projektem edukacyjnym, lecz również pełnoprawnym zadaniem biznesowym. Wykonywany dla Wydziału Informatyki Politechniki Poznańskiej, traktowany jest dokładnie tak samo, jak w pełni profesjonalne zlecenia, z którymi jego uczestnikom przyjdzie się zmierzyć w przyszłości. Z tego względu, konieczna jest jego analiza w kontekście powiązanych procesów biznesowych.
 
 \section{Aktorzy}
-\label{Chapter21}
+\label{Chapter22}
 
 W systemie zdefiniowani są następujący aktorzy:
 \begin{itemize}
@@ -16,12 +19,12 @@ W systemie zdefiniowani są następujący aktorzy:
 \end{itemize}
 
 \section{Obiekty biznesowe}
-\label{Chapter22}
+\label{Chapter23}
 
 W ramach systemu \textit{iQuest}, zdefiniowanych jest sześć obiektów biznesowych. Mowa o Ankiecie, Badaniu, Grupie Docelowej, Katalogu Ankiet, Pytaniu i Raporcie. Poniższe opisy tych obiektów podane są w kolejności alfabetycznej.
 
 \subsection{Ankieta}
-\label{Chapter221}
+\label{Chapter231}
 
 Jest tworzona przez Ankieterów i wysyłana do Respondentów. Raz utworzona Ankieta zostaje zapisana w Katalogu Ankiet. Ankietę charakteryzują następujące atrybuty:
 
@@ -33,7 +36,7 @@ Jest tworzona przez Ankieterów i wysyłana do Respondentów. Raz utworzona Anki
 \end{itemize}
 
 \subsection{Badanie}
-\label{Chapter222}
+\label{Chapter232}
 
 Jest to Ankieta wraz z wybranymi: grupą docelową i czasem trwania. Badanie determinują następujące atrybuty:
 
@@ -47,7 +50,7 @@ Jest to Ankieta wraz z wybranymi: grupą docelową i czasem trwania. Badanie det
 \end{itemize}
 
 \subsection{Grupa Docelowa}
-\label{Chapter223}
+\label{Chapter233}
 
 Grupa studentów lub absolwentów, do których skierowana jest ankieta. Atrybuty:
 
@@ -56,14 +59,14 @@ Grupa studentów lub absolwentów, do których skierowana jest ankieta. Atrybuty
 \end{itemize}
 
 \subsection{Katalog Ankiet}
-\label{Chapter224}
+\label{Chapter234}
 
-Katalog Ankiet zawiera zbiór wszystkich Ankiet dostępnych dla danego Ankietera \textit{iQuest}. Ankiety mogą być z poziomu Katalogu Ankiet współdzielone, duplikowane, oglądane, edytowane i//lub usuwane, w zależności od aktualnego statusu. Dla przykładu, nowo-utworzoną Ankietę bez odpowiedzi można bez problemu usunąć lub edytować, podczas gdy taka, na którą udzielono już odpowiedzi, dostępna jest w trybie \textit{tylko do odczytu}.
+Katalog Ankiet zawiera zbiór wszystkich Ankiet dostępnych dla danego Ankietera \textit{iQuest}. Ankiety mogą być z poziomu Katalogu Ankiet współdzielone, duplikowane, oglądane, edytowane i\slash lub usuwane, w zależności od aktualnego statusu. Dla przykładu, nowo-utworzoną Ankietę bez odpowiedzi można bez problemu usunąć lub edytować, podczas gdy taka, na którą udzielono już odpowiedzi, dostępna jest w trybie \textit{tylko do odczytu}.
 
 \subsection{Pytanie}
-\label{Chapter225}
+\label{Chapter235}
 
-Pytanie jest elementarną jednostką Ankiety. Samo może składać się jedynie z nazwy (w przypadku pytań otwartych), lub nazwy i dostępnych odpowiedzi (dla Pytań zamkniętych). Pytanie w ogólności charakteryzują:
+Pytanie jest elementarną jednostką Ankiety. Może składać się jedynie z treści (w przypadku pytań otwartych), lub treści i dostępnych odpowiedzi (dla Pytań zamkniętych). Pytanie w ogólności charakteryzują:
 
 \begin{itemize}
 \item Treść Pytania,
@@ -72,18 +75,18 @@ Pytanie jest elementarną jednostką Ankiety. Samo może składać się jedynie 
 \end{itemize}
 
 \subsection{Raport}
-\label{Chapter226}
+\label{Chapter236}
 
 Zebrane odpowiedzi z jednego lub z kilku badań. Może zawierać wykresy, zestawienia.
 
 \pagebreak
 \section{Biznesowe przypadki użycia}
-\label{Chapter23}
+\label{Chapter24}
 
 Poniżej przedstawione zostały biznesowe przypadki użycia. Obejmują one dwa główne zagadnienia: zbieranie informacji oraz zarządzanie Grupami Docelowymi.
 
 \subsection{BC01: Zbieranie informacji o Absolwentach}
-\label{Chapter231}
+\label{Chapter241}
 
 \ucsection{BC01: Zbieranie informacji o Absolwentach}{Ankieter, Respondent}
 {Ankieter chce ankietować Absolwentów}
@@ -105,7 +108,7 @@ Poniżej przedstawione zostały biznesowe przypadki użycia. Obejmują one dwa g
 {}
 
 \subsection{BC02: Zbieranie informacji o Studentach}
-\label{Chapter232}
+\label{Chapter242}
 
 \ucsection{BC02: Zbieranie informacji o Studentach}{Ankieter, Respondent}
 {Ankieter chce ankietować Studentów}
@@ -120,7 +123,7 @@ Poniżej przedstawione zostały biznesowe przypadki użycia. Obejmują one dwa g
 {}
 
 \subsection{BC03: Zarządzanie Grupami Docelowymi}
-\label{Chapter233}
+\label{Chapter243}
 
 \ucsection{BC03: Zarządzanie Grupami Docelowymi}{Administrator}
 {Ankieter chce ankietować Studentów}

@@ -1,20 +1,16 @@
 \chapter{Opis implementacji}
 \label{Chapter6}
 
-%WRZUCIĆ TO GDZIEŚ W TEN DZIAŁ?
-%Instalacja systemu realizowana jest trójstopniowo. Pierwszym krokiem jest umieszczenie na serwerze docelowym plików platformy Moodle i ich instalacja oraz wstępna konfiguracja. W tak przygotowanym środowisku, umieszczane są następnie pliki systemu iQuest, które -- dzięki wbudowanym mechanizmom platformy Moodle -- administrator może w bardzo prosty sposób zainstalować i aktywować. Aktualizacja systemu przebiega bardzo podobnie, i polega jedynie na przeprowadzeniu standardowego dla Moodle procesu aktualizacji, poprzedzonego zmianą odpowiednich plików na serwerze, w ramach którego działa system.
-%WRZUCIĆ TO GDZIEŚ W TEN DZIAŁ?
-
 \section{Wstęp}
 \label{Chapter61}
 
-Realizacja projektu iQuest rozciągała się na okres trwający 5 miesięcy. W tym czasie zrealizowano dwa kolejne wydania. \\
+Realizacja projektu \textit{iQuest} rozciągała się na okres trwający 5 miesięcy. W tym czasie zrealizowano dwa kolejne wydania. \\
 
-W pierwszym miesiącu -- w trakcie praktyk studenckich odbywanych przez 3 spośród 4 członków zespołu programistów -- utworzono pierwszą wtyczkę do platformy Moodle. Był to moduł logowania przez eKonto. Następne 3 miesiące trwało utworzenie pierwszego wydania, obejmującego podstawowe mechanizmy tworzenia badań i ankiet, oraz ich przeprowadzania. Ostatni miesiąc poświęcony został na dopracowanie wcześniej wspomnianych modułów o dodatkowe elementy, bezpośrednio związane z wymaganiami funkcjonalnymi i pozafunkcjonalnymi wyznaczonymi dla projektu. \\
+W pierwszym miesiącu -- w trakcie praktyk studenckich odbywanych przez 3 spośród 4 członków zespołu programistów -- utworzono pierwszą wtyczkę do platformy \textit{Moodle}. Był to moduł logowania przez \textit{eKonto}. Następne 3 miesiące trwało utworzenie pierwszego wydania, obejmującego podstawowe mechanizmy tworzenia badań i ankiet, oraz ich przeprowadzania. Ostatni miesiąc -- przeznaczony na drugie wydanie -- zaowocował powstaniem mechanizmów zarządzania grupami docelowymi, tworzenia predefiniowanych zestawów odpowiedzi do pytań, oraz wieloma innymi dodatkami, bezpośrednio związanymi z wymaganiami funkcjonalnymi i pozafunkcjonalnymi, wyznaczonymi dla projektu. \\
 
-W trakcie realizacji, zdarzały się dynamiczne zmiany podejścia do poszczególnych elementów systemu, co skutkowało zatwierdzaniem nowych decyzji projektowych i wymagało przebudowania gotowych już elementów. Dla zespołu programistów, było to bardzo trudne i wymagało poświęcenia znaczących nakładów czasowych. \\
+W trakcie realizacji, zdarzały się dynamiczne zmiany podejścia do poszczególnych elementów systemu, co skutkowało zatwierdzaniem nowych decyzji projektowych i wymagało przebudowania gotowych już elementów. Dla zespołu programistów, było to uciążliwe i wymagało poświęcenia znaczących nakładów czasowych. \\
 
-W dalszej części niniejszego rozdziału znajduje się analiza systemu iQuest w kontekście implementacji. Rozpoczęty opisem napotkanych problemów i zastosowanych rozwiązań wywód, kontynuowany będzie opisem zastosowanych technologii. Wówczas nastąpi przejście do wyjaśnienia kwestii związanych z implementacją interfejsu i logiki, a także mechanizmów wiążących je ze sobą.
+W dalszej części niniejszego rozdziału znajduje się analiza systemu \textit{iQuest} w kontekście implementacji. Rozpoczęty opisem napotkanych problemów i zastosowanych rozwiązań wywód, kontynuowany będzie opisem zastosowanych technologii. Wówczas nastąpi przejście do wyjaśnienia kwestii związanych z implementacją interfejsu i logiki, a także mechanizmów wiążących je ze sobą.
 
 \section{Napotkane problemy i ich rozwiązania}
 \label{Chapter62}
@@ -25,37 +21,33 @@ W dalszej części niniejszego rozdziału znajduje się analiza systemu iQuest w
 
 Problemy oraz ich rozwiązania zostały posortowane chronologicznie, zgodnie z kolejnością, w jakiej pojawiały się w czasie realizacji projektu. Celem ułatwienia ich analizy, wcześniej zamieszczono krótki wstęp teoretyczny opisujący budowę platformy \textit{Moodle}.
 
-\subsection{Platforma Moodle}
+\subsection{Platforma \textit{Moodle}}
 \label{Chapter622}
 %KU
 
-Po zalogowaniu do systemu użytkownik musi wybrać \textit{kurs}. Jest on największą częścią platformy \textit{Moodle} i przeważnie kojarzony jest z ,,przedmiotem''. Na kurs składa się kilka lub kilkanaście \textit{sekcji}. Odpowiadają one najczęściej konkretnym zajęciom, wydarzeniom lub np.~tygodniom. Najmniejszą jednostką w Moodle jest \textit{aktywność}, będąca podstawowym typem modułów rozszerzających funkcjonalność platformy. Aktywnościami są np.~\textit{Fora}, \textit{Głosowania}, czy \textit{Czat}. \\
-
-Istnieje również inny typ modułów: \textit{zasoby}. Są to m.in.~własne strony internetowe, pliki, adresy \definicja{URL}. Na potrzeby projektu została wyróżniona grupa \textit{materiały}. Zalicza się do niej wszystkie moduły inne niż \textit{iQuest}, czyli inne niż badania i związane z nimi ankiety. Moduły grupowane są w sekcje. Różnica pomiędzy tym, czy użytkownik znajduje się lub nie, w konkretnym elemencie platformy, jak moduł, czy kurs, nazywana jest \textit{kontekstem}. O ułożeniu i wyświetlaniu elementów na stronie decyduje \textit{formater}, definiując w ten sposób interfejs użytkownika.
+Po zalogowaniu do systemu użytkownik musi wybrać \textit{kurs}. Jest on największą częścią platformy \textit{Moodle} i przeważnie kojarzony jest z ,,przedmiotem''. Na kurs składa się kilka lub kilkanaście \textit{sekcji}. Odpowiadają one najczęściej konkretnym zajęciom, wydarzeniom lub np.~tygodniom. Najmniejszą jednostką w \textit{Moodle} jest \textit{aktywność}, będąca podstawowym typem modułów rozszerzających funkcjonalność platformy. \textit{Aktywnościami} są np.~\textit{Fora}, \textit{Głosowania}, czy \textit{Czat}. \\
+Problem ten przewijał się przez cały czas implementacji systemu \textit{iQuest}.
+Istnieje również inny typ modułów: \textit{zasoby}. Są to m.in.~własne \textit{strony internetowe}, \textit{pliki}, \textit{adresy URL}. Na potrzeby projektu została wyróżniona grupa \textit{materiały}. Zalicza się do niej wszystkie moduły inne niż \textit{iQuest}, czyli inne niż badania i związane z nimi ankiety. Moduły grupowane są w sekcje. Różnica pomiędzy tym, czy użytkownik znajduje się lub nie, w konkretnym elemencie platformy, jak moduł, czy kurs, nazywana jest \textit{kontekstem}. O ułożeniu i wyświetlaniu elementów na stronie decyduje \textit{formater}, definiując w ten sposób interfejs użytkownika.
 
 \input{06-A-Problemy-MT.tex}
 \input{06-B-Problemy-KU.tex}
 
-{\color{red}Fragment niezredagowany}
-
 \subsection{Testy jednostkowe i akceptacyjne}
-\label{Chapter 62b}
+\label{Chapter62b}
 
-Realizacja wszystkich testów została pierwotnie powierzona jednemu z członków zespołu programistów. Zadanie to okazało się posiadać bardzo wysoki stopień złożoności, sprawiając, że napisanie pojedynczej linii kodu zajmowało średnio bardzo dużo czasu. \\
+Realizacja wszystkich testów została pierwotnie powierzona jednemu z członków zespołu programistów. Ze względu na brak precyzyjnej architektury logiki we wczesnej fazie projektu, początkowe utrzymanie testów okazało się być bardzo czasochłonne. \\
 
-Przyczyną takiego stanu był stały rozwój systemu. Realizowany bez zastosowania metody rozwoju w oparciu o testowanie, iQuest z przerażającą szybkością ewoluował. Nowe parametry, nowe wartości wyjściowe oraz zmiana dostępności poszczególnych funkcji sprawiały, że utrzymywanie testów zajmowało nawet kilkudziesięciokrotnie więcej czasu, niż ich utworzenie od nowa. \\
+Przyczyną takiego stanu był także stały rozwój systemu. Realizowany bez zastosowania metody rozwoju w oparciu o testowanie, \textit{iQuest} ze znaczną szybkością ewoluował niezależnie od testów. Nowe parametry, nowe wartości wyjściowe oraz zmiana dostępności poszczególnych funkcji sprawiały, że utrzymywanie testów zajmowało nawet kilkudziesięciokrotnie więcej czasu, niż ich utworzenie od nowa. \\
 
-Problem ten występował jednak jedynie w trakcie pierwszego wydania projektu. Przy drugim wydaniu, działalność związaną z testami jednostkowymi w sporej mierze przejął programista logiki aplikacji, co znacząco zmniejszyło czasochłonność ich realizacji. \\
+Problem ten występował jednak jedynie w trakcie pierwszego wydania projektu. Przy drugim wydaniu, działalność związaną z testami jednostkowymi w całości przejął programista logiki aplikacji, co znacząco zmniejszyło czasochłonność ich realizacji. \\
 
-Większy problem tyczył się testów akceptacyjnych. Już na początku realizacji projektu, wyszło na jaw, że eksport z \textit{Selenium IDE} (standard \textit{HTML}) do \textit{Eclipse IDE} (standard \textit{Java}) nie jest zadaniem prostym. Dla przykładu, część metod odwołania do poszczególnych obszarów na stronie nie może być przenoszony do Javy, ze względu na znane problemy. \\
-
-Na podstawie powyższej analizy stwierdzono, że testy akceptacyjne mogą być wykonywane za pomocą rozszerzenia \textit{Selenium IDE for Firefox}, szczególnie, że narzędzia w nim dostępne umożliwiają spory stopień automatyzacji.
+Większy problem tyczył się testów akceptacyjnych. Już na początku realizacji projektu, wyszło na jaw, że eksport z \textit{Selenium IDE} (standard \textit{HTML}) do \textit{Eclipse IDE} (standard \textit{Java}) nie jest zadaniem prostym. Ze względu na jego czasochłonność, w szczególności przy utrzymywaniu testów, zdecydowano o pominięciu tego kroku. \\
 
 \subsection{Mapowanie obiektowo-relacyjne}
 \label{Chapter62c}
 %LW
 
-Mapowanie obiektowo-relacyjne pozwala uprościć operacje na danych przechowywanych w bazie danych poprzez udostępnienie ich programiście w postaci obiektowej. System \textit{iQuest} operuje na klasach takich jak: ankieta, badanie, grupa docelowa, członek grupy docelowej, uprawnienie dostępu, pytanie (i potomne), odpowiedź, zadanie, praca w tle, etc. Początkowo architekt stworzył diagram klas na którym każda klasa miała wyróżnione publiczne metody \emph{insert, update, delete}. Niestety takie rozwiązanie spowodowało powielenie dużej ilości kodu związanego z interakcją z bazą danych. W ramach refaktoryzacji podjęto zadania stworzenia klas, które wzorem nowoczesnych systemów \emph{ORM} uproszczą projektowanie nowych klas reprezentujących dane. Ze względu na silną integrację z mechanizmami \emph{Moodle} w grę nie wchodziły gotowe rozwiązania. Autorskie rozwiązanie korzysta z mechanizmów \emph{Moodle Data manipulation API} oraz mechanizmu refleksji języka PHP, by pozwolić programiście korzystającego z tego rozwiązania na proste pobieranie i manipulację obiektami przechowywanymi w bazie danych. Diagram UML przedstawia się następująco:
+Mapowanie obiektowo-relacyjne pozwala uprościć operacje na danych przechowywanych w bazie danych poprzez udostępnienie ich programiście w postaci obiektowej. System \textit{iQuest} operuje na klasach takich jak: ankieta, badanie, grupa docelowa, członek grupy docelowej, uprawnienie dostępu, pytanie (i potomne), odpowiedź, zadanie, praca w tle, etc. Początkowo architekt stworzył diagram klas na którym każda klasa miała wyróżnione publiczne metody \textit{insert, update, delete}. Niestety takie rozwiązanie spowodowało powielenie dużej ilości kodu związanego z interakcją z bazą danych. W ramach refaktoryzacji podjęto się zadania stworzenia klas, które wzorem nowoczesnych systemów \textit{ORM} uproszczą projektowanie nowych klas reprezentujących dane. Ze względu na silną integrację istniejącego już kodu z mechanizmami \textit{Moodle} w grę nie wchodziły gotowe rozwiązania. Autorskie rozwiązanie korzysta z mechanizmów \textit{Moodle Data manipulation API} oraz mechanizmu refleksji języka \textit{PHP}, by pozwolić programiście korzystającemu z tego rozwiązania na proste pobieranie i manipulację obiektami przechowywanymi w bazie danych. Diagram UML przedstawia się następująco:
 
 \newpage
 \begin{figure}[H]
@@ -66,28 +58,23 @@ Mapowanie obiektowo-relacyjne pozwala uprościć operacje na danych przechowywan
 \end{figure}
 \newpage
 
-Klasa danych dziedziczy po klasie \emph{record} oraz implementuje statyczną metodę \emph{get\_mapping} interfejsu \emph{irecord}, by uzyskać dostęp do metod komunikacji z bazą danych. Metoda \emph{get\_mapping} pozwala zdefiniować mapowanie danej klasy na odpowiednią relację w bazie danych. Należy przy tym podać nazwę tabeli, mapowanie dla pól klasy składające się z mapowania nazw (klasa \emph{names\_mapping}), tj. nazwy w klasie i bazie danych oraz typu, który zadecyduje o metodzie pobrania/zapisania danej (typem może być także klasa potomna klasy \emph{record}). Dodatkowo można uwzględnić istnienie kluczy obcych, których poprawność będzie sprawdzana, jeżeli utworzymy obiekt klasy \emph{reference\_mapping}. W przypadku dziedziczenia wystarczy zdefiniować przy mapowaniu sposób jego obsługi (m.in. jakie pole określa typ klasy). Najważniejszy kod znajduje się w metodzie \emph{get\_instance}, która pobiera konstruktor danej klasy, poprzez refleksję tworzy obiekt z wyłuskanymi z bazy danych parametrami wymaganymi przy jego tworzeniu oraz ustawia resztę pól pobranych z bazy danych. Metody \emph{insert, update, delete} pobierają reprezentację obiektu oczekiwanego przez metody \emph{Data manipulation API} oraz wykonują żądane operacje.\\
-Zastosowane rozwiązanie znacząco poprawiło czytelność kodu poprzez zastosowanie zasady DRY (\emph{Don't repeat yourself}). Projektowano je, mając na uwadze rozwiązanie, z którym programista logiki miał już wcześniej styczność, tj. implementację \emph{ActiveRecord} z \emph{Ruby on Rails}. W trakcie pracy nad projektem doceniono stosowanie konwencji nazewniczych, których obecność znacząco upraszcza projektowanie klas mapujących dane.
+Klasa danych dziedziczy po klasie \textit{record} oraz implementuje statyczną metodę \textit{get\_mapping} interfejsu \textit{irecord}, by uzyskać dostęp do metod komunikacji z bazą danych. Metoda \textit{get\_mapping} pozwala zdefiniować mapowanie danej klasy na odpowiednią relację w bazie danych. Należy przy tym podać nazwę tabeli, mapowanie dla pól klasy składające się z mapowania nazw (klasa \textit{names\_mapping}), tj.~nazwy w klasie i bazie danych oraz typu, który zadecyduje o metodzie pobrania/zapisania danej (typem może być także klasa potomna klasy \textit{record}). Dodatkowo można uwzględnić istnienie kluczy obcych, których poprawność będzie sprawdzana, jeżeli utworzymy obiekt klasy \textit{reference\_mapping}. W przypadku dziedziczenia wystarczy zdefiniować przy mapowaniu sposób jego obsługi (m.in. jakie pole określa typ klasy). Najważniejszy kod znajduje się w metodzie \textit{get\_instance}, która pobiera konstruktor danej klasy, poprzez refleksję tworzy obiekt i na podstawie pobranych z bazy danych informacji, ustawia resztę pól. Metody \textit{insert, update, delete} pobierają reprezentację obiektu oczekiwanego przez metody \textit{Data manipulation API} oraz wykonują żądane operacje.\\
+Zastosowane rozwiązanie znacząco poprawiło czytelność kodu poprzez zastosowanie zasady DRY (ang. \definicja{Don't repeat yourself}). Projektowano je, mając na uwadze rozwiązanie, z którym programista logiki miał już wcześniej styczność, tj. implementację \textit{ActiveRecord} z \textit{Ruby on Rails}. W trakcie pracy nad projektem doceniono stosowanie konwencji nazewniczych, których obecność znacząco upraszcza projektowanie klas mapujących dane.
 
 \subsection{Inwencja programistów}
 \label{Chapter62d}
 
-W trakcie rozwoju oprogramowania pojawiło się kilka małych niejasności, które należało rozwiązać. Kilka razy wykazano również inicjatywę i zaproponowano rozwiązania, które stały się ostatecznie częścią projektu.
+W trakcie rozwoju oprogramowania pojawiło się kilka małych niejasności, które należało rozwiązać. Kilka razy wykazano również inicjatywę i zaproponowano rozwiązania, które stały się ostatecznie częścią projektu. \\
 
-Pierwszą ideą było zagospodarowanie przestrzeni w widoku badania. Po utworzeniu badania i dodania do niego ankiety, ankieterowi ukazuje się widok badania. Architekt nie zaproponował jak ma on wyglądać. Dał tylko pewne wskazówki. Zaznaczył, że z tego widoku, ankieter ma mieć możliwość usunięcia ankiety z badania oraz edytowania jej. I tu pojawił się problem. Żeby spełnić wymagania, na stronie wystarczyło pokazać odnośniki: ,,edytuj'' i ,,usuń z badania''. Praktycznie cała strona pozostawała pusta. Sytuacja taka jest niedopuszczalna, bo na pewno istniały jakieś przydatne informacje, które można było w tym miejscu wyświetlić. Wykoncypowano, że najbardziej naturalnie będzie pokazać w tym miejscu statystyki dla badania.
+Pierwszą ideą było zagospodarowanie przestrzeni w widoku badania. Po utworzeniu badania i dodania do niego ankiety, ankieterowi ukazuje się widok badania. Architekt nie zaproponował jak ma on wyglądać. Dał tylko pewne wskazówki. Zaznaczył, że z tego widoku, ankieter ma mieć możliwość usunięcia ankiety z badania oraz edytowania jej. Żeby spełnić wymagania, na stronie wystarczyło pokazać odnośniki: ,,edytuj'' i ,,usuń z badania''. Praktycznie cała strona pozostawała pusta. Sytuacja taka jest niedopuszczalna, gdyż zawsze istnieją przydatne informacje, które można w takim miejscu wyświetlić. Ustalono, że najbardziej naturalnym będzie zamieścić w tym miejscu podstawowe statystyki badania. \\
 
-W pierwszej wersji zaimplementowano tylko proste statystyki. Można się z nich dowiedzieć: ile czasu zostało do zakończenia badania, ile osób liczy grupa docelowa oraz ile osób już odpowiedziało i poznać wartość procentową. Następnie dodano kolejną tabelkę ze statystykami. Wyświetla się gdy choć jedna osoba odpowie na któreś pytanie. Możemy w niej zobaczyć jak kształtowały się odpowiedzi, w pytaniach zamkniętych, na które odpowiedziano. Nie zdecydowano się wyświetlać odpowiedzi na pytania otwarte ze względu na ich różnorodność, a więc ilość miejsca, które zajmowały. Ideą tabelki było pokazanie skróconych informacji o badaniu. Cały, dokładny, rozbudowany raport można wygenerować z użyciem systemu \emph{Jasper Report}.
+W pierwszej wersji zaimplementowano tylko proste parametry, takie jak: ile czasu zostało do zakończenia badania, ile osób liczy grupa docelowa oraz ile osób już odpowiedziało. Wraz z rozwojem systemu, dodano kolejną tabelę z danymi. Wyświetla się ona, gdy choć jedna osoba odpowie na któreś pytanie. Możemy na jej podstawie przeanalizować, jak kształtowały się odpowiedzi w pytaniach zamkniętych. Nie zdecydowano się wyświetlać odpowiedzi na pytania otwarte, ze względu na ich różnorodność -- negatywnie wpływałoby to na czytelność strony. Ideą tabeli było pokazanie skróconych informacji o badaniu. Dokładny, rozbudowany raport, można wygenerować z użyciem systemu \textit{Jasper Report}. \\
 
-Pozyskanie i podliczenie odpowiedzi na dane pytanie wiązało się z wymyśleniem algorytmu. Teoretycznie najprostszym rozwiązaniem byłoby, dla każdej dozwolonej odpowiedzi na pytanie zamknięte, sprawdzenie liczności krotek w tabeli \emph{answers}. To rozwiązanie jest jednak nieoptymalne, bo wiąże się z wielokrotnym odwoływaniem się do bazy danych. Lepiej pozwolić bazie danych samej zoptymalizować odwołania do tablic. Tak postąpiono w tym przypadku. Przy użyciu wyrażenia ,,GROUP BY'' opracowano zapytanie, które od razu zwracało liczbę odpowiedzi respondentów na możliwą odpowiedź. Takie podejście gwarantuje szybsze wykonanie algorytmu.
+Pozyskanie i podliczenie odpowiedzi dla danego pytania wiązało się z zastosowaniem odpowiedniego algorytmu. Teoretycznie najprostszym rozwiązaniem byłoby sprawdzanie liczby krotek związanych z danym pytaniem w tabeli \textit{answers}. To rozwiązanie jest jednak nieoptymalne, gdyż wiąże się z wielokrotnymi odwołaniami bazy danych. Lepszym wyborem było użycie wbudowanych mechanizmów systemu zarządzania bazą danych celem optymalizacji odwołania do tablic. Przy użyciu wyrażenia ,,GROUP BY'' opracowano zapytanie, które od razu zwraca liczbę odpowiedzi respondentów w dany sposób, co pozytywnie wpłynęło na szybkość działania algorytmu. \\
 
-Kolejnym pomysłem było dodanie kilku przycisków. Zarówno w katalogu jak i widoku badania umieszczono przycisk ,,pokaż''. Służy on do wyświetlenia ankiety tak samo jak widzi ją respondent. Dzięki temu, że ankieter może zobaczyć układ pytań, łatwiej mu zdecydować o dodaniu kolejnej strony. Pojawił się także przycisk pozwalający na dodanie nowej ankiety, będąc w widoku katalogu. Znajduję się on zarówno na dole jak i na górze tabelki, aby nie było konieczności długiego przewijania ekranu.
+Kolejna kwestia tyczy się odnośników, zwiększających intuicyjność pracy z systemem. Zarówno w katalogu jak i widoku badania umieszczono przycisk ,,pokaż''. Służy on do wyświetlenia ankiety w taki sam sposób, w jaki widzi ją respondent. Dzięki temu, że ankieter może zobaczyć układ pytań, łatwiej mu zdecydować o np.~ podziale na strony. W widoku katalogu pojawił się także przycisk pozwalający na dodanie nowej ankiety. Znajduję się on zarówno w dolnej, jak i górnej części tabeli katalogu, co zwalnia użytkownika z konieczności mozolnego przewijania strony. \\
 
-W założeniach projektu ustalono, że odpowiedź jest nieedytowalna. Dodano udoskonalenie, które polegało na tym, że respondent nie musi od razu wypełnić całej ankiety. Może to robić stopniowo. Za każdym razem jednak zostaną mu wyświetlone tylko te pytania, na które jeszcze nie odpowiedział. Pozwala to także uniknąć sytuacji, w której respondent przeoczy jakieś pytania. Jeśli respondent nie wypełni całej ankiety, to badanie nie zniknie z widoku kursu. Dopiero po wypełnieniu całej ankiety badanie nie pokaże się w kursie.
-
-
-%Tutaj znajduje się opis wszystkich Waszych doświadczeń związanych z projektem -- zarówno pozytywnych jak i negatywnych, dotyczących organizacji, środowiska czy samych już kwestii technicznych. To ma być zebranie Waszych wniosków, wraz z prawdopodobnymi nauczkami dla przyszłych roczników. 
-%
-%To dobre miejsce na zaaplikowanie zawartości Lessons Learned Log, jeśli tak prowadziliście, ale też miejsce na własne przemyślenia.
+W założeniach projektu ustalono, że raz udzielona odpowiedź na pytanie jest nieedytowalna. Z tego względu, dodano udoskonalenie, które polega na tym, że respondent nie musi od razu wypełnić całej ankiety. Może to robić stopniowo - za każdym razem jednak zostaną mu wyświetlone tylko te pytania, na które jeszcze nie odpowiedział. Pozwala to także uniknąć sytuacji, w której respondent przeoczy jakieś pytania. Jeśli respondent nie wypełni całej ankiety, to badanie nie zniknie z widoku kursu. Dopiero po wypełnieniu całej ankiety, badanie już więcej nie pojawi się w kursie.
 
 \section{Użyte technologie}
 \label{Chapter63}
@@ -98,25 +85,12 @@ W założeniach projektu ustalono, że odpowiedź jest nieedytowalna. Dodano udo
 \section{Ogólna struktura projektu}
 \label{Chapter64}
 
+Zgodnie z ideą trójwarstwowej architektury, opisanej w rozdziale \ref{Chapter5}., system \textit{iQuest} podzielono na trzy warstwy, w tym: prezentacji i logiki biznesowej. Obie z nich są ze sobą ściśle powiązane. Szczegóły z tym związane przedstawiają rozdziały \ref{Chapter65}-\ref{Chapter67}.
 
 \input{06-3-Interfejs-KU.tex}
 \input{06-4-Logika-LW.tex}
-
-%to poleci gdzieś indziej.
-%\begin{landscape}
-
-%\begin{figure}[!th]
-%\centering\includegraphics[width=1.25\textheight]{figures/Survey_Creator_Survey_Runner.png}
-%\caption{Backend -- moduły Survey Creator i Survey Runner}\label{rys:iquest-backend}
-%\end{figure}
-
-%\begin{figure}[!th]
-%\centering\includegraphics[width=1.25\textheight]{figures/ePoczta_Connector_Background_Task_Scheduler_and_Executor.png}
-%\caption{Backend -- moduły ePoczta Connector i Background Task Scheduler and Executor}\label{rys:iquest-backend2}
-%\end{figure}
-
-%\end{landscape}
-
 \input{06-5-Powiazanie-Logiki-Interfejsu-LW.tex}
 
-{\color{red}Koniec fragmentu niezredagowanego}
+\subsection{Instalacja \textit{iQuest}}
+\label{Chapter68}
+Instalacja systemu realizowana jest trójstopniowo. Pierwszym krokiem jest umieszczenie na serwerze docelowym plików platformy \textit{Moodle} i ich instalacja oraz wstępna konfiguracja. W tak przygotowanym środowisku, umieszczane są następnie pliki systemu \textit{iQuest}, które -- dzięki wbudowanym mechanizmom platformy \textit{Moodle} -- administrator może w bardzo prosty sposób zainstalować i aktywować. Aktualizacja systemu przebiega bardzo podobnie, i polega jedynie na przeprowadzeniu standardowego dla \textit{Moodle} procesu aktualizacji, poprzedzonego zmianą odpowiednich plików na serwerze, w ramach którego działa system.

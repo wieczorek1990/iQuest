@@ -7,16 +7,14 @@
 \subsection{Wstęp}
 \label{Chapter711}
 
-Testy i weryfikacja jakości oprogramowania realizowana była na trzech poziomach: testów jednostkowych (dla logiki) oraz automatycznych i manualnych testów akceptacyjnych. Te ostatnie realizowane były nie tylko w zgodzie z dokumentem \textit{MAT}\cite{Redmine:ProjDocs}, ale też intuicyjnie, poprzez zwykłe korzystanie z systemu.
+Testy i weryfikacja jakości oprogramowania realizowana była na trzech poziomach: testów jednostkowych (dla logiki) oraz automatycznych i manualnych testów akceptacyjnych. Te ostatnie realizowane były nie tylko w zgodzie z dokumentem \textit{MAT}\footnote{\cite{Redmine:ProjDocs}}, ale też intuicyjnie, poprzez zwykłe korzystanie z systemu.
 
 \subsection{Testy jednostkowe}
 \label{Chapter712}
 
-Testy jednostkowe zostały wykonane jako pierwsze i traktowane były z wysokim priorytetem. Realizowane były z użyciem klas PHPUnit, stosowanych powszechnie m.in.~przy testowaniu wtyczek do platformy Moodle. Testy te były kluczowe dla rozwoju logiki systemu iQuest. Przygotowaliśmy konfigurowalne skrypty automatyzujące proces testowania w języku BASH. Część testów operuje na systemie w trybie produkcyjnym, część na trybie testowym, obsługującym tzw. ,,atrapy'' (ang. \definicja{mock}), imitujące działanie systemów zewnętrznych poprzez zwracanie przykładowych danych.\\
+Testy jednostkowe zostały wykonane jako pierwsze i traktowane były z wysokim priorytetem. Realizowane były z użyciem klas \textit{PHPUnit}, stosowanych powszechnie m.in.~przy testowaniu wtyczek do platformy \textit{Moodle}. Testy te były kluczowe dla rozwoju logiki systemu iQuest. Przygotowane zostały też konfigurowalne skrypty automatyzujące proces testowania w języku \textit{BASH}. Część testów operuje na systemie w trybie produkcyjnym, część na trybie testowym, obsługującym tzw. ,,atrapy'' (ang. \definicja{mock}), imitujące działanie systemów zewnętrznych poprzez zwracanie przykładowych danych.\\
 
-Przy realizacji pierwszego wydania, za testy jednostkowe w pełni odpowiadał jeden z członków zespołu programistów. W wydaniu drugim, rolę tę przejął programista realizujący logikę systemu. Z początku próbowaliśmy działać w oparciu o TDU (ang. \definicja{Test-Driven Development} - rozwój w oparciu o testy), jednakże szybko porzuciliśmy tą metodykę, ze względu na brak doświadczenia programistów.
-
-Na początku projektu przygotowaliśmy program w języku Java uruchamiający zestaw testów akceptacyjnych. W drugim wydaniu korzystaliśmy już wyłącznie z Selenium IDE, ze względu możliwość szybszego rozpoznania problemów z poziomu przeglądarki, w przeciwieństwie do terminala.
+Przy realizacji pierwszego wydania, za testy jednostkowe w pełni odpowiadał jeden z członków zespołu programistów. W wydaniu drugim, rolę tę przejął programista realizujący logikę systemu. Planowano stosować technikę TDU (ang. \definicja{Test-Driven Development} - rozwój w oparciu o testy), jednakże szybko porzucono tą metodykę, ze względu na brak doświadczenia programistów. Więcej informacji o problemach i rozwiązaniach przyjętych przy wykonywaniu testów znaleźć można w rozdziale \ref{Chapter62b}. \\
 
 \newpage
 \begin{figure}[H]
@@ -36,7 +34,7 @@ Na początku projektu przygotowaliśmy program w języku Java uruchamiający zes
 \end{figure}
 \newpage
 
-Na diagramach widzimy trzy klasy służące do testowania, z których dziedziczą wszystkie inne, są to:
+Na diagramach widoczne są trzy klasy służące do testowania, z których dziedziczą wszystkie inne:
 \begin{itemize}
 \item \emph{basic\_testcase} -- podstawowe testy jednostkowe
 \item \emph{advanced\_testcase} -- testy z użyciem bazy danych
@@ -46,40 +44,43 @@ Na diagramach widzimy trzy klasy służące do testowania, z których dziedzicz�
 \subsection{Testy akceptacyjne}
 \label{Chapter713}
 
+Na początku projektu, przygotowano program w języku \textit{Java}, uruchamiający zestaw testów akceptacyjnych. W drugim wydaniu korzystano jednak wyłącznie z \textit{Selenium IDE}, ze względu możliwość szybszego rozpoznania problemów z poziomu przeglądarki, w przeciwieństwie do terminala.
+
 Testy akceptacyjne rozpatrywane są na dwóch poziomach: automatycznym i manualnym. Różnica polega jedynie na tym, kto (lub co) wykonuje test - komputer z odpowiednim oprogramowaniem, czy człowiek.
 
 \subsubsection{MAT}
 \label{Chapter7131}
-{\color{red}Testy akceptacyjne wymagają poprawienia -- dane od zespołu zarządzającego były nieaktualne!!!}
-Poniżej przedstawiono Manualne Testy Akceptacyjne:
+Poniżej przedstawiono wybrane Manualne Testy Akceptacyjne:
 
-\matbegin{TC1}{Logowanie do systemu przez eKonto}
+\matbegin{TC1}{Logowanie do systemu przez \textit{eKonto}}
 \matpres
 \matpre{Użytkownik jest niezalogowany}
-\matpre{Użytkownik posiada eKonto}
+\matpre{Użytkownik posiada \textit{eKonto}}
 \matpre{Połączenie z Internetem}
 \matsteps
-\matstep{1}{Użytkownik wpisuje adres systemu}{Strona logowania do system iQuest}
-\matstep{2}{Użytkownik naciska przycisk ,,Zaloguj przez eKonto''}{Strona logowania eLogin}
+\matstep{1}{Użytkownik wybiera opcję "zaloguj się"}{Strona logowania do system \textit{iQuest}}
+\matstep{2}{Użytkownik naciska przycisk ,,Zaloguj przez eKonto''}{Strona logowania \textit{eLogin}}
 \matstep{3}{Użytkownik wpisuje dane logowania}{}
-\matstep{4}{Użytkownik naciska przycisk ,,Zaloguj''}{Przekierowanie na stronę systemu iQuest, wyświetlenie strony głównej z zalogowanym użytkownikiem.}
+\matstep{4}{Użytkownik naciska przycisk ,,Zaloguj''}{Przekierowanie na stronę systemu \textit{iQuest}, wyświetlenie strony głównej z zalogowanym użytkownikiem.}
 \matremark{}
 
 \matbegin{TC2}{Stworzenie Ankiety}
 \matpres
 \matpre{Zalogowany użytkownik z prawem do tworzenia ankiet}
+\matpre{Użytkownik w trakcie przeglądania swojego katalogu ankiet}
 \matsteps
 \matstep{1}{Użytkownik wybiera przycisk ,,Stwórz ankietę''}{Strona umożliwiająca tworzenie ankiet}
 \matstep{2}{Użytkownik podaje nazwę ankiety}{}
-\matstep{3}{Użytkownik podaje wstęp  i podsumowanie ankiety}{}
-\matstep{4}{Użytkownik dodaje pytanie jednokrotnego wyboru}{Pojawia się pole na wpisanie treści pytania}
-\matstep{5}{Użytkownik wpisuje treść pytania}{}
-\matstep{6}{Użytkownik naciska przycisk „Dodaj odpowiedź'' dwukrotnie}{Pojawiają się dwa pola do wpisania możliwych odpowiedzi}
-\matstep{7}{Użytkownik podaje treści możliwych odpowiedzi}{}
-\matstep{8}{Użytkownik dodaje stronę wciskając przycisk „Dodaj stronę''}{Wyświetla się nowa strona na dodawanie pytań}
-\matstep{9}{Użytkownik dodaje pytanie otwarte}{Wyświetla się pole na wpisanie treści pytania}
-\matstep{10}{Użytkownik wpisuje treść pytania}{}
-\matstep{11}{Użytkownik wybiera przycisk „Zapisz zmiany''}{Komunikat o pomyślnym stworzeniu ankiety}
+\matstep{3}{Użytkownik podaje wstęp i podsumowanie ankiety}{}
+\matstep{4}{Użytkownik wybiera opcję definiowania pytań}{Interfejs dodawania pytań}
+\matstep{5}{Użytkownik dodaje pytanie jednokrotnego wyboru}{Pojawia się pole na wpisanie treści pytania}
+\matstep{6}{Użytkownik wpisuje treść pytania}{}
+\matstep{7}{Użytkownik naciska przycisk ,,Dodaj odpowiedź'' dwukrotnie}{Pojawiają się dwa pola do wpisania możliwych odpowiedzi}
+\matstep{8}{Użytkownik podaje treści możliwych odpowiedzi}{}
+\matstep{9}{Użytkownik dodaje stronę wciskając przycisk ,,Dodaj stronę''}{Wyświetla się nowa strona na dodawanie pytań}
+\matstep{10}{Użytkownik dodaje pytanie otwarte}{Wyświetla się pole na wpisanie treści pytania}
+\matstep{11}{Użytkownik wpisuje treść pytania}{}
+\matstep{12}{Użytkownik wybiera przycisk ,,Zapisz zmiany''}{Komunikat o pomyślnym stworzeniu ankiety}
 \matremark{}
 
 \begin{table}[H]
@@ -98,25 +99,26 @@ Krok & \textbf{Dane} \\ \hline
 \matbegin{TC2.2}{Stworzenie Ankiety - brak pytań}
 \matpres
 \matpre{Zalogowany użytkownik z prawem do tworzenia ankiet}
+\matpre{Użytkownik w trakcie przeglądania swojego katalogu ankiet}
 \matsteps
-\matstep{1}{Użytkownik wybiera przycisk „Stwórz ankietę''}{Strona umożliwiająca tworzenie ankiet}
+\matstep{1}{Użytkownik wybiera przycisk ,,Stwórz ankietę''}{Strona umożliwiająca tworzenie ankiet}
 \matstep{2}{Użytkownik podaje nazwę ankiety}{}
-\matstep{3}{Użytkownik podaje wstęp  i podsumowanie ankiety}{}
-\matstep{4}{Użytkownik wybiera przycisk „Zapisz zmiany''}{Komunikat o braku pytań w ankiecie}
+\matstep{3}{Użytkownik podaje wstęp i podsumowanie ankiety}{}
+\matstep{4}{Użytkownik wybiera przycisk ,,Zapisz zmiany''}{Komunikat o braku pytań w ankiecie}
 \matremark{}
 
 \matbegin{TC3}{Edycja ankiety}
 \matpres
 \matpre{Zalogowany użytkownik z prawem do tworzenia ankiet}
-\matpre{Użytkownik posiada prawo do edycji ankiety ,,Ankiety testowej''}
+\matpre{Użytkownik posiada prawo do edycji ankiety ,,Ankieta testowa''}
+\matpre{Użytkownik w trakcie przeglądania swojego katalogu ankiet}
 \matsteps
-\matstep{1}{Użytkownik wybiera przycisk „Katalog Ankiet''}{Strona z listą ankiet do których prawo ma użytkownik.}
-\matstep{2}{Użytkownik wybiera przycisk „edytuj'' przy „Ankiecie Testowej''}{Strona umożliwiająca edycję „Ankiety Testowej''}
-\matstep{3}{Użytkownik wciska przycisk „usuń'' przy pytaniu drugim}{Pytanie drugie znika}
-\matstep{4}{Użytkownik naciska przycisk „Dodaj odpowiedź'' przy pytaniu pierwszym}{Pojawia się pole do wpisania możliwej odpowiedzi}
-\matstep{5}{Użytkownik wpisuje możliwą odpowiedź}{}
-\matstep{6}{Użytkownik wybiera przycisk „Zapisz zmiany''}{Strona wyświetla komunikat potwierdzający zapisanie zmian w ankiecie.}
-\matremark{}
+\matstep{1}{Użytkownik wybiera przycisk ,,edytuj'' przy „Ankiecie Testowej''}{Strona umożliwiająca edycję „Ankiety Testowej''}
+\matstep{2}{Użytkownik wciska przycisk ,,usuń'' przy pytaniu drugim}{Pytanie drugie znika}
+\matstep{3}{Użytkownik naciska przycisk ,,Dodaj odpowiedź'' przy pytaniu pierwszym}{Pojawia się pole do wpisania możliwej odpowiedzi}
+\matstep{4}{Użytkownik wpisuje możliwą odpowiedź}{}
+\matstep{5}{Użytkownik wybiera przycisk ,,Zapisz zmiany''}{Strona wyświetla komunikat potwierdzający zapisanie zmian w ankiecie.}
+\matremark{Edytowane mogą być jedynie ankiety, na które nie udzielono jeszcze żadnej odpowiedzi}
 
 \begin{table}[H]
 \centering
@@ -131,24 +133,24 @@ Krok & \textbf{Dane} \\ \hline
 \matpres
 \matpre{Zalogowany użytkownik z prawem do tworzenia ankiet}
 \matpre{Użytkownik posiada prawo do edycji ankiety ,,Ankiety testowej''}
+\matpre{Użytkownik w trakcie przeglądania swojego katalogu ankiet}
 \matsteps
-\matstep{1}{Użytkownik wybiera przycisk „Katalog Ankiet''}{Strona z listą ankiet do których prawo ma użytkownik.}
-\matstep{2}{Użytkownik wybiera przycisk „edytuj'' przy „Ankiecie Testowej''}{Strona umożliwiająca edycję „Ankiety Testowej''}
-\matstep{3}{Użytkownik wciska przycisk „usuń'' przy każdym z pytań}{Pytania znikają}
-\matstep{4}{Użytkownik wybiera przycisk „Zapisz zmiany''}{Strona wyświetla komunikat, że ankieta nie posiada pytań i prosi o ich dodanie.}
-\matremark{}
+\matstep{1}{Użytkownik wybiera przycisk ,,edytuj'' przy „Ankiecie Testowej''}{Strona umożliwiająca edycję ,,Ankiety Testowej''}
+\matstep{2}{Użytkownik wciska przycisk ,,usuń'' przy każdym z pytań}{Pytania znikają}
+\matstep{3}{Użytkownik wybiera przycisk ,,Zapisz zmiany''}{Strona wyświetla komunikat, że ankieta nie posiada pytań i prosi o ich dodanie.}
+\matremark{Edytowane mogą być jedynie ankiety, na które nie udzielono jeszcze żadnej odpowiedzi}
 
 \matbegin{TC4}{Wybranie grupy docelowej}
 \matpres
 \matpre{Zalogowany użytkownik z prawami do tworzenia ankiet}
-\matpre{Użytkownik posiada prawa do ankiety „Ankieta Testowa''}
-\matpre{Użytkownik posiada prawo do ankietowania grupy docelowej „test''}
+\matpre{Użytkownik posiada prawa do ankiety ,,Ankieta Testowa'' oraz badania ,,Badanie Testowe''}
+\matpre{Użytkownik posiada prawo do ankietowania grupy docelowej ,,test''}
 \matsteps
-\matstep{1}{Użytkownik wybiera przycisk ,,Włącz tryb edycji''}{Interfejs edycji Moodle}
-\matstep{2}{Użytkownik wybiera przycisk „edytuj'' przy „Ankiecie Testowej''}{Strona umożliwiająca edycję „Ankiety Testowej''}
-\matstep{3}{Użytkownik wybiera grupę docelową „test''}{}
-\matstep{4}{Użytkownik wybiera przycisk „Zapisz zmiany''}{Strona wyświetla komunikat, że ankieta została zaktualizowana pomyślnie.}
-\matstep{5}{Respondent otrzymuje email z powiadomieniem o ankiecie}{}
+\matstep{1}{Użytkownik wybiera przycisk ,,Włącz tryb edycji''}{Interfejs edycji \textit{Moodle}}
+\matstep{2}{Użytkownik wybiera przycisk „edytuj'' przy ,,Badaniu Testowym''}{Strona umożliwiająca edycję ,,Ankiety Testowej''}
+\matstep{3}{Użytkownik wybiera grupę docelową ,,test''}{}
+\matstep{4}{Użytkownik wybiera przycisk ,,Zapisz zmiany''}{Strona wyświetla komunikat, że ankieta została zaktualizowana pomyślnie.}
+\matstep{5}{Respondent otrzymuje e-mail z powiadomieniem o ankiecie}{}
 \matremark{}
 
 \matbegin{TC5}{Udzielanie odpowiedzi}
@@ -162,15 +164,15 @@ Krok & \textbf{Dane} \\ \hline
 \matstep{3}{Użytkownik zaznacza odpowiedź na pytanie 1 jako ,,tak''}{}
 \matstep{4}{Użytkownik podaje odpowiedź na pytanie drugie jako ,,tak''}{}
 \matstep{5}{Użytkownik potwierdza wypełnienie ankiety przyciskiem ,,Wyślij''}{System prezentuje ankiety na które użytkownik jeszcze nie odpowiedział oraz komunikat o pomyślnym przesłaniu odpowiedzi}
-\matstep{6}{Respondent otrzymuje email z powiadomieniem o ankiecie}{}
+\matstep{6}{Respondent otrzymuje e-mail z powiadomieniem o ankiecie}{}
 \matremark{}
 
 \matbegin{TC6}{Sprawdzenie wyników}
 \matpres
 \matpre{Zalogowany użytkownik z prawem do oglądania wyników ankiety ,,Testowa''}
 \matsteps
-\matstep{1}{Użytkownik wybiera badanie, którego podstawowe wyniki chce sprawdzić}{System prezentuje podsumowanie ankiety}
-\matremark{Dotyczy podstawowych wyników. Wyniki zaawansowane obsługuje zewnętrzny serwer BI}
+\matstep{1}{Użytkownik wybiera badanie, którego podstawowe wyniki chce sprawdzić}{System prezentuje podsumowanie ankiety \textit{Moodle}}
+\matremark{Dotyczy podstawowych wyników. Wyniki zaawansowane obsługuje zewnętrzny serwer \textit{BI}}
 
 \matbegin{TC7}{Dodawanie grupy docelowej}
 \matpres
@@ -179,9 +181,9 @@ Krok & \textbf{Dane} \\ \hline
 \matsteps
 \matstep{1}{Administrator wybiera przycisk ,,Zarządzaj grupami docelowymi''}{System prezentuje dostępne grupy docelowe w systemie}
 \matstep{2}{Administrator wybiera przycisk ,,dodaj''}{System prezentuje interfejs dodawania grupy docelowej}
-\matstep{3}{Administrator podaję nazwę nowej grupy „Grupa 1” i wskazuje jej członków}{}
+\matstep{3}{Administrator podaję nazwę nowej grupy ,,Grupa 1” i wskazuje jej członków}{}
 \matstep{4}{Administrator wybiera grupę nadrzędną dla nowej grupy docelowej}{System automatycznie zapisują zmiany}
-\matremark{Test przygotowany na podstawie makiety systemu iQuest}
+\matremark{Test przygotowany na podstawie makiety systemu \textit{iQuest}}
 
 \matbegin{TC8}{Edycja grupy docelowej}
 \matpres
@@ -192,20 +194,18 @@ Krok & \textbf{Dane} \\ \hline
 \matstep{2}{Administrator wybiera przycisk ,,zmień nazwę''}{System prezentuje interfejs zmiany nazwy grupy docelowej}
 \matstep{3}{Administrator pozostawia nazwę niezmienioną i zatwierdza zmiany}{System prezentuje dostępne grupy docelowe w systemie}
 \matstep{4}{Administrator wybiera grupę nadrzędną dla grupy docelowej i dodaje nowego członka do grupy}{System automatycznie zapisują zmiany}
-\matremark{Test przygotowany na podstawie makiety systemu iQuest}
+\matremark{Test przygotowany na podstawie makiety systemu \textit{iQuest}}
 
-\matbegin{TC9}{Edycja grupy docelowej}
+\matbegin{TC9}{Logowanie bez użycia \textit{eKonta}}
 \matpres
 \matpre{Użytkownik jest niezalogowany}
 \matpre{Istnieje konto użytkownika w systemie}
 \matsteps
-\matstep{1}{Użytkownik wpisuje adres systemu}{Strona główna moodla z kursem iQuest}
+\matstep{1}{Użytkownik wpisuje adres systemu}{Strona główna \textit{Moodle} z kursem zawierającym system \textit{iQuest}}
 \matstep{2}{Użytkownik naciska przycisk ,,Zaloguj się''}{Strona logowania}
 \matstep{3}{Użytkownik wpisuje dane logowania}{}
-\matstep{4}{Użytkownik naciska przycisk ,,Zaloguj się''}{Przekierowanie na główną stronę moodla z kursem iQuest. Wyświetla się napis: ,,Jesteś zalogowany(a) jako...''}
+\matstep{4}{Użytkownik naciska przycisk ,,Zaloguj się''}{Przekierowanie na główną stronę \textit{Moodle} z kursem zawierającym system \textit{iQuest}. Wyświetla się napis: ,,Jesteś zalogowany(a) jako...''}
 \matremark{}
-
-{\color{red}Niedodane jeszcze TC: Logowanie bez eKonta, }
 
 Dodatkowo, poniżej znajduje się wykaz mapujący przypadki testowe do przypadków użycia:
 \begin{itemize}
@@ -223,26 +223,13 @@ Dodatkowo, poniżej znajduje się wykaz mapujący przypadki testowe do przypadk�
 \subsubsection{AAT}
 \label{Chapter7131}
 
-Automatyczne testy akceptacyjne realizowano w zgodzie z testami manualnymi i operując na tych samych wytycznych. Nagrywanie testów odbywało się za pomocą oprogramowania Selenium IDE, udostępnianego w formie rozszerzenia dla przeglądarki Mozilla Firefox. Pierwotnie, testy były konwertowane do języka Java, celem uruchamiania ich z poziomu języka Java, oferującego sporą swobodę przy projektowaniu warunków początkowych i końcowych dla testów. Problemy, jakie wynikały z takiego działania, opisane zostały w rozdziale \ref{Chapter6}. Na ich podstawie zdecydowano o pozostaniu w obrębie Selenium IDE, które samo w sobie również umożliwia automatyzację w wysokim stopniu. Aby dodatkowo ułatwić zadanie, przygotowany został skrypt ustawiający bazę danych w stan początkowy dla realizacji testów.
+Automatyczne testy akceptacyjne realizowano w zgodzie z testami manualnymi i operując na tych samych wytycznych. Nagrywanie testów odbywało się za pomocą oprogramowania \textit{Selenium IDE}, udostępnianego w formie rozszerzenia dla przeglądarki \textit{Mozilla Firefox}. Pierwotnie, testy były konwertowane do języka \textit{Java}, celem uruchamiania ich za pomocą jego środowiska, oferującego sporą swobodę przy projektowaniu warunków początkowych i końcowych dla testów. Problemy, jakie wynikały z takiego działania, opisane zostały w rozdziale \ref{Chapter6}. Na ich podstawie zdecydowano o pozostaniu w obrębie \textit{Selenium IDE}, które samo w sobie również umożliwia automatyzację. Aby dodatkowo ułatwić zadanie, przygotowany został skrypt ustawiający bazę danych w stan początkowy dla realizacji testów.
 
 \subsection{Inne metody zapewniania jakości}
 \label{Chapter714}
 
-Celem zapewnienia jak najwyższej jakości oprogramowania, było ono testowane -- w kontrolowanych warunkach -- na różnorakich maszynach. Co prawda, lokalne serwery developerskie pracowały w oparciu o system Ubuntu 12.04 LTS, z serwerem Apache i systemem zarządzania bazą danych PostgreSQL, jednak maszyny klienckie były już znacznie bardziej różnorodne.
+Celem zapewnienia jak najwyższej jakości oprogramowania, było ono testowane -- w kontrolowanych warunkach -- na różnorakich maszynach. Co prawda, lokalne serwery developerskie pracowały zawsze w oparciu o system \textit{Ubuntu 12.04 LTS}\footnote{\cite{Man:Ubuntu}}, z serwerem \textit{Apache} i systemem zarządzania bazą danych \textit{PostgreSQL}, jednak maszyny klienckie były już znacznie bardziej różnorodne. \\
 
-System przetestowano na zbiorze komputerów stacjonarnych klasy PC oraz równoważnych laptopów, z użyciem systemów Windows i Linux. Realizowano je także na laptopach i netbookach klasy PC oraz Macintosh, również pod kontrolą systemów Windows i Linux, oraz - w przypadku tej ostatniej klasy - MacOS. Ponadto, przetestowano trzy główne platformy mobilne (Android, iOS, WP7.x) poprzez dostęp do systemu z poziomu telefonów komórkowych.
+Testy klienckie odbyły się na komputerach stacjonarnych klasy PC oraz równoważnych laptopach, z użyciem zarówno systemów rodziny \textit{Windows} (wersje od \textit{XP} do \textit{8}), jak i \textit{Linux} (wspomniana wcześniej wersja \textit{Ubuntu}) oraz \textit{Mac OS X}. Ponadto, przetestowano trzy główne platformy mobilne (Android, iOS @ iPhone 4S, WP7.x @ Nokia Lumia 710) poprzez dostęp do systemu z poziomu telefonów komórkowych. Testowane komputery charakteryzowały się posiadaniem co najmniej jednordzeniowego procesora ze zbiorem 32-bitowych instrukcji i taktowaniem zegara nie mniejszym niż 1,5GHz, oraz 4 GB pamięci RAM.
 
-Wspomniane wyżej maszyny pracowały pod kontrolą następujących systemów operacyjnych:
-\begin{itemize}
-\item{Windows XP Professional SP3 32-bit + Internet Explorer 7}
-\item{Windows Vista Business SP2 32-bit + Internet Explorer 8}
-\item{Windows 7 Professional SP1 64-bit + Mozilla Firefox + Google Chrome}
-\item{Windows 8 Professional 64-bit + Internet Explorer 10 + Google Chrome}
-\item{Ubuntu 12.04 64-bit + Mozilla Firefox + Google Chrome}
-\item{Mac OS X + Apple Safari}
-\item{Google Android 2.2, 2.3, 4.0, 4.1}
-\item{iOS (iPhone 4S)}
-\item{Windows Phone 7.5 (Nokia Lumia 710)}
-\end{itemize}
-
-Na podstawie powyższych testów, utworzono dwa raporty: ,,wygląd i działanie systemu iQuest na platformach mobilnych'' oraz ,,wygląd i działanie systemu iQuest w różnych konfiguracjach system-przeglądarka'', udostępnione w ramach systemu zarządzania projektem\cite{Redmine:ProjDocs}. Wynika z nich, że system iQuest posiada bardzo wysoki współczynnik przenośności.
+Na podstawie powyższych testów, utworzono dwa raporty: ,,wygląd i działanie systemu \textit{iQuest} na platformach mobilnych'' oraz ,,wygląd i działanie systemu \textit{iQuest} w różnych konfiguracjach system-przeglądarka'', udostępnione w ramach systemu zarządzania projektem\footnote{\cite{Redmine:ProjDocs}}. Wynika z nich, że system \textit{iQuest} jest przenośny.

@@ -1,12 +1,12 @@
 \chapter{Zebrane doświadczenia}
 \label{Chapter8}
 
-%Tu wbijamy doświadczenia - czyli czegośmy się nauczyli. Każdy item powinien mieć do siebie min. jedno zdanie uzasadnienia / przykładu.
-Podczas pracy zebraliśmy następujące doświadczenia bezpośrednio związane z zastosowanymi technologiami:
+Podczas pracy zebraliśmy następujące doświadczenia, bezpośrednio związane z zastosowanymi technologiami:
 \begin{itemize}
-\item Implementowanie testów jednostkowych z użyciem PHPUnit -- w celu kontroli poprawności pisanego kodu back-end'u w języku PHP,
-\item Implementowanie logiki aplikacji w języku PHP na podstawie UML -- na podstawie diagramów UML oraz rozmów z architektem zaimplementowano kod back-end'u w języku PHP,
-\item Implementowanie usług internetowych (protokół \emph SOAP) -- dla komunikacji z usługami uczelni wykorzystano klienty dostarczone przez Dział Rozwoju Oprogramowania w języku PHP, dla komunikacji z serwerem raportowania wykorzystano API \emph{external services} platformy Moodle (PHP) po stronie systemu iQuest oraz Apache Axis (Java) po stronie serwera JasperReports,
+\item Implementowanie testów jednostkowych z użyciem PHPUnit -- w celu kontroli poprawności logiki pisanej w języku \textit{PHP}.
+\item Implementowanie logiki aplikacji w języku \textit{PHP} na podstawie UML -- na podstawie diagramów UML oraz rozmów z architektem zaimplementowano kod back-endu w języku \textit{PHP}.
+\item Implementowanie usług internetowych (protokół \textit{SOAP}) -- dla komunikacji z usługami uczelni wykorzystano klienty dostarczone przez DRO, natomiast dla komunikacji z serwerem raportowania wykorzystano API \textit{external services} platformy \textit{Moodle}, po stronie systemu \textit{iQuest} oraz \textit{Apache Axis} (Java) po stronie serwera \textit{JasperReports}.
+
 \item Implementowanie schematu bazy danych w formacie XMLDB na podstawie UML -- wykorzystano interfejs do zarządzania XMLDB dostarczany przez Moodle; drobne poprawki wprowadzano ręcznie w pliku XML definiującym schemat bazy danych,
 \item Implementowanie modułów uwierzytelniania systemu Moodle -- na podstawie przykładowych oraz istniejących modułów uwierzytelniania stworzono moduł uwierzytelniania przez eKonto oraz moduł dla absolwentów,
 \item Rozszerzanie funkcjonalności oprogramowania o otwartym kodzie źródłowym -- w celu spełnienia wymagań projektowych dodano m.in. okresowe sprawdzanie ważności sesji eKonto do mechanizmu zarządzania sesją Moodle, zmodyfikowano wygląd strony logowania, panelu użytkownika,
@@ -27,14 +27,19 @@ Podczas pracy zebraliśmy następujące doświadczenia bezpośrednio związane z
 %Poniżej wrzucamy jakiś opis do tych doświadczeń. Takie jakby podsumowanie ich w formie zdaniowej.
 Bardzo istotna cześć doświadczeń związanych z projektem wiąże się z pracą zespołową.
 Nauczyliśmy się, że dobrego członka zespołu wyróżnia: sumienność, punktualność, odpowiedzialność, dokładność, terminowość, prawdomówność, uczciwość, asertywność, zdolność kreatywnego myślenia, kultura bycia oraz komunikatywność. Praca w grupie nad dużym projektem wymaga dobrej koordynacji prac. Dostępność architekta i kierownika projektu znacząco ułatwiła pracę nad projektem. Dzięki podziałowi zadań, każdy członek zespołu mógł pogłębić swoje zainteresowania. Wraz z upływem każdy członek zespołu znalazł sobie zbiór typów zagadnień, które potrafił zrealizować szybciej i lepiej ze względu na wcześniej pozyskane doświadczenie. Uzyskane doświadczenia z pewnością przydadzą się nam w pracy zawodowej.
-%I kończymy te doświadczenia...
 
-%Tu zaczynamy bawić się we wnioski. Wymieniamy siebie i mówimy co nam się podobało, co nie, i w ogóle czego się spodziewaliśmy, jak to poszło, co sądzimy o SDS, itp. Można je tak jak jest niżej, wymieniać od myślników, można sobie wywalić pod nazwiskiem "itemize" i pobawić się w pisanie normalnego tekstu. Jeśli ktoś chce, może napisać co by zrobił, gdyby posiadając dzisiejszą wiedzę o tym projekcie i powiązanych z nim technologiach, znów miał wybrać tę pracę inżynierską. Jak by się to potoczyło? Co by zrobił, a czego nie? Jak mi starczy czasu to też taką rozkminę tu chyba dorzucę ;)
-Wnioski:
+\textbf{Wnioski:}
 \begin{description}
 \item Krzysztof Borowiak:
 \begin{itemize}
-\item ...
+\item Praca zespołowa znacząco upraszcza realizowanie różnych projektów -- gdy jeden z członków zespołu czegoś nie wie, lub nie potrafi, może to szybko skonsultować z kolegami. Jest to znacznie szybsze i efektywniejsze, niż wyszukiwanie informacji samodzielnie.
+\item Dokumentacja wykonywana przez ,,społeczność'' (ang. \definicja{community}) nie jest tak dobra, jak próbują przekonywać zwolennicy rozwiązań ,,otwartych'' i ,,darmowych''.
+\item Wykonywanie testów jednostkowych we wstępnej fazie projektu, w szczególności, gdy szczegóły architektoniczne logiki oprogramowania nie są jeszcze kompletne, jest niezwykle uciążliwe i czasochłonne. Wyjątkiem jest zastosowanie techniki TDU, przy czym wymaga ona pewnego stopnia doświadczenia ze strony programistów.
+\item Wraz z projektem, powinna być rozwijana baza wiedzy. Każdy problem, z którym dowolny członek zespołu się spotkał, powinien zostać zanotowany i opisany, aby pozostali członkowie zespołu, np.~nieobecni przy jego napotkaniu, mogli się z nim zapoznać i w łatwy sposób uniknąć.
+\item Zespół zarządzający powinien dbać o to, aby zadania były przydzielane bezpośrednio do poszczególnych członków zespołu programistów i egzekwować ich wykonanie w wyznaczonym czasie.
+\item Jeśli wewnątrz zespołu pojawiają się spory na tle osobistym między dowolnymi jego członkami, może to wpłynąć na pracę całej ekipy. Sprawy takie powinny pozostawać poza pokojem pracy, lub być rozpatrywane z pomocą kierownika projektu.
+\item Zaufanie to podstawa każdej działalności. Jeśli jakaś kwestia zostaje przekazana dowolnej osobie związanej z projektem, nie powinna być wykorzystywana przeciwko osobie przekazującej, gdyż może to negatywnie wpłynąć na współpracę wewnątrz zespołu. Podobnie w kwestii modyfikacji kodu utworzonego przez kogoś innego.
+\item Nie każdy student kierunku Informatyka będzie dobrym programistą. Jest wiele specjalizacji, w których może się on rozwijać. SDS, skupiający się wokół wytwarzania oprogramowania pozwala wykonanie pracy dyplomowej związanej w bardzo wąskim spektrum tematów.
 \end{itemize}
 \item Maciej Trojan
 \begin{itemize}
