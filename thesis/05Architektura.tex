@@ -4,7 +4,7 @@
 \section{Wstęp}
 \label{Chapter51}
 
-System \textit{iQuest} został stworzony w oparciu o model architektury trójwarstwowej, w którym wyróżnione zostały warstwy: danych, logiki biznesowej oraz prezentacji. Dzięki takiemu podejściu, zadania związane z poszczególnymi warstwami można było bez większego problemu rozdzielić między członków zespołu programistów, a w przypadku ewentualnej modyfikacji jednej z warstw nie występuje konieczność wprowadzania zmian w reszcie projektu.
+System \textit{iQuest} został stworzony w oparciu o model architektury trójwarstwowej, w którym wyróżnione zostały warstwy: danych, logiki biznesowej oraz prezentacji. Dzięki takiemu podejściu, zadania związane z poszczególnymi warstwami można było bez większego problemu rozdzielić pomiędzy członków zespołu programistów, a w przypadku ewentualnej modyfikacji jednej z warstw nie występuje konieczność wprowadzania zmian w pozostałej części projektu.
 
 \section{Opis ogólny architektury -- ,,Marketektura''}
 \label{Chapter52}
@@ -13,13 +13,13 @@ System \textit{iQuest} to aplikacja internetowa w postaci zbioru rozszerzeń pla
 
 \begin{figure}[H]
 \centering\includegraphics[width=0.9\textwidth]{figures/marketecture}
-\caption{Diagram ,,Marketektury''}\label{rys:marketecture}
+\caption{Diagram ,,Marketektury'' (wyk. zespół zarządzający)}\label{rys:marketecture}
 \end{figure}
 
 \section{Analiza~podejść\slash Analiza~SWOT}
 \label{Chapter53}
 
-W fazie inicjacji projektu, zespół zarządzający przeprowadził analizę SWOT (ang. \definicja{Strengths, Weaknesses, Opportunities, Threats} - mocne strony, słabe strony, szanse, zagrożenia). Poniżej zamieszczono tabele \ref{tab:SWOT1}. oraz \ref{tab:SWOT2}., zawierające jej wyniki. W oparciu o nie, zespół zarządzający podjął decyzję o realizacji projektu z użyciem platformy \textit{Moodle}.
+W fazie inicjacji projektu, zespół zarządzający przeprowadził analizę SWOT (ang. \definicja{Strengths, Weaknesses, Opportunities, Threats} - mocne strony, słabe strony, szanse, zagrożenia). Poniżej zamieszczono tabele \ref{tab:SWOT1}. oraz \ref{tab:SWOT2}., zawierające jej wyniki. W oparciu o nie zespół zarządzający podjął decyzję o realizacji projektu z użyciem platformy \textit{Moodle}.
 
 \begin{table}[H]
 \centering
@@ -55,7 +55,24 @@ W fazie inicjacji projektu, zespół zarządzający przeprowadził analizę SWOT
 \caption{Podejście drugie -- napisanie aplikacji od podstaw przy użyciu \textit{Java~EE}}\label{tab:SWOT2}
 \end{table}
 
-Rozpatrując powyższe tabele z perspektywy czasu, autorzy niniejszej pracy stwierdzili, iż analiza SWOT została zrealizowana nieprawidłowo, faworyzując rozwiązanie z użyciem systemu \textit{Moodle}. Dla przykładu, dokumentacja \textit{Moodle} okazała się być w znacznym stopniu nieprecyzyjna i niekompletna, zaś w kodzie platformy nie stosuje się podejścia MVC.
+Rozpatrując powyższe tabele z perspektywy czasu, autorzy niniejszej pracy stwierdzili, iż analiza SWOT została zrealizowana nieprawidłowo, faworyzując rozwiązanie z użyciem systemu \textit{Moodle}. Dla przykładu, dokumentacja \textit{Moodle} okazała się w znacznym stopniu nieprecyzyjna i~niekompletna, zaś w kodzie platformy nie stosuje się podejścia MVC. Prawidłowa analiza podejść dla pierwszego podejścia, zdaniem zespołu programistów, została zamieszczona w tabeli \ref{tab:SWOT3}. Niestety, nie została ona wzięta pod uwagę w trakcje projektowania systemu \textit{iQuest}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ | p{2.5cm} | p{5.5cm} | p{5.5cm} | }
+\hline
+--- & \textbf{Pozytywne} & \textbf{Negatywne} \\ \hline
+\multirow{6}{*}{\textbf{Wewnętrzne}} & \textbf{Mocne strony (S)} & \textbf{Słabe strony (W)} \\
+			& Środowisko \textit{Moodle} jest oparte na modułach, co częściowo ułatwia rozwój. & Dokumentacja platformy \textit{Moodle}\cite{Man:Moodle} jest niekompletna i nieprecyzyjna. \\
+			& Już zaimplementowane mechanizmy, takie jak kontrola praw dostępu, CMS. & Konieczność trzymania się standardów \textit{Moodle}. \\
+			& & Konieczność wdrożenia się w obcy kod. \\ \hline
+%					
+\multirow{3}{*}{\textbf{Zewnętrzne}} & \textbf{Szanse (O)} & \textbf{Zagrożenia (T)} \\
+				& \textit{Moodle} jest znany w kręgach akademickich, w tym wśród przyszłych użytkowników systemu \textit{iQuest}. & Środowisko (w kategorii implementacyjnej) może być nieznane programistom. \\
+				& Możliwość utworzenia bazy wiedzy, zachęcającej użytkowników do korzystania z funkcjonalności systemu \textit{iQuest}. & \\ \hline
+\end{tabular}
+\caption{Podejście pierwsze -- w oparciu o platformę \textit{Moodle} -- zdaniem zespołu programistów}\label{tab:SWOT3}
+\end{table}
 
 \section{Perspektywy architektoniczne}
 \label{Chapter54}
@@ -65,7 +82,7 @@ Rozpatrując powyższe tabele z perspektywy czasu, autorzy niniejszej pracy stwi
 
 \begin{figure}[H]
 \centering\includegraphics[width=0.9\textwidth]{figures/PhysicalView}
-\caption{Diagram perspektywy fizycznej}\label{rys:PerspektywaFizyczna}
+\caption{Diagram perspektywy fizycznej (wyk. zespół zarządzający)}\label{rys:PerspektywaFizyczna}
 \end{figure}
 
 Schemat \ref{rys:PerspektywaFizyczna} prezentuje perspektywę fizyczną projektu. Widać na nim dokładnie, opisaną wcześniej, opartą na rozszerzeniach dla platformy \textit{Moodle} budowę logiki systemu \textit{iQuest}. Za jej pośrednictwem dokonuje się połączeń z serwerem baz danych oraz serwerem raportowania. Użytkownik systemu, z wykorzystaniem przeglądarki internetowej, komunikuje się z platformą, lub systemem raportowania, korzystając przy tym z warstwy prezentacji.
@@ -75,7 +92,7 @@ Schemat \ref{rys:PerspektywaFizyczna} prezentuje perspektywę fizyczną projektu
 
 \begin{figure}[H]
 \centering\includegraphics[width=0.9\textwidth]{figures/LogicalView}
-\caption{Diagram perspektywy logicznej}\label{rys:PerspektywaLogiczna}
+\caption{Diagram perspektywy logicznej (wyk. zespół zarządzający)}\label{rys:PerspektywaLogiczna}
 \end{figure}
 
 Schemat \ref{rys:PerspektywaLogiczna} prezentuje perspektywę logiczną systemu. Określa ona zależności między poszczególnymi komponentami ,,wszczepionymi'' do platformy \textit{Moodle}. Poniżej znajduje się opis wyszczególnionych na rysunku komponentów.
@@ -92,7 +109,7 @@ Pierwszy z nich odpowiada za definiowanie ankiet, natomiast drugi za ich realiza
 \subsubsection{iQuest Course Format Plugin}
 \label{Chapter5422}
 
-\definicja{Course Format Plugin} dla platformy \textit{Moodle} odpowiada za obsługę interfejsu użytkownika. W przypadku systemu \textit{iQuest}, zarządza kwestią wyświetlania użytkownikowi tylko tych składowych kursu związanego z systemem \textit{iQuest}, które są dla niego dostępne. Przykładowo, Respondent uzyska dostęp do listy ankiet, które może wypełnić, podczas gdy ankieter uzyska dostęp do listy zarządzanych przez niego badań.
+\definicja{Course Format Plugin} dla platformy \textit{Moodle} odpowiada za obsługę interfejsu użytkownika. W~przypadku systemu \textit{iQuest}, zarządza kwestią wyświetlania użytkownikowi tylko tych składowych kursu związanego z systemem \textit{iQuest}, które są dla niego dostępne. Przykładowo, Respondent uzyska dostęp do listy ankiet, które może wypełnić, podczas gdy ankieter uzyska dostęp do listy zarządzanych przez niego badań.
 
 \subsubsection{eDziekanat Connector oraz ePoczta Connector}
 \label{Chapter5423}
@@ -102,7 +119,7 @@ Komponenty te odpowiadają za komunikację z usługami \textit{eDziekanat} i \te
 \subsubsection{Background Task Scheduler and Executor}
 \label{Chapter5424}
 
-Dzięki temu komponentowi możliwe jest szeregowanie oraz wykonywanie zadań w tle. Jednym z jego zadań jest kolejkowanie i aktywowanie mechanizmów rozsyłania wiadomości e-mail z zaproszeniami do udziału w ankiecie.
+Dzięki temu komponentowi możliwe jest szeregowanie oraz wykonywanie zadań w tle. Jednym z~jego zadań jest kolejkowanie i aktywowanie mechanizmów rozsyłania wiadomości e-mail z~zaproszeniami do udziału w ankiecie.
 
 \subsubsection{eKonto Authentication Plugin}
 \label{Chapter5425}
@@ -112,12 +129,16 @@ Dzięki temu komponentowi możliwe jest szeregowanie oraz wykonywanie zadań w t
 \subsection{Perspektywa implemetancyjna}
 \label{Chapter543}
 
+Diagram perspektywy implementacyjnej (zwanej też perspektywą warstw; rys.~\ref{rys:PerspektywaImplementacyjna}) przedstawia graficzną interpretację zależności między poszczególnymi elementami systemu \textit{iQuest} w nawiązaniu do warstw zastosowanego modelu trójwarstwowego. Funkcje zaprezentowanych na nim modułów zostały wyjaśnione już wcześniej w niniejszym rozdziale.
+
+\newpage
+\begin{landscape}
 \begin{figure}[H]
 \centering\includegraphics[width=0.9\textwidth]{figures/Layers}
-\caption{Diagram perspektywy implementacyjnej}\label{rys:PerspektywaImplementacyjna}
+\caption{Diagram perspektywy implementacyjnej (wyk. zespół zarządzający)}\label{rys:PerspektywaImplementacyjna}
 \end{figure}
-
-Diagram perspektywy implementacyjnej (rys.~\ref{rys:PerspektywaImplementacyjna}) pozwala na analizę przeplatania się elementów systemu \textit{iQuest} w ramach poszczególnych warstw zastosowanego modelu trójwarstwowego. Funkcje zaprezentowanych na nim modułów zostały wyjaśnione już wcześniej w niniejszym dokumencie.
+\end{landscape}
+\newpage
 
 \section{Decyzje projektowe}
 \label{Chapter55}
@@ -364,7 +385,7 @@ Uzasadnienie & Pozwala to na poprawienie responsywności systemu dla użytkownik
 Identyfikator & D16 \\ \hline
 Nazwa & Kolejkowanie zadań wykonywanych w tle \\ \hline
 Opis & Moduł wykonywana zadań w tle posiada mechanizm kolejkowania. \\ \hline
-Uzasadnienie & Pozwala to na zwiększenie niezawodności systemu (np. e-maile do wysłania nie "przepadną" a zostaną zakolejkowane w przypadku awarii \textit{ePoczty}). \\ \hline
+Uzasadnienie & Pozwala to na zwiększenie niezawodności systemu (np. e-maile do wysłania nie ,,przepadną'' a zostaną zakolejkowane w przypadku awarii \textit{ePoczty}). \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -467,8 +488,8 @@ Uzasadnienie & Ułatwia to implementację - można uniknąć problemów związan
 \hline
 %
 Identyfikator & D23 \\ \hline
-Nazwa &  Oznaczanie zleceń jako "gotowe do wykonania" \\ \hline
-Opis & Rozpoczęcie wykonywania w tle zlecenia może nastąpić tylko, jeżeli jest ono oznaczone jako "gotowe do wykonania". \\ \hline
+Nazwa &  Oznaczanie zleceń jako ,,gotowe do wykonania'' \\ \hline
+Opis & Rozpoczęcie wykonywania w tle zlecenia może nastąpić tylko, jeżeli jest ono oznaczone jako ,,gotowe do wykonania''. \\ \hline
 Uzasadnienie & Pozwala to zapobiec rozpoczęciu wykonywania zlecenia w momencie, kiedy cały czas do zlecenia dodawane są zadania. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -529,7 +550,7 @@ Uzasadnienie & Poprawia to wydajność oraz umożliwia dostęp do danych w przyp
 Identyfikator & D27 \\ \hline
 Nazwa & Moduł \textit{eDziekanat Connector} \\ \hline
 Opis & Moduł \textit{eDziekanat Connector} służy do pobierania danych z systemu \textit{eDziekanat}. \\ \hline
-Uzasadnienie & Wydzielenie osobnego modułu do pobierania danych poprzez usługę \textit{eDziekanat} pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". W przypadku zmian w sposobie dostępu do usługi, wystarczy zmodyfikować tylko ten moduł. \\ \hline
+Uzasadnienie & Wydzielenie osobnego modułu do pobierania danych poprzez usługę \textit{eDziekanat} pozwala na umieszczenie kodu za to odpowiedzialnego ,,w jednym miejscu''. W przypadku zmian w sposobie dostępu do usługi, wystarczy zmodyfikować tylko ten moduł. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -544,7 +565,7 @@ Uzasadnienie & Wydzielenie osobnego modułu do pobierania danych poprzez usług�
 Identyfikator & D28 \\ \hline
 Nazwa & Moduł \textit{ePoczta Connector} \\ \hline
 Opis & Moduł \textit{ePoczta Connector} służy do wysyłania wiadomości e-mail przy pomocy usługi \textit{ePoczta}. \\ \hline
-Uzasadnienie & Wydzielenie osobnego modułu do interakcji z usługą \textit{ePoczta} pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". W przypadku zmian w sposobie dostępu do usługi, wystarczy zmodyfikować tylko ten moduł. Możliwe jest też łatwe utworzenie "atrapy" modułu przydatnej przy testowaniu. \\ \hline
+Uzasadnienie & Wydzielenie osobnego modułu do interakcji z usługą \textit{ePoczta} pozwala na umieszczenie kodu za to odpowiedzialnego ,,w jednym miejscu''. W przypadku zmian w sposobie dostępu do usługi, wystarczy zmodyfikować tylko ten moduł. Możliwe jest też łatwe utworzenie ,,atrapy'' modułu przydatnej przy testowaniu. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -634,7 +655,7 @@ Uzasadnienie & Dzięki temu nie ma potrzeby implementowania dodatkowej funkcjona
 Identyfikator & D34 \\ \hline
 Nazwa & Moduł Logger \\ \hline
 Opis & Za obsługę dziennika zdarzeń systemowych odpowiada specjalny moduł - \textit{Logger}. \\ \hline
-Uzasadnienie & Wydzielenie do tego celu osobnego modułu pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". \\ \hline
+Uzasadnienie & Wydzielenie do tego celu osobnego modułu pozwala na umieszczenie kodu za to odpowiedzialnego ,,w jednym miejscu''. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -649,7 +670,7 @@ Uzasadnienie & Wydzielenie do tego celu osobnego modułu pozwala na umieszczenie
 Identyfikator & D35 \\ \hline
 Nazwa & Moduł \textit{Background Task Scheduler and Executor} \\ \hline
 Opis & Za obsługę zadań wykonywanych w tle odpowiada specjalny moduł - \textit{Background Task Scheduler and Executor}. \\ \hline
-Uzasadnienie & Wydzielenie do tego celu osobnego modułu pozwala na umieszczenie kodu za to odpowiedzialnego "w jednym miejscu". \\ \hline
+Uzasadnienie & Wydzielenie do tego celu osobnego modułu pozwala na umieszczenie kodu za to odpowiedzialnego ,,w jednym miejscu''. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -693,8 +714,8 @@ Uzasadnienie & Biblioteka \textit{PHPUnit} jest dość rozbudowana, a testowanie
 %
 Identyfikator & D38 \\ \hline
 Nazwa & Dostęp absolwentów do systemu \\ \hline
-Opis & Student po staniu się absolwentem ma dostęp do systemu przy pomocy "zwykłego" konta w systemie \textit{Moodle}. \\ \hline
-Uzasadnienie & Logowanie absolwentów przy pomocy \textit{eKonta} nie jest na razie możliwe, a więc będą oni musieli korzystać ze "zwykłych" kont. \\ \hline
+Opis & Student po staniu się absolwentem ma dostęp do systemu przy pomocy ,,zwykłego'' konta w systemie \textit{Moodle}. \\ \hline
+Uzasadnienie & Logowanie absolwentów przy pomocy \textit{eKonta} nie jest na razie możliwe, a więc będą oni musieli korzystać ze ,,zwykłych'' kont. \\ \hline
 Źródło & Architekt \\ \hline
 %
 \end{tabular}
@@ -723,7 +744,7 @@ Uzasadnienie & Tak proste rozwiązanie jest wystarczające, ponieważ w przewidy
 %
 Identyfikator & D40 \\ \hline
 Nazwa & Atrapy \\ \hline
-Opis & Kod źródłowy systemu zawiera alternatywne wersje modułów \textit{eDziekanat Connector} oraz \textit{ePoczta Connector}. Nie łączą się one z systemami uczelnianymi, a służą jedynie jako "atrapy" wykorzystywane przy testowaniu. \\ \hline
+Opis & Kod źródłowy systemu zawiera alternatywne wersje modułów \textit{eDziekanat Connector} oraz \textit{ePoczta Connector}. Nie łączą się one z systemami uczelnianymi, a służą jedynie jako ,,atrapy'' wykorzystywane przy testowaniu. \\ \hline
 Uzasadnienie &  Takie rozwiązanie sprawia, że znaczną część prac związanych z testowaniem można wykonać bez konieczności połączenia z prawdziwymi usługami zewnętrznymi. \\ \hline
 Źródło & Architekt \\ \hline
 %
@@ -927,6 +948,6 @@ Ze względu na obszerność, schemat bazy danych przedstawiono na następnej str
 \begin{landscape}
 \begin{figure}[th]
 \centering\includegraphics[height=\textheight, width=1.5\textwidth]{figures/iQuest_Database}
-\caption{Diagram Bazy Danych}\label{rys:iQuest_DataBase}
+\caption{Diagram Bazy Danych (wyk. zespół zarządzający)}\label{rys:iQuest_DataBase}
 \end{figure}
 \end{landscape}

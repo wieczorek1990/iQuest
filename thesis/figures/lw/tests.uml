@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\mod_isurvey_system_event_testcase</OriginalElement>
+  <nodes>
+    <node x="4155.533462657613" y="507.56644034917554">\mod_isurvey_stub_testcase</node>
+    <node x="3400.108366935484" y="244.0">\question_test_core</node>
+    <node x="3595.108366935484" y="244.0">\mod_isurvey_research_testcase</node>
+    <node x="1893.1930116000751" y="389.5577109602327">\edziekanat_connector_test_core</node>
+    <node x="2461.244422890398" y="531.5577109602327">\mod_isurvey_epoczta_connector_real_testcase</node>
+    <node x="3150.116126392322" y="426.9912706110572">\mod_isurvey_send_emails_task_testcase</node>
+    <node x="4450.108366935484" y="244.0">\mod_isurvey_answer_set_answer_testcase</node>
+    <node x="1614.2444228903976" y="531.5577109602327">\mod_isurvey_edziekanat_connector_mock_testcase</node>
+    <node x="2043.2444228903976" y="531.5577109602327">\mod_isurvey_edziekanat_connector_real_testcase</node>
+    <node x="4457.116126392322" y="426.9912706110572">\mod_isurvey_survey_permission_testcase</node>
+    <node x="4615.608366935484" y="102.0">\mod_isurvey_user_testcase</node>
+    <node x="4214.116126392322" y="426.9912706110572">\mod_isurvey_job_testcase</node>
+    <node x="3880.5334626576137" y="507.56644034917554">\basic_testcase</node>
+    <node x="1984.108366935484" y="244.0">\mod_isurvey_faculty_group_member_testcase</node>
+    <node x="2867.030241935484" y="102.0">\mod_isurvey_research_ans_answer_testcase</node>
+    <node x="2857.244422890398" y="531.5577109602327">\mod_isurvey_epoczta_connector_mock_testcase</node>
+    <node x="3496.116126392322" y="426.9912706110572">\mod_isurvey_target_group_permission_testcase</node>
+    <node x="2783.530241935484" y="0.0">\advanced_testcase</node>
+    <node x="2708.108366935484" y="244.0">\mod_isurvey_target_group_member_testcase</node>
+    <node x="2369.108366935484" y="244.0">\mod_isurvey_question_choice_testcase</node>
+    <node x="4809.116126392322" y="426.9912706110572">\mod_isurvey_survey_testcase</node>
+    <node x="4231.608366935484" y="102.0">\mod_isurvey_background_processor_testcase</node>
+    <node x="3482.358366935484" y="326.0">\mod_isurvey_single_choice_question_testcase</node>
+    <node x="1682.108366935484" y="244.0">\mod_isurvey_answer_set_testcase</node>
+    <node x="3790.5334626576137" y="589.5664403491755">\mod_isurvey_database_helper_testcase</node>
+    <node x="3897.116126392322" y="426.9912706110572">\mod_isurvey_target_group_testcase</node>
+    <node x="2723.994422890398" y="389.5577109602327">\epoczta_connector_test_core</node>
+    <node x="2237.030241935484" y="102.0">\mod_isurvey_webservices_testcase</node>
+    <node x="3090.108366935484" y="244.0">\mod_isurvey_study_scope_testcase</node>
+    <node x="4062.608366935484" y="102.0">\iquest_testcase</node>
+    <node x="3878.108366935484" y="244.0">\mod_isurvey_task_testcase</node>
+    <node x="4130.108366935484" y="244.0">\mod_isurvey_faculty_group_testcase</node>
+    <node x="3154.358366935484" y="326.0">\mod_isurvey_open_question_testcase</node>
+    <node x="2546.030241935484" y="102.0">\mod_isurvey_system_event_testcase</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\question_test_core" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="3487.608366935484" y="204.0" />
+      <point x="4113.827116935484" y="204.0" />
+      <point x="-23.28125" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_database_helper_testcase" target="\basic_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="0.0" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_single_choice_question_testcase" target="\question_test_core">
+      <point x="0.0" y="-16.0" />
+      <point x="3666.858366935484" y="301.0" />
+      <point x="3531.358366935484" y="301.0" />
+      <point x="43.75" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_job_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="4325.616126392322" y="356.9912706110572" />
+      <point x="4188.327116935484" y="174.0" />
+      <point x="51.21875" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_target_group_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="4045.616126392322" y="366.9912706110572" />
+      <point x="4179.014616935484" y="184.0" />
+      <point x="41.90625" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_task_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="3994.108366935484" y="224.0" />
+      <point x="4132.452116935484" y="224.0" />
+      <point x="-4.65625" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_system_event_testcase" target="\advanced_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="2696.530241935484" y="82.0" />
+      <point x="2859.217741935484" y="82.0" />
+      <point x="-10.8125" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_epoczta_connector_real_testcase" target="\epoczta_connector_test_core">
+      <point x="0.0" y="-16.0" />
+      <point x="2649.244422890398" y="511.5577109602327" />
+      <point x="2786.994422890398" y="511.5577109602327" />
+      <point x="-63.0" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_epoczta_connector_mock_testcase" target="\epoczta_connector_test_core">
+      <point x="0.0" y="-16.0" />
+      <point x="3050.744422890398" y="511.5577109602327" />
+      <point x="2912.994422890398" y="511.5577109602327" />
+      <point x="63.0" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_send_emails_task_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="3313.116126392322" y="386.9912706110572" />
+      <point x="4160.389616935484" y="204.0" />
+      <point x="23.28125" y="16.0" />
+    </edge>
+    <edge source="\epoczta_connector_test_core" target="\advanced_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="2849.994422890398" y="349.5577109602327" />
+      <point x="2815.967741935484" y="62.0" />
+      <point x="-54.0625" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_webservices_testcase" target="\advanced_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="2381.530241935484" y="72.0" />
+      <point x="2837.592741935484" y="72.0" />
+      <point x="-32.4375" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_answer_set_answer_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="4620.108366935484" y="214.0" />
+      <point x="4151.077116935484" y="214.0" />
+      <point x="13.96875" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_survey_permission_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="4623.116126392322" y="346.9912706110572" />
+      <point x="4197.639616935484" y="164.0" />
+      <point x="60.53125" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_target_group_member_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="2889.108366935484" y="184.0" />
+      <point x="4095.202116935484" y="184.0" />
+      <point x="-41.90625" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_survey_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="4933.116126392322" y="336.9912706110572" />
+      <point x="4206.952116935484" y="154.0" />
+      <point x="69.84375" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_research_ans_answer_testcase" target="\advanced_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="3043.530241935484" y="82.0" />
+      <point x="2880.842741935484" y="82.0" />
+      <point x="10.8125" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_question_choice_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="2528.608366935484" y="174.0" />
+      <point x="4085.889616935484" y="174.0" />
+      <point x="-51.21875" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_faculty_group_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="4280.108366935484" y="224.0" />
+      <point x="4141.764616935484" y="224.0" />
+      <point x="4.65625" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_user_testcase" target="\advanced_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="4731.608366935484" y="52.0" />
+      <point x="2945.717741935484" y="52.0" />
+      <point x="75.6875" y="16.0" />
+    </edge>
+    <edge source="\edziekanat_connector_test_core" target="\advanced_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="2030.1930116000751" y="339.5577109602327" />
+      <point x="2794.342741935484" y="52.0" />
+      <point x="-75.6875" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_research_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="3726.608366935484" y="214.0" />
+      <point x="4123.139616935484" y="214.0" />
+      <point x="-13.96875" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_faculty_group_member_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="2166.608366935484" y="164.0" />
+      <point x="4076.577116935484" y="164.0" />
+      <point x="-60.53125" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_study_scope_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="3235.108366935484" y="194.0" />
+      <point x="4104.514616935484" y="194.0" />
+      <point x="-32.59375" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_edziekanat_connector_real_testcase" target="\edziekanat_connector_test_core">
+      <point x="0.0" y="-16.0" />
+      <point x="2242.244422890398" y="511.5577109602327" />
+      <point x="2098.693011600075" y="511.5577109602327" />
+      <point x="68.5" y="16.0" />
+    </edge>
+    <edge source="\iquest_testcase" target="\advanced_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="4137.108366935484" y="72.0" />
+      <point x="2902.467741935484" y="72.0" />
+      <point x="32.4375" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_open_question_testcase" target="\question_test_core">
+      <point x="0.0" y="-16.0" />
+      <point x="3308.358366935484" y="301.0" />
+      <point x="3443.858366935484" y="301.0" />
+      <point x="-43.75" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_target_group_permission_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="3686.616126392322" y="376.9912706110572" />
+      <point x="4169.702116935484" y="194.0" />
+      <point x="32.59375" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_answer_set_testcase" target="\iquest_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="1823.108366935484" y="154.0" />
+      <point x="4067.264616935484" y="154.0" />
+      <point x="-69.84375" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_edziekanat_connector_mock_testcase" target="\edziekanat_connector_test_core">
+      <point x="0.0" y="-16.0" />
+      <point x="1818.7444228903976" y="511.5577109602327" />
+      <point x="1961.6930116000751" y="511.5577109602327" />
+      <point x="-68.5" y="16.0" />
+    </edge>
+    <edge source="\mod_isurvey_background_processor_testcase" target="\advanced_testcase">
+      <point x="0.0" y="-16.0" />
+      <point x="4413.608366935484" y="62.0" />
+      <point x="2924.092741935484" y="62.0" />
+      <point x="54.0625" y="16.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.2976327944572748" x="3336.0" y="311.0" />
+  <SelectedNodes>
+    <node>\mod_isurvey_stub_testcase</node>
+    <node>\basic_testcase</node>
+    <node>\mod_isurvey_database_helper_testcase</node>
+  </SelectedNodes>
+  <Categories />
+</Diagram>
+

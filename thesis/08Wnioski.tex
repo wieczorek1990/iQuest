@@ -1,74 +1,82 @@
-\chapter{Zebrane doświadczenia}
+\chapter{Zebrane doświadczenia i wnioski}
 \label{Chapter8}
 
-Podczas pracy zebraliśmy następujące doświadczenia, bezpośrednio związane z zastosowanymi technologiami:
-\begin{itemize}
+\section{Doświadczenia związane z zastosowanymi technologiami}
+\label{Chapter81}
+
+Podczas pracy zebrano następujące doświadczenia, bezpośrednio związane z zastosowanymi technologiami:
+
+\begin{enumerate}
 \item Implementowanie testów jednostkowych z użyciem PHPUnit -- w celu kontroli poprawności logiki pisanej w języku \textit{PHP}.
 \item Implementowanie logiki aplikacji w języku \textit{PHP} na podstawie UML -- na podstawie diagramów UML oraz rozmów z architektem zaimplementowano kod back-endu w języku \textit{PHP}.
 \item Implementowanie usług internetowych (protokół \textit{SOAP}) -- dla komunikacji z usługami uczelni wykorzystano klienty dostarczone przez DRO, natomiast dla komunikacji z serwerem raportowania wykorzystano API \textit{external services} platformy \textit{Moodle}, po stronie systemu \textit{iQuest} oraz \textit{Apache Axis} (Java) po stronie serwera \textit{JasperReports}.
+\item Implementowanie schematu bazy danych w formacie \textit{XMLDB} na podstawie UML -- wykorzystano interfejs do zarządzania \textit{XMLDB} dostarczany przez \textit{Moodle}; drobne poprawki wprowadzano ręcznie w pliku \textit{XML}, definiującym schemat bazy danych.
+\item Implementowanie modułów uwierzytelniania systemu \textit{Moodle} -- na podstawie przykładowych oraz istniejących modułów uwierzytelniania stworzono moduł uwierzytelniania przez \textit{eKonto} oraz moduł dla absolwentów,
+\item Rozszerzanie funkcjonalności oprogramowania o otwartym kodzie źródłowym -- w celu spełnienia wymagań projektowych dodano m.in.~okresowe sprawdzanie ważności sesji \textit{eKonto} do mechanizmu zarządzania sesją \textit{Moodle}, zmodyfikowano wygląd strony logowania i panelu użytkownika.
+\item Konfigurowanie systemów operacyjnych \textit{Ubuntu} -- w celu zdalnej konfiguracji wykorzystano protokół \textit{SSH}. Należało zainstalować i skonfigurować wymagane oprogramowanie (w tym \textit{Apache}, \textit{CRON}, \textit{PostgreSQL}, \textit{PHP}, \textit{Check Point's Linux SNX}), przygotować katalogi repozytoriów kodu.
+\item Programowanie z użyciem \textit{Eclipse PDT} -- wykorzystano zintegrowane środowisko programistyczne w celu zwiększenia produktywności programistów.
+\item Konfigurowanie \textit{JasperServer} -- dodano dialekt zapytań \textit{JoSQL}, własne źródło danych (pomocne okazały się informacje z projektu \textit{Business Intelligence Server} dostępnego na \textit{Redmine}),
+\item Projektowanie raportów \textit{JasperReports} -- zaprojektowano raporty w~\textit{JasperReports Studio}.
+\item Korzystanie z klientów \textit{VPN} (firmy \textit{CheckPoint}) -- w celu uzyskania dostępu do sieci wewnętrznej, zobligowano zespół do zestawiania połączenia \textit{VPN}.
+\item Korzystanie z systemu zarządzania projektami \textit{Redmine} -- zarządzanie zagadnieniami, bazą wiedzy, repozytorium, plikami, korzystanie z dostępnych metod komunikacji: komunikaty, forum, komentarze.
+\item Korzystanie z systemów kontroli wersji \textit{SVN} i \textit{Git} -- \textit{SVN} wykorzystano jako repozytorium kodu, \textit{Git} natomiast posłużyło zespołowi podczas pracy nad niniejszą pracą.
+\item Pisanie dokumentacji technicznej oraz użytkownika.
+\item Implementowanie modułów aktywności systemu \textit{Moodle}.
+\item Projektowanie testów akceptacyjnych z użyciem \textit{Selenium IDE}.
+\item Implementowanie formularzy z wykorzystaniem \textit{JavaScript}.
+\end{enumerate}
 
-\item Implementowanie schematu bazy danych w formacie XMLDB na podstawie UML -- wykorzystano interfejs do zarządzania XMLDB dostarczany przez Moodle; drobne poprawki wprowadzano ręcznie w pliku XML definiującym schemat bazy danych,
-\item Implementowanie modułów uwierzytelniania systemu Moodle -- na podstawie przykładowych oraz istniejących modułów uwierzytelniania stworzono moduł uwierzytelniania przez eKonto oraz moduł dla absolwentów,
-\item Rozszerzanie funkcjonalności oprogramowania o otwartym kodzie źródłowym -- w celu spełnienia wymagań projektowych dodano m.in. okresowe sprawdzanie ważności sesji eKonto do mechanizmu zarządzania sesją Moodle, zmodyfikowano wygląd strony logowania, panelu użytkownika,
-\item Konfigurowanie systemów operacyjnych Ubuntu i OpenSUSE -- W celu zdalnej konfiguracji wykorzystywano protokół SSH; Należało zainstalować i skonfigurować wymagane oprogramowanie (w tym Apache, cron, PostgreSQL, PHP, Check Point's Linux SNX), przygotować katalogi repozytoriów kodu,
-\item Programowanie z użyciem Eclipse PDT -- wykorzystano zintegrowane środowisko programistyczne w celu zwiększenia produktywności programistów,
-\item Konfigurowanie JasperServer -- dodano dialekt zapytań JoSQL, własne źródło danych (pomocne okazały się informacje z projektu \emph{Business Intelligence Server} dostępnego na Redmine),
-\item Projektowanie raportów JasperReports -- obejmowało zaprojektowanie raportów w JasperReports Studio,
-\item Korzystanie z klientów VPN (firmy CheckPoint) -- w celu uzyskania dostępu do sieci wewnętrznej zobligowano zespół do zestawiania połączenia VPN,
-\item Korzystanie z systemu zarządzania projektami Redmine -- obejmuje zarządzanie zagadnieniami, bazą wiedzy, repozytorium, plikami, korzystanie z dostępnych metod komunikacji: komunikaty, forum, komentarze,
-\item Korzystanie z systemów kontroli wersji SVN i Git -- SVN wykorzystano jak repozytorium kodu, repozytorium Git służyło zespołowi podczas pracy nad niniejszą pracą,
-\item Pisanie dokumentacji technicznej oraz użytkownika,
-\item Implementowanie modułów aktywności systemu Moodle,
-\item Projektowanie testów akceptacyjnych z użyciem Selenium IDE,
-\item Implementowanie formularzy z wykorzystaniem JavaScript,
-\end{itemize}
-%Tu kończymy wbijać doświadczenia.
+\section{Wnioski z udziału w realizacji projektu}
+\label{Chapter82}
 
-%Poniżej wrzucamy jakiś opis do tych doświadczeń. Takie jakby podsumowanie ich w formie zdaniowej.
-Bardzo istotna cześć doświadczeń związanych z projektem wiąże się z pracą zespołową.
-Nauczyliśmy się, że dobrego członka zespołu wyróżnia: sumienność, punktualność, odpowiedzialność, dokładność, terminowość, prawdomówność, uczciwość, asertywność, zdolność kreatywnego myślenia, kultura bycia oraz komunikatywność. Praca w grupie nad dużym projektem wymaga dobrej koordynacji prac. Dostępność architekta i kierownika projektu znacząco ułatwiła pracę nad projektem. Dzięki podziałowi zadań, każdy członek zespołu mógł pogłębić swoje zainteresowania. Wraz z upływem każdy członek zespołu znalazł sobie zbiór typów zagadnień, które potrafił zrealizować szybciej i lepiej ze względu na wcześniej pozyskane doświadczenie. Uzyskane doświadczenia z pewnością przydadzą się nam w pracy zawodowej.
+Bardzo istotna cześć doświadczeń związanych z projektem wiąże się z pracą zespołową. Członek zespołu musi posiadać następujące cechy: sumienność, punktualność, odpowiedzialność, dokładność, terminowość, prawdomówność, uczciwość, asertywność, zdolność kreatywnego myślenia, kultura osobista oraz komunikatywność. Praca w grupie nad dużym projektem wymaga dobrej koordynacji oraz odpowiedniego podziału zadań, które przydzielano w zależności od: umiejętności, doświadczeń i zainteresowań poszczególnych członków zespołu. Bardzo ważna była dostępność architekta i kierownika projektu.
 
-\textbf{Wnioski:}
+\subsection{Wnioski indywidualne}
+\label{Chapter821}
+
 \begin{description}
-\item Krzysztof Borowiak:
+\item Krzysztof Marian Borowiak:
 \begin{itemize}
-\item Praca zespołowa znacząco upraszcza realizowanie różnych projektów -- gdy jeden z członków zespołu czegoś nie wie, lub nie potrafi, może to szybko skonsultować z kolegami. Jest to znacznie szybsze i efektywniejsze, niż wyszukiwanie informacji samodzielnie.
-\item Dokumentacja wykonywana przez ,,społeczność'' (ang. \definicja{community}) nie jest tak dobra, jak próbują przekonywać zwolennicy rozwiązań ,,otwartych'' i ,,darmowych''.
-\item Wykonywanie testów jednostkowych we wstępnej fazie projektu, w szczególności, gdy szczegóły architektoniczne logiki oprogramowania nie są jeszcze kompletne, jest niezwykle uciążliwe i czasochłonne. Wyjątkiem jest zastosowanie techniki TDU, przy czym wymaga ona pewnego stopnia doświadczenia ze strony programistów.
-\item Wraz z projektem, powinna być rozwijana baza wiedzy. Każdy problem, z którym dowolny członek zespołu się spotkał, powinien zostać zanotowany i opisany, aby pozostali członkowie zespołu, np.~nieobecni przy jego napotkaniu, mogli się z nim zapoznać i w łatwy sposób uniknąć.
-\item Zespół zarządzający powinien dbać o to, aby zadania były przydzielane bezpośrednio do poszczególnych członków zespołu programistów i egzekwować ich wykonanie w wyznaczonym czasie.
-\item Jeśli wewnątrz zespołu pojawiają się spory na tle osobistym między dowolnymi jego członkami, może to wpłynąć na pracę całej ekipy. Sprawy takie powinny pozostawać poza pokojem pracy, lub być rozpatrywane z pomocą kierownika projektu.
-\item Zaufanie to podstawa każdej działalności. Jeśli jakaś kwestia zostaje przekazana dowolnej osobie związanej z projektem, nie powinna być wykorzystywana przeciwko osobie przekazującej, gdyż może to negatywnie wpłynąć na współpracę wewnątrz zespołu. Podobnie w kwestii modyfikacji kodu utworzonego przez kogoś innego.
-\item Nie każdy student kierunku Informatyka będzie dobrym programistą. Jest wiele specjalizacji, w których może się on rozwijać. SDS, skupiający się wokół wytwarzania oprogramowania pozwala wykonanie pracy dyplomowej związanej w bardzo wąskim spektrum tematów.
+\item Praca zespołowa znacząco upraszcza realizowanie różnych projektów -- gdy jeden z członków zespołu czegoś nie wie lub uzyskuje inne efekty niż oczekiwane, może to szybko skonsultować z kolegami. Jest to znacznie szybsze i efektywniejsze, niż wyszukiwanie informacji samodzielnie.
+\item Dokumentacja wykonywana przez ,,społeczność'' nie jest tak dobra, jak próbują przekonywać zwolennicy rozwiązań ,,otwartych'' i ,,darmowych'' -- jest niekompletna i nie można się w pełni na niej oprzeć.
+\item Wykonywanie testów jednostkowych we wstępnej fazie projektu, zwłaszcza, gdy szczegóły architektoniczne logiki oprogramowania nie są jeszcze kompletne, jest niezwykle uciążliwe i czasochłonne. Wyjątkiem jest zastosowanie techniki TDU, przy czym wymaga ona niemałego doświadczenia ze strony programistów.
+\item Wraz z projektem, powinna być rozwijana baza wiedzy. Każdy problem, z którym dowolny członek zespołu się spotkał, powinien zostać zanotowany i opisany na wspólnej platformie, aby pozostali członkowie zespołu, mogli się z nim zapoznać i uniknąć jego powielania.
+\item Zespół zarządzający powinien dbać o to, aby zadania były przydzielane bezpośrednio poszczególnym członkom zespołu programistów i egzekwować ich wykonanie w wyznaczonym terminie.
+\item Należy oddzielać pracę od spraw osobistych.
+\item Zaufanie i lojalność to podstawa dobrej współpracy zespołu -- każda poruszana kwestia powinna znaleźć konstruktywne rozwiązanie.
+\item Nie każdy student kierunku Informatyka wiąże swoją przyszłość z rolą programisty. Jest wiele specjalizacji, w których może się on rozwijać. SDS, skupiające się wokół wytwarzania oprogramowania pozwala na wykonanie pracy dyplomowej tylko w tym zakresie.
 \end{itemize}
 \item Maciej Trojan
 \begin{itemize}
-\item Niewątpliwą zaletą pracy nad dużym projektem było zrozumienie jak ważną role odgrywa
-dobre zaplanowanie i zaprojektowanie oprogramowania przed przystąpieniem do bezpośredniego
-programowania.
-\item Praca w zespole z określonym podziałem na role, umożliwiła szybkie rozwiązywanie
-problemów napotkanych w trakcie wytwarzania oprogramowania. Ponadto podział ten wymusił
-zagłębienie się w dziedzinach powiązanych z pełnioną rolą, co znacząco wpłynęło na
-rozwijanie umiejętności.
-\item Aby projekt został zrealizowany w wyznaczonym terminie, powstające zagadnienia należy
-przydzielać do konkretnych osób oraz egzekwować ich wykonanie.
+\item Niewątpliwą zaletą pracy nad dużym projektem było zrozumienie jak ważną role odgrywa dobre przygotowanie projektu w fazie planowania przed przystąpieniem do programowania.
+\item Praca w zespole z określonym podziałem na role umożliwia szybkie rozwiązywanie problemów napotkanych w trakcie wytwarzania oprogramowania. Ponadto podział ten wymusza zagłębienie się w dziedzinach powiązanych z pełnioną rolą, co znacząco wpływa na rozwijanie umiejętności.
+\item Aby projekt został zrealizowany w wyznaczonym terminie, powstające zagadnienia należy przydzielać do konkretnych osób oraz egzekwować ich wykonanie w terminie.
 \end{itemize}
 \item Krzysztof Urbaniak:
 \begin{itemize}
-\item ...
+\item Kluczem do sprawnej pracy jest dobra organizacja zasobów. System \textit{Redmine} bardzo pomagał w odpowiednim przydziale zadań do osób, w taki sposób, aby projekt ukończyć w określonym czasie.
+\item Wspólna praca zespołu w jednym pokoju wpływa na większą świadomość jego członków o postępie prac. Przekłada się to na szybsze znajdowanie błędów, czy grupowe rozwiązywanie większych problemów (np.~w formie burzy mózgów).
+\item Rodzina systemów operacyjnych \textit{Linux} jest o wiele przyjaźniejsza programistom, niż \textit{Windows}. Góruje ona chociażby w kwestii dostępności aplikacji operujących na plikach tekstowych, a także łatwości pisania skryptów. Programista pracujący z użyciem \textit{Linuxa} ma poczucie, że wiele procesów można zautomatyzować, w przeciwieństwie do pracy w środowisku \textit{Windows}.
+\item Wybór rozwiązań, o których ma się szczątkowe pojęcie, nie jest dobrym pomysłem. Lepiej jest wybierać rozwiązania bardziej znane, nawet jeśli wydaje się, że wymagają więcej zaangażowania.
+\item Wybór pracy inżynierskiej pod nadzorem zespołu SDS był dobrym pomysłem. Wsparcie architekta oraz kierownika było bardzo istotne, m.in.~w~kategorii ukończenia prac w terminie.
 \end{itemize}
 \item Łukasz Wieczorek:
 \begin{itemize}
-\item Zatwierdzaj swoje zmiany (ang. \emph{commit}) dopiero, gdy funkcjonalność, którą miałeś zaimplementować, jest kompletna i przetestowana jednostkowo oraz akceptacyjnie,
-\item Przygotuj wcześniej logikę, z której będą korzystać programiści interfejsu, by nie opóźniać ich pracy,
-\item Jeśli nie wiesz, jak zaimplementować daną funkcjonalność zapytaj architekta -- zwykle dysponuje on większą wiedzą ogólną,
-\item Werbalizacja problemu bardzo często pomaga w jego rozwiązaniu,
-\item Wcześniejsza refaktoryzacja znacznie ułatwia dalszą pracę nad kodem,
-\item Wielokrotnie powtarzane fragmenty kodu należy jak najszybciej zrefaktoryzować, by uchronić się od poprawiania podobnych konstrukcji składniowych,
-\item ,,Nie należy mnożyć bytów ponad potrzebę'',
-\item Testy jednostkowe ułatwiają refaktoryzację kodu -- nawet jeśli ich utrzymywanie jest kosztowne, warto je pisać,
-\item Podstawą efektywnej pracy jest kontrola czasu poświęcanego na realizację przydzielonych zdań,
-\item Dobra komunikacja w zespole to podstawa sukcesu,
+\item Zmiany zatwierdza się (ang. \definicja{commit}) dopiero, gdy funkcjonalność, która miała być zaimplementowana, jest kompletna i przetestowana.
+\item Logika, z której będą korzystać programiści interfejsu, powinna zostać przygotowana wcześniej. by nie opóźniać ich pracy.
+\item Jeśli nie wiadomo, jak zaimplementować daną funkcjonalność, warto skierować się do architekta -- zwykle dysponuje on większą wiedzą ogólną w takich kategoriach.
+\item Werbalizacja problemu bardzo często pomaga w jego rozwiązaniu.
+\item Wielokrotnie powtarzane fragmenty kodu należy jak najszybciej zrefaktoryzować, by uchronić się od poprawiania podobnych konstrukcji składniowych. Ponadto, wcześniejsza refaktoryzacja znacznie ułatwia dalszą pracę nad kodem.
+\item Testy jednostkowe ułatwiają refaktoryzację kodu -- nawet jeśli ich utrzymywanie jest kosztowne, warto je realizować.
+\item ,,Nie należy mnożyć bytów ponad potrzebę''.
+\item Podstawą efektywnej pracy jest kontrola czasu poświęcanego na realizację przydzielonych zdań.
+\item Dobra komunikacja w zespole to podstawa sukcesu.
 \end{itemize}
 \end{description}
-%I po robocie.
+
+\subsection{Wnioski zbiorowe}
+\label{Chapter822}
+
+Rozwijanie istniejącego oprogramowania wymaga dużo większego nakładu pracy niż konstrukcja oprogramowania od podstaw. Wiele czasu poświęca się na analizę rozwiązań zastosowanych przez twórców rozwiązania bazowego. W trakcie implementacji pojawiają się problemy, na które długimi godzinami szuka się rozwiązań. Niektórych nie udaje się w ogóle rozwiązać, co prowadzi do konieczności modyfikacji wcześniej utworzonego oprogramowania (ang. \definicja{hacking}). Praca nad oprogramowaniem, którego tworzenie zaczęło się przed ponad dziesięcioma laty, wymaga pracy z rozwiązaniami architektonicznymi, które dawno zostały już zarzucone (np. \textit{transaction script} porzucono na rzecz \textit{Model View Controller}). Dodatkową trudnością są zmieniające się lub niewspierane już interfejsy programowania aplikacji. Wymienione problemy dotyczą szczególnie obszernego oprogramowania, właśnie takiego z jakim przyszło nam pracować -- \textit{Moodle} to wg programu \textit{CLOC} ponad 2 miliony linii kodu. Uważamy, że decyzja architekta odnośnie rozwijania systemu \textit{Moodle} była błędna i nieprzemyślana, zwłaszcza w kontekście braku doświadczenia całego zespołu w tej technologii. Potwierdzenie naszych wniosków widzimy chociażby porównując wydajność pracy z innymi zespołami realizującymi projekty w ramach \textit{Software Development Studio}. Jednakże, mimo wszelkich trudności, dużym nakładem pracy, udało nam się zakończyć projekt w terminie.
+
+Możliwość współpracy z SDS była niewątpliwie zaletą. Po pierwsze, projekt, który należało wykonać był bardzo złożony. Powiększenie zespołu projektowego o dwie dodatkowe osoby, dało możliwość odciążenia pozostałych od części pracy, związanej z projektowaniem systemu, a co za tym idzie, pozostali mogli zająć się samą implementacją. Po drugie, wszystkie ewentualnie spory można było szybko rozwiązać, pytając o zdanie architekta, nie tracąc tym samym czasu na niepotrzebne spory o sposób realizacji. Po trzecie, udostępniony system \textit{Redmine} znacząco polepsza organizację pracy. Dzięki ,,śledzeniu zagadnień'' można lepiej organizować czas, co więcej, każdy wie, co ma robić. Nie bez znaczenia jest też możliwość korzystania z repozytorium \textit{SVN}. Wyposażony pokój jest udogodnieniem, które wpływa na lepszą komunikację w zespole. Korzyścią wynikającą ze sposobu organizacji pracy jest konieczność trzymania się terminów, dzięki której nasz ostatni semestr studiów inżynierskich był dobrze zaplanowany pod względem równomiernego rozkładu pracochłonności.

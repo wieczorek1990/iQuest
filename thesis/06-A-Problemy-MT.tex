@@ -1,7 +1,7 @@
 \subsection{Inicjalizacja bazy danych}
 \label{Chapter623}
 
-Moduł \textit{iQuest} do prawidłowego działania wymaga rozszerzenia istniejącej bazy danych platformy \textit{Moodle} o dodatkowe tabele, przechowujące niezbędne do spełnienia założonej funkcjonalności dane. \\
+Moduł \textit{iQuest} do prawidłowego działania wymaga rozszerzenia istniejącej bazy danych platformy \textit{Moodle} o dodatkowe tabele, przechowujące dane niezbędne do spełnienia założonej funkcjonalności. \\
 
 Do zaimportowania bazy danych przygotowanej przez Architekta, wykorzystano narzędzie wbudowane w platformę Moodle: \textit{XMLDB}. Gwarantuje ono bezobsługową instalację modułu w przyszłości. W trakcie pracy z tym narzędziem, znaleziony został błąd, uniemożliwiający zaimportowanie kluczy obcych do bazy. W efekcie, programiści musieli ręcznie utworzyć wszystkie klucze obce, przewidziane przez Architekta, co wymagało znaczących nakładów czasowych.
 
@@ -9,4 +9,4 @@ Do zaimportowania bazy danych przygotowanej przez Architekta, wykorzystano narz�
 \label{Chapter624}
 Postanowiono, że wraz z instalacją modułu \textit{iSurvey}, zawierającego logikę systemu \textit{iQuest}, powinien automatycznie tworzyć się powiązany z nim kurs. Rozwiązanie to zmniejsza nakład czasu wymagany do przygotowania platformy do użytku, oraz zapobiega pomyłkom związanym z ręcznym tworzeniem i konfiguracją systemu. \\
 
-Konsekwencje takiego podejścia wyszły na jaw dopiero po jego zrealizowaniu. Okazało się, że podejście to uniemożliwia instalację modułu jednocześnie z całą platformą \textit{Moodle}, ponieważ w trakcie procesu instalacji platformy \textit{Moodle}, dodatkowe moduły instalowane są przed mechanizmami pozwalającymi na tworzenie \textit{kursu}. Z tego względu, moduł \textit{iSurvey} należy dodawać do wcześniej zainstalowanej platformy.
+Okazało się, że podejście to uniemożliwia instalację modułu jednocześnie z całą platformą \textit{Moodle}, ponieważ w trakcie procesu instalacji platformy \textit{Moodle}, dodatkowe moduły instalowane są przed mechanizmami pozwalającymi na tworzenie \textit{kursu}. Z tego względu, moduł \textit{iSurvey} należy dodawać do wcześniej zainstalowanej platformy.
