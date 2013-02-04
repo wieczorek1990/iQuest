@@ -4,12 +4,12 @@
 \section{Wstęp}
 \label{Chapter41}
 
-W niniejszym rozdziale zostaną zaprezentowane i krótko opisane wymagania pozafunkcjonalne dotyczące systemu \textit{iQuest}. Dodatkowo, zostały one przydzielone do wybranych przez zespół zarządzający charakterystyk oprogramowania.
+W~niniejszym rozdziale zostaną zaprezentowane i~krótko opisane wymagania pozafunkcjonalne dotyczące systemu \textit{iQuest}. Dodatkowo, zostały one przydzielone do wybranych przez zespół zarządzający charakterystyk oprogramowania.
 
 \section{Opis wymagań}
 \label{Chapter42}
 
-Wymagania pozafunkcjonalne przypisane do wyżej opisanych charakterystyk oprogramowania przedstawione zostały w tabeli \ref{tab:reqs}. Dodatkowo, określono za pomocą etykiety \emph{ważność (W)} oraz \emph{trudność implementacji (TI)} dla każdego z wymagań. Wartości w ramach tego oznaczenia wyrażone są w następującej skali:
+Wymagania pozafunkcjonalne przypisane do~wyżej opisanych charakterystyk oprogramowania przedstawione zostały w~tabeli \ref{tab:reqs}. Dodatkowo, określono za~pomocą etykiety \emph{ważność~(W)} oraz~\emph{trudność implementacji~(TI)} dla~każdego z~wymagań. Wartości w~ramach tego oznaczenia wyrażone~są w~następującej skali:
 
 \begin{itemize}
 \item{H (ang.~\definicja{high}) -- wysoka}
@@ -17,7 +17,7 @@ Wymagania pozafunkcjonalne przypisane do wyżej opisanych charakterystyk oprogra
 \item{L (ang.~\definicja{low}) -- niska}
 \end{itemize}
 
-Analizy, zakończonej etykietowaniem, dokonał zespół zarządzający, rozpatrując to wedle wytycznych przedstawionych w trakcie zajęć akademickich na 1. roku studiów II stopnia.
+Analizy, zakończonej etykietowaniem, dokonał zespół zarządzający, rozpatrując to~wedle wytycznych przedstawionych w trakcie zajęć akademickich na 1.~roku studiów II~stopnia.
 
 \newpage
 \begin{center}
@@ -116,8 +116,8 @@ Zużycie zasobów & Możliwość pracy przez ankietera\slash respondenta na śre
 \end{longtable}
 \end{center}
 
-Zważywszy, że projekt ten jest istotny dla Uczelni, dołożono wszelkich starań, aby spełnić wszystkie wymagania pozafunkcjonalne. Zadanie to zostało w sporej części wykonane dzięki zastosowaniu sprawdzonego i znanego narzędzia w roli podstawy dla całego systemu. Mowa o platformie \textit{Moodle}\footnote{Więcej informacji w rozdziale~\ref{Chapter6}, poświęconym implementacji i zastosowanym przy niej technologiom.}. Użycie jej pozwoliło m.in.~na zapewnienie modułowości systemowi. Spełniona została także adaptatywność i przenośność systemu, oparta na uniwersalności języka \textit{PHP}, jak też szerokiej gamie obsługiwanych przez \textit{Moodle} systemów baz danych. \\
+Zważywszy, że~projekt ten jest istotny dla~Uczelni, dołożono wszelkich starań, aby~spełnić wszystkie wymagania pozafunkcjonalne. Zadanie to~zostało w~sporej części wykonane dzięki zastosowaniu sprawdzonego i~znanego narzędzia w~roli podstawy dla~całego~systemu. Mowa o platformie \textit{Moodle}\footnote{Więcej informacji w~rozdziale~\ref{Chapter6}, poświęconym implementacji i~zastosowanym przy~niej technologiom.}. Użycie jej~pozwoliło m.in.~na~zapewnienie modułowości systemowi. Spełniona została także adaptatywność i~przenośność systemu, oparta na~uniwersalności języka \textit{PHP}, jak~też szerokiej gamie obsługiwanych przez~\textit{Moodle} systemów baz~danych. \\
 
-Zalety wykorzystania tak powszechnej technologii były -- przynajmniej w teorii -- znacznie szersze. \textit{Moodle} posiada swój własny standard kodowania, którego przy realizowaniu projektu starano się w pełni przestrzegać. To sprawia, że w połączeniu z wytycznymi \textit{DRO} (\definicja{Dział Rozwoju Oprogramowania Politechniki Poznańskiej}), dokumentacją \textit{Moodle} i dokumentacją systemu \textit{iQuest}, nakład pracy wymagany do wdrożenia się, w celu rozwoju projektu, został zmniejszony. \\
+Zalety wykorzystania tak~powszechnej technologii były -- przynajmniej w teorii -- znacznie szersze. \textit{Moodle} posiada swój własny standard kodowania, którego~przy realizowaniu projektu starano~się w~pełni przestrzegać. To sprawia, że~w~połączeniu z wytycznymi \textit{DRO} (\definicja{Dział Rozwoju Oprogramowania Politechniki Poznańskiej}), dokumentacją \textit{Moodle} i~dokumentacją systemu \textit{iQuest}, nakład pracy wymagany do~wdrożenia~się, w~celu rozwoju projektu, został zmniejszony. \\
 
-W trakcie prac nad projektem, niemały nacisk stawiano na prawidłowe zarządzanie uprawnieniami użytkowników. Wykorzystano w tym celu mechanizmy dostępne w platformie \textit{Moodle}. Są one weryfikowane przy każdym działaniu podejmowanym przez użytkowników i zależą od przydzielonej im w systemie roli. Szczegóły tej kwestii swobodnie definiować może administracja. Ważnym jest, że osoby pełniące rolę ankietera mogą modyfikować i analizować jedynie te badania, które zostały utworzone przez siebie lub udostępnione im bezpośrednio. Podobnie działają uprawnienia przydzielone do roli respondenta -- pozwalając dokładnie jeden raz odpowiedzieć na pytania w ankietach skierowanych do grup docelowych, do których należy użytkownik.
+W~trakcie prac nad projektem, niemały nacisk stawiano na~prawidłowe zarządzanie uprawnieniami użytkowników. Wykorzystano w~tym celu mechanizmy dostępne w~platformie \textit{Moodle}. Są one weryfikowane przy każdym działaniu podejmowanym przez użytkowników i~zależą od~przydzielonej im~w~systemie roli. Szczegóły tej~kwestii swobodnie definiować może administracja. Ważnym jest, że~osoby pełniące rolę ankietera mogą modyfikować i~analizować jedynie te badania, które zostały utworzone przez~siebie lub~udostępnione im~bezpośrednio. Podobnie działają uprawnienia przydzielone do~roli respondenta -- pozwalając dokładnie jeden~raz odpowiedzieć na~pytania w~ankietach skierowanych do~grup docelowych, do~których należy użytkownik.

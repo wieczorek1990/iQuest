@@ -4,34 +4,32 @@
 \section{Wstęp}
 \label{Chapter71}
 
-Testy i weryfikacja jakości oprogramowania realizowana była na trzech poziomach: testów jednostkowych (dla logiki) oraz automatycznych i manualnych testów akceptacyjnych. Te ostatnie realizowane były nie tylko w zgodzie z dokumentem \textit{MAT}\footnote{\cite{Redmine:ProjDocs}}, ale też intuicyjnie, poprzez normalne korzystanie z systemu.
+Testy i weryfikacja jakości oprogramowania realizowana była na~trzech poziomach: testów jednostkowych (dla~logiki) oraz automatycznych i~manualnych testów akceptacyjnych. Te~ostatnie realizowane były nie~tylko w~zgodzie z~dokumentem \textit{MAT}\footnote{\cite{Redmine:ProjDocs}}, ale~też intuicyjnie, poprzez normalne korzystanie z~systemu.
 
 \section{Testy jednostkowe}
 \label{Chapter72}
 
-Testy jednostkowe zostały wykonane jako pierwsze i traktowane były z wysokim priorytetem. Realizowane były z użyciem klas \textit{PHPUnit}, stosowanych powszechnie m.in.~przy testowaniu wtyczek do platformy \textit{Moodle}. Testy te były kluczowe dla rozwoju logiki systemu iQuest. Przygotowane zostały też konfigurowalne skrypty automatyzujące proces testowania w języku \textit{BASH}. Część testów operuje na systemie w trybie produkcyjnym, część na trybie testowym, obsługującym tzw. ,,atrapy'' (ang. \definicja{mock}), imitujące działanie systemów zewnętrznych poprzez zwracanie przykładowych danych.\\
+Testy jednostkowe zostały wykonane jako pierwsze i~traktowane były z~wysokim priorytetem. Realizowane były z~użyciem klas \textit{PHPUnit}, stosowanych powszechnie m.in.~przy testowaniu wtyczek do~platformy \textit{Moodle}. Testy~te~były kluczowe dla~rozwoju logiki systemu iQuest. Przygotowane zostały też~konfigurowalne skrypty automatyzujące proces testowania w~języku \textit{BASH}. Część testów operuje na~systemie w~trybie produkcyjnym, część~na~trybie testowym, obsługującym tzw.~,,atrapy'' (ang.~\definicja{mock}), imitujące działanie systemów zewnętrznych poprzez zwracanie przykładowych danych.\\
 
-Przy realizacji pierwszego wydania, za testy jednostkowe w pełni odpowiadał jeden z członków zespołu programistów. W wydaniu drugim, rolę tę przejął programista realizujący logikę systemu. Planowano stosować technikę \textit{Test-Driven Development} (TDU) - rozwój w oparciu o testy), jednakże szybko zrezygnowano z tego pomysłu. Przyczyną był brak doświadczenia programistów w tej materii. Więcej informacji o problemach i rozwiązaniach przyjętych przy wykonywaniu testów znaleźć można w rozdziale \ref{Chapter62b}.
+Przy realizacji pierwszego wydania, za~testy jednostkowe w~pełni odpowiadał jeden z~członków zespołu programistów. W wydaniu drugim, rolę~tę przejął programista realizujący logikę systemu. Planowano stosować technikę \textit{Test-Driven Development}~(TDU) - rozwój w~oparciu o~testy), jednakże szybko zrezygnowano z~tego pomysłu. Przyczyną był brak doświadczenia programistów w~tej materii. Więcej informacji o~problemach i~rozwiązaniach przyjętych przy~wykonywaniu testów znaleźć można w~rozdziale \ref{Chapter62b}.
 
 \newpage
 \begin{figure}[H]
 \begin{center}
 \includepdf{figures/lw/tests1.pdf} 
 \end{center}
-\caption{Struktura klas testujących (1) (wyk. Łukasz Wieczorek)}
-\label{fig:tests1}
+\caption{Struktura klas testujących (1) (wyk. Łukasz Wieczorek)}\label{fig:tests1}
 \end{figure}
 \newpage
 \begin{figure}[H]
 \begin{center}
-\includepdf{figures/lw/tests2.pdf} 
+\includegraphics[width=\textwidth]{figures/lw/tests2.pdf} 
 \end{center}
-\caption{Struktura klas testujących (2) (wyk. Łukasz Wieczorek)}
-\label{fig:tests2}
+\caption{Struktura klas testujących (2) (wyk. Łukasz Wieczorek)}\label{fig:tests2}
 \end{figure}
 \newpage
 
-Na diagramach widoczne są trzy klasy służące do testowania, z których dziedziczą wszystkie inne:
+Na diagramach widoczne są trzy klasy służące do testowania, z~których dziedziczą wszystkie inne:
 \begin{description}
 \item[basic\_testcase] -- podstawowe testy jednostkowe
 \item[advanced\_testcase] -- testy z użyciem bazy danych
@@ -41,9 +39,9 @@ Na diagramach widoczne są trzy klasy służące do testowania, z których dzied
 \section{Testy akceptacyjne}
 \label{Chapter73}
 
-Na początku projektu, przygotowano program w języku \textit{Java}, uruchamiający zestaw testów akceptacyjnych. W drugim wydaniu korzystano jednak wyłącznie z \textit{Selenium IDE}, ze względu na możliwość szybszego rozpoznania problemów z poziomu przeglądarki, w przeciwieństwie do terminala.
+Na początku projektu, przygotowano program w~języku \textit{Java}, uruchamiający zestaw testów akceptacyjnych. W~drugim wydaniu korzystano jednak wyłącznie z~\textit{Selenium IDE}, ze~względu na~możliwość szybszego rozpoznania problemów z~poziomu przeglądarki, w~przeciwieństwie do~terminala.
 
-Testy akceptacyjne rozpatrywane są na dwóch poziomach: automatycznym i manualnym. Różnica polega jedynie na tym, kto (lub co) wykonuje test - komputer z odpowiednim oprogramowaniem, czy człowiek.
+Testy akceptacyjne rozpatrywane są na dwóch poziomach: automatycznym i~manualnym. Różnica polega jedynie na~tym, kto~(lub~co) wykonuje test - komputer z~odpowiednim oprogramowaniem, czy~człowiek.
 
 \subsection{MAT}
 \label{Chapter731}
@@ -220,13 +218,13 @@ Dodatkowo, poniżej znajduje się wykaz mapujący przypadki testowe do przypadk�
 \subsection{AAT}
 \label{Chapter732}
 
-Automatyczne testy akceptacyjne realizowano w zgodzie z testami manualnymi, operując na tych samych wytycznych. Nagrywanie testów odbywało się za pomocą oprogramowania \textit{Selenium IDE}, udostępnianego w formie rozszerzenia dla przeglądarki \textit{Mozilla Firefox}. Pierwotnie, testy były konwertowane do języka \textit{Java}, w celu uruchamiania ich za pomocą jego środowiska, oferującego sporą swobodę przy projektowaniu warunków początkowych i końcowych dla testów. Problemy, jakie wynikały z takiego działania, opisane zostały w rozdziale \ref{Chapter6}. Na ich podstawie zdecydowano o pozostaniu w obrębie \textit{Selenium IDE}, które samo w sobie również umożliwia automatyzację. Dla dodatkowego ułatwienia zadania, przygotowano skrypt ustawiający bazę danych w stan początkowy dla realizacji testów.
+Automatyczne testy akceptacyjne realizowano w~zgodzie z~testami manualnymi, operując na~tych samych wytycznych. Nagrywanie testów odbywało~się za~pomocą oprogramowania \textit{Selenium IDE}, udostępnianego w~formie rozszerzenia dla~przeglądarki \textit{Mozilla Firefox}. Pierwotnie, testy były konwertowane do~języka \textit{Java}, w~celu uruchamiania ich za~pomocą jego środowiska, oferującego sporą swobodę przy~projektowaniu warunków początkowych i~końcowych dla~testów. Problemy, jakie wynikały z~takiego działania, opisane zostały w~rozdziale~\ref{Chapter6}. Na~ich~podstawie zdecydowano o~pozostaniu w~obrębie \textit{Selenium IDE}, które~samo w~sobie również umożliwia automatyzację. Dla dodatkowego ułatwienia zadania, przygotowano skrypt ustawiający bazę danych w~stan początkowy dla~realizacji testów.
 
 \section{Inne metody zapewniania jakości}
 \label{Chapter74}
 
-Konieczność zapewnienia jak najwyższej jakości oprogramowania, wymusiła testowanie w kontrolowanych warunkach na różnych urządzeniach. Co prawda, lokalne serwery developerskie pracowały zawsze w oparciu o system \textit{Ubuntu 12.04 LTS}\footnote{\cite{Man:Ubuntu}}, z serwerem \textit{Apache} i systemem zarządzania bazą danych \textit{PostgreSQL}, jednak maszyny klienckie były już znacznie bardziej różnorodne. \\
+Konieczność zapewnienia jak najwyższej jakości oprogramowania, wymusiła testowanie w~kontrolowanych warunkach na~różnych urządzeniach. Co~prawda, lokalne serwery developerskie pracowały zawsze w~oparciu o~system \textit{Ubuntu 12.04 LTS}\footnote{\cite{Man:Ubuntu}}, z~serwerem \textit{Apache} i~systemem zarządzania bazą danych \textit{PostgreSQL}, jednak maszyny klienckie były już~znacznie bardziej różnorodne. \\
 
-Testy klienckie odbyły się na komputerach stacjonarnych klasy PC oraz równoważnych laptopach, z użyciem zarówno systemów rodziny \textit{Windows} (wersje od \textit{XP} do \textit{8}), jak i \textit{Linux} (wspomniana wcześniej wersja \textit{Ubuntu}) oraz \textit{Mac OS X}. Ponadto, przetestowano trzy główne platformy mobilne (Android, iOS @ iPhone 4S, WP7.x @ Nokia Lumia 710) poprzez dostęp do systemu z poziomu telefonów komórkowych. Komputery użyte do testów charakteryzowały się posiadaniem co najmniej jednordzeniowego procesora ze zbiorem 32-bitowych instrukcji i taktowaniem zegara nie mniejszym niż 1,5GHz, oraz 4 GB pamięci RAM. \\
+Testy klienckie odbyły się na komputerach stacjonarnych klasy PC oraz~równoważnych laptopach, z~użyciem zarówno systemów rodziny \textit{Windows} (wersje od~\textit{XP} do~\textit{Win8}), jak~i~\textit{Linux} (wspomniana wcześniej wersja \textit{Ubuntu}) oraz~\textit{Mac~OS~X}. Ponadto, przetestowano trzy główne platformy mobilne (Android, iOS @ iPhone~4S, WP7.x @ Nokia~Lumia~710) poprzez dostęp do~systemu z~poziomu telefonów komórkowych. Komputery użyte do~testów charakteryzowały~się posiadaniem co~najmniej jednordzeniowego procesora ze~zbiorem 32-bitowych~instrukcji i~taktowaniem zegara nie~mniejszym niż~1,5~GHz, oraz~4~GB pamięci~RAM. \\
 
-Na podstawie testów, utworzono dwa raporty: ,,wygląd i działanie systemu \textit{iQuest} na platformach mobilnych'' oraz ,,wygląd i działanie systemu \textit{iQuest} w różnych konfiguracjach system-przeglądarka'', udostępnione w ramach systemu zarządzania projektem\footnote{\cite{Redmine:ProjDocs}}. Wynika z nich, że system \textit{iQuest} jest przenośny.
+Na podstawie testów, utworzono dwa raporty: ,,wygląd i~działanie systemu \textit{iQuest} na~platformach mobilnych'' oraz ,,wygląd i~działanie systemu \textit{iQuest} w~różnych konfiguracjach system-przeglądarka'', udostępnione w~ramach systemu zarządzania projektem\footnote{\cite{Redmine:ProjDocs}}. Wynika z~nich, że~system \textit{iQuest} jest~przenośny.

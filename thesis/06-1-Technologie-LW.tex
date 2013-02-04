@@ -1,65 +1,65 @@
 \subsection{\textit{Moodle}}
 \label{Chapter631}
 
-\textit{Moodle} (ang. \definicja{Modular Object-Oriented Dynamic Learning Environment}) -- stanowi podstawę systemu \textit{iQuest}. Jest to popularna (ponad 63 miliony użytkowników) platforma e-learningowa o otwartym kodzie źródłowym, napisana w języku \emph{PHP}. Wyboru dokonano ze względu na kilka czynników:
+\textit{Moodle} (ang.~\definicja{Modular Object-Oriented Dynamic Learning Environment}) -- stanowi podstawę systemu \textit{iQuest}. Jest~to popularna (ponad 63~miliony użytkowników) platforma e-learningowa o~otwartym kodzie źródłowym, napisana w~języku~\emph{PHP}. Wyboru dokonano ze~względu na~kilka czynników:
 \begin{itemize}
-\item{Propozycję Kierownika Projektu oraz następującą po niej decyzję Architekta, wynikającą z faktu, iż \textit{Moodle} posiada już implementację wielu wymaganych w \textit{iQuest} mechanizmów, jak np. konta użytkowników, system ról i uprawnień.}
-\item{Oczekiwania Klienta, wynikające z popularności platformy \textit{Moodle} wśród systemów uczelnianych.}
+\item{Propozycję Kierownika Projektu oraz~następującą po~niej decyzję Architekta, wynikającą z~faktu, iż~\textit{Moodle} posiada~już implementację wielu wymaganych w~\textit{iQuest} mechanizmów, jak np.~konta użytkowników, system ról i~uprawnień.}
+\item{Oczekiwania Klienta, wynikające z~popularności platformy \textit{Moodle} wśród systemów uczelnianych.}
 \item{Modułowość \textit{Moodle}, umożliwiającą pisanie rozszerzeń.}
 \end{itemize}
 
 \subsection{\textit{PHP}}
 \label{Chapter632}
 
-\textit{PHP} -- platforma \textit{Moodle} jest napisana właśnie w tym języku programowania. Z tego względu, jest to technologia zastosowana w większości rozszerzeń utworzonych przez zespół textit{iQuest}, korzystających z interfejsów programowania aplikacji tej platformy. Ponadto \textit{PHP} jest jednym z najpopularniejszych języków programowania aplikacji internetowych, posiada doskonałą dokumentację\footnote{\cite{Man:PHP}} oraz jest cały czas rozwijany.
+\textit{PHP} -- platforma \textit{Moodle} jest~napisana właśnie w~tym~języku programowania. Z~tego względu, jest~to technologia zastosowana w~większości rozszerzeń utworzonych przez zespół \textit{iQuest}, korzystających z~interfejsów programowania aplikacji tej platformy. Ponadto \textit{PHP} jest jednym z~najpopularniejszych języków programowania aplikacji internetowych, posiada doskonałą dokumentację\footnote{\cite{Man:PHP}} oraz~jest wciąż rozwijany.
 
-Dodatkowo, język \textit{PHP} jest dość przyjazny dla programisty, gdy chodzi o komunikację z bazą danych. Przy realizacji zadań z tym związanych, odnoszono się zarówno do wspomnianej wyżej dokumentacji, jak też do literatury fachowej, w tym ,,PHP i MySQL - Księga przykładów'' autorstwa E. Quigley oraz M. Gargenta\footnote{\cite{EQMG:PiMKp07}}.
+Dodatkowo, język~\textit{PHP} jest dość przyjazny dla~programisty, gdy~chodzi o~komunikację z~bazą~danych. Przy realizacji zadań z~tym związanych, odnoszono~się zarówno do~wspomnianej wyżej dokumentacji, jak~też do~literatury fachowej\footnote{m.in.~,,PHP i~MySQL - Księga przykładów'' autorstwa E. Quigley oraz M. Gargenta\cite{EQMG:PiMKp07}}.
 
 \subsection{\textit{PHPUnit}}
 \label{Chapter633}
 
-Ze względu na fakt, iż programiści \textit{Moodle'a} wykonują testy jednostkowe kodu wykorzystując do tego celu \textit{PHPUnit}, zdecydowano się skorzystać z przygotowanego przez nich oprogramowania. \textit{Moodle} udostępnia dwie klasy do testowania -- \textit{basic\_testcase} i \textit{advanced\_testcase}, przy czym druga wymieniona służy do testów, które wchodzą w interakcję z bazą danych. Korzystanie z tych klas dodatkowo uprasza fakt istnienia świetnej dokumentacji technicznej\footnote{\cite{Man:PHPUnit}}.
+Ze względu na fakt, iż~programiści \textit{Moodle'a} wykonują testy jednostkowe kodu wykorzystując do~tego~celu \textit{PHPUnit}, zdecydowano~się skorzystać z~przygotowanego przez~nich oprogramowania. \textit{Moodle} udostępnia dwie klasy do~testowania -- \textit{basic\_testcase} i \textit{advanced\_testcase}, przy czym druga wymieniona służy do testów, które wchodzą w interakcję z~bazą~danych. Korzystanie z~tych klas dodatkowo uprasza fakt istnienia świetnej dokumentacji technicznej\footnote{\cite{Man:PHPUnit}}.
 
 \subsection{\textit{Selenium}}
 \label{Chapter634}
 
-\textit{Selenium} -- szybko rozwijający się zestaw narzędzi do testów akceptacyjnych. Był to naturalny wybór zwłaszcza, że zostało ono przybliżone programistom na zajęciach z Inżynierii Oprogramowania w trakcie toku studiów. \textit{Selenium} składa się m.in. z następującego oprogramowania\footnote{\cite{Man:Selenium}}:
+\textit{Selenium} -- szybko rozwijający~się zestaw narzędzi do~testów akceptacyjnych. Był~to naturalny wybór zwłaszcza, że~zostało ono~przybliżone programistom na~zajęciach z Inżynierii Oprogramowania w~trakcie toku studiów. \textit{Selenium} składa się m.in.~z~następującego oprogramowania\footnote{\cite{Man:Selenium}}:
 \begin{itemize}
-\item{\textit{Selenium IDE} -- zintegrowane środowisko programistyczne dla skryptów \textit{Selenium} -- zaimplementowane jako rozszerzenie dla przeglądarki internetowej \textit{Firefox}. Pozwala na: nagrywanie i odtwarzanie sekwencji kroków, wykonywanych podczas pracy z przeglądarką, eksport skryptów do kodu języków programowania (np. \textit{Java}).}
-\item{\textit{Selenium Client Drivers} (\textit{Java}) -- sterownik klienta dla języka \textit{Java}, pozwalający na wykonywanie skryptów \textit{Selenium} z poziomu języka \textit{Java}},
-\item{\textit{HtmlUnit Driver} -- Implementacja klasy \textit{WebDriver}, która emuluje zachowanie przeglądarki. Pozwala na uruchamianie skryptów \textit{Selenium} bez korzystania z przeglądarki internetowej.}
+\item{\textit{Selenium IDE} -- zintegrowane środowisko programistyczne dla~skryptów \textit{Selenium} -- zaimplementowane~jako rozszerzenie dla~przeglądarki internetowej \textit{Firefox}. Pozwala~na: nagrywanie~i~odtwarzanie sekwencji kroków, wykonywanych podczas pracy z~przeglądarką, eksport skryptów do~kodu języków programowania (np.~\textit{Java}).}
+\item{\textit{Selenium Client Drivers} (\textit{Java}) -- sterownik klienta dla~języka \textit{Java}, pozwalający na~wykonywanie skryptów \textit{Selenium} z~poziomu języka~\textit{Java}},
+\item{\textit{HtmlUnit Driver} -- Implementacja klasy \textit{WebDriver}, która~emuluje zachowanie przeglądarki. Pozwala na~uruchamianie skryptów \textit{Selenium} bez~korzystania z~przeglądarki internetowej.}
 \end{itemize}
 
 \subsection{\textit{PostgreSQL}}
 \label{Chapter635}
 
-System zarządzania bazą danych \textit{PostgreSQL} został wybrany ze względu na wymaganie pozafunkcjonalne -- pracownicy \textit{Działu Rozwoju Oprogramowania Politechniki Poznańskiej} korzystają z tej właśnie bazy danych. Jest to baza danych o otwartym kodzie źródłowym, zgodna ze standardami, ciągle rozwijana, wysoce konfigurowalna.
+System zarządzania bazą~danych \textit{PostgreSQL} został wybrany ze~względu na~wymaganie pozafunkcjonalne -- pracownicy DRO korzystają z~tej właśnie bazy~danych. Jest to~baza~danych o~otwartym kodzie źródłowym, zgodna ze~standardami, ciągle rozwijana, wysoce konfigurowalna.
 
 \subsection{\textit{Eclipse IDE}}
 \label{Chapter636}
 
-Wybór \textit{Eclipse IDE} jako stosowanego dla projektu \textit{iQuest} zintegrowanego środowiska programistycznego wynika z faktu, iż oprogramowanie to jest dostępne za darmo. Dodatkową zaletą \textit{Eclipse} jest modularność tego rozwiązania, dzięki czemu dostępny jest w nim dodatek \textit{PHP Development Tools}, upraszczający pracę z technologią \textit{PHP}. Udostępnia m.in. narzędzia do analizy poprawności składniowej pisanego kodu, formatery kodu, wyszukiwanie fraz w wielu plikach, kontekstowe podpowiedzi i nawigację.
+Wybór \textit{Eclipse IDE} jako stosowanego dla~projektu \textit{iQuest} zintegrowanego środowiska programistycznego wynika z~faktu, iż~oprogramowanie to~jest dostępne za~darmo. Dodatkową zaletą \textit{Eclipse} jest~modularność tego rozwiązania, dzięki czemu dostępny jest~w~nim dodatek \textit{PHP~Development Tools}, upraszczający pracę z~technologią \textit{PHP}. Udostępnia m.in.~narzędzia do analizy poprawności składniowej pisanego kodu, formatery kodu, wyszukiwanie fraz w~wielu plikach, kontekstowe podpowiedzi i~nawigację.
 
 \subsection{\textit{SVN}}
 \label{Chapter637}
 
-\textit{Subversion} został wybrany jako podstawowy system kontroli wersji ze względu na wymagania pozafunkcjonalne. Zespół eksploatacji, który docelowo przejmie zarządzanie artefaktami związanymi z projektem, wykorzystuje właśnie \textit{SVN}. Główne funkcjonalności tego systemu to: atomowe publikowanie zmian, historia operacji na plikach (zmiana nazwy, skopiowanie, przeniesienie, modyfikacja, usunięcie), wersjonowanie plików i folderów, łatwy dostęp do informacji o zmianach.
+\textit{Subversion} został wybrany jako~podstawowy system kontroli wersji ze~względu na~wymagania pozafunkcjonalne. Zespół eksploatacji, który~docelowo przejmie zarządzanie artefaktami związanymi z~projektem, wykorzystuje właśnie~\textit{SVN}. Główne funkcjonalności tego systemu~to: atomowe publikowanie zmian, historia operacji na~plikach (zmiana nazwy, skopiowanie, przeniesienie, modyfikacja, usunięcie), wersjonowanie plików i~folderów, łatwy dostęp do~informacji o~zmianach.
 
 \subsection{\textit{Redmine}}
 \label{Chapter638}
 
-Systemu zarządzania projektami \textit{Redmine} wykorzystywany był od samego początku istnienia projektu. Jest to narzędzie bardzo przydatne w wymianie informacji pomiędzy członkami zespołu, integrujące się m.in. z repozytorium kodu, bazą wiedzy o projekcie, listą zagadnień, forum.  Technologia ta została narzucona, ze względu na sposób organizacji pracy w \textit{Software Development Studio} na Politechnice Poznańskiej.
+Systemu zarządzania projektami \textit{Redmine} wykorzystywany był od~samego początku istnienia projektu. Jest~to narzędzie bardzo przydatne w~wymianie informacji pomiędzy członkami zespołu, integrujące się m.in.~z~repozytorium kodu, bazą wiedzy o~projekcie, listą zagadnień, forum. Technologia ta została narzucona, ze~względu na~sposób organizacji pracy w~\textit{Software Development Studio} na~Politechnice~Poznańskiej.
 
 \subsection{\textit{JasperReports}}
 \label{Chapter639}
 
-Ze względu na wymagania pozafunkcjonalne, zdecydowano się skorzystać z mechanizmów raportowania oferowanych przez \textit{JasperReports}. Jest to najbardziej popularny silnik raportowania o otwartym kodzie źródłowym (wersja Community). Pozwala na generację raportów, których treść jest określona z dokładnością co do piksela. Generowane raporty można eksportować do popularnych formatów dokumentów, np. \textit{HTML}, \textit{PDF}, \textit{Excel}, \textit{Word}.
+Ze względu na wymagania pozafunkcjonalne, zdecydowano~się skorzystać z~mechanizmów raportowania oferowanych przez~\textit{JasperReports}. Jest~to najbardziej popularny silnik raportowania o~otwartym kodzie źródłowym (wersja \textit{Community}). Pozwala na generację raportów, których treść jest określona z~dokładnością co~do~piksela. Generowane raporty można eksportować do~popularnych formatów dokumentów, np.~\textit{HTML}, \textit{PDF}, \textit{Excel}, \textit{Word}.
 
 \subsection{\textit{JetBrains PhpStorm}}
 \label{Chapter63a}
 
-\textit{PhpStorm} jest komercyjnym \textit{IDE} dla języka \textit{PHP} tworzonym przez firmę \textit{JetBrains}, dostępnym dla studentów na licencji edukacyjnej. Dla celów niniejszej pracy dyplomowej, wykorzystano funkcjonalność odpowiedzialną za tworzenie diagramów UML z kodu. Wygenerowane w trybie \textit{Organic} diagramy można zobaczyć w dalszej części pracy (schematy \ref{rys:back-end1}., \ref{rys:back-end2}., \ref{fig:tests1}., \ref{fig:tests2}., zamieszczone w rozdziałach \ref{Chapter6}. i \ref{Chapter7}.).
+\textit{PhpStorm} jest komercyjnym \textit{IDE} dla~języka~\textit{PHP} tworzonym przez firmę \textit{JetBrains}, dostępnym dla~studentów na~licencji edukacyjnej. Dla~celów niniejszej pracy dyplomowej, wykorzystano funkcjonalność tworzenia diagramów~UML z~kodu źródłowego. Wygenerowane w trybie \textit{Organic} diagramy można zobaczyć w~dalszej części pracy (schematy \ref{rys:back-end1}., \ref{rys:back-end2}., \ref{fig:tests1}., \ref{fig:tests2}., zamieszczone w~rozdziałach \ref{Chapter6}. i~\ref{Chapter7}.).
 
 \subsection{\textit{HTML} oraz \textit{CSS}}
 \label{Chapter63b}
-Po stronie użytkownika, system \textit{iQuest} prezentowany jest za pośrednictwem interpretowanego przez jego przeglądarkę internetową kodu w języku \textit{HTML}. Jego wygląd, wraz z umiejscowieniem elementów, określa natomiast arkusz stylów \textit{CSS}. Realizując zadania związane z tymi technologiami, odnoszono się do profesjonalnej literatury branżowej\footnote{M.in. ,,Wstępu do CSS3 i HTML5'' autorstwa Bartosza Danowskiego\cite{BD:WdCiH11}}.
+Po stronie użytkownika, system \textit{iQuest} prezentowany jest~za~pośrednictwem interpretowanego przez~jego przeglądarkę internetową kodu w~języku \textit{HTML}. Jego wygląd, wraz~z~umiejscowieniem elementów, określa natomiast arkusz stylów \textit{CSS}. Realizując zadania związane z~tymi technologiami, odnoszono~się do~profesjonalnej literatury branżowej\footnote{M.in. ,,Wstępu do CSS3 i HTML5'' autorstwa Bartosza Danowskiego\cite{BD:WdCiH11}}.

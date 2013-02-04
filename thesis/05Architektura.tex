@@ -4,12 +4,12 @@
 \section{Wstęp}
 \label{Chapter51}
 
-System \textit{iQuest} został stworzony w oparciu o model architektury trójwarstwowej, w którym wyróżnione zostały warstwy: danych, logiki biznesowej oraz prezentacji. Dzięki takiemu podejściu, zadania związane z poszczególnymi warstwami można było bez większego problemu rozdzielić pomiędzy członków zespołu programistów, a w przypadku ewentualnej modyfikacji jednej z warstw nie występuje konieczność wprowadzania zmian w pozostałej części projektu.
+System \textit{iQuest} został stworzony w~oparciu o~model architektury trójwarstwowej, w~którym wyróżnione zostały warstwy: danych, logiki~biznesowej oraz~prezentacji. Dzięki takiemu podejściu, zadania związane z~poszczególnymi warstwami można było bez~większego problemu rozdzielić pomiędzy członków zespołu programistów, a~w~przypadku ewentualnej modyfikacji jednej z~warstw nie~występuje konieczność wprowadzania zmian w~pozostałej części projektu.
 
 \section{Opis ogólny architektury -- ,,Marketektura''}
 \label{Chapter52}
 
-System \textit{iQuest} to aplikacja internetowa w postaci zbioru rozszerzeń platformy e-learningowej \textit{Moodle}. Całość (\textit{Moodle} oraz rozszrzenia) zainstalowana jest na serwerze www, zlokalizowanym w sieci Politechniki Poznańskiej, łączącym się z osobnym serwerem baz danych oraz usługami \textit{eKonto} i \textit{eDziekanat}. Funkcje raportowania realizowane są w głównej mierze za pośrednictwem zewnętrznego systemu \textit{BI}, pobierającego dane z \textit{iQuest} za pośrednictwem usług sieciowych (ang.~\definicja{webservices}). Administracja oraz obsługa systemu odbywa się za pośrednictwem przeglądarki internetowej, w ramach połączenia z platformą \textit{Moodle} lub serwerem raportowania. Respondenci mogą też uzyskać dostęp do systemu przy pomocy urządzeń mobilnych, takich jak tablety czy smartfony.
+System \textit{iQuest} to~aplikacja internetowa w~postaci zbioru rozszerzeń platformy e-learningowej \textit{Moodle}. Całość (\textit{Moodle} oraz~rozszrzenia) zainstalowana jest na serwerze~www, zlokalizowanym w~sieci Politechniki Poznańskiej, łączącym~się z~osobnym serwerem baz~danych oraz usługami \textit{eKonto} i \textit{eDziekanat}. Funkcje raportowania realizowane są~w~głównej mierze za~pośrednictwem zewnętrznego systemu \textit{BI}, pobierającego dane z~\textit{iQuest} za pośrednictwem usług sieciowych (ang.~\definicja{webservices}). Administracja oraz~obsługa systemu odbywa się za~pośrednictwem przeglądarki internetowej, w~ramach połączenia z~platformą \textit{Moodle}, lub~serwerem raportowania. Respondenci mogą~też uzyskać dostęp do systemu przy~pomocy urządzeń mobilnych, takich~jak tablety czy~smartfony.
 
 \begin{figure}[H]
 \centering\includegraphics[width=0.9\textwidth]{figures/marketecture}
@@ -19,7 +19,7 @@ System \textit{iQuest} to aplikacja internetowa w postaci zbioru rozszerzeń pla
 \section{Analiza~podejść\slash Analiza~SWOT}
 \label{Chapter53}
 
-W fazie inicjacji projektu, zespół zarządzający przeprowadził analizę SWOT (ang. \definicja{Strengths, Weaknesses, Opportunities, Threats} - mocne strony, słabe strony, szanse, zagrożenia). Poniżej zamieszczono tabele \ref{tab:SWOT1}. oraz \ref{tab:SWOT2}., zawierające jej wyniki. W oparciu o nie zespół zarządzający podjął decyzję o realizacji projektu z użyciem platformy \textit{Moodle}.
+W fazie inicjacji projektu, zespół zarządzający przeprowadził analizę~SWOT (ang. \definicja{Strengths, Weaknesses, Opportunities, Threats} - mocne~strony, słabe~strony, szanse, zagrożenia). Poniżej zamieszczono tabele \ref{tab:SWOT1}. oraz~\ref{tab:SWOT2}., zawierające jej wyniki. W oparciu o~nie zespół zarządzający podjął decyzję o~realizacji projektu z~użyciem platformy \textit{Moodle}.
 
 \begin{table}[H]
 \centering
@@ -55,7 +55,7 @@ W fazie inicjacji projektu, zespół zarządzający przeprowadził analizę SWOT
 \caption{Podejście drugie -- napisanie aplikacji od podstaw przy użyciu \textit{Java~EE}}\label{tab:SWOT2}
 \end{table}
 
-Rozpatrując powyższe tabele z perspektywy czasu, autorzy niniejszej pracy stwierdzili, iż analiza SWOT została zrealizowana nieprawidłowo, faworyzując rozwiązanie z użyciem systemu \textit{Moodle}. Dla przykładu, dokumentacja \textit{Moodle} okazała się w znacznym stopniu nieprecyzyjna i~niekompletna, zaś w kodzie platformy nie stosuje się podejścia MVC. Prawidłowa analiza podejść dla pierwszego podejścia, zdaniem zespołu programistów, została zamieszczona w tabeli \ref{tab:SWOT3}. Niestety, nie została ona wzięta pod uwagę w trakcje projektowania systemu \textit{iQuest}.
+Rozpatrując powyższe tabele z~perspektywy czasu, autorzy niniejszej pracy stwierdzili, iż~analiza SWOT została zrealizowana nieprawidłowo, faworyzując rozwiązanie z~użyciem systemu \textit{Moodle}. Dla~przykładu, dokumentacja \textit{Moodle} okazała się w~znacznym stopniu nieprecyzyjna i~niekompletna, zaś~w~kodzie platformy nie~stosuje~się podejścia~MVC. Prawidłowa, zdaniem zespołu programistów, analiza podejść dla~pierwszego podejścia, została zamieszczona w~tabeli~\ref{tab:SWOT3}. Niestety, nie~została ona wzięta pod~uwagę w~trakcje projektowania systemu \textit{iQuest}.
 
 \begin{table}[H]
 \centering
@@ -85,7 +85,7 @@ Rozpatrując powyższe tabele z perspektywy czasu, autorzy niniejszej pracy stwi
 \caption{Diagram perspektywy fizycznej (wyk. zespół zarządzający)}\label{rys:PerspektywaFizyczna}
 \end{figure}
 
-Schemat \ref{rys:PerspektywaFizyczna} prezentuje perspektywę fizyczną projektu. Widać na nim dokładnie, opisaną wcześniej, opartą na rozszerzeniach dla platformy \textit{Moodle} budowę logiki systemu \textit{iQuest}. Za jej pośrednictwem dokonuje się połączeń z serwerem baz danych oraz serwerem raportowania. Użytkownik systemu, z wykorzystaniem przeglądarki internetowej, komunikuje się z platformą, lub systemem raportowania, korzystając przy tym z warstwy prezentacji.
+Schemat \ref{rys:PerspektywaFizyczna} prezentuje perspektywę fizyczną projektu. Widać na~nim dokładnie, opisaną wcześniej, opartą na~rozszerzeniach dla~platformy \textit{Moodle} budowę logiki systemu \textit{iQuest}. Za~jej pośrednictwem dokonuje~się połączeń z~serwerem baz~danych oraz~serwerem raportowania. Użytkownik systemu, z~wykorzystaniem przeglądarki internetowej, komunikuje~się z~platformą, lub~systemem raportowania, korzystając przy~tym z~warstwy prezentacji.
 
 \subsection{Perspektywa logiczna}
 \label{Chapter542}
@@ -95,41 +95,41 @@ Schemat \ref{rys:PerspektywaFizyczna} prezentuje perspektywę fizyczną projektu
 \caption{Diagram perspektywy logicznej (wyk. zespół zarządzający)}\label{rys:PerspektywaLogiczna}
 \end{figure}
 
-Schemat \ref{rys:PerspektywaLogiczna} prezentuje perspektywę logiczną systemu. Określa ona zależności między poszczególnymi komponentami ,,wszczepionymi'' do platformy \textit{Moodle}. Poniżej znajduje się opis wyszczególnionych na rysunku komponentów.
+Schemat \ref{rys:PerspektywaLogiczna} prezentuje perspektywę logiczną systemu. Określa ona zależności między poszczególnymi komponentami ,,wszczepionymi'' do~platformy \textit{Moodle}. Poniżej znajduje~się opis wyszczególnionych na~rysunku komponentów.
 
 \subsubsection{iQuest Survey Activity Plugin}
 \label{Chapter5421}
-Funkcjonalnością \definicja{Activity Plugin} jest udostępnianie możliwości dodania nowych rodzajów tzw. ,,aktywności'' w ramach platformy \textit{Moodle}. \textit{iQuest Survey Activity Plugin} pozwala na dodanie nowego badania \textit{iQuest}. Komponent ten składa się z dwóch subkomponentów:
+Funkcjonalnością \definicja{Activity Plugin} jest~udostępnianie możliwości dodania nowych rodzajów tzw.~,,aktywności'' w~ramach platformy \textit{Moodle}. \textit{iQuest Survey Activity Plugin} pozwala na~dodanie nowego badania \textit{iQuest}. Komponent~ten składa~się z~dwóch subkomponentów:
 \begin{itemize}
 \item{Survey Creator}
 \item{Survey Runner}
 \end{itemize}
-Pierwszy z nich odpowiada za definiowanie ankiet, natomiast drugi za ich realizację.
+Pierwszy z~nich odpowiada za~definiowanie ankiet, natomiast drugi za~ich realizację.
 
 \subsubsection{iQuest Course Format Plugin}
 \label{Chapter5422}
 
-\definicja{Course Format Plugin} dla platformy \textit{Moodle} odpowiada za obsługę interfejsu użytkownika. W~przypadku systemu \textit{iQuest}, zarządza kwestią wyświetlania użytkownikowi tylko tych składowych kursu związanego z systemem \textit{iQuest}, które są dla niego dostępne. Przykładowo, Respondent uzyska dostęp do listy ankiet, które może wypełnić, podczas gdy ankieter uzyska dostęp do listy zarządzanych przez niego badań.
+\definicja{Course Format Plugin} dla~platformy \textit{Moodle} odpowiada za~obsługę interfejsu użytkownika. W~przypadku systemu \textit{iQuest}, zarządza kwestią wyświetlania użytkownikowi tylko tych składowych kursu związanego z~systemem \textit{iQuest}, które są~dla niego dostępne. Przykładowo, Respondent uzyska dostęp do~listy ankiet, które może wypełnić, podczas gdy~ankieter uzyska dostęp do~listy zarządzanych przez niego badań.
 
 \subsubsection{eDziekanat Connector oraz ePoczta Connector}
 \label{Chapter5423}
 
-Komponenty te odpowiadają za komunikację z usługami \textit{eDziekanat} i \textit{ePoczta}, pozwalające m.in. na pozyskanie danych o grupach docelowych (w oparciu o dane Grup Dziekańskich) oraz wysyłanie powiadomień za pośrednictwem poczty studenckiej.
+Komponenty te odpowiadają za komunikację z usługami \textit{eDziekanat} i~\textit{ePoczta}, pozwalające m.in.~na pozyskanie danych o grupach docelowych (w~oparciu o~dane Grup~Dziekańskich) oraz~wysyłanie powiadomień za~pośrednictwem poczty studenckiej.
 
 \subsubsection{Background Task Scheduler and Executor}
 \label{Chapter5424}
 
-Dzięki temu komponentowi możliwe jest szeregowanie oraz wykonywanie zadań w tle. Jednym z~jego zadań jest kolejkowanie i aktywowanie mechanizmów rozsyłania wiadomości e-mail z~zaproszeniami do udziału w ankiecie.
+Dzięki temu komponentowi możliwe jest~szeregowanie oraz~wykonywanie zadań w~tle. Jednym z~jego zadań jest kolejkowanie i~aktywowanie mechanizmów rozsyłania wiadomości e-mail z~zaproszeniami do~udziału w~ankiecie.
 
 \subsubsection{eKonto Authentication Plugin}
 \label{Chapter5425}
 
-\definicja{eKonto Authentication Plugin} -- to moduł uwierzytelniania (ang.~\definicja{Authentication}), korzystający z systemu \textit{eLogin} platformy \textit{eKonto} do logowania się do platformy \textit{Moodle}, obsługującej system \textit{iQuest}. Korzystanie z tego systemu pozwala nie tylko na jednoznaczną weryfikację tożsamości użytkownika łączącego się z systemem, ale jest zarazem wygodne -- dzięki jego zastosowaniu, nie ma potrzeby posiadania osobnego konta w systemie \textit{iQuest}.
+\definicja{eKonto Authentication Plugin} -- to~moduł uwierzytelniania (ang.~\definicja{Authentication}), korzystający z~systemu \textit{eLogin} platformy \textit{eKonto} do~logowania~się do~platformy \textit{Moodle}, obsługującej system \textit{iQuest}. Korzystanie z~tego systemu pozwala nie~tylko na~jednoznaczną weryfikację tożsamości użytkownika łączącego~się z~systemem, ale~jest zarazem wygodne -- dzięki jego~zastosowaniu, nie~ma~potrzeby posiadania osobnego konta w~systemie \textit{iQuest}.
 
 \subsection{Perspektywa implemetancyjna}
 \label{Chapter543}
 
-Diagram perspektywy implementacyjnej (zwanej też perspektywą warstw; rys.~\ref{rys:PerspektywaImplementacyjna}) przedstawia graficzną interpretację zależności między poszczególnymi elementami systemu \textit{iQuest} w nawiązaniu do warstw zastosowanego modelu trójwarstwowego. Funkcje zaprezentowanych na nim modułów zostały wyjaśnione już wcześniej w niniejszym rozdziale.
+Diagram perspektywy implementacyjnej (zwanej też~perspektywą warstw; rys.~\ref{rys:PerspektywaImplementacyjna}) przedstawia graficzną interpretację zależności między poszczególnymi elementami systemu \textit{iQuest} w~nawiązaniu do~warstw zastosowanego modelu trójwarstwowego. Funkcje zaprezentowanych na~nim modułów zostały wyjaśnione już~wcześniej w niniejszym rozdziale.
 
 \newpage
 \begin{landscape}
@@ -146,7 +146,7 @@ Diagram perspektywy implementacyjnej (zwanej też perspektywą warstw; rys.~\ref
 \subsection{Wstęp}
 \label{Chapter551}
 
-W procesie rozwoju systemu \textit{iQuest} podjęto dokładnie 40 decyzji projektowych. Większość decyzji podejmował Architekt. W części przypadków rozpatrywano także zdanie zespołu programistów.
+W procesie rozwoju systemu \textit{iQuest} podjęto dokładnie 40~decyzji projektowych. Większość decyzji podejmował Architekt. W~części przypadków rozpatrywano także zdanie zespołu programistów.
 
 \subsection{Podjęte decyzje}
 \label{Chapter552}
@@ -942,7 +942,7 @@ Uzasadnienie & Jest bardzo mała szansa, że na Uczelni pojawi się potrzeba prz
 \section{Schemat bazy danych}
 \label{Chapter56}
 
-Ze względu na obszerność, schemat bazy danych przedstawiono na następnej stronie.
+Ze względu na obszerność, schemat bazy danych przedstawiono na~następnej stronie.
 
 \newpage
 \begin{landscape}

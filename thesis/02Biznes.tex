@@ -4,29 +4,29 @@
 \section{Wstęp}
 \label{Chapter21}
 
-System \textit{iQuest}, będący przedmiotem niniejszej Pracy Dyplomowej, jest nie tylko projektem edukacyjnym, ale również pełnoprawnym zadaniem biznesowym. Wykonany dla Wydziału Informatyki Politechniki Poznańskiej, traktowany jest dokładnie tak samo, jak w pełni profesjonalne zlecenia, z którymi jego uczestnikom przyjdzie się zmierzyć w przyszłości. Z tego względu, konieczna jest jego analiza w kontekście powiązanych procesów biznesowych.
+System \textit{iQuest}, będący przedmiotem niniejszej Pracy Dyplomowej, jest~nie tylko projektem edukacyjnym, ale~również pełnoprawnym zadaniem biznesowym. Wykonany dla~Wydziału~Informatyki Politechniki~Poznańskiej, traktowany jest dokładnie tak~samo, jak~w~pełni profesjonalne zlecenia, z~którymi jego~uczestnikom przyjdzie się~zmierzyć w~przyszłości. Z~tego względu, konieczna jest jego analiza w~kontekście powiązanych procesów biznesowych.
 
 \section{Aktorzy}
 \label{Chapter22}
 
-W systemie zdefiniowani są następujący aktorzy:
+W~systemie zdefiniowani są~następujący aktorzy:
 \begin{itemize}
 \item System -- opisywany system. \textit{iQuest}.
-\item Administrator -- zarządza sprawami technicznymi, związanymi platformą \textit{Moodle}\footnote{ang. \definicja{Modular Object-Oriented Dynamic Learning Environment}}. Funkcję mogą pełnić osoby mające podstawową wiedzę informatyczną, znający mechanizmy \textit{Moodle'a}.
-\item Administrator Bazy Danych -- zarządza sprawami technicznymi, związanymi z prawami do grup docelowych, ich tworzeniem i utrzymaniem. Funkcję mogą pełnić Pracownicy Uczelni\slash Dziekanatu oraz Administratorzy Systemów.
-\item Ankieter -- tworzy ankiety, wskazuje grupy docelowe i rozsyła ankiety. Może też przeglądać raporty. Funkcję mogą pełnić: Prowadzący zajęcia, Pracownik Dziekanatu.
-\item Respondent -- odpowiada na otrzymane ankiety. Funkcję mogą pełnić: Absolwenci, Studenci.
+\item Administrator -- zarządza sprawami technicznymi, związanymi platformą \textit{Moodle}\footnote{ang.~\definicja{Modular Object-Oriented Dynamic Learning Environment}}. Funkcję mogą pełnić osoby mające podstawową wiedzę informatyczną, znający mechanizmy \textit{Moodle'a}.
+\item Administrator Bazy Danych -- zarządza sprawami technicznymi, związanymi z~prawami do~grup docelowych, ich tworzeniem i~utrzymaniem. Funkcję mogą pełnić Pracownicy Uczelni\slash Dziekanatu oraz Administratorzy Systemów.
+\item Ankieter -- tworzy ankiety, wskazuje grupy docelowe i~rozsyła ankiety. Może~też przeglądać raporty. Funkcję mogą pełnić: Prowadzący zajęcia, Pracownik Dziekanatu.
+\item Respondent -- odpowiada na~otrzymane ankiety. Funkcję mogą pełnić: Absolwenci, Studenci.
 \end{itemize}
 
 \section{Obiekty biznesowe}
 \label{Chapter23}
 
-W ramach systemu \textit{iQuest}, zdefiniowanych jest sześć obiektów biznesowych. Mowa o Ankiecie, Badaniu, Grupie Docelowej, Katalogu Ankiet, Pytaniu i Raporcie. Poniższe opisy tych obiektów podane są w kolejności alfabetycznej.
+W ramach systemu \textit{iQuest}, zdefiniowanych jest~sześć obiektów biznesowych. Mowa o~Ankiecie, Badaniu, Grupie~Docelowej, Katalogu~Ankiet, Pytaniu i~Raporcie. Poniższe opisy tych obiektów podane są w kolejności alfabetycznej.
 
 \subsection{Ankieta}
 \label{Chapter231}
 
-Jest tworzona przez Ankieterów i wysyłana do Respondentów. Raz utworzona Ankieta zostaje zapisana w Katalogu Ankiet. Ankietę charakteryzują następujące atrybuty:
+Jest tworzona przez Ankieterów i~wysyłana do~Respondentów. Raz~utworzona Ankieta zostaje zapisana w Katalogu Ankiet. Ankietę charakteryzują następujące atrybuty:
 
 \begin{itemize}
 \item Nazwa Ankiety,
@@ -38,7 +38,7 @@ Jest tworzona przez Ankieterów i wysyłana do Respondentów. Raz utworzona Anki
 \subsection{Badanie}
 \label{Chapter232}
 
-Jest to Ankieta wraz z wybranymi: grupą docelową i czasem trwania. Badanie determinują następujące atrybuty:
+Jest to Ankieta wraz z~wybranymi: grupą docelową i~czasem trwania. Badanie determinują następujące atrybuty:
 
 \begin{itemize}
 \item Nazwa Badania,
@@ -52,7 +52,7 @@ Jest to Ankieta wraz z wybranymi: grupą docelową i czasem trwania. Badanie det
 \subsection{Grupa Docelowa}
 \label{Chapter233}
 
-Grupa studentów lub absolwentów, do których skierowana jest ankieta. Atrybuty:
+Grupa studentów lub~absolwentów, do~których skierowana jest~ankieta. Atrybuty:
 
 \begin{itemize}
 \item Studenci\slash Absolwenci
@@ -61,12 +61,12 @@ Grupa studentów lub absolwentów, do których skierowana jest ankieta. Atrybuty
 \subsection{Katalog Ankiet}
 \label{Chapter234}
 
-Katalog Ankiet zawiera zbiór wszystkich Ankiet dostępnych dla danego Ankietera \textit{iQuest}. Ankiety mogą być współdzielone z poziomu Katalogu Ankiet, duplikowane, oglądane, edytowane i\slash lub usuwane, w zależności od aktualnego statusu. Dla przykładu, nowo-utworzoną Ankietę bez odpowiedzi można bez problemu usunąć lub edytować, podczas gdy taka, na którą udzielono już odpowiedzi, dostępna jest w trybie \textit{tylko do odczytu}.
+Katalog Ankiet zawiera zbiór wszystkich Ankiet dostępnych dla~danego Ankietera \textit{iQuest}. Ankiety mogą być współdzielone z~poziomu Katalogu Ankiet, duplikowane, oglądane, edytowane i/lub usuwane, w~zależności od~aktualnego statusu. Dla~przykładu, nowo-utworzoną Ankietę bez~odpowiedzi można bez~problemu usunąć lub~edytować, podczas gdy~taka, na~którą udzielono już~odpowiedzi, dostępna jest w~trybie \textit{tylko do~odczytu}.
 
 \subsection{Pytanie}
 \label{Chapter235}
 
-Pytanie jest elementarną jednostką Ankiety. Może składać się jedynie z treści (w przypadku pytań otwartych), lub treści i dostępnych odpowiedzi (dla Pytań zamkniętych). Pytanie w ogólności charakteryzują:
+Pytanie jest~elementarną jednostką Ankiety. Może składać~się jedynie z~treści (w~przypadku pytań otwartych), lub~treści i~dostępnych odpowiedzi (dla~Pytań zamkniętych). Pytanie w~ogólności charakteryzują:
 
 \begin{itemize}
 \item Treść Pytania,
@@ -77,13 +77,13 @@ Pytanie jest elementarną jednostką Ankiety. Może składać się jedynie z tre
 \subsection{Raport}
 \label{Chapter236}
 
-Raport jest zbiorem odpowiedzi z jednego lub z kilku badań. Może zawierać wykresy i zestawienia. Funkcjonalność raportów pozwala na selektywne uzyskiwanie informacji na zadany temat.
+Raport jest zbiorem odpowiedzi z~jednego lub~z~kilku badań. Może zawierać wykresy i~zestawienia. Funkcjonalność raportów pozwala na~selektywne uzyskiwanie informacji na~zadany temat.
 
 \pagebreak
 \section{Biznesowe przypadki użycia}
 \label{Chapter24}
 
-Poniżej przedstawione zostały biznesowe przypadki użycia. Obejmują one dwa główne zagadnienia: zbieranie informacji oraz zarządzanie Grupami Docelowymi.
+Poniżej przedstawione zostały biznesowe przypadki użycia. Obejmują one dwa~główne zagadnienia: zbieranie informacji oraz~zarządzanie Grupami Docelowymi.
 
 \subsection{BC01: Zbieranie informacji o Absolwentach}
 \label{Chapter241}
